@@ -1,0 +1,7 @@
+import { IGreenhouseGases } from 'library/types/MarineFarming/index.d';
+
+export default (data: any): IGreenhouseGases[] => data?.map((datum: any) => ({
+	time: datum?.time ?? '',
+	emissionLevel: datum?.emission_per_cell ?? 0,
+	device: datum?.h3 ?? '',
+})) ?? [];

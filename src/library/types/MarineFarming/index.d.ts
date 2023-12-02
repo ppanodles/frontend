@@ -1,15 +1,6 @@
 export interface IShip {
     type: string;
     geometry: IGeometry;
-    properties: IProperties;
-}
-
-export interface IGeometry {
-    type: string;
-    coordinates: number[];
-}
-
-export interface IProperties {
     id: number;
     mmsi: number;
     imo?: number;
@@ -46,8 +37,13 @@ export interface IProperties {
     message_type: number;
 }
 
+export interface IGeometry {
+    type: string;
+    coordinates: number[];
+}
+
 interface IGreenhouseGases {
-    time: Date;
+    time: string;
     emissionLevel: number;
     device: string;
 }
@@ -56,7 +52,7 @@ interface IFilmContamination { // пленочное загрязнение
     type: 'Нефть' | 'Нефтепродукты' | 'Масла' | 'Естественные' | 'Сточные';
     id: string; // urn:ogc:def:crs:OGC:1.3:CRS84
     time: string; // Date
-    emissionLevel: number;
+    name: string;
     properties: {
         Id: number;
         Area: number;

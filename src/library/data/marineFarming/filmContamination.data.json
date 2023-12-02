@@ -4,7 +4,7 @@
             "type": "Масла",
             "id": "urn:ogc:def:crs:OGC:1.3:CRS84",
             "time": "25-11-2023 08:00",
-            "emissionLevel": 1,
+            "name": "oil_spill_26092022_model",
             "properties": {
                 "Id": 0,
                 "Area": 0.34033074518,
@@ -109,7 +109,7 @@
             "type": "Масла",
             "id": "urn:ogc:def:crs:OGC:1.3:CRS84",
             "time": "25-11-2023 08:00",
-            "emissionLevel": 1,
+            "name": "oil_spill_26092022_model",
             "properties": {
                 "Id": 0,
                 "Area": 0.11409227241,
@@ -166,7 +166,7 @@
             "type": "Масла",
             "id": "urn:ogc:def:crs:OGC:1.3:CRS84",
             "time": "25-11-2023 08:00",
-            "emissionLevel": 1,
+            "name": "oil_spill_26092022_model",
             "properties": {
                 "Id": 0,
                 "Area": 0.62361911641000001,

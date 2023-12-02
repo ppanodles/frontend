@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { IFilmContamination, IGreenhouseGases, IShip } from 'library/types/MarineFarming/index.d';
-
+import greenhouseGasesMapper from 'library/mappers/greenhouseGases.mapper';
+import shipsMapper from 'library/mappers/ships.mapper';
+import filmContaminationMapper from 'library/mappers/filmContamination.mapper';
 import shipData from 'library/data/marineFarming/ships.data.json';
 import filmContaminationData from 'library/data/marineFarming/filmContamination.data.json';
 import greenhouseGasesData from 'library/data/marineFarming/greenhouseGases.data.json';
@@ -13,9 +15,9 @@ export type MarineFarmingState = {
 };
 
 const initialState: MarineFarmingState = {
-	ships: (shipData as { data: IShip[] }).data,
-	filmContamination: (filmContaminationData as { data: IFilmContamination[] }).data,
-	greenhouseGases: (greenhouseGasesData as any).data.map((value: any) => ({device: value.h3, emissionLevel: value.emission_per_cell, time: value.time })),
+	ships: shipsMapper((shipData as any).data),
+	filmContamination: filmContaminationMapper(filmContaminationData.data),
+	greenhouseGases: greenhouseGasesMapper(greenhouseGasesData.data),
 	filters: {},
 
 };
