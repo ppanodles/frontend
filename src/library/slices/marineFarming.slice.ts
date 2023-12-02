@@ -3,10 +3,11 @@ import { IFilmContamination, IGreenhouseGases, IShip } from 'library/types/Marin
 
 import shipData from 'library/data/marineFarming/ships.data.json';
 import filmContaminationData from 'library/data/marineFarming/filmContamination.data.json';
+import greenhouseGasesData from 'library/data/marineFarming/greenhouseGases.data.json';
 
 export type MarineFarmingState = {
     ships: IShip[];
-    greenhouseGases?: IGreenhouseGases[];
+    greenhouseGases: IGreenhouseGases[];
     filmContamination: IFilmContamination[];
     filters: {[key: string]: { value: string; state: boolean; }}
 };
@@ -14,7 +15,7 @@ export type MarineFarmingState = {
 const initialState: MarineFarmingState = {
 	ships: (shipData as { data: IShip[] }).data,
 	filmContamination: (filmContaminationData as { data: IFilmContamination[] }).data,
-	greenhouseGases: undefined,
+	greenhouseGases: (greenhouseGasesData as any).data.map((value: any) => ({device: value.h3, emissionLevel: value.emission_per_cell, time: value.time })),
 	filters: {},
 
 };

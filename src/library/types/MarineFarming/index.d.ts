@@ -46,16 +46,9 @@ export interface IProperties {
     message_type: number;
 }
 
-interface IBase {
-    coordinates: number[];
-}
-
-interface IGreenhouseGases extends IBase {
-    type: string;
-    name: string;
+interface IGreenhouseGases {
     time: Date;
     emissionLevel: number;
-    value: number;
     device: string;
 }
 
