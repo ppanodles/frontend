@@ -4,7 +4,7 @@ export interface IShip {
     id: number;
     mmsi: number;
     imo?: number;
-    vessel_name: string;
+    vessel_name: string; // наименование судна
     callsign: string;
     vessel_type: string;
     vessel_type_code?: number;

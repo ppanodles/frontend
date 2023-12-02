@@ -1,9 +1,11 @@
 import React from 'react';
 
-interface IProps {}
+interface IProps {
+	display: 'map' | 'chart' | 'table'
+}
 
-const MarineFarming: React.FunctionComponent<IProps> = () => (
-	<div>MarineFarming</div>
+const MarineFarming: React.FunctionComponent<IProps> = ({ display }) => (
+	<div>{`MarineFarming - ${display}`}</div>
 );
 
 export default MarineFarming;

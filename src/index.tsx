@@ -4,6 +4,7 @@ import 'resources/styles/index.css';
 import {Provider} from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
 import routes from 'main/routes';
+import ThemeConfig from 'library/components/ThemeConfig';
 import reportWebVitals from './reportWebVitals';
 import store from './main/rootReducer';
 
@@ -14,7 +15,9 @@ root.render(
 	<React.StrictMode>
 		<Provider store={store}>
 			{/* add  fallbackElement */}
-			<RouterProvider router={routes} />
+			<ThemeConfig>
+				<RouterProvider router={routes} />
+			</ThemeConfig>
 		</Provider>
 	</React.StrictMode>,
 );
