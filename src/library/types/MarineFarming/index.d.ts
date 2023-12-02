@@ -59,10 +59,19 @@ interface IGreenhouseGases extends IBase {
     device: string;
 }
 
-interface IFilmContamination extends IBase { // пленочное загрязнение
-    type: string; // нефть
-    id: string;
-    time: Date;
+interface IFilmContamination { // пленочное загрязнение
+    type: 'Нефть' | 'Нефтепродукты' | 'Масла' | 'Естественные' | 'Сточные';
+    id: string; // urn:ogc:def:crs:OGC:1.3:CRS84
+    time: string; // Date
     emissionLevel: number;
-    level: number;
+    properties: {
+        Id: number;
+        Area: number;
+        long: number;
+        lat: number;
+      }
+    geometry: {
+        type: string;
+        coordinates: number[][];
+    }
 }
