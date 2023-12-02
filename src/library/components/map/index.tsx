@@ -2,12 +2,12 @@ import Map, { Layer, Source } from 'react-map-gl';
 import type {
 	FillLayer, MapRef,
 } from 'react-map-gl';
-import { cellToBoundary } from 'h3-js';
-
-import { Feature, FeatureCollection } from 'geojson';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
+
 import { MarineFarmingState } from 'library/slices/marineFarming.slice';
+import { getGeoJsonFromData } from './helpers';
 
 const layerStyle: FillLayer = {
 	id: 'point',
@@ -19,47 +19,6 @@ const layerStyle: FillLayer = {
 	},
 };
 
-const getH3ColorByEmission = (emissionLevel: number): string => {
-	if (emissionLevel < 142) {
-		return 'yellow';
-	}
-
-	if (emissionLevel > 200) {
-		return 'red';
-	}
-
-	return 'orange';
-};
-
-const mapGreenhouseGasesDataToFeatures = (data: {
-    time: string;
-    emissionLevel: number;
-    device: string;
-}, index: number): Feature => ({
-	type: 'Feature',
-	properties: {
-		color: getH3ColorByEmission(data.emissionLevel),
-		opacity: 1,
-		id: index,
-	},
-	geometry: {
-		type: 'Polygon',
-		coordinates: [cellToBoundary(data.device, true)],
-	},
-});
-
-const getGeoJsonFromData = ({greenhouseGases}: Omit<MarineFarmingState, 'filters'>): FeatureCollection => {
-	const greenhouseGasesFeatures = greenhouseGases.map(mapGreenhouseGasesDataToFeatures);
-	// const shipsFeatures = ships.map(mapShipsDataToFeatures);
-	// const filmContaminationFeatures = filmContamination.map(mapFilmContaminationDataToFeatures);
-
-	return {
-		type: 'FeatureCollection',
-		features: [...greenhouseGasesFeatures],
-		// features: [...shipsFeatures, ...greenhouseGasesFeatures, ...filmContaminationFeatures],
-	};
-};
-
 const DataMap = () => {
 	const mapRefCallback = useCallback((ref: MapRef | null) => {
 		if (ref !== null) {
@@ -68,7 +27,6 @@ const DataMap = () => {
 		}
 	}, []);
 	const data = useSelector((state) => (state as {marineFarming: MarineFarmingState}).marineFarming);
-
 	const geoJson = getGeoJsonFromData(
 		{
 			ships: data.ships,
