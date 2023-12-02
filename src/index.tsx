@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'resources/styles/index.css';
-import App from './main/App';
+import {Provider} from 'react-redux';
+import { RouterProvider } from 'react-router-dom';
+import routes from 'main/routes';
 import reportWebVitals from './reportWebVitals';
+import store from './main/rootReducer';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
 	<React.StrictMode>
-		<App />
+		<Provider store={store}>
+			{/* add  fallbackElement */}
+			<RouterProvider router={routes} />
+		</Provider>
 	</React.StrictMode>,
 );
 

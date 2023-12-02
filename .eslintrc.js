@@ -31,6 +31,12 @@ module.exports = {
 		'react-hooks',
 	],
 	rules: {
+		'react/function-component-definition': [
+			2,
+			{
+				namedComponents: 'arrow-function',
+			},
+		],
 		'react/destructuring-assignment': 'off',
 		'import/no-extraneous-dependencies': 'off',
 		'react/require-default-props': 'off',
@@ -55,5 +61,6 @@ module.exports = {
 		'jsx-a11y/label-has-associated-control': [2, {assert: 'either', depth: 25}],
 		'react-hooks/rules-of-hooks': 'error', // Проверяем правила хуков
 		'react-hooks/exhaustive-deps': 'warn', // Проверяем зависимости эффекта
+		'react/react-in-jsx-scope': 0,
 	},
 };
