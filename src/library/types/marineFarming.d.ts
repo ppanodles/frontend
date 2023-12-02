@@ -12,10 +12,10 @@ export interface IShip {
     vessel_class: string;
     length?: number;
     width?: number;
-    flag_country: string;
+    flag_country: string; // страна прописки
     flag_code: any;
-    destination: string;
-    eta?: string;
+    destination: string; // порт назначения
+    eta?: string; // ожидаемое время прибытия
     draught?: number;
     longitude: number;
     latitude: number;
