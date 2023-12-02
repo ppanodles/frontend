@@ -1,9 +1,10 @@
 import { MarineFarmingState } from 'library/slices/marineFarming.slice';
 import { FeatureCollection } from 'geojson';
-import { mapGreenhouseGasesDataToFeatures } from '../mappers';
+import { mapFilmContaminationDataToFeatures, mapGreenhouseGasesDataToFeatures } from '../mappers';
 
 /* eslint-disable import/prefer-default-export */
 type H3Colors = '#880E4F' | '#C2185B' | '#DD2C00' | '#FF9100' | '#FFC400' | '#FFEB3B'
+type FilmContaminationColors = '#FF9315' | '#22C38E' | '#304FFE'
 
 export const getH3ColorByEmission = (emissionLevel: number): H3Colors => {
 	if (emissionLevel < 294.7) {
@@ -28,15 +29,26 @@ export const getH3ColorByEmission = (emissionLevel: number): H3Colors => {
 
 	return '#FFEB3B';
 };
+export const getFilmContaminationColorByType = (type: 'Нефть' | 'Нефтепродукты' | 'Масла' | 'Естественные' | 'Сточные'): FilmContaminationColors => {
+	if (type === 'Нефть' || type === 'Масла' || type === 'Нефтепродукты') {
+		return '#FF9315';
+	}
 
-export const getGeoJsonFromData = ({greenhouseGases}: Omit<MarineFarmingState, 'filters'>): FeatureCollection => {
+	if (type === 'Сточные') {
+		return '#304FFE';
+	}
+
+	return '#22C38E';
+};
+
+export const getGeoJsonFromData = ({greenhouseGases, filmContamination}: Omit<MarineFarmingState, 'filters'>): FeatureCollection => {
 	const greenhouseGasesFeatures = greenhouseGases.map(mapGreenhouseGasesDataToFeatures);
 	// const shipsFeatures = ships.map(mapShipsDataToFeatures);
-	// const filmContaminationFeatures = filmContamination.map(mapFilmContaminationDataToFeatures);
+	const filmContaminationFeatures = filmContamination.map(mapFilmContaminationDataToFeatures);
 
 	return {
 		type: 'FeatureCollection',
-		features: [...greenhouseGasesFeatures],
+		features: [...greenhouseGasesFeatures, ...filmContaminationFeatures],
 		// features: [...shipsFeatures, ...greenhouseGasesFeatures, ...filmContaminationFeatures],
 	};
 };
