@@ -1,4 +1,4 @@
-import { IFilmContamination } from 'library/types/MarineFarming/index.d';
+import { IFilmContamination } from 'library/types/marineFarming';
 
 export default (data: any): IFilmContamination[] => data?.map((datum: any) => ({
 	type: datum?.type || 'Нефть',
