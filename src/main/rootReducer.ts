@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import marineFarmingReducer from 'library/slices/marineFarming.slice';
 
 const store = configureStore({
 	reducer: {
-		// todos: todoReducer,
+		marineFarming: marineFarmingReducer,
 	},
+	devTools: process.env.NODE_ENV !== 'production',
 });
 
 export default store;
