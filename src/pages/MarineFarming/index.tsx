@@ -1,5 +1,6 @@
 import { Box, Container } from '@mui/material';
 import LayoutSelector from 'library/components/LayoutSelector';
+import DataMap from 'library/components/map';
 import extractLayout from 'library/helpers/extractLayout';
 import paths, { LayoutType } from 'library/paths';
 import React, { useMemo } from 'react';
@@ -12,7 +13,9 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 	const { pathname } = useLocation();
 
 	const changeLayoutHandle = (value: LayoutType | null) => {
-		if (value !== null) { navigate(paths.marineFarming[value]); }
+		if (value !== null) {
+			navigate(paths.marineFarming[value]);
+		}
 	};
 
 	const layout = useMemo(() => extractLayout(pathname), [pathname]);
@@ -31,7 +34,9 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 				<LayoutSelector value={layout} setValue={changeLayoutHandle} />
 			</Box>
 
-			{paths.marineFarming[LayoutType.MAP] === pathname && <div>map</div>}
+			{paths.marineFarming[LayoutType.MAP] === pathname && (
+				<DataMap />
+			)}
 			{paths.marineFarming[LayoutType.CHARTS] === pathname && <div>charts</div>}
 			{paths.marineFarming[LayoutType.TABLE] === pathname && <div>table</div>}
 		</Container>
