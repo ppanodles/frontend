@@ -1,5 +1,5 @@
 import {
-	Box, ListItemButton, List, ListItem, ListItemAvatar, ListItemText, Typography, Stack,
+	Box, ListItemButton, List, ListItem, ListItemAvatar, ListItemText, Typography, Stack, ListItemIcon,
 } from '@mui/material';
 import React, { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -44,18 +44,18 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 						<ListItem
 							key={data.name}
 							disablePadding
-							secondaryAction={(
-								<Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-									<Icon sx={{ color: ({ palette }) => palette.info.main }} iconName={data.status ? 'visibility-on' : 'visibility-off'} />
-								</Box>
-							)}
 							sx={{
 								'&:not(first-child)': {
 									mt: 1,
 								},
 							}}
 						>
-							<ListItemButton role={undefined} onClick={() => listItemButtonHandler(data.id)} dense sx={{ backgroundColor: ({ palette }) => palette.primary.light}}>
+							<ListItemButton
+								role={undefined}
+								onClick={() => listItemButtonHandler(data.id)}
+								dense
+								sx={{ backgroundColor: ({ palette }) => palette.primary.light}}
+							>
 								<ListItemAvatar sx={{ display: 'flex', alignItems: 'center'}}>
 									<Box sx={{ height: '40px', width: '2px', backgroundColor: ({ palette }) => (data.status ? palette.success.light : palette.info.main) }} />
 									<Icon sx={{ ml: 2, color: ({ palette }) => palette.info.main }} iconName={data.icon} />
@@ -66,6 +66,11 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 									}}
 									primary={data.name}
 								/>
+								<ListItemIcon sx={{ width: '24px', minWidth: '24px' }}>
+									<Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+										<Icon sx={{ color: ({ palette }) => palette.info.main }} iconName={data.status ? 'visibility-on' : 'visibility-off'} />
+									</Box>
+								</ListItemIcon>
 							</ListItemButton>
 						</ListItem>
 					))
