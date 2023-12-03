@@ -8,11 +8,16 @@ import filmContaminationData from 'library/data/marineFarming/filmContamination.
 import greenhouseGasesData from 'library/data/marineFarming/greenhouseGases.data.json';
 import { IFilterType } from 'library/types/system.d';
 import FilterType from 'library/constants/FilterType';
+import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
 
-type Filters = {
-	ships: IFilterType<IShip>[],
-	greenhouseGases: IFilterType<IGreenhouseGases>[],
-	filmContamination: IFilterType<IFilmContamination>[],
+export type Filters = {
+	[MarineFarmingDataType.SHIPS]: IFilterType<IShip>[],
+	[MarineFarmingDataType.GREENHOUSE_GASES]: IFilterType<IGreenhouseGases>[],
+	[MarineFarmingDataType.FILM_CONTAMINATION]: IFilterType<IFilmContamination>[],
+};
+
+export type ISlicesAccessibility = {
+	[key in keyof Filters]: boolean;
 };
 
 export type MarineFarmingState = {
@@ -20,11 +25,8 @@ export type MarineFarmingState = {
     greenhouseGases: IGreenhouseGases[];
     filmContamination: IFilmContamination[];
     filters: Filters;
-	slicesAccessibility: {
-		ships: boolean;
-		greenhouseGases: boolean;
-		filmContamination: boolean;
-	}
+	slicesAccessibility: ISlicesAccessibility,
+	selectedTable: MarineFarmingDataType;
 };
 
 const initialState: MarineFarmingState = {
@@ -32,33 +34,34 @@ const initialState: MarineFarmingState = {
 	filmContamination: filmContaminationMapper(filmContaminationData.data),
 	greenhouseGases: greenhouseGasesMapper(greenhouseGasesData.data),
 	filters: {
-		ships: [
+		[MarineFarmingDataType.SHIPS]: [
 			{ type: FilterType.LIST_SELECTOR, field: 'vessel_type', name: 'Тип судна' },
 			{ type: FilterType.LIST_SELECTOR, field: 'vessel_name', name: 'Наименование судна' },
 			{ type: FilterType.LIST_SELECTOR, field: 'flag_country', name: 'Страна регистрации судна'},
 			{ type: FilterType.LIST_SELECTOR, field: 'destination', name: 'Порт назначения'},
 			{ type: FilterType.DATE_TIME_RANGE, field: 'eta', name: 'Время прибытия'},
 		],
-		greenhouseGases: [
+		[MarineFarmingDataType.GREENHOUSE_GASES]: [
 			{type: FilterType.RANGE, field: 'emissionLevel', name: 'Уровень эмиссии'},
 		],
-		filmContamination: [
+		[MarineFarmingDataType.FILM_CONTAMINATION]: [
 			{ type: FilterType.LIST_SELECTOR, field: 'type', name: 'Тип пленочного загрязнения' },
 			{ type: FilterType.LIST_SELECTOR, field: 'name', name: 'Наименование загрязнения' },
 		],
 	},
 	slicesAccessibility: {
-		ships: true,
-		greenhouseGases: true,
-		filmContamination: true,
+		[MarineFarmingDataType.SHIPS]: true,
+		[MarineFarmingDataType.GREENHOUSE_GASES]: true,
+		[MarineFarmingDataType.FILM_CONTAMINATION]: true,
 	},
+	selectedTable: MarineFarmingDataType.SHIPS,
 };
 
 const marineFarmingSlice = createSlice({
 	name: 'marine-farming',
 	initialState,
 	reducers: {
-		toggleSliceAccessibility(state, action: PayloadAction<'ships' | 'greenhouseGases' | 'filmContamination'>) {
+		toggleSliceAccessibility(state, action: PayloadAction<MarineFarmingDataType>) {
 			state.slicesAccessibility[action.payload] = !state.slicesAccessibility[action.payload];
 		},
 	},

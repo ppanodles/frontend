@@ -1,5 +1,5 @@
 import { FeatureCollection } from 'geojson';
-import { IGreenhouseGases } from 'library/types/marineFarming';
+import { IGreenhouseGases } from 'library/types/marineFarming.d';
 import { mapGreenhouseGasesDataToFeatures } from '../mappers';
 
 /* eslint-disable import/prefer-default-export */

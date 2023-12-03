@@ -8,11 +8,12 @@ import { RootState } from 'main/rootReducer';
 import { toggleSliceAccessibility } from 'library/slices/marineFarming.slice';
 import { IconNames } from 'resources/icons';
 
-import Icon from '../Icon';
+import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
+import Icon from '../../Icon';
 
 interface IProps {}
 
-type SliceSelectorType = { id: 'ships' | 'greenhouseGases' | 'filmContamination', name: string, icon: IconNames, status: boolean };
+type SliceSelectorType = { id: MarineFarmingDataType, name: string, icon: IconNames, status: boolean };
 
 const SlicesBlock: React.FunctionComponent<IProps> = () => {
 	const dispatch = useDispatch();
@@ -21,17 +22,17 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 
 	const slices: SliceSelectorType[] = useMemo(() => ([
 		{
-			id: 'ships', name: 'Судно/Корабль', icon: 'near-me', status: sliceFlags.ships,
+			id: MarineFarmingDataType.SHIPS, name: 'Судно/Корабль', icon: 'near-me', status: sliceFlags[MarineFarmingDataType.SHIPS],
 		},
 		{
-			id: 'greenhouseGases', name: 'Парниковые газы от судоходства', icon: 'heat', status: sliceFlags.greenhouseGases,
+			id: MarineFarmingDataType.GREENHOUSE_GASES, name: 'Парниковые газы от судоходства', icon: 'heat', status: sliceFlags[MarineFarmingDataType.GREENHOUSE_GASES],
 		},
 		{
-			id: 'filmContamination', name: 'Пленочные загрязнения', icon: 'water-ec', status: sliceFlags.filmContamination,
+			id: MarineFarmingDataType.FILM_CONTAMINATION, name: 'Пленочные загрязнения', icon: 'water-ec', status: sliceFlags[MarineFarmingDataType.FILM_CONTAMINATION],
 		},
 	]), [sliceFlags]);
 
-	const listItemButtonHandler = (id: 'ships' | 'greenhouseGases' | 'filmContamination') => dispatch(toggleSliceAccessibility(id));
+	const listItemButtonHandler = (id: MarineFarmingDataType) => dispatch(toggleSliceAccessibility(id));
 	return (
 		<Box>
 			<Stack direction="row" spacing={0.7} sx={{ mb: 3, display: 'flex', color: ({ palette }) => palette.common.white }}>

@@ -1,4 +1,4 @@
-import { IShip } from 'library/types/marineFarming';
+import { IShip } from 'library/types/marineFarming.d';
 import { Popup } from 'react-map-gl';
 
 interface IProps {

@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-shadow
-enum MarineFarmingSlice {
-    SHIP = 'SHIP',
+enum MarineFarmingDataType {
+    SHIPS = 'SHIPS',
     GREENHOUSE_GASES = 'GREENHOUSE_GASES',
     FILM_CONTAMINATION = 'FILM_CONTAMINATION',
 }
 
-export default MarineFarmingSlice;
+export default MarineFarmingDataType;

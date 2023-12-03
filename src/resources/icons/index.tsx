@@ -1,7 +1,19 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-export type IconNames = 'marine-farming' | 'agro-industry' | 'municipality' | 'map' | 'tables' | 'diagram' | 'near-me' | 'heat' | 'water-ec' | 'visibility-on' | 'visibility-off' | 'items'
+export type IconNames = 'marine-farming'
+	| 'agro-industry'
+	| 'municipality'
+	| 'map'
+	| 'tables'
+	| 'diagram'
+	| 'near-me'
+	| 'heat'
+	| 'water-ec'
+	| 'visibility-on'
+	| 'visibility-off'
+	| 'items'
+	| 'filters';
 
 export const icons: Record<IconNames, React.ReactNode> = {
 	'marine-farming': (
@@ -95,6 +107,14 @@ export const icons: Record<IconNames, React.ReactNode> = {
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 			<path
 				d="M18.63 12.451a1.5 1.5 0 0 0-.713-1.282l-.975-.593.968-.592a1.5 1.5 0 0 0 0-2.565L12.57 4.2a1.5 1.5 0 0 0-1.5 0L5.73 7.42a1.5 1.5 0 0 0 0 2.565l.967.592-.975.593a1.5 1.5 0 0 0 0 2.565l.975.592-.967.593a1.5 1.5 0 0 0 0 2.565l5.34 3.217a1.5 1.5 0 0 0 1.5 0l5.31-3.247a1.5 1.5 0 0 0 0-2.565l-.968-.593.975-.592a1.5 1.5 0 0 0 .743-1.253Zm-6.81-6.997L17.13 8.7l-2.408 1.5-2.902 1.748L6.51 8.7l5.31-3.247ZM17.137 16.2l-5.317 3.25-5.31-3.25 1.627-.997 2.933 1.747a1.5 1.5 0 0 0 1.5 0l2.902-1.777 1.665 1.027Zm-2.415-2.25L11.82 15.7l-5.31-3.25 1.627-.997 3.293 2.01a.75.75 0 0 0 .75 0l3.292-2.01 1.658.997-2.408 1.5Z"
+				fill="currentColor"
+			/>
+		</svg>
+	),
+	filters: (
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+			<path
+				d="M7.005 6h10l-5.01 6.3L7.005 6Zm-2.75-.39c2.02 2.59 5.75 7.39 5.75 7.39v6c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-6s3.72-4.8 5.74-7.39a.998.998 0 0 0-.79-1.61H5.045c-.83 0-1.3.95-.79 1.61Z"
 				fill="currentColor"
 			/>
 		</svg>

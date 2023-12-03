@@ -1,4 +1,4 @@
-import { IGreenhouseGases } from 'library/types/marineFarming';
+import { IGreenhouseGases } from 'library/types/marineFarming.d';
 
 export default (data: any): IGreenhouseGases[] => data?.map((datum: any) => ({
 	time: datum?.time ?? '',

@@ -1,4 +1,4 @@
-import { IShip } from 'library/types/marineFarming';
+import { IShip } from 'library/types/marineFarming.d';
 
 export default (data: any): IShip[] => data?.map((datum: any) => ({
 	type: datum.type ?? '',

@@ -1,4 +1,4 @@
-import { IFilmContamination } from 'library/types/marineFarming';
+import { IFilmContamination } from 'library/types/marineFarming.d';
 import { Popup } from 'react-map-gl';
 
 interface IProps {
