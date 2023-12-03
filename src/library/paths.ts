@@ -2,12 +2,19 @@ const MARINE_FARMING_BASE = '/app/marine-farming/';
 const AGRO_INDUSTRY_BASE = '/app/agro-industry/';
 const MUNICIPALITY = '/app/municipality/';
 
-export default {
+// eslint-disable-next-line no-shadow
+export enum LayoutType {
+    MAP ='MAP',
+    CHARTS ='CHARTS',
+    TABLE = 'TABLE',
+}
+
+const paths = {
 	marineFarming: {
 		base: MARINE_FARMING_BASE,
-		map: `${MARINE_FARMING_BASE}map`,
-		charts: `${MARINE_FARMING_BASE}charts`,
-		table: `${MARINE_FARMING_BASE}table`,
+		[LayoutType.MAP]: `${MARINE_FARMING_BASE}map`,
+		[LayoutType.CHARTS]: `${MARINE_FARMING_BASE}charts`,
+		[LayoutType.TABLE]: `${MARINE_FARMING_BASE}table`,
 	},
 	agroIndustry: {
 		base: AGRO_INDUSTRY_BASE,
@@ -20,3 +27,5 @@ export default {
 		table: `${MUNICIPALITY}table`,
 	},
 };
+
+export default paths;

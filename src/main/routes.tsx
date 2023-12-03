@@ -1,5 +1,5 @@
 import Dashboard from 'library/components/Dashboard';
-import paths from 'library/paths';
+import paths, { LayoutType } from 'library/paths';
 import AgroIndustry from 'pages/AgroIndustry';
 import MarineFarming from 'pages/MarineFarming';
 import Municipality from 'pages/Municipality';
@@ -13,18 +13,18 @@ export default createBrowserRouter([
 				path: paths.marineFarming.base,
 				element: <Dashboard />,
 				children: [
-					{ path: paths.marineFarming.map, element: <MarineFarming display="map" /> },
-					{ path: paths.marineFarming.charts, element: <MarineFarming display="chart" /> },
-					{ path: paths.marineFarming.table, element: <MarineFarming display="table" /> },
-					{ path: paths.marineFarming.base, element: <Navigate to={paths.marineFarming.map} replace />},
+					{ path: paths.marineFarming[LayoutType.MAP], element: <MarineFarming /> },
+					{ path: paths.marineFarming[LayoutType.CHARTS], element: <MarineFarming /> },
+					{ path: paths.marineFarming[LayoutType.TABLE], element: <MarineFarming /> },
+					{ path: paths.marineFarming.base, element: <Navigate to={paths.marineFarming[LayoutType.MAP]} replace />},
 				],
 			},
 			{
 				path: paths.agroIndustry.base,
 				element: <Dashboard />,
 				children: [
-					{ path: paths.agroIndustry.charts, element: <AgroIndustry display="chart" /> },
-					{ path: paths.agroIndustry.table, element: <AgroIndustry display="table" /> },
+					{ path: paths.agroIndustry.charts, element: <AgroIndustry /> },
+					{ path: paths.agroIndustry.table, element: <AgroIndustry /> },
 					{ path: paths.agroIndustry.base, element: <Navigate to={paths.agroIndustry.table} replace />},
 				],
 			},
@@ -32,9 +32,9 @@ export default createBrowserRouter([
 				path: paths.municipality.base,
 				element: <Dashboard />,
 				children: [
-					{ path: paths.municipality.charts, element: <Municipality display="chart" /> },
-					{ path: paths.municipality.table, element: <Municipality display="table" /> },
-					{ path: paths.municipality.base, element: <Navigate to={paths.municipality.base} replace />},
+					{ path: paths.municipality.charts, element: <Municipality /> },
+					{ path: paths.municipality.table, element: <Municipality /> },
+					{ path: paths.municipality.base, element: <Navigate to={paths.municipality.table} replace />},
 				],
 			},
 			{

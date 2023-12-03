@@ -18,6 +18,7 @@ const Dashboard: React.FunctionComponent<IProps> = () => {
 		<Box sx={() => ({
 			display: 'flex',
 			minHeight: '100%',
+			width: '100%',
 			overflow: 'hidden',
 		})}
 		>

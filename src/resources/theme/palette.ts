@@ -56,8 +56,8 @@ const INFO = {
 const SUCCESS = {
 	lighter: '#E9FCD4',
 	light: '#AAF27F',
-	main: '#54D62C',
-	dark: '#229A16',
+	main: '#0BAAC1',
+	dark: '#06768D',
 	darker: '#08660D',
 	contrastText: GREY[800],
 };
@@ -125,7 +125,7 @@ const palette = {
 	// text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
 	text: { ...TEXT },
 	background: {
-		paper: '#fff', default: '#fff', neutral: GREY[200], main: '#FDFAF9',
+		paper: '#fff', default: '#313140', neutral: GREY[200], main: '#FDFAF9',
 	},
 	action: {
 		active: GREY[600],

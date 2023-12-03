@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-export type IconNames = 'marine-farming' | 'agro-industry' | 'municipality'
+export type IconNames = 'marine-farming' | 'agro-industry' | 'municipality' | 'map' | 'tables' | 'diagram'
 
 export const icons: Record<IconNames, React.ReactNode> = {
 	'marine-farming': (
@@ -25,6 +25,28 @@ export const icons: Record<IconNames, React.ReactNode> = {
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 			<path
 				d="M12 7V3H2v18h20V7H12ZM6 19H4v-2h2v2Zm0-4H4v-2h2v2Zm0-4H4V9h2v2Zm0-4H4V5h2v2Zm4 12H8v-2h2v2Zm0-4H8v-2h2v2Zm0-4H8V9h2v2Zm0-4H8V5h2v2Zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10Zm-2-8h-2v2h2v-2Zm0 4h-2v2h2v-2Z"
+				fill="currentColor"
+			/>
+		</svg>
+	),
+	map: (
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+			<path
+				d="m20.5 3-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5ZM10 5.47l4 1.4v11.66l-4-1.4V5.47Zm-5 .99 3-1.01v11.7l-3 1.16V6.46Zm14 11.08-3 1.01V6.86l3-1.16v11.84Z"
+				fill="currentColor"
+			/>
+		</svg>
+	),
+	tables: (
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+			<path fillRule="evenodd" clipRule="evenodd" d="M3.75 7.5h16.5c.45 0 .75-.3.75-.75V6c0-1.65-1.35-3-3-3H6C4.35 3 3 4.35 3 6v.75c0 .45.3.75.75.75Z" fill="currentColor" />
+			<path fillRule="evenodd" clipRule="evenodd" d="M18 21H6c-1.65 0-3-1.35-3-3V6.75c0-.45.3-.75.75-.75h16.5c.45 0 .75.3.75.75V18c0 1.65-1.35 3-3 3Zm1.5-4.5V18c0 .825-.675 1.5-1.5 1.5H9v-3h10.5Zm0-1.5H9v-3h10.5v3Zm0-4.5H9v-3h10.5v3Zm-12 0v-3h-3v3h3Zm-3 1.5v3h3v-3h-3Zm3 4.5h-3V18c0 .825.675 1.5 1.5 1.5h1.5v-3Z" fill="currentColor" />
+		</svg>
+	),
+	diagram: (
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+			<path
+				d="M8.25 17.625h-3a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75ZM6 16.125h1.5v-3H6v3Zm12.75 1.5h-3a.75.75 0 0 1-.75-.75v-12a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v12a.75.75 0 0 1-.75.75Zm-2.25-1.5H18v-10.5h-1.5v10.5Zm-3 1.5h-3a.75.75 0 0 1-.75-.75v-9a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v9a.75.75 0 0 1-.75.75Zm-2.25-1.5h1.5v-7.5h-1.5v7.5Zm7.5 3.75H5.25a.75.75 0 1 1 0-1.5h13.5a.75.75 0 1 1 0 1.5Z"
 				fill="currentColor"
 			/>
 		</svg>

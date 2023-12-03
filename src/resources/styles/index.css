@@ -133,8 +133,29 @@
     /* Safari, Android, iOS */ url('../fonts/inter-v11-latin-900.svg#Inter') format('svg'); /* Legacy iOS */
 }
 
-body {
+html {
+  height: 100%;
   margin: 0;
+  padding: 0;
+  font: inherit;
+  vertical-align: baseline;
+  background: rgb(255 255 255);
+}
+
+#root {
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  max-height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  color: rgb(0 0 0);
+  font-size: 16px;
   font-family:
     Inter,
     -apple-system,
@@ -148,6 +169,10 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
+  line-height: 1.4;
+  direction: ltr;
+  background: rgb(255 255 255);
+  font-variant-ligatures: no-common-ligatures;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
