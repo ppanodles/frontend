@@ -30,11 +30,14 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 				position: 'relative',
 			}}
 		>
-			<Box sx={{ position: 'absolute', top: 8, right: 8 }}>
+			<Box sx={{
+				position: 'absolute', top: 8, right: 8, zIndex: '1',
+			}}
+			>
 				<LayoutSelector value={layout} setValue={changeLayoutHandle} />
 			</Box>
 
-			{paths.marineFarming[LayoutType.MAP] === pathname && (
+			{paths.marineFarming[LayoutType.MAP] === pathname && process.env.REACT_APP_ACCESS_TOKEN && (
 				<DataMap />
 			)}
 			{paths.marineFarming[LayoutType.CHARTS] === pathname && <div>charts</div>}

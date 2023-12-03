@@ -106,7 +106,7 @@ const DataMap = () => {
 			}}
 			maxZoom={8}
 			minZoom={4}
-			style={{ width: '100%', height: 1100 }}
+			style={{ width: '100%', height: '100%' }}
 			mapStyle="mapbox://styles/ea-dev/clpn3u19i010801po2evb0nto"
 		>
 			{filmContaminationMarkers}
