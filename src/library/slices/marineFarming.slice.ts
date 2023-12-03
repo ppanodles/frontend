@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IFilmContamination, IGreenhouseGases, IShip } from 'library/types/marineFarming.d';
 import greenhouseGasesMapper from 'library/mappers/greenhouseGases.mapper';
 import shipsMapper from 'library/mappers/ships.mapper';
@@ -20,6 +20,11 @@ export type MarineFarmingState = {
     greenhouseGases: IGreenhouseGases[];
     filmContamination: IFilmContamination[];
     filters: Filters;
+	slicesAccessibility: {
+		ships: boolean;
+		greenhouseGases: boolean;
+		filmContamination: boolean;
+	}
 };
 
 const initialState: MarineFarmingState = {
@@ -42,17 +47,23 @@ const initialState: MarineFarmingState = {
 			{ type: FilterType.LIST_SELECTOR, field: 'name', name: 'Наименование загрязнения' },
 		],
 	},
-
+	slicesAccessibility: {
+		ships: true,
+		greenhouseGases: true,
+		filmContamination: true,
+	},
 };
 
 const marineFarmingSlice = createSlice({
 	name: 'marine-farming',
 	initialState,
 	reducers: {
-
+		toggleSliceAccessibility(state, action: PayloadAction<'ships' | 'greenhouseGases' | 'filmContamination'>) {
+			state.slicesAccessibility[action.payload] = !state.slicesAccessibility[action.payload];
+		},
 	},
 });
 
-// export const {} = marineFarmingSlice.actions;
+export const { toggleSliceAccessibility } = marineFarmingSlice.actions;
 
 export default marineFarmingSlice.reducer;

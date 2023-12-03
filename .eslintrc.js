@@ -62,5 +62,11 @@ module.exports = {
 		'react-hooks/rules-of-hooks': 'error', // Проверяем правила хуков
 		'react-hooks/exhaustive-deps': 'warn', // Проверяем зависимости эффекта
 		'react/react-in-jsx-scope': 0,
+		'no-param-reassign': ['error', {
+			props: true,
+			ignorePropertyModificationsFor: [
+				'state',
+			],
+		}],
 	},
 };
