@@ -2,7 +2,7 @@ import { Box, Container } from '@mui/material';
 import LayoutSelector from 'library/components/LayoutSelector';
 import extractLayout from 'library/helpers/extractLayout';
 import paths, { LayoutType } from 'library/paths';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 interface IProps {}
@@ -15,6 +15,8 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 		if (value !== null) { navigate(paths.marineFarming[value]); }
 	};
 
+	const layout = useMemo(() => extractLayout(pathname), [pathname]);
+
 	return (
 		<Container
 			disableGutters
@@ -26,7 +28,7 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 			}}
 		>
 			<Box sx={{ position: 'absolute', top: 8, right: 8 }}>
-				<LayoutSelector value={extractLayout(pathname)} setValue={changeLayoutHandle} />
+				<LayoutSelector value={layout} setValue={changeLayoutHandle} />
 			</Box>
 
 			{paths.marineFarming[LayoutType.MAP] === pathname && <div>map</div>}
