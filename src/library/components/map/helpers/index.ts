@@ -1,6 +1,6 @@
-import { MarineFarmingState } from 'library/slices/marineFarming.slice';
 import { FeatureCollection } from 'geojson';
-import { mapFilmContaminationDataToFeatures, mapGreenhouseGasesDataToFeatures } from '../mappers';
+import { IGreenhouseGases } from 'library/types/marineFarming';
+import { mapGreenhouseGasesDataToFeatures } from '../mappers';
 
 /* eslint-disable import/prefer-default-export */
 type H3Colors = '#880E4F' | '#C2185B' | '#DD2C00' | '#FF9100' | '#FFC400' | '#FFEB3B'
@@ -41,14 +41,14 @@ export const getFilmContaminationColorByType = (type: 'Нефть' | 'Нефте
 	return '#22C38E';
 };
 
-export const getGeoJsonFromData = ({greenhouseGases, filmContamination}: Omit<MarineFarmingState, 'filters'>): FeatureCollection => {
+export const getGeoJsonFromData = (greenhouseGases: IGreenhouseGases[]): FeatureCollection => {
 	const greenhouseGasesFeatures = greenhouseGases.map(mapGreenhouseGasesDataToFeatures);
 	// const shipsFeatures = ships.map(mapShipsDataToFeatures);
-	const filmContaminationFeatures = filmContamination.map(mapFilmContaminationDataToFeatures);
+	// const filmContaminationFeatures = filmContamination.map(mapFilmContaminationDataToFeatures);
 
 	return {
 		type: 'FeatureCollection',
-		features: [...greenhouseGasesFeatures, ...filmContaminationFeatures],
+		features: [...greenhouseGasesFeatures],
 		// features: [...shipsFeatures, ...greenhouseGasesFeatures, ...filmContaminationFeatures],
 	};
 };
