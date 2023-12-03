@@ -1,2 +1,4 @@
-// eslint-disable-next-line import/prefer-default-export
-export const DRAWER_WIDTH = 246;
+// in px
+export const DRAWER_WIDTH = 248;
+export const NAVBAR_HEIGHT_MOBILE = 56;
+export const NAVBAR_HEIGHT_DESKTOP = 56;

@@ -1,4 +1,5 @@
 import Dashboard from 'library/components/Dashboard';
+import paths from 'library/paths';
 import AgroIndustry from 'pages/AgroIndustry';
 import MarineFarming from 'pages/MarineFarming';
 import Municipality from 'pages/Municipality';
@@ -9,28 +10,38 @@ export default createBrowserRouter([
 		path: '/app',
 		children: [
 			{
-				path: '/app/marine-farming',
+				path: paths.marineFarming.base,
 				element: <Dashboard />,
 				children: [
-					{ path: '/app/marine-farming/map', element: <MarineFarming display="map" /> },
-					{ path: '/app/marine-farming/charts', element: <MarineFarming display="chart" /> },
-					{ path: '/app/marine-farming/table', element: <MarineFarming display="table" /> },
-					{ path: '/app/marine-farming/*', element: <Navigate to="/app/marine-farming/map" replace />},
+					{ path: paths.marineFarming.map, element: <MarineFarming display="map" /> },
+					{ path: paths.marineFarming.charts, element: <MarineFarming display="chart" /> },
+					{ path: paths.marineFarming.table, element: <MarineFarming display="table" /> },
+					{ path: paths.marineFarming.base, element: <Navigate to={paths.marineFarming.map} replace />},
 				],
 			},
 			{
-				path: '/app/agro-industry',
-				element: <AgroIndustry />,
+				path: paths.agroIndustry.base,
+				element: <Dashboard />,
+				children: [
+					{ path: paths.agroIndustry.charts, element: <AgroIndustry display="chart" /> },
+					{ path: paths.agroIndustry.table, element: <AgroIndustry display="table" /> },
+					{ path: paths.agroIndustry.base, element: <Navigate to={paths.agroIndustry.table} replace />},
+				],
 			},
 			{
-				path: '/app/municipality',
-				element: <Municipality />,
+				path: paths.municipality.base,
+				element: <Dashboard />,
+				children: [
+					{ path: paths.municipality.charts, element: <Municipality display="chart" /> },
+					{ path: paths.municipality.table, element: <Municipality display="table" /> },
+					{ path: paths.municipality.base, element: <Navigate to={paths.municipality.base} replace />},
+				],
 			},
 			{
-				element: <Navigate to="/app/marine-farming" replace />,
+				element: <Navigate to={paths.marineFarming.base} replace />,
 			},
 		],
 	},
-	{ path: '/', element: <Navigate to="/app/marine-farming" replace /> },
-	{ path: '*', element: <Navigate to="/app/marine-farming" replace /> },
+	{ path: '/', element: <Navigate to={paths.marineFarming.base} replace /> },
+	{ path: '*', element: <Navigate to={paths.marineFarming.base} replace /> },
 ]);

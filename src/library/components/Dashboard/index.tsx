@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box } from '@mui/material';
 import { Outlet } from 'react-router-dom';
+import { NAVBAR_HEIGHT_MOBILE, NAVBAR_HEIGHT_DESKTOP } from 'library/constants/styled';
 import Navbar from '../Navbar';
 import SidePanel from '../SidePanel';
 
@@ -27,6 +28,7 @@ const Dashboard: React.FunctionComponent<IProps> = () => {
 				flexGrow: 1,
 				display: 'flex',
 				overflow: 'auto',
+				mt: { xs: NAVBAR_HEIGHT_MOBILE / 8, md: NAVBAR_HEIGHT_DESKTOP / 8 },
 				minHeight: '100%',
 			})}
 			>
