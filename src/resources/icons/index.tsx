@@ -13,7 +13,10 @@ export type IconNames = 'marine-farming'
 	| 'visibility-on'
 	| 'visibility-off'
 	| 'items'
-	| 'filters';
+	| 'filters'
+	| 'calendar'
+	| 'clock'
+	| 'marker'
 
 export const icons: Record<IconNames, React.ReactNode> = {
 	'marine-farming': (
@@ -117,6 +120,22 @@ export const icons: Record<IconNames, React.ReactNode> = {
 				d="M7.005 6h10l-5.01 6.3L7.005 6Zm-2.75-.39c2.02 2.59 5.75 7.39 5.75 7.39v6c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-6s3.72-4.8 5.74-7.39a.998.998 0 0 0-.79-1.61H5.045c-.83 0-1.3.95-.79 1.61Z"
 				fill="currentColor"
 			/>
+		</svg>
+	),
+	calendar: (
+		<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M14.25 3h-.75V1.5H12V3H6V1.5H4.5V3h-.75c-.833 0-1.493.675-1.493 1.5L2.25 15a1.5 1.5 0 0 0 1.5 1.5h10.5c.825 0 1.5-.675 1.5-1.5V4.5c0-.825-.675-1.5-1.5-1.5Zm0 12H3.75V7.5h10.5V15Zm0-9H3.75V4.5h10.5V6ZM9 9.75h3.75v3.75H9V9.75Z" fill="#90909A" />
+		</svg>
+	),
+	clock: (
+		<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M8.992 1.5C4.853 1.5 1.5 4.86 1.5 9c0 4.14 3.353 7.5 7.492 7.5 4.148 0 7.508-3.36 7.508-7.5 0-4.14-3.36-7.5-7.508-7.5ZM9 15c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6Zm.375-9.75H8.25v4.5l3.938 2.363.562-.923-3.375-2.002V5.25Z" fill="#90909A" />
+		</svg>
+	),
+	marker: (
+		<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M9 1.5a5.246 5.246 0 0 0-5.25 5.25C3.75 10.688 9 16.5 9 16.5s5.25-5.813 5.25-9.75A5.246 5.246 0 0 0 9 1.5ZM5.25 6.75C5.25 4.68 6.93 3 9 3c2.07 0 3.75 1.68 3.75 3.75 0 2.16-2.16 5.393-3.75 7.41-1.56-2.002-3.75-5.273-3.75-7.41Z" fill="#90909A" />
+			<path d="M9 8.625a1.875 1.875 0 1 0 0-3.75 1.875 1.875 0 0 0 0 3.75Z" fill="#90909A" />
 		</svg>
 	),
 };

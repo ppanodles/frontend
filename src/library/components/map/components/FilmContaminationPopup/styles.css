@@ -1,0 +1,100 @@
+/* stylelint-disable selector-class-pattern */
+
+.mapboxgl-popup-content {
+    padding: 0;
+    background-color: #151124;
+}
+
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip {
+    border-top-color: #151124;
+}
+
+.popupContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 223px;
+    height: 138px;
+    color: #90909A;
+    background-color: #151124;
+    border-radius: 4px;
+}
+
+.popupContainer2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 179px;
+    height: 114px;
+}
+
+.popupDateLine {
+    display: flex;
+    justify-content: space-between;
+    height: 18px;
+}
+
+.popupDateBlock {
+    display: flex;
+    align-items: center;
+}
+
+.popupDateIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.popupDateValue {
+    margin-left: 8px;
+}
+
+.popupTimeBlock {
+    display: flex;
+    align-items: center;
+}
+
+.popupTimeIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.popupTimeValue {
+    margin-left: 8px;
+}
+
+.popupValue {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 48px;
+    border-top: 0.6px solid #90909A;
+    border-bottom: 0.6px solid #90909A;
+}
+
+.popupValueIcon {
+    width: 15px;
+    height: 15px;
+    margin-left: 4px;
+    border-radius: 50%;
+}
+
+.popupValueText {
+    height: 18px;
+    margin-left: 8px;
+    color: white;
+}
+
+.popupCords {
+    display: flex;
+    align-items: flex-start;
+    height: 32px;
+}
+
+.popupCordsValues {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -3px;
+    margin-left: 6px;
+}
