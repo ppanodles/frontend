@@ -8,8 +8,8 @@ import {
 } from 'react';
 import { useSelector } from 'react-redux';
 
-import { MarineFarmingState } from 'library/slices/marineFarming.slice';
 import { IFilmContamination, IShip } from 'library/types/marineFarming';
+import { RootState } from 'main/rootReducer';
 import { getFiltredShips, getGeoJsonFromData} from './helpers';
 import ShipPopup from './components/popups/ShipPopup';
 import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
@@ -32,9 +32,10 @@ const DataMap = () => {
 			(map as any).setLanguage('ru');
 		}
 	}, []);
-	const { greenhouseGases, filmContamination, ships } = useSelector(
-		(state) => (state as { marineFarming: MarineFarmingState }).marineFarming,
-	);
+
+	const {
+		greenhouseGases, filmContamination, ships, slicesAccessibility,
+	} = useSelector((state: RootState) => state.marineFarming);
 
 	const [popup, setPopup] = useState<ReactElement | null>(null);
 
@@ -113,13 +114,15 @@ const DataMap = () => {
 			style={{ width: '100%', height: '100%' }}
 			mapStyle="mapbox://styles/ea-dev/clpn3u19i010801po2evb0nto"
 		>
-			{filmContaminationMarkers}
-			{shipMarkers}
+			{slicesAccessibility.FILM_CONTAMINATION && filmContaminationMarkers}
+			{slicesAccessibility.SHIPS && shipMarkers}
 			{popup}
 			{/* {greenhouseGasesMarkers} */}
-			<Source id="my-data" type="geojson" data={geoJson}>
-				<Layer {...layerStyle} />
-			</Source>
+			{slicesAccessibility.GREENHOUSE_GASES && (
+				<Source id="my-data" type="geojson" data={geoJson}>
+					<Layer {...layerStyle} />
+				</Source>
+			)}
 		</Map>
 	);
 };
