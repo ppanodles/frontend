@@ -1,9 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable no-continue */
 /* eslint-disable no-plusplus */
-import { FeatureCollection } from 'geojson';
-import { IGreenhouseGases, IShip } from 'library/types/marineFarming.d';
-import { mapGreenhouseGasesDataToFeatures } from '../mappers';
+import { IShip } from 'library/types/marineFarming.d';
 
 /* eslint-disable import/prefer-default-export */
 type H3Colors = '#880E4F' | '#C2185B' | '#DD2C00' | '#FF9100' | '#FFC400' | '#FFEB3B'
@@ -42,18 +40,6 @@ export const getFilmContaminationColorByType = (type: 'Нефть' | 'Нефте
 	}
 
 	return '#22C38E';
-};
-
-export const getGeoJsonFromData = (greenhouseGases: IGreenhouseGases[]): FeatureCollection => {
-	const greenhouseGasesFeatures = greenhouseGases.map(mapGreenhouseGasesDataToFeatures);
-	// const shipsFeatures = ships.map(mapShipsDataToFeatures);
-	// const filmContaminationFeatures = filmContamination.map(mapFilmContaminationDataToFeatures);
-
-	return {
-		type: 'FeatureCollection',
-		features: [...greenhouseGasesFeatures],
-		// features: [...shipsFeatures, ...greenhouseGasesFeatures, ...filmContaminationFeatures],
-	};
 };
 
 export const getFiltredShips = (data: any[]): IShip[] => {

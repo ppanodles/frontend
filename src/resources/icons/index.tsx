@@ -20,6 +20,7 @@ export type IconNames = 'marine-farming'
 	| 'ship-marker'
 	| 'film-contamination'
 	| 'anchor'
+	| 'heap'
 
 export const icons: Record<IconNames, React.ReactNode> = {
 	'marine-farming': (
@@ -154,6 +155,11 @@ export const icons: Record<IconNames, React.ReactNode> = {
 	anchor: (
 		<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="m12.75 11.25 1.162 1.162c-.72 1.268-2.497 2.28-4.162 2.528V8.25H12v-1.5H9.75v-.885c.87-.315 1.5-1.14 1.5-2.115A2.257 2.257 0 0 0 9 1.5a2.257 2.257 0 0 0-2.25 2.25c0 .975.63 1.8 1.5 2.115v.885H6v1.5h2.25v6.69c-1.665-.247-3.442-1.26-4.162-2.527L5.25 11.25 2.25 9v2.25c0 2.91 3.69 5.25 6.75 5.25s6.75-2.34 6.75-5.25V9l-3 2.25ZM9 3c.412 0 .75.337.75.75 0 .412-.338.75-.75.75a.752.752 0 0 1-.75-.75c0-.413.338-.75.75-.75Z" fill="#C7C5D0" />
+		</svg>
+	),
+	heap: (
+		<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="m7 0 7 3.571v7.858L7 15l-7-3.571V3.57L7 0Z" fill="currentColor" />
 		</svg>
 	),
 };

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable max-len */
-import Map, { Layer, Marker, Source} from 'react-map-gl';
+import Map, { Layer, Marker, Source } from 'react-map-gl';
 import type { FillLayer, MapRef } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import {
@@ -10,10 +10,13 @@ import { useSelector } from 'react-redux';
 
 import { IFilmContamination, IShip } from 'library/types/marineFarming';
 import { RootState } from 'main/rootReducer';
-import { getFiltredShips, getGeoJsonFromData} from './helpers';
+import * as turf from '@turf/turf';
+import { getFiltredShips } from './helpers';
 import ShipPopup from './components/popups/ShipPopup';
 import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
 import Icon from '../Icon/index';
+import { mapGreenhouseGasesDataToFeatures } from './mappers';
+import GreenhouseGasePopup from './components/popups/GreenhouseGasePopup';
 
 const layerStyle: FillLayer = {
 	id: 'point',
@@ -35,39 +38,28 @@ const DataMap = () => {
 
 	const {
 		greenhouseGases, filmContamination, ships, slicesAccessibility,
-	} = useSelector((state: RootState) => state.marineFarming);
+	} = useSelector(
+		(state: RootState) => state.marineFarming,
+	);
 
 	const [popup, setPopup] = useState<ReactElement | null>(null);
 
-	// const mapGreenhouseGasesToMarkers = (greenhouseGasesInfo: IGreenhouseGases) => {
-	// 	const color = getH3ColorByEmission(greenhouseGasesInfo.emissionLevel);
-
-	// 	return (
-	// 		<Marker
-	// 			key={greenhouseGasesInfo.time}
-	// 			longitude={cellToBoundary(greenhouseGasesInfo.device, true)[0][0]}
-	// 			latitude={cellToBoundary(greenhouseGasesInfo.device, true)[0][1]}
-	// 			anchor="bottom"
-	// 		>
-	// 			<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-	// 				<g opacity="0.9">
-	// 					<path d="M12 4L19 7.57143V15.4286L12 19L5 15.4286V7.57143L12 4Z" fill={color} />
-	// 				</g>
-	// 			</svg>
-	// 		</Marker>
-	// 	);
-	// };
-
-	const mapShipsDataToMarkers = (shipInfo: IShip) => (
+	const mapShipsDataToMarkers = useCallback((shipInfo: IShip) => (
 		<Marker
-			onClick={() => setPopup(<ShipPopup
-				coordinates={[shipInfo.geometry.coordinates[0], shipInfo.geometry.coordinates[1]]}
-				destination={shipInfo.destination}
-				imo={shipInfo.imo ? shipInfo.imo.toString().substring(0, 7) : shipInfo.mmsi.toString().substring(0, 7)}
-				mmsi={shipInfo.mmsi.toString().substring(0, 7)}
-				name={shipInfo.registryName}
-				onClose={() => setPopup(null)}
-			/>)}
+			onClick={() => setPopup(
+				<ShipPopup
+					coordinates={[shipInfo.geometry.coordinates[0], shipInfo.geometry.coordinates[1]]}
+					destination={shipInfo.destination}
+					imo={
+						shipInfo.imo
+							? shipInfo.imo.toString().substring(0, 7)
+							: shipInfo.mmsi.toString().substring(0, 7)
+					}
+					mmsi={shipInfo.mmsi.toString().substring(0, 7)}
+					name={shipInfo.registryName}
+					onClose={() => setPopup(null)}
+				/>,
+			)}
 			key={shipInfo.id}
 			longitude={shipInfo.geometry.coordinates[0]}
 			latitude={shipInfo.geometry.coordinates[1]}
@@ -76,13 +68,16 @@ const DataMap = () => {
 		>
 			<Icon iconName="ship-marker" />
 		</Marker>
-	);
+	), []);
 
-	const mapFilmContaminationToMarkers = (filmContaminationInfo: IFilmContamination) => (
+	const mapFilmContaminationToMarkers = useCallback((filmContaminationInfo: IFilmContamination) => (
 		<Marker
 			onClick={() => setPopup(
 				<FilmContaminationPopup
-					coordinates={[filmContaminationInfo.geometry.coordinates[0][0], filmContaminationInfo.geometry.coordinates[0][1]]}
+					coordinates={[
+						filmContaminationInfo.geometry.coordinates[0][0],
+						filmContaminationInfo.geometry.coordinates[0][1],
+					]}
 					type={filmContaminationInfo.type}
 					onClose={() => setPopup(null)}
 				/>,
@@ -93,14 +88,15 @@ const DataMap = () => {
 		>
 			<Icon iconName="film-contamination" />
 		</Marker>
-	);
+	), []);
 
-	const geoJson = getGeoJsonFromData(greenhouseGases);
+	const greenhouseGasesFeatures = useMemo(() => greenhouseGases.map(mapGreenhouseGasesDataToFeatures), [greenhouseGases]);
 
-	const shipMarkers = useMemo(() => getFiltredShips(ships).map(mapShipsDataToMarkers), [ships]);
+	const shipMarkers = useMemo(() => getFiltredShips(ships).map(mapShipsDataToMarkers), [mapShipsDataToMarkers, ships]);
 
-	const filmContaminationMarkers = filmContamination.map(mapFilmContaminationToMarkers);
-	// const greenhouseGasesMarkers = greenhouseGases.map(mapGreenhouseGasesToMarkers);
+	const filmContaminationMarkers = useMemo(() => filmContamination.map(mapFilmContaminationToMarkers), [filmContamination, mapFilmContaminationToMarkers]);
+
+	const getClickedHeap = useCallback((lng: number, lat: number) => greenhouseGasesFeatures.find((greenhouseGase) => turf.booleanPointInPolygon(turf.point([lng, lat]), turf.polygon(greenhouseGase.geometry.coordinates))), [greenhouseGasesFeatures]);
 
 	return (
 		<Map
@@ -115,14 +111,34 @@ const DataMap = () => {
 			minZoom={4}
 			doubleClickZoom={false}
 			style={{ width: '100%', height: '100%' }}
+			onClick={(e) => {
+				const clickedGreenhouseGase = getClickedHeap(e.lngLat.lng, e.lngLat.lat);
+
+				if (clickedGreenhouseGase) {
+					setPopup(
+						<GreenhouseGasePopup
+							coordinates={e.lngLat.toArray()}
+							emission={Math.round(clickedGreenhouseGase.properties?.emission)}
+							onClose={() => setPopup(null)}
+						/>,
+					);
+				}
+			}}
 			mapStyle="mapbox://styles/ea-dev/clpn3u19i010801po2evb0nto"
 		>
+			{popup}
+
 			{slicesAccessibility.FILM_CONTAMINATION && filmContaminationMarkers}
 			{slicesAccessibility.SHIPS && shipMarkers}
-			{popup}
-			{/* {greenhouseGasesMarkers} */}
 			{slicesAccessibility.GREENHOUSE_GASES && (
-				<Source id="my-data" type="geojson" data={geoJson}>
+				<Source
+					id="my-data"
+					type="geojson"
+					data={{
+						type: 'FeatureCollection',
+						features: [...greenhouseGasesFeatures],
+					} as any}
+				>
 					<Layer {...layerStyle} />
 				</Source>
 			)}

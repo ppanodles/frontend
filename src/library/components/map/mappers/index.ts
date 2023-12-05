@@ -7,12 +7,13 @@ export const mapGreenhouseGasesDataToFeatures = (data: {
     time: string;
     emissionLevel: number;
     device: string;
-}, index: number): Feature => ({
+}, index: number) => ({
 	type: 'Feature',
 	properties: {
 		color: getH3ColorByEmission(data.emissionLevel),
 		opacity: 1,
 		id: index,
+		emission: data.emissionLevel,
 	},
 	geometry: {
 		type: 'Polygon',

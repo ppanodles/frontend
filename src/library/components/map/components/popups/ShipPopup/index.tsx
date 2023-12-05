@@ -54,7 +54,7 @@ const ShipPopup = ({
 							<div className="popupIcon">
 								<Icon iconName="anchor" />
 							</div>
-							<div className="popupValue">{destination}</div>
+							<div>{destination}</div>
 						</div>
 						<div className="popupBlock">
 							<div className="popupIcon">
@@ -66,13 +66,13 @@ const ShipPopup = ({
 							<div className="popupIcon">
 								<Icon iconName="clock" />
 							</div>
-							<div className="popupValue">{dateTime}</div>
+							<div>{dateTime}</div>
 						</div>
 					</div>
 					<div className="shipPopupValue">
 						<div className="shipPopupName">
 							<Icon iconName="marine-farming" style={{ color: '#00E5FF' }} />
-							<span className="popupValue">{name || 'Без наименования'}</span>
+							<span className="shipName">{name || 'Без наименования'}</span>
 						</div>
 						<div className="shipPopupInfo">
 							<div className="shipIMO">

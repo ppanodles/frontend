@@ -9,13 +9,16 @@ interface IProps {
   content: React.ReactNode;
   cords: number[];
   onClose(): void;
+  styles?: any;
 }
 
 function generateRandomDate(from: Date, to: Date) {
 	return new Date(from.getTime() + Math.random() * (to.getTime() - from.getTime()));
 }
 
-const BasePopup = ({content, onClose, cords }: IProps) => {
+const BasePopup = ({
+	content, onClose, cords, styles,
+}: IProps) => {
 	const date = generateRandomDate(new Date(2022, 1, 1), new Date());
 	const dateText = `${date.getDay() === 0 ? '01' : date.getDay() < 10 ? `0${date.getDay()}` : date.getDay()}.${date.getMonth() < 10 ? `0${date.getMonth() === 0 ? '1' : date.getMonth()}` : date.getMonth()}.${date.getFullYear()}`;
 
@@ -25,7 +28,7 @@ const BasePopup = ({content, onClose, cords }: IProps) => {
 		<Popup
 			closeOnMove
 			closeButton={false}
-			style={{
+			style={styles ?? {
 				width: '223px', height: '138px', marginLeft: '10px', marginTop: '10px',
 			}}
 			closeOnClick={false}

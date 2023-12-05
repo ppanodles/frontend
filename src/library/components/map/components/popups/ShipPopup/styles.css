@@ -49,6 +49,10 @@
   margin-left: 6px;
 }
 
+.shipName {
+  color: white;
+}
+
 .shipPopupValue {
   display: flex;
   align-items: center;
