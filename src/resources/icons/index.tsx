@@ -17,6 +17,8 @@ export type IconNames = 'marine-farming'
 	| 'calendar'
 	| 'clock'
 	| 'marker'
+	| 'ship-marker'
+	| 'film-contamination'
 
 export const icons: Record<IconNames, React.ReactNode> = {
 	'marine-farming': (
@@ -136,6 +138,16 @@ export const icons: Record<IconNames, React.ReactNode> = {
 		<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M9 1.5a5.246 5.246 0 0 0-5.25 5.25C3.75 10.688 9 16.5 9 16.5s5.25-5.813 5.25-9.75A5.246 5.246 0 0 0 9 1.5ZM5.25 6.75C5.25 4.68 6.93 3 9 3c2.07 0 3.75 1.68 3.75 3.75 0 2.16-2.16 5.393-3.75 7.41-1.56-2.002-3.75-5.273-3.75-7.41Z" fill="#90909A" />
 			<path d="M9 8.625a1.875 1.875 0 1 0 0-3.75 1.875 1.875 0 0 0 0 3.75Z" fill="#90909A" />
+		</svg>
+	),
+	'ship-marker': (
+		<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M19 5 5 10.857v.762l5.32 2.061L12.373 19h.763L19 5Z" fill="#00E5FF" />
+		</svg>
+	),
+	'film-contamination': (
+		<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M2.975 11.9h-.097a2.878 2.878 0 1 0 0 5.757h6.045a2.975 2.975 0 0 1 2.975 2.975v.097a2.878 2.878 0 1 0 5.757 0v-6.142a2.975 2.975 0 0 1 2.975-2.975h.143a2.83 2.83 0 1 0 0-5.66h-.143a2.975 2.975 0 0 1-2.975-2.975V2.88a2.875 2.875 0 1 0-5.755-.002v.097c0 1.643-1.332 2.975-2.975 2.975S5.95 7.282 5.95 8.925 4.618 11.9 2.975 11.9Z" fill="#FF9315" opacity={0.2} />
 		</svg>
 	),
 };

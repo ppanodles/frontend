@@ -1,5 +1,8 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable no-continue */
+/* eslint-disable no-plusplus */
 import { FeatureCollection } from 'geojson';
-import { IGreenhouseGases } from 'library/types/marineFarming.d';
+import { IGreenhouseGases, IShip } from 'library/types/marineFarming.d';
 import { mapGreenhouseGasesDataToFeatures } from '../mappers';
 
 /* eslint-disable import/prefer-default-export */
@@ -51,4 +54,18 @@ export const getGeoJsonFromData = (greenhouseGases: IGreenhouseGases[]): Feature
 		features: [...greenhouseGasesFeatures],
 		// features: [...shipsFeatures, ...greenhouseGasesFeatures, ...filmContaminationFeatures],
 	};
+};
+
+export const getFiltredShips = (data: any[]): IShip[] => {
+	const names: any = [];
+	const res = [];
+
+	for (let i = 0; i < data.length - 1; i++) {
+	  if (!names.includes(data[i].vesselName) && data[i].vesselName !== '') {
+			names.push(data[i].vesselName);
+			res.push({...data[i], rot: Math.floor(Math.random() * 360)});
+	  }
+	}
+
+	return res;
 };
