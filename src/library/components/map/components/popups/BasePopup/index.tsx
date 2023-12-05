@@ -37,33 +37,31 @@ const BasePopup = ({content, onClose, cords }: IProps) => {
 			<div className="popupContainer">
 				<div className="popupContainer2">
 					<div className="popupDateLine">
-						<div className="popupDateBlock">
-							<div className="popupDateIcon">
+						<div className="popupBlock">
+							<div className="popupIcon">
 								<Icon iconName="calendar" />
 							</div>
-							<div className="popupDateValue">
+							<div className="popupValue">
 								<span>
 									{dateText}
 								</span>
 							</div>
 						</div>
-						<div className="popupTimeBlock">
-							<div className="popupTimeIcon">
+						<div className="popupBlock">
+							<div className="popupIcon">
 								<Icon iconName="clock" />
 							</div>
-							<div className="popupTimeValue">
+							<div className="popupValue">
 								{dateTime}
 							</div>
 						</div>
 					</div>
-					<div className="popupValue">
-						{content}
-					</div>
+					{content}
 					<div className="popupCords">
 						<Icon iconName="marker" />
 						<div className="popupCordsValues">
 							<span>{cords[0]}</span>
-							<span>{	cords[0]}</span>
+							<span>{cords[1]}</span>
 						</div>
 					</div>
 				</div>

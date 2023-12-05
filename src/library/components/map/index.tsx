@@ -62,7 +62,10 @@ const DataMap = () => {
 		<Marker
 			onClick={() => setPopup(<ShipPopup
 				coordinates={[shipInfo.geometry.coordinates[0], shipInfo.geometry.coordinates[1]]}
-				name={(shipInfo as any).registryName}
+				destination={shipInfo.destination}
+				imo={shipInfo.imo ? shipInfo.imo.toString().substring(0, 7) : shipInfo.mmsi.toString().substring(0, 7)}
+				mmsi={shipInfo.mmsi.toString().substring(0, 7)}
+				name={shipInfo.registryName}
 				onClose={() => setPopup(null)}
 			/>)}
 			key={shipInfo.id}

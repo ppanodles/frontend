@@ -1,12 +1,84 @@
 /* stylelint-disable selector-class-pattern */
+
+.mapboxgl-popup-content {
+  padding: 0;
+  background-color: #151124;
+}
+
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip {
+  border-top-color: #151124;
+}
+
+.shipPopupContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 352px;
+  height: 120px;
+  color: #90909a;
+  background-color: #151124;
+  border-radius: 4px;
+}
+
+.shipPopupContainer2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 308px;
+  height: 96px;
+}
+
+.shipPopupDateLine {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  width: 100%;
+  height: 18px;
+}
+
+.shipPopupCords {
+  display: flex;
+  align-items: flex-start;
+  height: 18px;
+}
+
+.shipPopupCordsValues {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  margin-left: 6px;
+}
+
 .shipPopupValue {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
   height: 48px;
   border-top: 0.6px solid #90909a;
   border-bottom: 0.6px solid #90909a;
+}
+
+.shipPopupName {
+  display: flex;
+  align-items: center;
+}
+
+.shipPopupInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 98px;
+  padding-left: 10px;
+  border-left: 0.6px solid #90909a;
+}
+
+.shipIMO {
+  display: flex;
+  justify-content: space-between;
+  width: 88px;
 }
 
 .shipPopupValueIcon {

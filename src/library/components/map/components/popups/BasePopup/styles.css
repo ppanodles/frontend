@@ -34,31 +34,17 @@
   height: 18px;
 }
 
-.popupDateBlock {
+.popupBlock {
   display: flex;
   align-items: center;
 }
 
-.popupDateIcon {
+.popupIcon {
   width: 24px;
   height: 24px;
 }
 
-.popupDateValue {
-  margin-left: 8px;
-}
-
-.popupTimeBlock {
-  display: flex;
-  align-items: center;
-}
-
-.popupTimeIcon {
-  width: 24px;
-  height: 24px;
-}
-
-.popupTimeValue {
+.popupValue {
   margin-left: 8px;
 }
 
