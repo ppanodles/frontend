@@ -53,9 +53,11 @@ const MarineFarmingPanel: React.FunctionComponent<IProps> = () => {
 				<Typography>Фильтр данных</Typography>
 			</Stack>
 
-			{checkFilterAvailable(MarineFarmingDataType.SHIPS) && <ShipsFIlter />}
-			{checkFilterAvailable(MarineFarmingDataType.FILM_CONTAMINATION) && <FilmContaminationFilter />}
-			{checkFilterAvailable(MarineFarmingDataType.GREENHOUSE_GASES) && <GreenhouseGasesFilter />}
+			<Stack spacing={3}>
+				{checkFilterAvailable(MarineFarmingDataType.SHIPS) && <ShipsFIlter />}
+				{checkFilterAvailable(MarineFarmingDataType.FILM_CONTAMINATION) && <FilmContaminationFilter />}
+				{checkFilterAvailable(MarineFarmingDataType.GREENHOUSE_GASES) && <GreenhouseGasesFilter />}
+			</Stack>
 
 		</Stack>
 	);

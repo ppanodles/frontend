@@ -4,16 +4,16 @@ export interface IShip {
     id: number;
     mmsi: number;
     imo?: number;
-    vessel_name: string; // наименование судна
+    vesselName: string; // наименование судна
     callsign: string;
-    vessel_type: string;
-    vessel_type_code?: number;
-    vessel_type_cargo: string;
-    vessel_class: string;
+    vesselType: string;
+    vesselTypeCode?: number;
+    vesselTypeCargo: string;
+    vesselClass: string;
     length?: number;
     width?: number;
-    flag_country: string; // страна прописки
-    flag_code: any;
+    flagCountry: string; // страна прописки
+    flagCode: any;
     destination: string; // порт назначения
     eta?: string; // ожидаемое время прибытия
     draught?: number;
@@ -23,18 +23,18 @@ export interface IShip {
     cog?: number;
     rot?: number;
     heading?: number;
-    nav_status: string;
-    nav_status_code?: number;
+    navStatus: string;
+    navStatus_code?: number;
     source: string;
-    ts_pos_utc: string;
-    ts_static_utc: string;
-    ts_eta?: string;
-    ts_insert_utc: string;
-    registry_name?: string;
-    registry_name_en?: string;
-    vessel_type_main: string;
-    vessel_type_sub: string;
-    message_type: number;
+    tsPosUtc: string;
+    tsStaticUtc: string;
+    tsEta?: string;
+    tsInsertUtc: string;
+    registryName?: string;
+    registryNameEn?: string;
+    vesselTypeMain: string;
+    vesselTypeSub: string;
+    messageType: number;
 }
 
 export interface IGeometry {
