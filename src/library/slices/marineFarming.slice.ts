@@ -16,6 +16,8 @@ import {uniqBy} from 'lodash';
 
 const shipsData: IShip[] = shipsMapper((shipData as any).data);
 
+console.log(shipsData);
+
 export type Filters = {
 	[MarineFarmingDataType.SHIPS]: IFilterDataType<IShip>,
 	[MarineFarmingDataType.GREENHOUSE_GASES]: IFilterDataType<IGreenhouseGases>,

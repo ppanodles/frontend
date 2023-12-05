@@ -7,9 +7,9 @@ import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
 import { values, isEmpty } from 'lodash';
 import { IShip } from 'library/types/marineFarming.d';
 import { CommonFilterDataType } from 'library/types/system.d';
-import ListSelectorFilter from 'library/components/Filter/ListSelectorFilter';
 import { applyFilter } from 'library/slices/marineFarming.slice';
 import { createSelector } from 'reselect';
+import Filter from 'library/components/Filter';
 
 interface IProps {}
 
@@ -39,7 +39,8 @@ const ShipsFIlter: React.FunctionComponent<IProps> = () => {
 			{filters.map((filter) => {
 				if (filter.type === FilterType.LIST_SELECTOR) {
 					return (
-						<ListSelectorFilter
+						<Filter
+							type={FilterType.LIST_SELECTOR}
 							key={`${filter.name}_${filter.field}`}
 							name={filter.name}
 							values={filter.items}

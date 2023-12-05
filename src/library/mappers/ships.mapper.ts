@@ -1,5 +1,5 @@
 import { IShip } from 'library/types/marineFarming.d';
-
+/*
 export default (data: any): IShip[] => data?.map((datum: any) => ({
 	type: datum.type ?? '',
 	id: datum?.properties?.id ?? 0,
@@ -36,6 +36,49 @@ export default (data: any): IShip[] => data?.map((datum: any) => ({
 	vesselTypeMain: datum?.properties?.vessel_type_main ?? '',
 	vesselTypeSub: datum?.properties?.vessel_type_sub ?? '',
 	messageType: datum?.properties?.message_type ?? 0,
+	geometry: {
+		type: datum?.geometry?.type ?? '',
+		coordinates: datum?.geometry?.coordinates ?? [0, 0],
+	},
+})) ?? [];
+ */
+
+export default (data: any): IShip[] => data?.map((datum: any) => ({
+	type: datum.type ?? '',
+	id: datum?.id ?? 0,
+	mmsi: datum?.mmsi ?? 0,
+	imo: datum?.imo,
+	vesselName: datum?.vessel_name ?? '',
+	callsign: datum?.callsign ?? '',
+	vesselType: datum?.vessel_type ?? '',
+	vesselTypeCode: datum?.vessel_type_code,
+	vesselTypeCargo: datum?.vessel_type_cargo ?? '',
+	vessel_class: datum?.vessel_class ?? '',
+	length: datum?.length,
+	width: datum?.width,
+	flagCountry: datum?.flag_country ?? '',
+	flagCode: datum?.flag_code ?? 'non',
+	destination: datum?.destination ?? '',
+	eta: datum?.eta,
+	draught: datum?.draught,
+	longitude: datum?.longitude ?? 0,
+	latitude: datum?.latitude ?? 0,
+	sog: datum?.sog ?? 0,
+	cog: datum?.cog,
+	rot: datum?.rot,
+	heading: datum?.heading,
+	navStatus: datum?.nav_status ?? '',
+	navStatusCode: datum?.nav_status_code,
+	source: datum?.source ?? '',
+	tsPosUtc: datum?.ts_pos_utc ?? '',
+	tsStaticUtc: datum?.ts_static_utc ?? '',
+	tsEta: datum?.ts_eta,
+	tsInsertUtc: datum?.ts_insert_utc ?? '',
+	registryName: datum?.registry_name,
+	registryNameEn: datum?.registry_name_en,
+	vesselTypeMain: datum?.vessel_type_main ?? '',
+	vesselTypeSub: datum?.vessel_type_sub ?? '',
+	messageType: datum?.message_type ?? 0,
 	geometry: {
 		type: datum?.geometry?.type ?? '',
 		coordinates: datum?.geometry?.coordinates ?? [0, 0],

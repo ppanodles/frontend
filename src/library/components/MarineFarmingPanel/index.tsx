@@ -36,7 +36,7 @@ const MarineFarmingPanel: React.FunctionComponent<IProps> = () => {
 	const isSliceFiltersVisible = pathname === paths.marineFarming[LayoutType.MAP];
 
 	return (
-		<Stack mt={6} direction="column" alignItems="center" sx={{ px: 1.5 }}>
+		<Stack direction="column" alignItems="center" sx={{ px: 1.5 }}>
 			{ isSliceFiltersVisible && <SlicesBlock /> }
 			<Stack
 				direction="row"

@@ -1,6 +1,8 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
-import { Box, Drawer } from '@mui/material';
+import {
+	Box, Drawer, Stack, Typography, useTheme,
+} from '@mui/material';
 import { DRAWER_WIDTH } from 'library/constants/styled';
 import paths from 'library/paths';
 import { useLocation } from 'react-router-dom';
@@ -30,6 +32,7 @@ const getPanel = (path: string) => {
 
 const SidePanel: React.FunctionComponent<IProps> = ({ open, onClose }) => {
 	const { pathname } = useLocation();
+	const theme = useTheme();
 
 	return (
 		<Box
@@ -43,16 +46,40 @@ const SidePanel: React.FunctionComponent<IProps> = ({ open, onClose }) => {
 				ModalProps={{
 					keepMounted: true, // Better open performance on mobile.
 				}}
-				sx={(theme) => ({
+				sx={{
 					'& .MuiDrawer-paper': {
 						boxSizing: 'border-box',
 						width: DRAWER_WIDTH,
 						backgroundColor: theme.palette.primary.main,
 						border: 'none',
 					},
-				})}
+				}}
 			>
-				{getPanel(pathname)}
+				<Stack sx={{ overflow: 'hidden' }}>
+					<Box sx={{
+						minHeight: '56px', height: '56px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+					}}
+					>
+						<Typography variant="h5">LOGO WILL BE HERE</Typography>
+					</Box>
+					<Box sx={{
+						py: 2,
+						overflowY: 'auto',
+
+						'&::-webkit-scrollbar': {
+							marginTop: '80px',
+							width: '0.3rem',
+						},
+
+						'&::-webkit-scrollbar-thumb': {
+							borderRadius: '8px',
+							backgroundColor: theme.palette.background.default,
+						},
+					}}
+					>
+						{getPanel(pathname)}
+					</Box>
+				</Stack>
 			</Drawer>
 		</Box>
 	);
