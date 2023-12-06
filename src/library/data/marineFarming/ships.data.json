@@ -15,7 +15,10 @@
             "width": 9,
             "flag_country": "Россия",
             "flag_code": "non",
-            "destination": "Мурманск",
+            "destination": {
+                "port": "Мурманск",
+                "coordinates": [33.083792, 68.974705]
+            },
             "eta": "Sun Oct 15 2023 12:00:00",
             "draught": 4.400000095367432,
             "longitude": 33.031631,
@@ -59,7 +62,10 @@
             "width": 10,
             "flag_country": "Россия",
             "flag_code": "non",
-            "destination": "Мурманск",
+            "destination":  {
+                "port": "Мурманск",
+                "coordinates": [33.083792, 68.974705]
+            },
             "eta": "Tue Sep 10 2024 19:00:00",
             "draught": 0,
             "longitude": 33.09000015258789,
@@ -103,7 +109,10 @@
             "width": 12,
             "flag_country": "Россия",
             "flag_code": "non",
-            "destination": "RU KGD",
+            "destination":  {
+                "port": "Калининград",
+                "coordinates": [20.261238, 54.846789]
+            },
             "eta": "Tue Dec 19 2023 17:00:00",
             "draught": 3.799999952316284,
             "longitude": 20.451831,
@@ -147,7 +156,10 @@
             "width": 13,
             "flag_country": "Россия",
             "flag_code": "non",
-            "destination": "RU SAB>RU KGD",
+            "destination":  {
+                "port": "Калининград",
+                "coordinates": [20.261238, 54.846789]
+            },
             "eta": "Sun Nov 26 2023 10:00:00",
             "draught": 4,
             "longitude": 20.145467,
@@ -191,7 +203,10 @@
             "width": 10,
             "flag_country": "Беларусь",
             "flag_code": "non",
-            "destination": "MURMANSK",
+            "destination":  {
+                "port": "Мурманск",
+                "coordinates": [33.083792, 68.974705]
+            },
             "eta": "Tue Sep 10 2024 19:00:00",
             "draught": 2.5,
             "longitude": 33.09,
@@ -235,7 +250,10 @@
             "width": 10,
             "flag_country": "Россия",
             "flag_code": "non",
-            "destination": "Архангельск",
+            "destination": {
+                "port": "Архангельск",
+                "coordinates": [40.522246, 64.539871]
+            },
             "eta": "Thu Nov 07 2024 08:00:00",
             "draught": 25,
             "longitude": 40.49985885620117,
@@ -279,7 +297,10 @@
             "width": 10,
             "flag_country": "Россия",
             "flag_code": "non",
-            "destination": "Архангельск",
+            "destination": {
+                "port": "Архангельск",
+                "coordinates": [40.522246, 64.539871]
+            },
             "eta": "Thu Jun 27 2024 06:00:00",
             "draught": 4,
             "longitude": 40.538333,
@@ -323,7 +344,10 @@
             "width": 13,
             "flag_country": "Россия",
             "flag_code": "non",
-            "destination": "Владивосток",
+            "destination": {
+                "port": "Владивосток",
+                "coordinates": [ 131.882907,43.117321]
+            },
             "eta": "2024-02-27 18:00:00",
             "draught": 4.199999809265137,
             "longitude": 40.5,
@@ -349,6 +373,52 @@
                 "coordinates": [
                     40.5,
                     64.5833359
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 13398,
+            "mmsi": 273456920,
+            "imo": 8909329,
+            "vessel_name": "АЛЕКСЕЙ МАРЫШЕВ",
+            "callsign": "UCRD",
+            "vessel_type": "Пасскажирское",
+            "vessel_type_code": 0,
+            "vessel_type_cargo": "",
+            "vessel_class": "",
+            "length": 65,
+            "width": 13,
+            "flag_country": "Россия",
+            "flag_code": "non",
+            "destination":{
+                "port": "Владивосток",
+                "coordinates": [40.522246, 64.539871]
+            },
+            "eta": "2024-02-27 18:00:00",
+            "draught": 4.199999809265137,
+            "longitude": 40.5,
+            "latitude": 64.58333587646484,
+            "sog": 0,
+            "cog": null,
+            "rot": null,
+            "heading": null,
+            "nav_status": "Under way using engine",
+            "nav_status_code": 0,
+            "source": "S-AIS",
+            "ts_pos_utc": "2023-06-27 18:09:32",
+            "ts_static_utc": "2023-06-27 18:09:32",
+            "ts_eta": null,
+            "ts_insert_utc": "2023-06-27 18:09:32",
+            "registry_name": "АЛЕКСЕЙ МАРЫШЕВ",
+            "registry_name_en": "ALEKSEY MARYSHEV",
+            "vessel_type_main": "",
+            "vessel_type_sub": "",
+            "message_type": 1,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    46.032603, 69.880042
                 ]
             }
         }

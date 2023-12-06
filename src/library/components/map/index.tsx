@@ -11,14 +11,13 @@ import { useSelector } from 'react-redux';
 import { IFilmContamination, IShip } from 'library/types/marineFarming';
 import { RootState } from 'main/rootReducer';
 import * as turf from '@turf/turf';
-import { getFiltredShips } from './helpers';
 import ShipPopup from './components/popups/ShipPopup';
 import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
 import Icon from '../Icon/index';
 import { mapGreenhouseGasesDataToFeatures } from './mappers';
 import GreenhouseGasePopup from './components/popups/GreenhouseGasePopup';
-import { IPort, ports } from './extraData';
 import PortPopup from './components/popups/PortPopup';
+import { getFilmContaminationColorByType } from './helpers';
 
 const layerStyle: FillLayer = {
 	id: 'point',
@@ -31,6 +30,7 @@ const layerStyle: FillLayer = {
 };
 
 const DataMap = () => {
+	const [popup, setPopup] = useState<ReactElement | null>(null);
 	const mapRefCallback = useCallback((ref: MapRef | null) => {
 		if (ref !== null) {
 			const map = ref;
@@ -44,14 +44,14 @@ const DataMap = () => {
 		(state: RootState) => state.marineFarming,
 	);
 
-	const [popup, setPopup] = useState<ReactElement | null>(null);
+	const ports = ships.map((ship) => ship.destination);
 
 	const mapShipsDataToMarkers = useCallback((shipInfo: IShip) => (
 		<Marker
 			onClick={() => setPopup(
 				<ShipPopup
 					coordinates={[shipInfo.geometry.coordinates[0], shipInfo.geometry.coordinates[1]]}
-					destination={shipInfo.destination}
+					destination={shipInfo.destination.port}
 					imo={
 						shipInfo.imo
 							? shipInfo.imo.toString().substring(0, 7)
@@ -88,21 +88,21 @@ const DataMap = () => {
 			latitude={filmContaminationInfo.geometry.coordinates[0][1]}
 			anchor="top-left"
 		>
-			<Icon iconName="film-contamination" />
+			<Icon iconName="film-contamination" style={{color: getFilmContaminationColorByType(filmContaminationInfo.type)}} />
 		</Marker>
 	), []);
 
-	const portsToMarkers = useCallback((port: IPort) => (
+	const portsToMarkers = useCallback(({port, coordinates}: { port: string; coordinates: number[]; }) => (
 		<Marker
 			onClick={() => setPopup(
 				<PortPopup
-					coordinates={port.cords}
-					name={port.name}
+					coordinates={coordinates}
+					name={port}
 					onClose={() => setPopup(null)}
 				/>,
 			)}
-			longitude={port.cords[0]}
-			latitude={port.cords[1]}
+			longitude={coordinates[0]}
+			latitude={coordinates[1]}
 			anchor="top-left"
 		>
 			<div style={{
@@ -116,7 +116,7 @@ const DataMap = () => {
 
 	const greenhouseGasesFeatures = useMemo(() => greenhouseGases.map(mapGreenhouseGasesDataToFeatures), [greenhouseGases]);
 
-	const shipMarkers = useMemo(() => getFiltredShips(ships).map(mapShipsDataToMarkers), [mapShipsDataToMarkers, ships]);
+	const shipMarkers = useMemo(() => ships.map(mapShipsDataToMarkers), [mapShipsDataToMarkers, ships]);
 
 	const portMarkers = useMemo(() => ports.map(portsToMarkers), [portsToMarkers]);
 

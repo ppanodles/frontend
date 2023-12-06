@@ -105,7 +105,7 @@ const initialState: MarineFarmingState = {
 					name: 'Порт назначения',
 					items: uniqBy(shipsData
 						.filter((v) => v.destination !== undefined), 'destination')
-						.map((v) => ({ id: v.destination, name: v.destination })),
+						.map((v) => ({ id: v.destination.port, name: v.destination.port })),
 					selected: {},
 				},
 			},
