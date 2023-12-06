@@ -22,10 +22,8 @@ type IRangeFilter<T> = {
 
 type IDateTimeRangeFilter<T> = {
     type: FilterType.DATE_TIME_RANGE,
-    value?: {
-        from: Date,
-        to: Date,
-    }
+	borders: { from: Date; to: Date; };
+    value?: { from: Date, to: Date }
 } & Base<T>;
 
 type IDatePickFilter<T> = {

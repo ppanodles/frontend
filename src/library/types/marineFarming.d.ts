@@ -15,7 +15,7 @@ export interface IShip {
     flagCountry: string; // страна прописки
     flagCode: any;
     destination: string; // порт назначения
-    eta?: string; // ожидаемое время прибытия
+    eta: Date; // ожидаемое время прибытия
     draught?: number;
     longitude: number;
     latitude: number;

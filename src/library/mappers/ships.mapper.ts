@@ -59,7 +59,7 @@ export default (data: any): IShip[] => data?.map((datum: any) => ({
 	flagCountry: datum?.flag_country ?? '',
 	flagCode: datum?.flag_code ?? 'non',
 	destination: datum?.destination ?? '',
-	eta: datum?.eta,
+	eta: datum?.eta ? new Date(datum.eta) : new Date(),
 	draught: datum?.draught,
 	longitude: datum?.longitude ?? 0,
 	latitude: datum?.latitude ?? 0,

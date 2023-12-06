@@ -3,9 +3,9 @@ import { IFilmContamination, IGreenhouseGases, IShip } from 'library/types/marin
 import greenhouseGasesMapper from 'library/mappers/greenhouseGases.mapper';
 import shipsMapper from 'library/mappers/ships.mapper';
 import filmContaminationMapper from 'library/mappers/filmContamination.mapper';
-import shipData from 'library/data/marineFarming/ships.data.json';
-import filmContaminationData from 'library/data/marineFarming/filmContamination.data.json';
-import greenhouseGasesData from 'library/data/marineFarming/greenhouseGases.data.json';
+import shipJSON from 'library/data/marineFarming/ships.data.json';
+import filmContaminationJSON from 'library/data/marineFarming/filmContamination.data.json';
+import greenhouseGasesJSON from 'library/data/marineFarming/greenhouseGases.data.json';
 import { IFilterDataType } from 'library/types/system.d';
 import FilterType from 'library/constants/FilterType';
 import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
@@ -13,10 +13,11 @@ import {
 	DateTimePickPayload, DateTimeRangePayload, ListSelectorPayload, RangePayload,
 } from 'library/types/filterPayload.d';
 import {uniqBy} from 'lodash';
+import getDefaultDateRange from 'library/helpers/getDefaultDateRange';
 
-const shipsData: IShip[] = shipsMapper((shipData as any).data);
-
-console.log(shipsData);
+const shipsData: IShip[] = shipsMapper((shipJSON as any).data);
+const filmContaminationData: IFilmContamination[] = filmContaminationMapper(filmContaminationJSON.data);
+const greenhouseGasesData: IGreenhouseGases[] = greenhouseGasesMapper(greenhouseGasesJSON.data);
 
 export type Filters = {
 	[MarineFarmingDataType.SHIPS]: IFilterDataType<IShip>,
@@ -59,8 +60,8 @@ type ApplyFilterPayload = ShipsFilterPayload | GreenhouseGasesFilterPayload | Fi
 
 const initialState: MarineFarmingState = {
 	ships: shipsData,
-	filmContamination: filmContaminationMapper(filmContaminationData.data),
-	greenhouseGases: greenhouseGasesMapper(greenhouseGasesData.data),
+	filmContamination: filmContaminationData,
+	greenhouseGases: greenhouseGasesData,
 	filters: {
 		[MarineFarmingDataType.SHIPS]: {
 			vesselType: {
@@ -108,17 +109,28 @@ const initialState: MarineFarmingState = {
 					selected: {},
 				},
 			},
-			// eta: {
-			// 	[FilterType.DATE_TIME_RANGE]: {
-			// 		type: FilterType.DATE_TIME_RANGE,
-			// 		field: 'eta',
-			// 		name: 'Время прибытия',
-			// 		items: uniqBy(shipsData
-			// 			.filter((v) => v.eta !== undefined), 'eta')
-			// 			.map((v) => ({ id: v.eta, name: v.eta })),
-			// 		selected: {},
-			// 	},
-			// },
+			eta: {
+				[FilterType.DATE_TIME_RANGE]: {
+					type: FilterType.DATE_TIME_RANGE,
+					field: 'eta',
+					name: 'Время прибытия',
+					borders: getDefaultDateRange(shipsData.map((v) => v.eta)),
+				},
+			},
+		},
+		[MarineFarmingDataType.FILM_CONTAMINATION]: {
+			type: {
+				[FilterType.LIST_SELECTOR]: {
+					type: FilterType.LIST_SELECTOR,
+					field: 'type',
+					name: 'Тип пленочного загрязнения',
+					shouldShowAlways: true,
+					items: uniqBy(filmContaminationData
+						.filter((v) => v.type !== undefined), 'type')
+						.map((v) => ({ id: v.type, name: v.type })),
+					selected: {},
+				},
+			},
 		},
 		[MarineFarmingDataType.GREENHOUSE_GASES]: {
 			// emissionLevel: {
@@ -126,13 +138,6 @@ const initialState: MarineFarmingState = {
 			// 		type: FilterType.RANGE, field: 'emissionLevel', name: 'Уровень эмиссии', shouldShowAlways: true,
 			// 	},
 			// },
-		},
-		[MarineFarmingDataType.FILM_CONTAMINATION]: {
-		// 	type: {
-		// 		[FilterType.LIST_SELECTOR]: {
-		// 			type: FilterType.LIST_SELECTOR, field: 'type', name: 'Тип пленочного загрязнения', shouldShowAlways: true,
-		// 		},
-		// 	},
 		},
 	},
 	slicesAccessibility: {

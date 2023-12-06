@@ -55,6 +55,18 @@ const ShipsFIlter: React.FunctionComponent<IProps> = () => {
 					);
 				}
 
+				if (filter.type === FilterType.DATE_TIME_RANGE) {
+					return (
+						<Filter
+							type={FilterType.DATE_TIME_RANGE}
+							key={`${filter.name}_${filter.field}`}
+							name={filter.name}
+							value={filter.value}
+							borders={filter.borders}
+						/>
+					);
+				}
+
 				return null;
 			})}
 		</Stack>
