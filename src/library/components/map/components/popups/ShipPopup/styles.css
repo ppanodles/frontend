@@ -50,7 +50,12 @@
 }
 
 .shipName {
+  margin-left: 6px;
   color: white;
+}
+
+.shipPopupDateValue {
+  margin-left: 6px;
 }
 
 .shipPopupValue {
