@@ -6,6 +6,7 @@ import { RootState } from 'main/rootReducer';
 import { useSelector } from 'react-redux';
 import { Filters, ISlicesAccessibility } from 'library/slices/marineFarming.slice';
 import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
+import { DRAWER_WIDTH } from 'library/constants/styled';
 import SlicesBlock from './children/SlicesBlock';
 import Icon from '../Icon';
 import ShipsFIlter from './children/ShipsFIlter';
@@ -36,7 +37,7 @@ const MarineFarmingPanel: React.FunctionComponent<IProps> = () => {
 	const isSliceFiltersVisible = pathname === paths.marineFarming[LayoutType.MAP];
 
 	return (
-		<Stack direction="column" alignItems="center" sx={{ px: 1.5 }}>
+		<Stack direction="column" alignItems="center" sx={{ width: DRAWER_WIDTH, px: 1.5 }}>
 			{ isSliceFiltersVisible && <SlicesBlock /> }
 			<Stack
 				direction="row"
@@ -53,10 +54,10 @@ const MarineFarmingPanel: React.FunctionComponent<IProps> = () => {
 				<Typography>Фильтр данных</Typography>
 			</Stack>
 
-			<Stack spacing={3}>
+			<Stack spacing={3} width="100%">
 				{checkFilterAvailable(MarineFarmingDataType.SHIPS) && <ShipsFIlter />}
-				{checkFilterAvailable(MarineFarmingDataType.FILM_CONTAMINATION) && <FilmContaminationFilter />}
 				{checkFilterAvailable(MarineFarmingDataType.GREENHOUSE_GASES) && <GreenhouseGasesFilter />}
+				{checkFilterAvailable(MarineFarmingDataType.FILM_CONTAMINATION) && <FilmContaminationFilter />}
 			</Stack>
 
 		</Stack>

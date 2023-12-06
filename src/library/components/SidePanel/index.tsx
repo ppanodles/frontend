@@ -65,6 +65,7 @@ const SidePanel: React.FunctionComponent<IProps> = ({ open, onClose }) => {
 					<Box sx={{
 						py: 2,
 						overflowY: 'auto',
+						overflowX: 'hidden',
 
 						'&::-webkit-scrollbar': {
 							marginTop: '80px',

@@ -12,14 +12,14 @@ export type IListSelectorFilter = {
         name: string;
     }[];
     checked: {[key: string]: boolean};
-	onSelect(value: {[key: string]: boolean}): void;
+	onChange(value: {[key: string]: boolean}): void;
 }
 
 const ListSelectorFilter: React.FunctionComponent<IListSelectorFilter> = ({
-	name, values, checked, onSelect,
+	name, values, checked, onChange,
 }) => {
 	const selectHandler = (id: string) => {
-		onSelect({
+		onChange({
 			...checked,
 			[id]: !checked[id],
 		});

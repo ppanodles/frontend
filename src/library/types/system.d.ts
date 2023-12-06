@@ -14,21 +14,19 @@ type IListSelectionFilter<T> = {
 
 type IRangeFilter<T> = {
     type: FilterType.RANGE,
-    value?: {
-        from: number,
-        to: number,
-    }
+    borders: { from: number; to: number; };
+    selected?: { from: number, to: number }
 } & Base<T>;
 
 type IDateTimeRangeFilter<T> = {
     type: FilterType.DATE_TIME_RANGE,
-	borders: { from: Date; to: Date; };
-    value?: { from: Date, to: Date }
+	borders: { from: string; to: string; };
+    selected?: { from: string, to: string }
 } & Base<T>;
 
 type IDatePickFilter<T> = {
     type: FilterType.DATE_TIME_PICK,
-    value?: Date
+    selected?: Date
 } & Base<T>;
 
 export type CommonFilterDataType<T> = IListSelectionFilter<T> | IRangeFilter<T> | IDateTimeRangeFilter<T> | IDatePickFilter<T>

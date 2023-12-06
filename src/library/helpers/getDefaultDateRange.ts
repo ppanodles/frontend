@@ -1,4 +1,10 @@
-export default (dates: Date[]): { from: Date, to: Date } => ({
-	from: dates.reduce((a, b) => (a < b ? a : b)),
-	to: dates.reduce((a, b) => (a > b ? a : b)),
-});
+import dayjs from 'dayjs';
+
+export default (data: string[]): { from: string, to: string } => {
+	const dates = data.map((datum) => (dayjs(datum)));
+
+	return ({
+		from: dates.reduce((a, b) => (a.isBefore(b) ? a : b)).toString(),
+		to: dates.reduce((a, b) => (a.isAfter(b) ? a : b)).toString(),
+	});
+};

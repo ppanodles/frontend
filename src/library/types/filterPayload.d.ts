@@ -11,7 +11,7 @@ export type DateTimeRangePayload<T, P> = {
     dataType: T;
 	field: P;
 	filter: FilterType.DATE_TIME_RANGE;
-	value: { from: Date; to: Date };
+	value: { from: string; to: string };
 }
 
 export type DateTimePickPayload<T, P> = {

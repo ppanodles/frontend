@@ -13,6 +13,7 @@ import {
 	DateTimePickPayload, DateTimeRangePayload, ListSelectorPayload, RangePayload,
 } from 'library/types/filterPayload.d';
 import {uniqBy} from 'lodash';
+import getDefaultRange from 'library/helpers/getDefaultRange';
 
 const shipsData: IShip[] = shipsMapper((shipJSON as any).data);
 const filmContaminationData: IFilmContamination[] = filmContaminationMapper(filmContaminationJSON.data);
@@ -30,8 +31,8 @@ export type ISlicesAccessibility = {
 
 export type MarineFarmingState = {
     ships: IShip[];
-    greenhouseGases: IGreenhouseGases[];
     filmContamination: IFilmContamination[];
+    greenhouseGases: IGreenhouseGases[];
     filters: Filters;
 	slicesAccessibility: ISlicesAccessibility,
 	selectedTable: MarineFarmingDataType;
@@ -109,6 +110,17 @@ const initialState: MarineFarmingState = {
 				},
 			},
 		},
+		[MarineFarmingDataType.GREENHOUSE_GASES]: {
+			emissionLevel: {
+				[FilterType.RANGE]: {
+					type: FilterType.RANGE,
+					field: 'emissionLevel',
+					name: 'Уровень эмиссии',
+					shouldShowAlways: true,
+					borders: getDefaultRange(greenhouseGasesData.map((v) => v.emissionLevel)),
+				},
+			},
+		},
 		[MarineFarmingDataType.FILM_CONTAMINATION]: {
 			type: {
 				[FilterType.LIST_SELECTOR]: {
@@ -122,13 +134,6 @@ const initialState: MarineFarmingState = {
 					selected: {},
 				},
 			},
-		},
-		[MarineFarmingDataType.GREENHOUSE_GASES]: {
-			// emissionLevel: {
-			// 	[FilterType.RANGE]: {
-			// 		type: FilterType.RANGE, field: 'emissionLevel', name: 'Уровень эмиссии', shouldShowAlways: true,
-			// 	},
-			// },
 		},
 	},
 	slicesAccessibility: {

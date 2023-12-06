@@ -33,6 +33,7 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 	]), [sliceFlags]);
 
 	const listItemButtonHandler = (id: MarineFarmingDataType) => dispatch(toggleSliceAccessibility(id));
+
 	return (
 		<Box>
 			<Stack direction="row" spacing={0.7} sx={{ mb: 3, display: 'flex', color: ({ palette }) => palette.common.white }}>

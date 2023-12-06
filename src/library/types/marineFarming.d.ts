@@ -10,6 +10,8 @@ export interface IShip {
         port: string;
         coordinates: number[]
     }; // порт назначения
+    eta: string; // ожидаемое время прибытия
+    draught?: number;
     longitude: number;
     latitude: number;
     rot?: number;
