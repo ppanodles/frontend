@@ -17,6 +17,8 @@ import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
 import Icon from '../Icon/index';
 import { mapGreenhouseGasesDataToFeatures } from './mappers';
 import GreenhouseGasePopup from './components/popups/GreenhouseGasePopup';
+import { IPort, ports } from './extraData';
+import PortPopup from './components/popups/PortPopup';
 
 const layerStyle: FillLayer = {
 	id: 'point',
@@ -90,9 +92,33 @@ const DataMap = () => {
 		</Marker>
 	), []);
 
+	const portsToMarkers = useCallback((port: IPort) => (
+		<Marker
+			onClick={() => setPopup(
+				<PortPopup
+					coordinates={port.cords}
+					name={port.name}
+					onClose={() => setPopup(null)}
+				/>,
+			)}
+			longitude={port.cords[0]}
+			latitude={port.cords[1]}
+			anchor="top-left"
+		>
+			<div style={{
+				width: 30, height: 30, borderRadius: '50%', backgroundColor: '#00E5FF', display: 'flex', justifyContent: 'center', alignItems: 'center',
+			}}
+			>
+				<Icon style={{ color: 'black' }} iconName="anchor" />
+			</div>
+		</Marker>
+	), []);
+
 	const greenhouseGasesFeatures = useMemo(() => greenhouseGases.map(mapGreenhouseGasesDataToFeatures), [greenhouseGases]);
 
 	const shipMarkers = useMemo(() => getFiltredShips(ships).map(mapShipsDataToMarkers), [mapShipsDataToMarkers, ships]);
+
+	const portMarkers = useMemo(() => ports.map(portsToMarkers), [portsToMarkers]);
 
 	const filmContaminationMarkers = useMemo(() => filmContamination.map(mapFilmContaminationToMarkers), [filmContamination, mapFilmContaminationToMarkers]);
 
@@ -127,7 +153,7 @@ const DataMap = () => {
 			mapStyle="mapbox://styles/ea-dev/clpn3u19i010801po2evb0nto"
 		>
 			{popup}
-
+			{portMarkers}
 			{slicesAccessibility.FILM_CONTAMINATION && filmContaminationMarkers}
 			{slicesAccessibility.SHIPS && shipMarkers}
 			{slicesAccessibility.GREENHOUSE_GASES && (
