@@ -41,10 +41,10 @@ const DataMap = () => {
 		(state: RootState) => state.marineFarming,
 	);
 
-	const ports = ships.map((ship) => ({
+	const ports = useMemo(() => ships.map((ship) => ({
 		port: ship.destinationPort,
 		coordinates: ship.destinationCoordinates,
-	}));
+	})).filter((value, index, self) => self.findIndex((v) => v.port === value.port) === index), [ships]);
 
 	const mapShipsDataToMarkers = useCallback((shipInfo: IShip) => (
 		<Marker

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { Popup } from 'react-map-gl';
-import { getFormattedDate } from 'library/components/map/helpers';
+import dayjs from 'dayjs';
 import Icon from '../../../../Icon/index';
 
 import './styles.css';
@@ -16,7 +16,7 @@ interface IProps {
 const BasePopup = ({
 	content, onClose, cords, date, styles,
 }: IProps) => {
-	const {fullDate, time} = getFormattedDate(date);
+	const [fullDate, time] = dayjs(date, ['DD-MM-YYYY HH:mm', 'DD-MM-YYYY HH:mm:ss', 'YYYY-MM-DD HH:mm:ss', 'YYYY-MM-DD HH:mm']).format('DD-MM-YYYY HH:mm').split(' ');
 
 	return (
 		<Popup

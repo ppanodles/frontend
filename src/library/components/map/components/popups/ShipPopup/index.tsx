@@ -2,7 +2,7 @@ import Icon from 'library/components/Icon';
 import { Popup } from 'react-map-gl';
 
 import './styles.css';
-import { getFormattedDate } from 'library/components/map/helpers';
+import dayjs from 'dayjs';
 
 interface IProps {
   name?: string;
@@ -17,7 +17,7 @@ interface IProps {
 const ShipPopup = ({
 	name, coordinates, onClose, destination, imo, mmsi, dateUTC,
 }: IProps) => {
-	const {fullDate, time} = getFormattedDate(dateUTC);
+	const [fullDate, time] = dayjs(dateUTC, ['DD-MM-YYYY HH:mm', 'DD-MM-YYYY HH:mm:ss', 'YYYY-MM-DD HH:mm:ss', 'YYYY-MM-DD HH:mm']).format('DD-MM-YYYY HH:mm').split(' ');
 
 	return (
 		<Popup
