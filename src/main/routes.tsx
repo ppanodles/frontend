@@ -7,7 +7,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 export default createBrowserRouter([
 	{
-		path: '/app',
+		path: '/frontend/app',
 		children: [
 			{
 				path: paths.marineFarming.base,
@@ -42,6 +42,7 @@ export default createBrowserRouter([
 			},
 		],
 	},
+	{ path: '/frontend/app/', element: <Navigate to={paths.marineFarming.base} replace /> },
 	{ path: '/', element: <Navigate to={paths.marineFarming.base} replace /> },
 	{ path: '*', element: <Navigate to={paths.marineFarming.base} replace /> },
 ]);

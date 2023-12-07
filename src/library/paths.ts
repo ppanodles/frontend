@@ -1,6 +1,6 @@
-const MARINE_FARMING_BASE = '/app/marine-farming/';
-const AGRO_INDUSTRY_BASE = '/app/agro-industry/';
-const MUNICIPALITY = '/app/municipality/';
+const MARINE_FARMING_BASE = '/frontend/app/marine-farming/';
+const AGRO_INDUSTRY_BASE = '/frontend/app/agro-industry/';
+const MUNICIPALITY = '/frontend/app/municipality/';
 
 // eslint-disable-next-line no-shadow
 export enum LayoutType {
