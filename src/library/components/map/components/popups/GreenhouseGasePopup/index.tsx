@@ -5,14 +5,18 @@ import BasePopup from '../BasePopup';
 import './styles.css';
 
 interface IProps {
+  date:string;
   emission: number;
   coordinates: number[];
   onClose(): void;
 }
 
-const GreenhouseGasePopup = ({ emission, coordinates, onClose }: IProps) => (
+const GreenhouseGasePopup = ({
+	date, emission, coordinates, onClose,
+}: IProps) => (
 	<BasePopup
 		cords={coordinates}
+		date={date}
 		onClose={onClose}
 		styles={{
 			width: '223px', height: '138px',

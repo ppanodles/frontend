@@ -10,53 +10,61 @@ import { IFilterDataType } from 'library/types/system.d';
 import FilterType from 'library/constants/FilterType';
 import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
 import {
-	DateTimePickPayload, DateTimeRangePayload, ListSelectorPayload, RangePayload,
+	DateTimePickPayload,
+	DateTimeRangePayload,
+	ListSelectorPayload,
+	RangePayload,
 } from 'library/types/filterPayload.d';
-import {uniqBy} from 'lodash';
+import { uniqBy } from 'lodash';
 import getDefaultRange from 'library/helpers/getDefaultRange';
 
 const shipsData: IShip[] = shipsMapper((shipJSON as any).data);
-const filmContaminationData: IFilmContamination[] = filmContaminationMapper(filmContaminationJSON.data);
+const filmContaminationData: IFilmContamination[] = filmContaminationMapper(
+	filmContaminationJSON.data,
+);
 const greenhouseGasesData: IGreenhouseGases[] = greenhouseGasesMapper(greenhouseGasesJSON.data);
 
 export type Filters = {
-	[MarineFarmingDataType.SHIPS]: IFilterDataType<IShip>,
-	[MarineFarmingDataType.GREENHOUSE_GASES]: IFilterDataType<IGreenhouseGases>,
-	[MarineFarmingDataType.FILM_CONTAMINATION]: IFilterDataType<IFilmContamination>,
+  [MarineFarmingDataType.SHIPS]: IFilterDataType<IShip>;
+  [MarineFarmingDataType.GREENHOUSE_GASES]: IFilterDataType<IGreenhouseGases>;
+  [MarineFarmingDataType.FILM_CONTAMINATION]: IFilterDataType<IFilmContamination>;
 };
 
 export type ISlicesAccessibility = {
-	[key in keyof Filters]: boolean;
+  [key in keyof Filters]: boolean;
 };
 
 export type MarineFarmingState = {
-    ships: IShip[];
-    filmContamination: IFilmContamination[];
-    greenhouseGases: IGreenhouseGases[];
-    filters: Filters;
-	slicesAccessibility: ISlicesAccessibility,
-	selectedTable: MarineFarmingDataType;
+  ships: IShip[];
+  filmContamination: IFilmContamination[];
+  greenhouseGases: IGreenhouseGases[];
+  filters: Filters;
+  slicesAccessibility: ISlicesAccessibility;
+  selectedTable: MarineFarmingDataType;
 };
 
 type ShipsFilterPayload =
-	ListSelectorPayload<MarineFarmingDataType.SHIPS, keyof IShip>
-		| DateTimeRangePayload<MarineFarmingDataType.SHIPS, keyof IShip>
-		| DateTimePickPayload<MarineFarmingDataType.SHIPS, keyof IShip>
-		| RangePayload<MarineFarmingDataType.SHIPS, keyof IShip>;
+  | ListSelectorPayload<MarineFarmingDataType.SHIPS, keyof IShip>
+  | DateTimeRangePayload<MarineFarmingDataType.SHIPS, keyof IShip>
+  | DateTimePickPayload<MarineFarmingDataType.SHIPS, keyof IShip>
+  | RangePayload<MarineFarmingDataType.SHIPS, keyof IShip>;
 
 type GreenhouseGasesFilterPayload =
-	ListSelectorPayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
-		| DateTimeRangePayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
-		| DateTimePickPayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
-		| RangePayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>;
+  | ListSelectorPayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
+  | DateTimeRangePayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
+  | DateTimePickPayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
+  | RangePayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>;
 
 type FilmContaminationFilterPayload =
-	ListSelectorPayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
-		| DateTimeRangePayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
-		| DateTimePickPayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
-		| RangePayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>;
+  | ListSelectorPayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
+  | DateTimeRangePayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
+  | DateTimePickPayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
+  | RangePayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>;
 
-type ApplyFilterPayload = ShipsFilterPayload | GreenhouseGasesFilterPayload | FilmContaminationFilterPayload;
+type ApplyFilterPayload =
+  | ShipsFilterPayload
+  | GreenhouseGasesFilterPayload
+  | FilmContaminationFilterPayload;
 
 const initialState: MarineFarmingState = {
 	ships: shipsData,
@@ -70,9 +78,10 @@ const initialState: MarineFarmingState = {
 					field: 'vesselType',
 					name: 'Тип судна',
 					shouldShowAlways: true,
-					items: uniqBy(shipsData
-						.filter((v) => v.vesselType !== undefined), 'vesselType')
-						.map((v) => ({ id: v.vesselType, name: v.vesselType })),
+					items: uniqBy(
+						shipsData.filter((v) => v.vesselType !== undefined),
+						'vesselType',
+					).map((v) => ({ id: v.vesselType, name: v.vesselType })),
 					selected: {},
 				},
 			},
@@ -81,9 +90,10 @@ const initialState: MarineFarmingState = {
 					type: FilterType.LIST_SELECTOR,
 					field: 'vesselName',
 					name: 'Наименование судна',
-					items: uniqBy(shipsData
-						.filter((v) => v.vesselName !== undefined), 'vesselName')
-						.map((v) => ({ id: v.vesselName, name: v.vesselName })),
+					items: uniqBy(
+						shipsData.filter((v) => v.vesselName !== undefined),
+						'vesselName',
+					).map((v) => ({ id: v.vesselName, name: v.vesselName })),
 					selected: {},
 				},
 			},
@@ -92,9 +102,10 @@ const initialState: MarineFarmingState = {
 					type: FilterType.LIST_SELECTOR,
 					field: 'flagCountry',
 					name: 'Страна регистрации судна',
-					items: uniqBy(shipsData
-						.filter((v) => v.flagCountry !== undefined), 'flagCountry')
-						.map((v) => ({ id: v.flagCountry, name: v.flagCountry })),
+					items: uniqBy(
+						shipsData.filter((v) => v.flagCountry !== undefined),
+						'flagCountry',
+					).map((v) => ({ id: v.flagCountry, name: v.flagCountry })),
 					selected: {},
 				},
 			},
@@ -103,9 +114,10 @@ const initialState: MarineFarmingState = {
 					type: FilterType.LIST_SELECTOR,
 					field: 'destinationPort',
 					name: 'Порт назначения',
-					items: uniqBy(shipsData
-						.filter((v) => v.destinationPort !== undefined), 'destinationPort')
-						.map((v) => ({ id: v.destinationPort, name: v.destinationPort })),
+					items: uniqBy(
+						shipsData.filter((v) => v.destinationPort !== undefined),
+						'destinationPort',
+					).map((v) => ({ id: v.destinationPort, name: v.destinationPort })),
 					selected: {},
 				},
 			},
@@ -121,20 +133,7 @@ const initialState: MarineFarmingState = {
 				},
 			},
 		},
-		[MarineFarmingDataType.FILM_CONTAMINATION]: {
-			type: {
-				[FilterType.LIST_SELECTOR]: {
-					type: FilterType.LIST_SELECTOR,
-					field: 'type',
-					name: 'Тип пленочного загрязнения',
-					shouldShowAlways: true,
-					items: uniqBy(filmContaminationData
-						.filter((v) => v.type !== undefined), 'type')
-						.map((v) => ({ id: v.type, name: v.type })),
-					selected: {},
-				},
-			},
-		},
+		[MarineFarmingDataType.FILM_CONTAMINATION]: {},
 	},
 	slicesAccessibility: {
 		[MarineFarmingDataType.SHIPS]: true,
@@ -151,11 +150,14 @@ const marineFarmingSlice = createSlice({
 		toggleSliceAccessibility(state, action: PayloadAction<MarineFarmingDataType>) {
 			state.slicesAccessibility[action.payload] = !state.slicesAccessibility[action.payload];
 		},
-		applyFilter(state, {
-			payload: {
-				filter, field, value, dataType,
-			},
-		}: PayloadAction<ApplyFilterPayload>) {
+		applyFilter(
+			state,
+			{
+				payload: {
+					filter, field, value, dataType,
+				},
+			}: PayloadAction<ApplyFilterPayload>,
+		) {
 			(state.filters[dataType] as any)[field][filter].selected = value;
 		},
 	},

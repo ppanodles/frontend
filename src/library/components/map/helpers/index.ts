@@ -1,5 +1,4 @@
 type H3Colors = '#880E4F' | '#C2185B' | '#DD2C00' | '#FF9100' | '#FFC400' | '#FFEB3B'
-type FilmContaminationColors = '#FF9315' | '#22C38E' | '#304FFE'
 
 export const getH3ColorByEmission = (emissionLevel: number): H3Colors => {
 	if (emissionLevel < 294.7) {
@@ -23,18 +22,6 @@ export const getH3ColorByEmission = (emissionLevel: number): H3Colors => {
 	}
 
 	return '#FFEB3B';
-};
-
-export const getFilmContaminationColorByType = (type: 'Нефть' | 'Нефтепродукты' | 'Масла' | 'Естественные' | 'Сточные'): FilmContaminationColors => {
-	if (type === 'Нефть' || type === 'Масла' || type === 'Нефтепродукты') {
-		return '#FF9315';
-	}
-
-	if (type === 'Сточные') {
-		return '#304FFE';
-	}
-
-	return '#22C38E';
 };
 
 export const getFormattedDate = (dateUTC: string): {fullDate: string, time:string} => {

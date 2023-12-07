@@ -15,7 +15,6 @@ import Icon from '../Icon/index';
 import { mapGreenhouseGasesDataToFeatures } from './mappers';
 import GreenhouseGasePopup from './components/popups/GreenhouseGasePopup';
 import PortPopup from './components/popups/PortPopup';
-import { getFilmContaminationColorByType } from './helpers';
 
 const layerStyle: FillLayer = {
 	id: 'point',
@@ -79,18 +78,19 @@ const DataMap = () => {
 			onClick={() => setPopup(
 				<FilmContaminationPopup
 					coordinates={[
-						filmContaminationInfo.geometry.coordinates[0][0],
-						filmContaminationInfo.geometry.coordinates[0][1],
+						filmContaminationInfo.long,
+						filmContaminationInfo.lat,
 					]}
-					type={filmContaminationInfo.type}
 					onClose={() => setPopup(null)}
+					date={filmContaminationInfo.time}
 				/>,
 			)}
-			longitude={filmContaminationInfo.geometry.coordinates[0][0]}
-			latitude={filmContaminationInfo.geometry.coordinates[0][1]}
+			longitude={filmContaminationInfo.long}
+			latitude={filmContaminationInfo.lat}
 			anchor="top-left"
+			key={filmContaminationInfo.id}
 		>
-			<Icon iconName="film-contamination" style={{color: getFilmContaminationColorByType(filmContaminationInfo.type)}} />
+			<Icon iconName="film-contamination" style={{color: '#FF9315'}} />
 		</Marker>
 	), []);
 
@@ -106,6 +106,7 @@ const DataMap = () => {
 			longitude={coordinates[0]}
 			latitude={coordinates[1]}
 			anchor="top-left"
+			key={`${port}${coordinates[0]}${coordinates[1]}`}
 		>
 			<div style={{
 				width: 30, height: 30, borderRadius: '50%', backgroundColor: '#00E5FF', display: 'flex', justifyContent: 'center', alignItems: 'center',
@@ -145,6 +146,7 @@ const DataMap = () => {
 				if (clickedGreenhouseGase) {
 					setPopup(
 						<GreenhouseGasePopup
+							date={clickedGreenhouseGase.properties.date}
 							coordinates={e.lngLat.toArray()}
 							emission={Math.round(clickedGreenhouseGase.properties?.emission)}
 							onClose={() => setPopup(null)}

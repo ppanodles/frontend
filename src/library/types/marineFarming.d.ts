@@ -23,18 +23,8 @@ interface IGreenhouseGases {
 }
 
 interface IFilmContamination { // пленочное загрязнение
-    type: 'Нефть' | 'Нефтепродукты' | 'Масла' | 'Естественные' | 'Сточные';
     id: string; // urn:ogc:def:crs:OGC:1.3:CRS84
     time: string; // Date
-    name: string;
-    properties: {
-        Id: number;
-        Area: number;
-        long: number;
-        lat: number;
-      }
-    geometry: {
-        type: string;
-        coordinates: number[][];
-    }
+    long: number;
+    lat: number;
 }

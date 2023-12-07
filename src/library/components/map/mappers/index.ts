@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-import { Feature } from 'geojson';
 import { cellToBoundary } from 'h3-js';
-import { getFilmContaminationColorByType, getH3ColorByEmission } from '../helpers';
+import { getH3ColorByEmission } from '../helpers';
 
 export const mapGreenhouseGasesDataToFeatures = (data: {
     time: string;
@@ -14,6 +13,7 @@ export const mapGreenhouseGasesDataToFeatures = (data: {
 		opacity: 1,
 		id: index,
 		emission: data.emissionLevel,
+		date: data.time,
 	},
 	geometry: {
 		type: 'Polygon',
@@ -21,30 +21,30 @@ export const mapGreenhouseGasesDataToFeatures = (data: {
 	},
 });
 
-export const mapFilmContaminationDataToFeatures = ({id, geometry, type}: {
-    type: 'Нефть' | 'Нефтепродукты' | 'Масла' | 'Естественные' | 'Сточные';
-    id: string;
-    time: string;
-    name: string;
-    properties: {
-        Id: number;
-        Area: number;
-        long: number;
-        lat: number;
-      }
-    geometry: {
-        type: string;
-        coordinates: number[][];
-    }
-}): Feature => ({
-	type: 'Feature',
-	properties: {
-		color: getFilmContaminationColorByType(type),
-		opacity: 0.2,
-		id,
-	},
-	geometry: {
-		type: 'MultiLineString',
-		coordinates: [geometry.coordinates],
-	},
-});
+// export const mapFilmContaminationDataToFeatures = ({id, geometry, type}: {
+//     type: 'Нефть' | 'Нефтепродукты' | 'Масла' | 'Естественные' | 'Сточные';
+//     id: string;
+//     time: string;
+//     name: string;
+//     properties: {
+//         Id: number;
+//         Area: number;
+//         long: number;
+//         lat: number;
+//       }
+//     geometry: {
+//         type: string;
+//         coordinates: number[][];
+//     }
+// }): Feature => ({
+// 	type: 'Feature',
+// 	properties: {
+// 		color: getFilmContaminationColorByType(type),
+// 		opacity: 0.2,
+// 		id,
+// 	},
+// 	geometry: {
+// 		type: 'MultiLineString',
+// 		coordinates: [geometry.coordinates],
+// 	},
+// });

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-/* eslint-disable no-nested-ternary */
 import { Popup } from 'react-map-gl';
+import { getFormattedDate } from 'library/components/map/helpers';
 import Icon from '../../../../Icon/index';
 
 import './styles.css';
@@ -9,20 +9,14 @@ interface IProps {
   content: React.ReactNode;
   cords: number[];
   onClose(): void;
+  date: string;
   styles?: any;
 }
 
-function generateRandomDate(from: Date, to: Date) {
-	return new Date(from.getTime() + Math.random() * (to.getTime() - from.getTime()));
-}
-
 const BasePopup = ({
-	content, onClose, cords, styles,
+	content, onClose, cords, date, styles,
 }: IProps) => {
-	const date = generateRandomDate(new Date(2022, 1, 1), new Date());
-	const dateText = `${date.getDay() === 0 ? '01' : date.getDay() < 10 ? `0${date.getDay()}` : date.getDay()}.${date.getMonth() < 10 ? `0${date.getMonth() === 0 ? '1' : date.getMonth()}` : date.getMonth()}.${date.getFullYear()}`;
-
-	const dateTime = `${date.getUTCHours() < 10 ? `0${date.getUTCHours()}` : date.getUTCHours()}:${date.getUTCMinutes() < 10 ? `0${date.getUTCMinutes()}` : date.getUTCMinutes()}`;
+	const {fullDate, time} = getFormattedDate(date);
 
 	return (
 		<Popup
@@ -46,7 +40,7 @@ const BasePopup = ({
 							</div>
 							<div className="popupValue">
 								<span>
-									{dateText}
+									{fullDate}
 								</span>
 							</div>
 						</div>
@@ -55,7 +49,7 @@ const BasePopup = ({
 								<Icon iconName="clock" />
 							</div>
 							<div className="popupValue">
-								{dateTime}
+								{time}
 							</div>
 						</div>
 					</div>

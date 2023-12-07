@@ -1,25 +1,24 @@
-import { getFilmContaminationColorByType } from '../../../helpers';
 import BasePopup from '../BasePopup';
 
 import './styles.css';
 
 interface IProps {
-  type: 'Нефть' | 'Нефтепродукты' | 'Масла' | 'Естественные' | 'Сточные';
+  date: string;
   coordinates: number[];
   onClose(): void;
 }
 
-const FilmContaminationPopup = ({ type, coordinates, onClose }: IProps) => (
+const FilmContaminationPopup = ({date, coordinates, onClose }: IProps) => (
 	<BasePopup
 		cords={coordinates}
 		onClose={onClose}
+		date={date}
 		content={(
 			<div className="filmContaminationPopupValue">
 				<div
 					className="filmContaminationPopupValueIcon"
-					style={{ backgroundColor: getFilmContaminationColorByType(type) }}
 				/>
-				<span className="filmContaminationPopupValueText">{type}</span>
+				<span className="filmContaminationPopupValueText">Плёночное загрязнение</span>
 			</div>
 		)}
 	/>
