@@ -46,7 +46,7 @@ export const selectFilteredShips = createSelector(
 					}
 				}
 
-				if (currentFilter.type === FilterType.DATE_TIME_RANGE && Boolean(currentFilter.selected.from) && currentFilter.selected.to) {
+				if (currentFilter.type === FilterType.DATE_TIME_RANGE && Boolean(currentFilter.selected.from) && Boolean(currentFilter.selected.to)) {
 					const dateFrom = dayjs(currentFilter.selected.from);
 					const dateTo = dayjs(currentFilter.selected.to);
 
@@ -63,8 +63,10 @@ export const selectFilteredShips = createSelector(
 					}
 				}
 
-				if (currentFilter.type === FilterType.RANGE) {
-					//  в диапазоне numbers
+				if (currentFilter.type === FilterType.RANGE && currentFilter.selected.from !== undefined && currentFilter.selected.to !== undefined) {
+					const { from, to } = currentFilter.selected;
+
+					return accumulatedShips.filter((ship) => from <= (ship[currentFilter.field] as number) && (ship[currentFilter.field] as number) <= to);
 				}
 			}
 
