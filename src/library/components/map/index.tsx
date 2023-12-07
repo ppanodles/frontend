@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { IFilmContamination, IShip } from 'library/types/marineFarming';
 import { RootState } from 'main/rootReducer';
 import * as turf from '@turf/turf';
+import { selectFilteredShips } from 'library/selectors/filters.selector';
 import ShipPopup from './components/popups/ShipPopup';
 import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
 import Icon from '../Icon/index';
@@ -36,96 +37,127 @@ const DataMap = () => {
 	}, []);
 
 	const {
-		greenhouseGases, filmContamination, ships, slicesAccessibility,
+		greenhouseGases, filmContamination, slicesAccessibility,
 	} = useSelector(
 		(state: RootState) => state.marineFarming,
 	);
 
-	const ports = useMemo(() => ships.map((ship) => ({
-		port: ship.destinationPort,
-		coordinates: ship.destinationCoordinates,
-	})).filter((value, index, self) => self.findIndex((v) => v.port === value.port) === index), [ships]);
+	const ships = useSelector(selectFilteredShips);
 
-	const mapShipsDataToMarkers = useCallback((shipInfo: IShip) => (
-		<Marker
-			onClick={() => setPopup(
-				<ShipPopup
-					coordinates={[shipInfo.longitude, shipInfo.latitude]}
-					destination={shipInfo.destinationPort}
-					imo={
-						shipInfo.imo
-							? shipInfo.imo.toString().substring(0, 7)
-							: shipInfo.mmsi.toString().substring(0, 7)
-					}
-					mmsi={shipInfo.mmsi.toString().substring(0, 7)}
-					name={shipInfo.vesselName}
-					dateUTC={shipInfo.tsPosUtc}
-					onClose={() => setPopup(null)}
-				/>,
-			)}
-			key={shipInfo.id}
-			longitude={shipInfo.longitude}
-			latitude={shipInfo.latitude}
-			anchor="bottom"
-			rotation={shipInfo.rot}
-		>
-			<Icon iconName="ship-marker" />
-		</Marker>
-	), []);
+	const ports = useMemo(
+		() => ships
+			.map((ship) => ({
+				port: ship.destinationPort,
+				coordinates: ship.destinationCoordinates,
+			}))
+			.filter((value, index, self) => self.findIndex((v) => v.port === value.port) === index),
+		[ships],
+	);
 
-	const mapFilmContaminationToMarkers = useCallback((filmContaminationInfo: IFilmContamination) => (
-		<Marker
-			onClick={() => setPopup(
-				<FilmContaminationPopup
-					coordinates={[
-						filmContaminationInfo.long,
-						filmContaminationInfo.lat,
-					]}
-					onClose={() => setPopup(null)}
-					date={filmContaminationInfo.time}
-				/>,
-			)}
-			longitude={filmContaminationInfo.long}
-			latitude={filmContaminationInfo.lat}
-			anchor="top-left"
-			key={filmContaminationInfo.id}
-		>
-			<Icon iconName="film-contamination" style={{color: '#FF9315'}} />
-		</Marker>
-	), []);
-
-	const portsToMarkers = useCallback(({port, coordinates}: { port: string; coordinates: number[]; }) => (
-		<Marker
-			onClick={() => setPopup(
-				<PortPopup
-					coordinates={coordinates}
-					name={port}
-					onClose={() => setPopup(null)}
-				/>,
-			)}
-			longitude={coordinates[0]}
-			latitude={coordinates[1]}
-			anchor="top-left"
-			key={`${port}${coordinates[0]}${coordinates[1]}`}
-		>
-			<div style={{
-				width: 30, height: 30, borderRadius: '50%', backgroundColor: '#00E5FF', display: 'flex', justifyContent: 'center', alignItems: 'center',
-			}}
+	const mapShipsDataToMarkers = useCallback(
+		(shipInfo: IShip) => (
+			<Marker
+				onClick={() => setPopup(
+					<ShipPopup
+						coordinates={[shipInfo.longitude, shipInfo.latitude]}
+						destination={shipInfo.destinationPort}
+						imo={
+							shipInfo.imo
+								? shipInfo.imo.toString().substring(0, 7)
+								: shipInfo.mmsi.toString().substring(0, 7)
+						}
+						mmsi={shipInfo.mmsi.toString().substring(0, 7)}
+						name={shipInfo.vesselName}
+						dateUTC={shipInfo.tsPosUtc}
+						onClose={() => setPopup(null)}
+					/>,
+				)}
+				key={shipInfo.id}
+				longitude={shipInfo.longitude}
+				latitude={shipInfo.latitude}
+				anchor="bottom"
+				rotation={shipInfo.rot}
 			>
-				<Icon style={{ color: 'black' }} iconName="anchor" />
-			</div>
-		</Marker>
-	), []);
+				<Icon iconName="ship-marker" />
+			</Marker>
+		),
+		[],
+	);
 
-	const greenhouseGasesFeatures = useMemo(() => greenhouseGases.map(mapGreenhouseGasesDataToFeatures), [greenhouseGases]);
+	const mapFilmContaminationToMarkers = useCallback(
+		(filmContaminationInfo: IFilmContamination) => (
+			<Marker
+				onClick={() => setPopup(
+					<FilmContaminationPopup
+						coordinates={[filmContaminationInfo.long, filmContaminationInfo.lat]}
+						onClose={() => setPopup(null)}
+						date={filmContaminationInfo.time}
+					/>,
+				)}
+				longitude={filmContaminationInfo.long}
+				latitude={filmContaminationInfo.lat}
+				anchor="top-left"
+				key={filmContaminationInfo.id}
+			>
+				<Icon iconName="film-contamination" style={{ color: '#FF9315' }} />
+			</Marker>
+		),
+		[],
+	);
 
-	const shipMarkers = useMemo(() => ships.map(mapShipsDataToMarkers), [mapShipsDataToMarkers, ships]);
+	const portsToMarkers = useCallback(
+		({ port, coordinates }: { port: string; coordinates: number[] }) => (
+			<Marker
+				onClick={() => setPopup(
+					<PortPopup coordinates={coordinates} name={port} onClose={() => setPopup(null)} />,
+				)}
+				longitude={coordinates[0]}
+				latitude={coordinates[1]}
+				anchor="top-left"
+				key={`${port}${coordinates[0]}${coordinates[1]}`}
+			>
+				<div
+					style={{
+						width: 30,
+						height: 30,
+						borderRadius: '50%',
+						backgroundColor: '#00E5FF',
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'center',
+					}}
+				>
+					<Icon style={{ color: 'black' }} iconName="anchor" />
+				</div>
+			</Marker>
+		),
+		[],
+	);
+
+	const greenhouseGasesFeatures = useMemo(
+		() => greenhouseGases.map(mapGreenhouseGasesDataToFeatures),
+		[greenhouseGases],
+	);
+
+	const shipMarkers = useMemo(
+		() => ships.map(mapShipsDataToMarkers),
+		[mapShipsDataToMarkers, ships],
+	);
 
 	const portMarkers = useMemo(() => ports.map(portsToMarkers), [ports, portsToMarkers]);
 
-	const filmContaminationMarkers = useMemo(() => filmContamination.map(mapFilmContaminationToMarkers), [filmContamination, mapFilmContaminationToMarkers]);
+	const filmContaminationMarkers = useMemo(
+		() => filmContamination.map(mapFilmContaminationToMarkers),
+		[filmContamination, mapFilmContaminationToMarkers],
+	);
 
-	const getClickedHeap = useCallback((lng: number, lat: number) => greenhouseGasesFeatures.find((greenhouseGase) => turf.booleanPointInPolygon(turf.point([lng, lat]), turf.polygon(greenhouseGase.geometry.coordinates))), [greenhouseGasesFeatures]);
+	const getClickedHeap = useCallback(
+		(lng: number, lat: number) => greenhouseGasesFeatures.find((greenhouseGase) => turf.booleanPointInPolygon(
+			turf.point([lng, lat]),
+			turf.polygon(greenhouseGase.geometry.coordinates),
+		)),
+		[greenhouseGasesFeatures],
+	);
 
 	return (
 		<Map
@@ -136,8 +168,8 @@ const DataMap = () => {
 				latitude: 70.939,
 				zoom: 4,
 			}}
-			maxZoom={8}
-			minZoom={4}
+			// maxZoom={8}
+			// minZoom={4}
 			doubleClickZoom={false}
 			style={{ width: '100%', height: '100%' }}
 			onClick={(e) => {
