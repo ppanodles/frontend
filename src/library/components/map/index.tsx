@@ -42,14 +42,17 @@ const DataMap = () => {
 		(state: RootState) => state.marineFarming,
 	);
 
-	const ports = ships.map((ship) => ship.destination);
+	const ports = ships.map((ship) => ({
+		port: ship.destinationPort,
+		coordinates: ship.destinationCoordinates,
+	}));
 
 	const mapShipsDataToMarkers = useCallback((shipInfo: IShip) => (
 		<Marker
 			onClick={() => setPopup(
 				<ShipPopup
 					coordinates={[shipInfo.longitude, shipInfo.latitude]}
-					destination={shipInfo.destination.port}
+					destination={shipInfo.destinationPort}
 					imo={
 						shipInfo.imo
 							? shipInfo.imo.toString().substring(0, 7)

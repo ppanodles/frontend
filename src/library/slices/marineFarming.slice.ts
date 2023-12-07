@@ -98,14 +98,14 @@ const initialState: MarineFarmingState = {
 					selected: {},
 				},
 			},
-			destination: {
+			destinationPort: {
 				[FilterType.LIST_SELECTOR]: {
 					type: FilterType.LIST_SELECTOR,
-					field: 'destination',
+					field: 'destinationPort',
 					name: 'Порт назначения',
 					items: uniqBy(shipsData
-						.filter((v) => v.destination !== undefined), 'destination')
-						.map((v) => ({ id: v.destination.port, name: v.destination.port })),
+						.filter((v) => v.destinationPort !== undefined), 'destinationPort')
+						.map((v) => ({ id: v.destinationPort, name: v.destinationPort })),
 					selected: {},
 				},
 			},

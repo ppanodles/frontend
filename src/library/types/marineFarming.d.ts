@@ -6,10 +6,8 @@ export interface IShip {
     vesselName: string; // наименование судна
     vesselType: string;
     flagCountry: string; // страна прописки
-    destination: {
-        port: string;
-        coordinates: number[]
-    }; // порт назначения
+    destinationPort: string;
+    destinationCoordinates: number[]// порт назначения
     eta: string; // ожидаемое время прибытия
     draught?: number;
     longitude: number;
