@@ -51,7 +51,7 @@ const calendarSx: SxProps<Theme> = ({ palette }) => ({
 		color: '#ACAAAF',
 
 		'&:disabled': {
-			color: '#525559',
+			color: '#3A434C!important',
 		},
 
 		'&:hover': {
