@@ -2,9 +2,7 @@ import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
 import { CommonFilterDataType } from 'library/types/system.d';
 import { RootState } from 'main/rootReducer';
 import { createSelector } from 'reselect';
-import {
-	values, isEmpty, keys, pickBy,
-} from 'lodash';
+import { values, isEmpty, keys } from 'lodash';
 import dayjs from 'dayjs';
 import FilterType from 'library/constants/FilterType';
 
@@ -36,11 +34,9 @@ export const selectFilteredShips = createSelector(
 		return filterTypes.reduce((accumulator, currentValue: FilterType) => values(filters[currentValue]).reduce((accumulatedShips, currentFilter) => {
 			if (!isEmpty(currentFilter.selected)) {
 				if (currentFilter.type === FilterType.LIST_SELECTOR) {
-					const pickSelection = pickBy(currentFilter.selected, (v) => v === true);
-
-					if (!isEmpty(pickSelection)) {
+					if (!isEmpty(currentFilter.selected)) {
 						return accumulatedShips
-							.filter((ship) => typeof ship[currentFilter.field] === 'string' && keys(pickSelection).includes(ship[currentFilter.field] as string));
+							.filter((ship) => typeof ship[currentFilter.field] === 'string' && values(currentFilter.selected).includes(ship[currentFilter.field] as string));
 					}
 				}
 

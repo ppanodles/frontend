@@ -1,6 +1,6 @@
 export interface IShip {
     type: string;
-    id: number;
+    id: string;
     mmsi: number;
     imo?: number;
     vesselName: string; // наименование судна

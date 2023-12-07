@@ -1,4 +1,5 @@
 import { IShip } from 'library/types/marineFarming.d';
+import { v1 as uuid } from 'uuid';
 /*
 export default (data: any): IShip[] => data?.map((datum: any) => ({
 	type: datum.type ?? '',
@@ -45,7 +46,7 @@ export default (data: any): IShip[] => data?.map((datum: any) => ({
 
 export default (data: any): IShip[] => data?.map((datum: any) => ({
 	type: datum.type ?? '',
-	id: datum?.id ?? 0,
+	id: uuid(),
 	mmsi: datum?.mmsi ?? 0,
 	imo: datum?.imo,
 	vesselName: datum?.vessel_name ?? '',

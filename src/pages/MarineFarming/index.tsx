@@ -1,4 +1,7 @@
-import { Box, Container } from '@mui/material';
+import {
+	Box, Container, Stack, Typography,
+} from '@mui/material';
+import dayjs from 'dayjs';
 import LayoutSelector from 'library/components/LayoutSelector';
 import DataMap from 'library/components/map';
 import extractLayout from 'library/helpers/extractLayout';
@@ -24,8 +27,6 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 
 	const test = useSelector(selectFilteredShips);
 
-	console.log(test.map((a) => a.eta));
-
 	return (
 		<Container
 			disableGutters
@@ -47,7 +48,19 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 				<DataMap />
 			)}
 			{paths.marineFarming[LayoutType.CHARTS] === pathname && <div>charts</div>}
-			{paths.marineFarming[LayoutType.TABLE] === pathname && <div>table</div>}
+			{paths.marineFarming[LayoutType.TABLE] === pathname && (
+				<Stack mt={20} mx={2}>
+					{
+						test.map((a, i) => (
+							<Box key={a.id}>
+								<Typography variant="h6" sx={{ color: 'white' }}>
+									{`${i + 1}) ${a.id} | ${a.vesselName} ${dayjs(a.eta).format('DD/MM/YYYY')}`}
+								</Typography>
+							</Box>
+						))
+					}
+				</Stack>
+			)}
 		</Container>
 	);
 };

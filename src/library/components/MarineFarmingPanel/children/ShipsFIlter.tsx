@@ -79,7 +79,3 @@ const ShipsFIlter: React.FunctionComponent<IProps> = () => {
 };
 
 export default ShipsFIlter;
-
-/*
-	3) Пофисксить поле, которое берется за id в фильтрах
-*/

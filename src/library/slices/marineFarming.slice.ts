@@ -82,7 +82,7 @@ const initialState: MarineFarmingState = {
 					items: uniqBy(
 						shipsData.filter((v) => v.vesselType !== undefined),
 						'vesselType',
-					).map((v) => ({ id: v.vesselType, name: v.vesselType })),
+					).map((v) => ({ id: v.id, name: v.vesselType })),
 					selected: {},
 				},
 				vesselName: {
@@ -92,7 +92,7 @@ const initialState: MarineFarmingState = {
 					items: uniqBy(
 						shipsData.filter((v) => v.vesselName !== undefined),
 						'vesselName',
-					).map((v) => ({ id: v.vesselName, name: v.vesselName })),
+					).map((v) => ({ id: v.id, name: v.vesselName })),
 					selected: {},
 				},
 				flagCountry: {
@@ -102,7 +102,7 @@ const initialState: MarineFarmingState = {
 					items: uniqBy(
 						shipsData.filter((v) => v.flagCountry !== undefined),
 						'flagCountry',
-					).map((v) => ({ id: v.flagCountry, name: v.flagCountry })),
+					).map((v) => ({ id: v.id, name: v.flagCountry })),
 					selected: {},
 				},
 				destinationPort: {
@@ -112,7 +112,7 @@ const initialState: MarineFarmingState = {
 					items: uniqBy(
 						shipsData.filter((v) => v.destinationPort !== undefined),
 						'destinationPort',
-					).map((v) => ({ id: v.destinationPort, name: v.destinationPort })),
+					).map((v) => ({ id: v.id, name: v.destinationPort })),
 					selected: {},
 				},
 			},

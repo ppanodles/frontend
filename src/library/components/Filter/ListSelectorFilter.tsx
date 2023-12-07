@@ -3,6 +3,7 @@ import {
 	Checkbox, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Typography,
 } from '@mui/material';
 
+import { omit } from 'lodash';
 import { filterLabelSx } from './commonData';
 
 export type IListSelectorFilter = {
@@ -11,18 +12,15 @@ export type IListSelectorFilter = {
         id: string;
         name: string;
     }[];
-    checked: {[key: string]: boolean};
-	onChange(value: {[key: string]: boolean}): void;
+    checked: { [key: string]: string };
+	onChange(value: {[key: string]: string}): void;
 }
 
 const ListSelectorFilter: React.FunctionComponent<IListSelectorFilter> = ({
 	name, values, checked, onChange,
 }) => {
-	const selectHandler = (id: string) => {
-		onChange({
-			...checked,
-			[id]: !checked[id],
-		});
+	const selectHandler = (id: string, value: string) => {
+		onChange(checked[id] ? omit(checked, id) : { ...checked, [id]: value });
 	};
 
 	return (
@@ -32,14 +30,14 @@ const ListSelectorFilter: React.FunctionComponent<IListSelectorFilter> = ({
 			</Typography>
 
 			<List sx={{ width: '100%' }}>
-				{values.map(({ id, name: itemName }) => {
+				{values.map(({ id, name: value }) => {
 					const labelId = `checkbox-list-label-${id}`;
 
 					return (
 						<ListItem key={id} disablePadding>
 							<ListItemButton
 								role={undefined}
-								onClick={() => selectHandler(id)}
+								onClick={() => selectHandler(id, value)}
 								dense
 							>
 								<ListItemIcon sx={{ minWidth: 0 }}>
@@ -52,7 +50,7 @@ const ListSelectorFilter: React.FunctionComponent<IListSelectorFilter> = ({
 										inputProps={{ 'aria-labelledby': labelId }}
 									/>
 								</ListItemIcon>
-								<ListItemText id={labelId} primary={itemName} sx={(theme) => ({ color: theme.palette.text.secondary })} />
+								<ListItemText id={labelId} primary={value} sx={(theme) => ({ color: theme.palette.text.secondary })} />
 							</ListItemButton>
 						</ListItem>
 					);

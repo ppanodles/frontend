@@ -9,7 +9,7 @@ type Base<T> = {
 type IListSelectionFilter<T> = {
     type: FilterType.LIST_SELECTOR,
     items: Array<{ id: string, name: string }>
-    selected: { [key: string]: boolean },
+    selected: { [key: string]: string },
 } & Base<T>;
 
 type IRangeFilter<T> = {

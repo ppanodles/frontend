@@ -4,7 +4,7 @@ export type ListSelectorPayload<T, P> = {
     dataType: T;
 	field: P;
 	filter: FilterType.LIST_SELECTOR;
-	value: {[key: string]: boolean};
+	value: {[key: string]: string};
 }
 
 export type DateTimeRangePayload<T, P> = {
