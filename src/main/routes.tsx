@@ -3,11 +3,11 @@ import paths, { LayoutType } from 'library/paths';
 import AgroIndustry from 'pages/AgroIndustry';
 import MarineFarming from 'pages/MarineFarming';
 import Municipality from 'pages/Municipality';
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createHashRouter, Navigate } from 'react-router-dom';
 
-export default createBrowserRouter([
+export default createHashRouter([
 	{
-		path: '/frontend/app',
+		path: '/app',
 		children: [
 			{
 				path: paths.marineFarming.base,
@@ -42,7 +42,6 @@ export default createBrowserRouter([
 			},
 		],
 	},
-	{ path: '/frontend/app/', element: <Navigate to={paths.marineFarming.base} replace /> },
 	{ path: '/', element: <Navigate to={paths.marineFarming.base} replace /> },
 	{ path: '*', element: <Navigate to={paths.marineFarming.base} replace /> },
 ]);
