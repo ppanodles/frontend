@@ -13,7 +13,6 @@ import {
 	DateTimePickPayload, DateTimeRangePayload, ListSelectorPayload, RangePayload,
 } from 'library/types/filterPayload.d';
 import {uniqBy} from 'lodash';
-import getDefaultDateRange from 'library/helpers/getDefaultDateRange';
 
 const shipsData: IShip[] = shipsMapper((shipJSON as any).data);
 const filmContaminationData: IFilmContamination[] = filmContaminationMapper(filmContaminationJSON.data);
@@ -107,14 +106,6 @@ const initialState: MarineFarmingState = {
 						.filter((v) => v.destination !== undefined), 'destination')
 						.map((v) => ({ id: v.destination.port, name: v.destination.port })),
 					selected: {},
-				},
-			},
-			eta: {
-				[FilterType.DATE_TIME_RANGE]: {
-					type: FilterType.DATE_TIME_RANGE,
-					field: 'eta',
-					name: 'Время прибытия',
-					borders: getDefaultDateRange(shipsData.map((v) => v.eta)),
 				},
 			},
 		},

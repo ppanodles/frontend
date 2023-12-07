@@ -1,9 +1,8 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-nested-ternary */
 import Icon from 'library/components/Icon';
 import { Popup } from 'react-map-gl';
 
 import './styles.css';
+import { getFormattedDate } from 'library/components/map/helpers';
 
 interface IProps {
   name?: string;
@@ -12,25 +11,13 @@ interface IProps {
   destination: string;
   imo: string;
   mmsi: string;
-}
-
-function generateRandomDate(from: Date, to: Date) {
-	return new Date(from.getTime() + Math.random() * (to.getTime() - from.getTime()));
+  dateUTC: string;
 }
 
 const ShipPopup = ({
-	name, coordinates, onClose, destination, imo, mmsi,
+	name, coordinates, onClose, destination, imo, mmsi, dateUTC,
 }: IProps) => {
-	const date = generateRandomDate(new Date(2022, 1, 1), new Date());
-	const dateText = `${
-		date.getDay() === 0 ? '01' : date.getDay() < 10 ? `0${date.getDay()}` : date.getDay()
-	}.${
-		date.getMonth() < 10 ? `0${date.getMonth() === 0 ? '1' : date.getMonth()}` : date.getMonth()
-	}.${date.getFullYear()}`;
-
-	const dateTime = `${date.getUTCHours() < 10 ? `0${date.getUTCHours()}` : date.getUTCHours()}:${
-		date.getUTCMinutes() < 10 ? `0${date.getUTCMinutes()}` : date.getUTCMinutes()
-	}`;
+	const {fullDate, time} = getFormattedDate(dateUTC);
 
 	return (
 		<Popup
@@ -60,13 +47,13 @@ const ShipPopup = ({
 							<div className="popupIcon">
 								<Icon iconName="calendar" />
 							</div>
-							<div className="shipPopupDateValue">{dateText}</div>
+							<div className="shipPopupDateValue">{fullDate}</div>
 						</div>
 						<div className="popupBlock">
 							<div className="popupIcon">
 								<Icon iconName="clock" />
 							</div>
-							<div className="shipPopupDateValue">{dateTime}</div>
+							<div className="shipPopupDateValue">{time}</div>
 						</div>
 					</div>
 					<div className="shipPopupValue">

@@ -6,46 +6,16 @@
             "mmsi": 273451700,
             "imo": 8837942,
             "vessel_name": "Керн",
-            "callsign": "UFVD",
             "vessel_type": "Научно-исследовательское",
-            "vessel_type_code": 90,
-            "vessel_type_cargo": "",
-            "vessel_class": "",
-            "length": 56,
-            "width": 9,
             "flag_country": "Россия",
-            "flag_code": "non",
             "destination": {
                 "port": "Мурманск",
                 "coordinates": [33.083792, 68.974705]
             },
-            "eta": "Sun Oct 15 2023 12:00:00",
-            "draught": 4.400000095367432,
             "longitude": 33.031631,
             "latitude": 68.957283,
-            "sog": 0,
-            "cog": 36,
             "rot": 0,
-            "heading": 9,
-            "nav_status": "",
-            "nav_status_code": null,
-            "source": "S-AIS",
-            "ts_pos_utc": "2023-06-09 17:25:16",
-            "ts_static_utc": "2023-06-09 17:25:16",
-            "ts_eta": null,
-            "ts_insert_utc": "2023-06-09 17:25:16",
-            "registry_name": "КЕРН",
-            "registry_name_en": "KERN",
-            "vessel_type_main": "",
-            "vessel_type_sub": "",
-            "message_type": 1,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    33.031631,
-                    68.957283
-                ]
-            }
+            "ts_pos_utc": "2023-06-09 17:25:16"
         },
         {
             "type": "Feature",
@@ -53,46 +23,16 @@
             "mmsi": 273297890,
             "imo": 0,
             "vessel_name": "Юрий Бабаев",
-            "callsign": "UBBX4",
             "vessel_type": "Грузовое",
-            "vessel_type_code": 50,
-            "vessel_type_cargo": "",
-            "vessel_class": "",
-            "length": 35,
-            "width": 10,
             "flag_country": "Россия",
-            "flag_code": "non",
             "destination":  {
                 "port": "Мурманск",
                 "coordinates": [33.083792, 68.974705]
             },
-            "eta": "Tue Sep 10 2024 19:00:00",
-            "draught": 0,
             "longitude": 33.09000015258789,
             "latitude": 69.05166625976562,
-            "sog": 0,
-            "cog": 237,
             "rot": null,
-            "heading": null,
-            "nav_status": "Under way using engine",
-            "nav_status_code": 0,
-            "source": "S-AIS",
-            "ts_pos_utc": "2023-06-27 12:35:03",
-            "ts_static_utc": "2023-06-27 12:35:03",
-            "ts_eta": "2023-09-10 19:00:00",
-            "ts_insert_utc": "2023-06-27 12:35:03",
-            "registry_name": null,
-            "registry_name_en": "Yuri Babaev",
-            "vessel_type_main": "",
-            "vessel_type_sub": "",
-            "message_type": 1,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    33.0900002,
-                    69.0516663
-                ]
-            }
+            "ts_pos_utc": "2023-06-27 12:35:03"
         },
         {
             "type": "Feature",
@@ -100,46 +40,16 @@
             "mmsi": 273457920,
             "imo": 8909331,
             "vessel_name": "Григорий Михеев",
-            "callsign": "UCRE",
             "vessel_type": "Грузопассажирское",
-            "vessel_type_code": 90,
-            "vessel_type_cargo": "",
-            "vessel_class": "",
-            "length": 65,
-            "width": 12,
             "flag_country": "Россия",
-            "flag_code": "non",
             "destination":  {
                 "port": "Калининград",
                 "coordinates": [20.261238, 54.846789]
             },
-            "eta": "Tue Dec 19 2023 17:00:00",
-            "draught": 3.799999952316284,
             "longitude": 20.451831,
             "latitude": 54.695446,
-            "sog": 0,
-            "cog": 240.1999969482422,
             "rot": 0,
-            "heading": 26,
-            "nav_status": "",
-            "nav_status_code": null,
-            "source": "S-AIS",
-            "ts_pos_utc": "2023-06-09 19:21:31",
-            "ts_static_utc": "2023-06-09 19:21:31",
-            "ts_eta": null,
-            "ts_insert_utc": "2023-06-09 19:21:31",
-            "registry_name": "ГРИГОРИЙ МИХЕЕВ",
-            "registry_name_en": "GRIGORIY MIKHEYEV",
-            "vessel_type_main": "",
-            "vessel_type_sub": "",
-            "message_type": 1,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    20.451831,
-                    54.695446
-                ]
-            }
+            "ts_pos_utc": "2023-06-09 19:21:31"
         },
         {
             "type": "Feature",
@@ -147,46 +57,16 @@
             "mmsi": 273120100,
             "imo": 8909343,
             "vessel_name": "Петр Котцов",
-            "callsign": "UCRJ",
             "vessel_type": "Промысловое",
-            "vessel_type_code": 95,
-            "vessel_type_cargo": "",
-            "vessel_class": "",
-            "length": 65,
-            "width": 13,
             "flag_country": "Россия",
-            "flag_code": "non",
             "destination":  {
                 "port": "Калининград",
                 "coordinates": [20.261238, 54.846789]
             },
-            "eta": "Sun Nov 26 2023 10:00:00",
-            "draught": 4,
             "longitude": 20.145467,
             "latitude": 54.675888,
-            "sog": 0,
-            "cog": 332.1000061035156,
             "rot": null,
-            "heading": null,
-            "nav_status": "",
-            "nav_status_code": null,
-            "source": "S-AIS",
-            "ts_pos_utc": "2023-06-09 19:38:37",
-            "ts_static_utc": "2023-06-09 19:38:37",
-            "ts_eta": null,
-            "ts_insert_utc": "2023-06-09 19:38:37",
-            "registry_name": "ПЕТР КОТЦОВ",
-            "registry_name_en": "PETR KOTTSOV",
-            "vessel_type_main": "",
-            "vessel_type_sub": "",
-            "message_type": 1,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    20.145467,
-                    54.675888
-                ]
-            }
+            "ts_pos_utc": "2023-06-09 19:38:37"
         },
         {
             "type": "Feature",
@@ -194,46 +74,16 @@
             "mmsi": 273297890,
             "imo": 9929065,
             "vessel_name": "Всеволод Пересыпкин",
-            "callsign": "UBBX4",
             "vessel_type": "Специального назначения",
-            "vessel_type_code": 50,
-            "vessel_type_cargo": "",
-            "vessel_class": "",
-            "length": 35,
-            "width": 10,
             "flag_country": "Беларусь",
-            "flag_code": "non",
             "destination":  {
                 "port": "Мурманск",
                 "coordinates": [33.083792, 68.974705]
             },
-            "eta": "Tue Sep 10 2024 19:00:00",
-            "draught": 2.5,
             "longitude": 33.09,
             "latitude": 69.051666,
-            "sog": 0,
-            "cog": 19.299999237060547,
             "rot": null,
-            "heading": null,
-            "nav_status": "Moored",
-            "nav_status_code": 5,
-            "source": "S-AIS",
-            "ts_pos_utc": "2023-06-30 10:01:16",
-            "ts_static_utc": "2023-06-30 10:01:16",
-            "ts_eta": "2023-09-10 19:00:00",
-            "ts_insert_utc": "2023-06-30 10:01:16",
-            "registry_name": "Vsevolod Peresipkyn",
-            "registry_name_en": "Vsevolod Peresipkyn",
-            "vessel_type_main": "",
-            "vessel_type_sub": "",
-            "message_type": 1,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    33.09,
-                    69.051666
-                ]
-            }
+            "ts_pos_utc": "2023-06-30 10:01:16"
         },
         {
             "type": "Feature",
@@ -241,46 +91,16 @@
             "mmsi": 273295890,
             "imo": 9929053,
             "vessel_name": "Александр Парфенов",
-            "callsign": "UBBX3",
             "vessel_type": "Специального назначения",
-            "vessel_type_code": 50,
-            "vessel_type_cargo": "",
-            "vessel_class": "",
-            "length": 35,
-            "width": 10,
             "flag_country": "Россия",
-            "flag_code": "non",
             "destination": {
                 "port": "Архангельск",
                 "coordinates": [40.522246, 64.539871]
             },
-            "eta": "Thu Nov 07 2024 08:00:00",
-            "draught": 25,
             "longitude": 40.49985885620117,
             "latitude": 64.58344268798828,
-            "sog": 0,
-            "cog": 157,
             "rot": null,
-            "heading": null,
-            "nav_status": "Under way using engine",
-            "nav_status_code": 0,
-            "source": "S-AIS",
-            "ts_pos_utc": "2023-06-10 22:41:17",
-            "ts_static_utc": "2023-06-10 22:41:17",
-            "ts_eta": "2023-11-07 08:00:00",
-            "ts_insert_utc": "2023-06-10 22:41:17",
-            "registry_name": "ALEXANDER PARFENOV",
-            "registry_name_en": "ALEXANDER PARFENOV",
-            "vessel_type_main": "",
-            "vessel_type_sub": "",
-            "message_type": 1,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    40.4998589,
-                    64.5834427
-                ]
-            }
+            "ts_pos_utc": "2023-06-10 22:41:17"
         },
         {
             "type": "Feature",
@@ -288,46 +108,16 @@
             "mmsi": 273433010,
             "imo": 8606575,
             "vessel_name": "Иван Петров",
-            "callsign": "UFNP",
             "vessel_type": "Научно-исследовательское",
-            "vessel_type_code": 99,
-            "vessel_type_cargo": "",
-            "vessel_class": "",
-            "length": 50,
-            "width": 10,
             "flag_country": "Россия",
-            "flag_code": "non",
             "destination": {
                 "port": "Архангельск",
                 "coordinates": [40.522246, 64.539871]
             },
-            "eta": "Thu Jun 27 2024 06:00:00",
-            "draught": 4,
             "longitude": 40.538333,
             "latitude": 64.526664,
-            "sog": 0,
-            "cog": 32.400001525878906,
             "rot": null,
-            "heading": 193,
-            "nav_status": "Moored",
-            "nav_status_code": 5,
-            "source": "S-AIS",
-            "ts_pos_utc": "2023-07-01 12:06:57",
-            "ts_static_utc": "2023-07-01 12:06:57",
-            "ts_eta": "2023-06-27 06:00:00",
-            "ts_insert_utc": "2023-07-01 12:06:57",
-            "registry_name": "ИВАН ПЕТРОВ",
-            "registry_name_en": "IVAN PETROV",
-            "vessel_type_main": "",
-            "vessel_type_sub": "",
-            "message_type": 1,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    40.538333,
-                    64.526664
-                ]
-            }
+            "ts_pos_utc": "2023-07-01 12:06:57"
         },
         {
             "type": "Feature",
@@ -335,92 +125,34 @@
             "mmsi": 273456920,
             "imo": 8909329,
             "vessel_name": "АЛЕКСЕЙ МАРЫШЕВ",
-            "callsign": "UCRD",
             "vessel_type": "Пасскажирское",
-            "vessel_type_code": 0,
-            "vessel_type_cargo": "",
-            "vessel_class": "",
-            "length": 65,
-            "width": 13,
             "flag_country": "Россия",
-            "flag_code": "non",
             "destination": {
                 "port": "Владивосток",
                 "coordinates": [ 131.882907,43.117321]
             },
-            "eta": "2024-02-27 18:00:00",
-            "draught": 4.199999809265137,
             "longitude": 40.5,
             "latitude": 64.58333587646484,
-            "sog": 0,
-            "cog": null,
             "rot": null,
-            "heading": null,
-            "nav_status": "Under way using engine",
-            "nav_status_code": 0,
-            "source": "S-AIS",
-            "ts_pos_utc": "2023-06-27 18:09:32",
-            "ts_static_utc": "2023-06-27 18:09:32",
-            "ts_eta": null,
-            "ts_insert_utc": "2023-06-27 18:09:32",
-            "registry_name": "АЛЕКСЕЙ МАРЫШЕВ",
-            "registry_name_en": "ALEKSEY MARYSHEV",
-            "vessel_type_main": "",
-            "vessel_type_sub": "",
-            "message_type": 1,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    40.5,
-                    64.5833359
-                ]
-            }
+            "ts_pos_utc": "2023-06-27 18:09:32"
+            
         },
         {
             "type": "Feature",
-            "id": 13398,
+            "id": 13391,
             "mmsi": 273456920,
             "imo": 8909329,
             "vessel_name": "АЛЕКСЕЙ МАРЫШЕВ",
-            "callsign": "UCRD",
             "vessel_type": "Пасскажирское",
-            "vessel_type_code": 0,
-            "vessel_type_cargo": "",
-            "vessel_class": "",
-            "length": 65,
-            "width": 13,
             "flag_country": "Россия",
-            "flag_code": "non",
             "destination":{
                 "port": "Владивосток",
                 "coordinates": [40.522246, 64.539871]
             },
-            "eta": "2024-02-27 18:00:00",
-            "draught": 4.199999809265137,
             "longitude": 40.5,
             "latitude": 64.58333587646484,
-            "sog": 0,
-            "cog": null,
             "rot": null,
-            "heading": null,
-            "nav_status": "Under way using engine",
-            "nav_status_code": 0,
-            "source": "S-AIS",
-            "ts_pos_utc": "2023-06-27 18:09:32",
-            "ts_static_utc": "2023-06-27 18:09:32",
-            "ts_eta": null,
-            "ts_insert_utc": "2023-06-27 18:09:32",
-            "registry_name": "АЛЕКСЕЙ МАРЫШЕВ",
-            "registry_name_en": "ALEKSEY MARYSHEV",
-            "vessel_type_main": "",
-            "vessel_type_sub": "",
-            "message_type": 1,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    46.032603, 69.880042
-                ]
-            }
+            "ts_pos_utc": "2023-06-27 18:09:32"
         }
     ]
 }

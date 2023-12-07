@@ -36,3 +36,15 @@ export const getFilmContaminationColorByType = (type: 'Нефть' | 'Нефте
 
 	return '#22C38E';
 };
+
+export const getFormattedDate = (dateUTC: string): {fullDate: string, time:string} => {
+	const [date, time] = dateUTC.split(' ');
+	const parts = date.split('-').map((d) => Number(d));
+	const fullDate = new Date(parts[0], parts[1] - 1, parts[2]);
+	const formattedDate = `${fullDate.getDate().toString().padStart(2, '0')}.${(fullDate.getMonth() + 1).toString().padStart(2, '0')}.${fullDate.getFullYear()}`;
+
+	return {
+		fullDate: formattedDate,
+		time: time.substring(0, 5),
+	};
+};

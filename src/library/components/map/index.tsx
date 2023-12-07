@@ -1,5 +1,4 @@
 /* eslint-disable import/no-unresolved */
-/* eslint-disable max-len */
 import Map, { Layer, Marker, Source } from 'react-map-gl';
 import type { FillLayer, MapRef } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -7,7 +6,6 @@ import {
 	ReactElement, useCallback, useMemo, useState,
 } from 'react';
 import { useSelector } from 'react-redux';
-
 import { IFilmContamination, IShip } from 'library/types/marineFarming';
 import { RootState } from 'main/rootReducer';
 import * as turf from '@turf/turf';
@@ -50,7 +48,7 @@ const DataMap = () => {
 		<Marker
 			onClick={() => setPopup(
 				<ShipPopup
-					coordinates={[shipInfo.geometry.coordinates[0], shipInfo.geometry.coordinates[1]]}
+					coordinates={[shipInfo.longitude, shipInfo.latitude]}
 					destination={shipInfo.destination.port}
 					imo={
 						shipInfo.imo
@@ -58,13 +56,14 @@ const DataMap = () => {
 							: shipInfo.mmsi.toString().substring(0, 7)
 					}
 					mmsi={shipInfo.mmsi.toString().substring(0, 7)}
-					name={shipInfo.registryName}
+					name={shipInfo.vesselName}
+					dateUTC={shipInfo.tsPosUtc}
 					onClose={() => setPopup(null)}
 				/>,
 			)}
 			key={shipInfo.id}
-			longitude={shipInfo.geometry.coordinates[0]}
-			latitude={shipInfo.geometry.coordinates[1]}
+			longitude={shipInfo.longitude}
+			latitude={shipInfo.latitude}
 			anchor="bottom"
 			rotation={shipInfo.rot}
 		>
@@ -118,7 +117,7 @@ const DataMap = () => {
 
 	const shipMarkers = useMemo(() => ships.map(mapShipsDataToMarkers), [mapShipsDataToMarkers, ships]);
 
-	const portMarkers = useMemo(() => ports.map(portsToMarkers), [portsToMarkers]);
+	const portMarkers = useMemo(() => ports.map(portsToMarkers), [ports, portsToMarkers]);
 
 	const filmContaminationMarkers = useMemo(() => filmContamination.map(mapFilmContaminationToMarkers), [filmContamination, mapFilmContaminationToMarkers]);
 
