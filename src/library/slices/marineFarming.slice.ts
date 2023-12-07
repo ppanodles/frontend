@@ -17,6 +17,7 @@ import {
 } from 'library/types/filterPayload.d';
 import { uniqBy } from 'lodash';
 import getDefaultRange from 'library/helpers/getDefaultRange';
+import getDefaultDateRange from 'library/helpers/getDefaultDateRange';
 
 const shipsData: IShip[] = shipsMapper((shipJSON as any).data);
 const filmContaminationData: IFilmContamination[] = filmContaminationMapper(
@@ -72,8 +73,8 @@ const initialState: MarineFarmingState = {
 	greenhouseGases: greenhouseGasesData,
 	filters: {
 		[MarineFarmingDataType.SHIPS]: {
-			vesselType: {
-				[FilterType.LIST_SELECTOR]: {
+			[FilterType.LIST_SELECTOR]: {
+				vesselType: {
 					type: FilterType.LIST_SELECTOR,
 					field: 'vesselType',
 					name: 'Тип судна',
@@ -84,9 +85,7 @@ const initialState: MarineFarmingState = {
 					).map((v) => ({ id: v.vesselType, name: v.vesselType })),
 					selected: {},
 				},
-			},
-			vesselName: {
-				[FilterType.LIST_SELECTOR]: {
+				vesselName: {
 					type: FilterType.LIST_SELECTOR,
 					field: 'vesselName',
 					name: 'Наименование судна',
@@ -96,9 +95,7 @@ const initialState: MarineFarmingState = {
 					).map((v) => ({ id: v.vesselName, name: v.vesselName })),
 					selected: {},
 				},
-			},
-			flagCountry: {
-				[FilterType.LIST_SELECTOR]: {
+				flagCountry: {
 					type: FilterType.LIST_SELECTOR,
 					field: 'flagCountry',
 					name: 'Страна регистрации судна',
@@ -108,9 +105,7 @@ const initialState: MarineFarmingState = {
 					).map((v) => ({ id: v.flagCountry, name: v.flagCountry })),
 					selected: {},
 				},
-			},
-			destinationPort: {
-				[FilterType.LIST_SELECTOR]: {
+				destinationPort: {
 					type: FilterType.LIST_SELECTOR,
 					field: 'destinationPort',
 					name: 'Порт назначения',
@@ -121,10 +116,18 @@ const initialState: MarineFarmingState = {
 					selected: {},
 				},
 			},
+			[FilterType.DATE_TIME_RANGE]: {
+				eta: {
+					type: FilterType.DATE_TIME_RANGE,
+					field: 'eta',
+					name: 'Время прибытия',
+					borders: getDefaultDateRange(shipsData.map((v) => v.eta)),
+				},
+			},
 		},
 		[MarineFarmingDataType.GREENHOUSE_GASES]: {
-			emissionLevel: {
-				[FilterType.RANGE]: {
+			[FilterType.RANGE]: {
+				emissionLevel: {
 					type: FilterType.RANGE,
 					field: 'emissionLevel',
 					name: 'Уровень эмиссии',
@@ -150,15 +153,12 @@ const marineFarmingSlice = createSlice({
 		toggleSliceAccessibility(state, action: PayloadAction<MarineFarmingDataType>) {
 			state.slicesAccessibility[action.payload] = !state.slicesAccessibility[action.payload];
 		},
-		applyFilter(
-			state,
-			{
-				payload: {
-					filter, field, value, dataType,
-				},
-			}: PayloadAction<ApplyFilterPayload>,
-		) {
-			(state.filters[dataType] as any)[field][filter].selected = value;
+		applyFilter(state, {
+			payload: {
+				filter, field, value, dataType,
+			},
+		}: PayloadAction<ApplyFilterPayload>) {
+			(state.filters[dataType] as any)[filter][field].selected = value;
 		},
 	},
 });

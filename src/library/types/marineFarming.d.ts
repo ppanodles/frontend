@@ -14,6 +14,7 @@ export interface IShip {
     latitude: number;
     rot?: number;
     tsPosUtc: string;
+    eta: string;
 }
 
 interface IGreenhouseGases {

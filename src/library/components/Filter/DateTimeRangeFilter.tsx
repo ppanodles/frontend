@@ -112,7 +112,6 @@ const DateTimeRangeFilter: React.FunctionComponent<IDateTimeRangeFilter> = ({
 							},
 						}}
 						onChange={(date) => handleOnChange({ from: date })}
-						onClose={() => console.log('lol')}
 						minDate={dayjs(borders.from)}
 						maxDate={value?.to ? dayjs(value.to) : dayjs(borders.to)}
 					/>

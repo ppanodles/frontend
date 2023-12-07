@@ -32,7 +32,7 @@ type IDatePickFilter<T> = {
 export type CommonFilterDataType<T> = IListSelectionFilter<T> | IRangeFilter<T> | IDateTimeRangeFilter<T> | IDatePickFilter<T>
 
 export type IFilterDataType<T> = {
-    [K in keyof T]?: {
-        [Key in FilterType]?: CommonFilterDataType<T>;
+    [Key in FilterType]?: {
+        [K in keyof T]?: CommonFilterDataType<T>;
     }
 }

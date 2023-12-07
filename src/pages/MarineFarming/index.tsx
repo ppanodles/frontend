@@ -3,7 +3,9 @@ import LayoutSelector from 'library/components/LayoutSelector';
 import DataMap from 'library/components/map';
 import extractLayout from 'library/helpers/extractLayout';
 import paths, { LayoutType } from 'library/paths';
+import { selectFilteredShips } from 'library/selectors/filters.selector';
 import React, { useMemo } from 'react';
+import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 interface IProps {}
@@ -19,6 +21,10 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 	};
 
 	const layout = useMemo(() => extractLayout(pathname), [pathname]);
+
+	const test = useSelector(selectFilteredShips);
+
+	console.log(test.map((a) => a.eta));
 
 	return (
 		<Container

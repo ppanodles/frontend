@@ -16,8 +16,6 @@ const GreenhouseGasesFilter: React.FunctionComponent<IProps> = () => {
 
 	const filters: CommonFilterDataType<IGreenhouseGases>[] = useSelector(selectFilters<IGreenhouseGases>(MarineFarmingDataType.GREENHOUSE_GASES));
 
-	console.log(filters);
-
 	return (
 		<Stack sx={{ width: '100%' }}>
 			{filters.map((filter) => {

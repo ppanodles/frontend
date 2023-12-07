@@ -55,6 +55,23 @@ const ShipsFIlter: React.FunctionComponent<IProps> = () => {
 					);
 				}
 
+				if (filter.type === FilterType.RANGE) {
+					return (
+						<Filter
+							type={FilterType.RANGE}
+							name={filter.name}
+							value={filter.selected}
+							borders={filter.borders}
+							onChange={(value) => dispatch(applyFilter({
+								dataType: MarineFarmingDataType.SHIPS,
+								field: filter.field,
+								filter: filter.type,
+								value,
+							}))}
+						/>
+					);
+				}
+
 				return null;
 			})}
 		</Stack>
@@ -62,3 +79,9 @@ const ShipsFIlter: React.FunctionComponent<IProps> = () => {
 };
 
 export default ShipsFIlter;
+
+/*
+	1) написать селекторы
+	2) пофиксить роутинг для гитпэйджес
+	3) Пофисксить поле, которое берется за id в фильтрах
+*/

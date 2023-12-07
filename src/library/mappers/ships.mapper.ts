@@ -57,4 +57,5 @@ export default (data: any): IShip[] => data?.map((datum: any) => ({
 	latitude: datum?.latitude ?? 0,
 	rot: datum?.rot,
 	tsPosUtc: datum?.ts_pos_utc ?? '',
+	eta: (datum?.eta ? new Date(datum.eta) : new Date()).toString(),
 })) ?? [];
