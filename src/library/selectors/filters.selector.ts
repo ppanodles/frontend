@@ -35,8 +35,6 @@ export const selectFilteredShips = createSelector(
 
 		return filterTypes.reduce((accumulator, currentValue: FilterType) => values(filters[currentValue]).reduce((accumulatedShips, currentFilter) => {
 			if (!isEmpty(currentFilter.selected)) {
-				// TODO тут реализовать разные типы фильтров
-
 				if (currentFilter.type === FilterType.LIST_SELECTOR) {
 					const pickSelection = pickBy(currentFilter.selected, (v) => v === true);
 

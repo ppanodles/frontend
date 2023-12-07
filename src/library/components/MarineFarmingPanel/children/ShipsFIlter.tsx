@@ -81,7 +81,5 @@ const ShipsFIlter: React.FunctionComponent<IProps> = () => {
 export default ShipsFIlter;
 
 /*
-	1) написать селекторы
-	2) пофиксить роутинг для гитпэйджес
 	3) Пофисксить поле, которое берется за id в фильтрах
 */
