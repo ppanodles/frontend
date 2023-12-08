@@ -1,43 +1,46 @@
 .mapboxgl-ctrl-group {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 40px;
-    height: 96px;
-    background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 40px;
+  height: 96px;
+  background: transparent;
 }
 
 .mapboxgl-ctrl-group button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #0B071B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #0b071b;
 }
 
 .mapboxgl-ctrl-group button :hover {
-    background-color: #00E5FF;
+  background-color: #00e5ff;
 }
 
 .mapboxgl-ctrl-group:not(:empty) {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .mapboxgl-ctrl-top-right .mapboxgl-ctrl {
-    margin: 0 12px 0 0;
+  margin: 0 12px 0 0;
 }
 
-.mapboxgl-ctrl-group button+button {
-    border-top: none;
+.mapboxgl-ctrl-group button + button {
+  border-top: none;
 }
 
 .mapboxgl-ctrl-group button:first-child {
-    border-radius: 50%;
-
+  border-radius: 50%;
 }
 
 .mapboxgl-ctrl-group button:last-child {
-    border-radius: 50%;
+  border-radius: 50%;
+}
 
+.mapboxgl-ctrl button:disabled .mapboxgl-ctrl-icon {
+  color: white;
+  opacity: 1;
 }
