@@ -4,13 +4,19 @@ import { createSelector } from 'reselect';
 import { values, isEmpty, keys } from 'lodash';
 import dayjs from 'dayjs';
 import FilterType from 'library/constants/FilterType';
+import { IShip } from 'library/types/marineFarming.d';
 
-const selectFilteredShips = createSelector(
+const selectFilteredShips: (state: RootState) => IShip[] = createSelector(
 	[
 		(state: RootState) => state.marineFarming.filters[MarineFarmingDataType.SHIPS],
 		(state: RootState) => state.marineFarming.ships,
+		(state: RootState) => state.marineFarming.slicesStatus,
 	],
-	(filters, ships) => {
+	(filters, ships, slicesStatus) => {
+		if (slicesStatus[MarineFarmingDataType.SHIPS] === false) {
+			return [];
+		}
+
 		const filterTypes = keys(filters) as FilterType[];
 
 		return filterTypes.reduce((accumulator, currentValue: FilterType) => values(filters[currentValue]).reduce((accumulatedShips, currentFilter) => {
