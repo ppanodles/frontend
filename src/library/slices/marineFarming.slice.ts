@@ -152,6 +152,8 @@ const marineFarmingSlice = createSlice({
 	reducers: {
 		toggleSliceAccessibility(state, action: PayloadAction<MarineFarmingDataType>) {
 			state.slicesAccessibility[action.payload] = !state.slicesAccessibility[action.payload];
+
+			(state.filters[action.payload] as any) = initialState.filters[action.payload];
 		},
 		applyFilter(state, {
 			payload: {
