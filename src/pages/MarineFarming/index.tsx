@@ -1,16 +1,12 @@
-import {
-	Box, Container, Stack, Typography,
-} from '@mui/material';
-import dayjs from 'dayjs';
+import {Box, Container} from '@mui/material';
 import LayoutSelector from 'library/components/LayoutSelector';
 import DataMap from 'library/components/map';
 import extractLayout from 'library/helpers/extractLayout';
 import paths, { LayoutType } from 'library/paths';
-import selectFilteredShips from 'library/selectors/ships.selector';
 import React, { useMemo } from 'react';
-import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Charts from './Charts';
+import Tables from './Tables';
 
 interface IProps {}
 
@@ -18,15 +14,13 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 	const navigate = useNavigate();
 	const { pathname } = useLocation();
 
+	const layout = useMemo(() => extractLayout(pathname), [pathname]);
+
 	const changeLayoutHandle = (value: LayoutType | null) => {
 		if (value !== null) {
 			navigate(paths.marineFarming[value]);
 		}
 	};
-
-	const layout = useMemo(() => extractLayout(pathname), [pathname]);
-
-	const test = useSelector(selectFilteredShips);
 
 	return (
 		<Container
@@ -45,23 +39,11 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 				<LayoutSelector value={layout} setValue={changeLayoutHandle} />
 			</Box>
 
-			{paths.marineFarming[LayoutType.MAP] === pathname && process.env.REACT_APP_ACCESS_TOKEN && (
+			{LayoutType.MAP === layout && process.env.REACT_APP_ACCESS_TOKEN && (
 				<DataMap />
 			)}
-			{paths.marineFarming[LayoutType.CHARTS] === pathname && <Charts />}
-			{paths.marineFarming[LayoutType.TABLE] === pathname && (
-				<Stack mt={20} mx={2}>
-					{
-						test.map((a, i) => (
-							<Box key={a.id}>
-								<Typography variant="h6" sx={{ color: 'white' }}>
-									{`${i + 1}) ${a.id} | ${a.vesselName} ${dayjs(a.eta).format('DD/MM/YYYY')}`}
-								</Typography>
-							</Box>
-						))
-					}
-				</Stack>
-			)}
+			{LayoutType.CHARTS === layout && <Charts />}
+			{LayoutType.TABLE === layout && <Tables />}
 		</Container>
 	);
 };
