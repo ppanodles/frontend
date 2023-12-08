@@ -1,5 +1,7 @@
 /* eslint-disable import/no-unresolved */
-import Map, { Layer, Marker, Source } from 'react-map-gl';
+import Map, {
+	Layer, Marker, Source, NavigationControl,
+} from 'react-map-gl';
 import type { FillLayer, MapRef } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import {
@@ -10,12 +12,16 @@ import { IFilmContamination, IShip } from 'library/types/marineFarming';
 import { RootState } from 'main/rootReducer';
 import * as turf from '@turf/turf';
 import selectFilteredShips from 'library/selectors/ships.selector';
+import { Box } from '@mui/material';
 import ShipPopup from './components/popups/ShipPopup';
 import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
 import Icon from '../Icon/index';
 import { mapGreenhouseGasesDataToFeatures } from './mappers';
 import GreenhouseGasePopup from './components/popups/GreenhouseGasePopup';
 import PortPopup from './components/popups/PortPopup';
+import GasesInfoTable from './components/GasesInfoTable';
+
+import './styles.css';
 
 const layerStyle: FillLayer = {
 	id: 'point',
@@ -168,8 +174,8 @@ const DataMap = () => {
 				latitude: 70.939,
 				zoom: 4,
 			}}
-			// maxZoom={8}
-			// minZoom={4}
+			maxZoom={8}
+			minZoom={4}
 			doubleClickZoom={false}
 			style={{ width: '100%', height: '100%' }}
 			onClick={(e) => {
@@ -204,6 +210,32 @@ const DataMap = () => {
 					<Layer {...layerStyle} />
 				</Source>
 			)}
+			{slicesAccessibility.GREENHOUSE_GASES && (
+				<Box sx={{
+					position: 'absolute',
+					bottom: 100,
+					right: 38,
+					zIndex: '1',
+					width: 180,
+					height: 200,
+					backgroundColor: '#0B071B',
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+					borderRadius: 4,
+				}}
+				>
+					<GasesInfoTable />
+				</Box>
+			)}
+
+			<NavigationControl
+				style={{
+					marginTop: 400,
+				}}
+				position="top-right"
+				showCompass={false}
+			/>
 		</Map>
 	);
 };

@@ -1,0 +1,43 @@
+.mapboxgl-ctrl-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 40px;
+    height: 96px;
+    background: transparent;
+}
+
+.mapboxgl-ctrl-group button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #0B071B;
+}
+
+.mapboxgl-ctrl-group button :hover {
+    background-color: #00E5FF;
+}
+
+.mapboxgl-ctrl-group:not(:empty) {
+    box-shadow: none;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl {
+    margin: 0 12px 0 0;
+}
+
+.mapboxgl-ctrl-group button+button {
+    border-top: none;
+}
+
+.mapboxgl-ctrl-group button:first-child {
+    border-radius: 50%;
+
+}
+
+.mapboxgl-ctrl-group button:last-child {
+    border-radius: 50%;
+
+}
