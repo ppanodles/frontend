@@ -15,7 +15,9 @@ import {
 	ListSelectorPayload,
 	RangePayload,
 } from 'library/types/filterPayload.d';
-import { uniqBy } from 'lodash';
+import {
+	keys, pickBy, uniqBy, values,
+} from 'lodash';
 import getDefaultRange from 'library/helpers/getDefaultRange';
 import getDefaultDateRange from 'library/helpers/getDefaultDateRange';
 import { LayoutType } from 'library/paths';
@@ -33,7 +35,11 @@ export type Filters = {
 };
 
 export type ISlicesStatus = {
-  [key in keyof Filters]: boolean;
+  [key in MarineFarmingDataType]: boolean;
+};
+
+export type IEnableMultiSelect = {
+  [key in LayoutType]?: boolean;
 };
 
 export type IEnabledSlices = {
@@ -46,11 +52,18 @@ export type MarineFarmingState = {
   filmContamination: IFilmContamination[];
   greenhouseGases: IGreenhouseGases[];
   filters: Filters;
+  /**
+   * Флаги включения слоев
+   */
   slicesStatus: ISlicesStatus;
   /**
    * Какие данные доступны в представлениях
    */
   enableSlices: IEnabledSlices;
+  /**
+   * На каких экранах можно выбрать одновременно несколько слоев (slicesStatus)
+   */
+  enableMultiSelect: IEnableMultiSelect;
 };
 
 type ShipsFilterPayload =
@@ -160,14 +173,17 @@ const initialState: MarineFarmingState = {
 		},
 		[LayoutType.CHARTS]: {
 			[MarineFarmingDataType.SHIPS]: false,
-			[MarineFarmingDataType.GREENHOUSE_GASES]: false,
+			[MarineFarmingDataType.GREENHOUSE_GASES]: true,
 			[MarineFarmingDataType.FILM_CONTAMINATION]: true,
 		},
 		[LayoutType.TABLE]: {
 			[MarineFarmingDataType.SHIPS]: true,
 			[MarineFarmingDataType.GREENHOUSE_GASES]: true,
-			[MarineFarmingDataType.FILM_CONTAMINATION]: false,
+			[MarineFarmingDataType.FILM_CONTAMINATION]: true,
 		},
+	},
+	enableMultiSelect: {
+		[LayoutType.MAP]: true,
 	},
 };
 
@@ -175,10 +191,33 @@ const marineFarmingSlice = createSlice({
 	name: 'marine-farming',
 	initialState,
 	reducers: {
-		toggleSliceAccessibility(state, action: PayloadAction<MarineFarmingDataType>) {
-			state.slicesStatus[action.payload] = !state.slicesStatus[action.payload];
+		selectFirstEnableSlice(state, { payload: currentLayout }: PayloadAction<LayoutType | undefined>) {
+			if (currentLayout) {
+				const firstEnableSlice: MarineFarmingDataType | undefined = (keys(pickBy(state.enableSlices[currentLayout], Boolean)) as MarineFarmingDataType[])?.[0];
 
-			(state.filters[action.payload] as any) = initialState.filters[action.payload];
+				if (firstEnableSlice) {
+					(keys(state.slicesStatus) as MarineFarmingDataType[]).forEach((slice: MarineFarmingDataType) => {
+						state.slicesStatus[slice] = firstEnableSlice === slice;
+					});
+				}
+			}
+		},
+		toggleSliceAccessibility(state, { payload: { dataType, currentLayout } }: PayloadAction<{ dataType: MarineFarmingDataType, currentLayout?: LayoutType }>) {
+			const newValue = !state.slicesStatus[dataType];
+
+			const isActionAvailable = newValue || values(state.slicesStatus).filter(Boolean).length > 1;
+
+			if (isActionAvailable && currentLayout !== undefined) {
+				if (state.enableMultiSelect[currentLayout]) {
+					state.slicesStatus[dataType] = !state.slicesStatus[dataType];
+					(state.filters[dataType] as any) = initialState.filters[dataType];
+				} else {
+					(keys(state.slicesStatus) as MarineFarmingDataType[]).forEach((slice: MarineFarmingDataType) => {
+						state.slicesStatus[slice] = dataType === slice ? newValue : false;
+					});
+					state.filters = initialState.filters;
+				}
+			}
 		},
 		applyFilter(state, {
 			payload: {
@@ -202,6 +241,6 @@ const marineFarmingSlice = createSlice({
 	},
 });
 
-export const { toggleSliceAccessibility, applyFilter } = marineFarmingSlice.actions;
+export const { toggleSliceAccessibility, applyFilter, selectFirstEnableSlice } = marineFarmingSlice.actions;
 
 export default marineFarmingSlice.reducer;

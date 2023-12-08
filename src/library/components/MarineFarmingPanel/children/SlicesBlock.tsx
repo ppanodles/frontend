@@ -11,6 +11,7 @@ import { IconNames } from 'resources/icons';
 import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
 import { selectAccessibleSlices } from 'library/selectors/filters.selector';
 import { useLocation } from 'react-router-dom';
+import getLayoutTypeFomPath from 'library/helpers/getLayoutTypeFomPath';
 import Icon from '../../Icon';
 
 interface IProps {}
@@ -63,7 +64,7 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 		return accumulator;
 	}, [] as SliceSelectorType[]), [sliceFlags, accessibleSlices]);
 
-	const listItemButtonHandler = (id: MarineFarmingDataType) => dispatch(toggleSliceAccessibility(id));
+	const listItemButtonHandler = (id: MarineFarmingDataType) => dispatch(toggleSliceAccessibility({dataType: id, currentLayout: getLayoutTypeFomPath(pathname)}));
 
 	return (
 		<Box>

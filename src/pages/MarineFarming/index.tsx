@@ -10,6 +10,7 @@ import selectFilteredShips from 'library/selectors/ships.selector';
 import React, { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Charts from './Charts';
 
 interface IProps {}
 
@@ -47,7 +48,7 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 			{paths.marineFarming[LayoutType.MAP] === pathname && process.env.REACT_APP_ACCESS_TOKEN && (
 				<DataMap />
 			)}
-			{paths.marineFarming[LayoutType.CHARTS] === pathname && <div>charts</div>}
+			{paths.marineFarming[LayoutType.CHARTS] === pathname && <Charts />}
 			{paths.marineFarming[LayoutType.TABLE] === pathname && (
 				<Stack mt={20} mx={2}>
 					{
