@@ -160,6 +160,18 @@ const marineFarmingSlice = createSlice({
 		}: PayloadAction<ApplyFilterPayload>) {
 			(state.filters[dataType] as any)[filter][field].selected = value;
 		},
+		dropFilterByField(state, { payload: { dataType, filter, field } }: PayloadAction<{dataType: MarineFarmingDataType, filter: FilterType, field: keyof IShip}>) {
+			(state.filters[dataType] as any)[filter][field] = (initialState.filters[dataType] as any)[filter][field];
+		},
+		dropFilterByFilterType(state, { payload: { dataType, filter } }: PayloadAction<{dataType: MarineFarmingDataType, filter: FilterType }>) {
+			(state.filters[dataType] as any)[filter] = (initialState.filters[dataType] as any)[filter];
+		},
+		dropFilterByDataType(state, { payload: { dataType } }: PayloadAction<{dataType: MarineFarmingDataType }>) {
+			(state.filters[dataType] as any) = initialState.filters[dataType];
+		},
+		dropFilters(state) {
+			state.filters = initialState.filters;
+		},
 	},
 });
 
