@@ -3,7 +3,7 @@ import { Stack } from '@mui/material';
 import Filter from 'library/components/Filter';
 import FilterType from 'library/constants/FilterType';
 import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
-import selectFilters from 'library/selectors/filters.selector';
+import { selectFilters } from 'library/selectors/filters.selector';
 import { CommonFilterDataType } from 'library/types/system.d';
 import { useDispatch, useSelector } from 'react-redux';
 import { IFilmContamination } from 'library/types/marineFarming.d';

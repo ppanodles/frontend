@@ -6,7 +6,7 @@ import LayoutSelector from 'library/components/LayoutSelector';
 import DataMap from 'library/components/map';
 import extractLayout from 'library/helpers/extractLayout';
 import paths, { LayoutType } from 'library/paths';
-import { selectFilteredShips } from 'library/selectors/filters.selector';
+import selectFilteredShips from 'library/selectors/ships.selector';
 import React, { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';

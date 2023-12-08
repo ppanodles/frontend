@@ -7,7 +7,7 @@ import { IShip } from 'library/types/marineFarming.d';
 import { CommonFilterDataType } from 'library/types/system.d';
 import { applyFilter } from 'library/slices/marineFarming.slice';
 import Filter from 'library/components/Filter';
-import selectFilters from 'library/selectors/filters.selector';
+import { selectFilters } from 'library/selectors/filters.selector';
 
 interface IProps {}
 

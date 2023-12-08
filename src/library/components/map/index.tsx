@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { IFilmContamination, IShip } from 'library/types/marineFarming';
 import { RootState } from 'main/rootReducer';
 import * as turf from '@turf/turf';
-import { selectFilteredShips } from 'library/selectors/filters.selector';
+import selectFilteredShips from 'library/selectors/ships.selector';
 import ShipPopup from './components/popups/ShipPopup';
 import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
 import Icon from '../Icon/index';
@@ -37,7 +37,7 @@ const DataMap = () => {
 	}, []);
 
 	const {
-		greenhouseGases, filmContamination, slicesAccessibility,
+		greenhouseGases, filmContamination, slicesStatus: slicesAccessibility,
 	} = useSelector(
 		(state: RootState) => state.marineFarming,
 	);

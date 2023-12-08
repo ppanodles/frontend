@@ -9,6 +9,8 @@ import { toggleSliceAccessibility } from 'library/slices/marineFarming.slice';
 import { IconNames } from 'resources/icons';
 
 import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
+import { selectAccessibleSlices } from 'library/selectors/filters.selector';
+import { useLocation } from 'react-router-dom';
 import Icon from '../../Icon';
 
 interface IProps {}
@@ -18,19 +20,48 @@ type SliceSelectorType = { id: MarineFarmingDataType, name: string, icon: IconNa
 const SlicesBlock: React.FunctionComponent<IProps> = () => {
 	const dispatch = useDispatch();
 
-	const sliceFlags = useSelector((state: RootState) => state.marineFarming.slicesAccessibility);
+	const { pathname } = useLocation();
 
-	const slices: SliceSelectorType[] = useMemo(() => ([
-		{
-			id: MarineFarmingDataType.SHIPS, name: 'Судно/Корабль', icon: 'near-me', status: sliceFlags[MarineFarmingDataType.SHIPS],
-		},
-		{
-			id: MarineFarmingDataType.GREENHOUSE_GASES, name: 'Парниковые газы от судоходства', icon: 'heat', status: sliceFlags[MarineFarmingDataType.GREENHOUSE_GASES],
-		},
-		{
-			id: MarineFarmingDataType.FILM_CONTAMINATION, name: 'Пленочные загрязнения', icon: 'water-ec', status: sliceFlags[MarineFarmingDataType.FILM_CONTAMINATION],
-		},
-	]), [sliceFlags]);
+	const sliceFlags = useSelector((state: RootState) => state.marineFarming.slicesStatus);
+
+	const accessibleSlices = useSelector((state: RootState) => selectAccessibleSlices(state, pathname));
+
+	const slices: SliceSelectorType[] = useMemo(() => accessibleSlices.reduce((accumulator: SliceSelectorType[], currentValue: MarineFarmingDataType) => {
+		if (currentValue === MarineFarmingDataType.SHIPS) {
+			const slice: SliceSelectorType = {
+				id: MarineFarmingDataType.SHIPS,
+				name: 'Судно/Корабль',
+				icon: 'near-me',
+				status: sliceFlags[MarineFarmingDataType.SHIPS],
+			};
+
+			return [...accumulator, slice];
+		}
+
+		if (currentValue === MarineFarmingDataType.GREENHOUSE_GASES) {
+			const slice: SliceSelectorType = {
+				id: MarineFarmingDataType.GREENHOUSE_GASES,
+				name: 'Парниковые газы от судоходства',
+				icon: 'heat',
+				status: sliceFlags[MarineFarmingDataType.GREENHOUSE_GASES],
+			};
+
+			return [...accumulator, slice];
+		}
+
+		if (currentValue === MarineFarmingDataType.FILM_CONTAMINATION) {
+			const slice: SliceSelectorType = {
+				id: MarineFarmingDataType.FILM_CONTAMINATION,
+				name: 'Пленочные загрязнения',
+				icon: 'water-ec',
+				status: sliceFlags[MarineFarmingDataType.FILM_CONTAMINATION],
+			};
+
+			return [...accumulator, slice];
+		}
+
+		return accumulator;
+	}, [] as SliceSelectorType[]), [sliceFlags, accessibleSlices]);
 
 	const listItemButtonHandler = (id: MarineFarmingDataType) => dispatch(toggleSliceAccessibility(id));
 
