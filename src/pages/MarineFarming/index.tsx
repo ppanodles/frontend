@@ -5,6 +5,7 @@ import extractLayout from 'library/helpers/extractLayout';
 import paths, { LayoutType } from 'library/paths';
 import React, { useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import DownloadButton from 'library/components/DownloadButton';
 import Charts from './Charts';
 import Tables from './Tables';
 
@@ -34,10 +35,16 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 			}}
 		>
 			<Box sx={{
-				position: 'absolute', top: 8, right: 8, zIndex: '1',
+				position: 'absolute', top: 8, right: 64, zIndex: '1',
 			}}
 			>
 				<LayoutSelector value={layout} setValue={changeLayoutHandle} />
+			</Box>
+			<Box sx={{
+				position: 'absolute', top: 8, right: 12, zIndex: '1', width: 40, height: 40,
+			}}
+			>
+				<DownloadButton />
 			</Box>
 
 			{LayoutType.MAP === layout && process.env.REACT_APP_ACCESS_TOKEN && (
