@@ -23,14 +23,14 @@ interface IGreenhouseGases {
     device: string;
 }
 
-interface IEcoFarmlandState {
+interface IEcoLocationState {
     id: number;
     time: string;
     temp: number;
     pressure: number;
     humidity: number;
     carbon: number;
-    station: string;
+    location: string;
 }
 
 interface IFilmContamination { // пленочное загрязнение

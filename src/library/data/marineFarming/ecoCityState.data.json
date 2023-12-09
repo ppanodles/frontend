@@ -1,31 +1,31 @@
 {
     "data": [
         {
-            "id": "urn:ogc",
+            "id": "urn:ogc44",
             "time": "2023-10-15 08:00",
             "temp": 17,
             "pressure": 434333,
             "humidity": 82,
             "carbon": 3543,
-            "location": "Карадагская СМ"
+            "location": "Сахильский муниципалитет"
         },
         {
-            "id": "urn:ogc1",
+            "id": "urn:ogc45",
             "time": "2023-12-22 08:00",
             "temp": 21,
             "pressure": 546456,
             "humidity": 91,
             "carbon": 4333,
-            "location": "Звенигородская СМ"
+            "location": "Акбулакский муниципалитет"
         },
         {
-            "id": "urn:ogc2",
+            "id": "urn:ogc46",
             "time": "2023-11-27 08:00",
             "temp": 5,
             "pressure": 655322,
             "humidity": 93,
             "carbon": 2347,
-            "location": "Карадагская СМ"
+            "location": "Николаевский муниципалитет"
         }
     ]
 }
