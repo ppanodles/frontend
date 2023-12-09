@@ -43,3 +43,11 @@ export const selectFilterStatuses: (state: RootState, pathname: string) => Marin
 	(slicesStatus, accessibleSlices) => (keys(pickBy(slicesStatus, Boolean)) as MarineFarmingDataType [])
 		.filter((dataType) => accessibleSlices.includes(dataType)) as MarineFarmingDataType[],
 );
+
+/**
+ * Для таблиц
+ */
+export const selectActiveSlice = createSelector(
+	(state: RootState) => state.marineFarming.slicesStatus,
+	(slicesStatus) => (keys(slicesStatus) as MarineFarmingDataType[]).find((slice: MarineFarmingDataType) => slicesStatus[slice] === true),
+);

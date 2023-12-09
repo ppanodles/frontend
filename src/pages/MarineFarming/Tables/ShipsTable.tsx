@@ -1,11 +1,7 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
-import { useMount } from 'react-use';
+import { useSelector } from 'react-redux';
 
-import getLayoutTypeFomPath from 'library/helpers/getLayoutTypeFomPath';
 import selectFilteredShips from 'library/selectors/ships.selector';
-import { selectFirstEnableSlice } from 'library/slices/marineFarming.slice';
 import { IShip } from 'library/types/marineFarming.d';
 import dayjs from 'dayjs';
 
@@ -31,15 +27,7 @@ const tableColumns: TableConfig<IShip>[] = [
 	},
 ];
 
-const Tables: React.FunctionComponent<IProps> = () => {
-	const dispatch = useDispatch();
-
-	const { pathname } = useLocation();
-
-	useMount(() => {
-		dispatch(selectFirstEnableSlice(getLayoutTypeFomPath(pathname)));
-	});
-
+const ShipsTable: React.FunctionComponent<IProps> = () => {
 	const shipsData = useSelector(selectFilteredShips);
 
 	return (
@@ -47,4 +35,4 @@ const Tables: React.FunctionComponent<IProps> = () => {
 	);
 };
 
-export default Tables;
+export default ShipsTable;

@@ -2,9 +2,10 @@ import { RootState } from 'main/rootReducer';
 import { createSelector } from 'reselect';
 import { values, isEmpty, keys } from 'lodash';
 import dayjs from 'dayjs';
+
 import FilterType from 'library/constants/FilterType';
-import { IEcoCityState } from 'library/types/ecoCity';
 import EcoCityStateDataType from 'library/constants/EcoCitySlice';
+import { IEcoCityState } from 'library/types/ecoCity.d';
 
 const selectFilteredEcoCityStates: (state: RootState) => IEcoCityState[] = createSelector(
 	[

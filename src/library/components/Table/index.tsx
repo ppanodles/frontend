@@ -160,10 +160,10 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 						</TableHead>
 						<TableBody>
 							{visibleRows
-								.map((ship, index) => (
+								.map((row, index) => (
 									<TableRow
 										hover
-										key={ship.id}
+										key={row.id}
 										sx={{
 											height: 32,
 											cursor: 'pointer',
@@ -182,11 +182,11 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 										{
 											tableConfig.map((cell) => (
 												<TableCell
-													key={`${ship.id}_${cell.value}`}
+													key={`${row.id}_${cell.value}`}
 													align="left"
 													sx={cell.sx}
 												>
-													{cell?.valueGetter ? cell.valueGetter(ship[cell.value]) : ship[cell.value]}
+													{cell?.valueGetter ? cell.valueGetter(row[cell.value]) : row[cell.value]}
 												</TableCell>
 											))
 										}

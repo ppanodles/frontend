@@ -18,8 +18,10 @@ export interface IShip {
 }
 
 interface IGreenhouseGases {
+    id: string;
     time: string;
     emissionLevel: number;
+    emissionValue: number;
     device: string;
 }
 

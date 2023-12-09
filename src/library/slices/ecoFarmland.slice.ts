@@ -1,20 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import ecoLocationStateMapper from 'library/mappers/ecoFarmland.mapper';
-import ecoFarmlandStateJSON from 'library/data/marineFarming/ecoFarmlandState.data.json';
-import { IFilterDataType } from 'library/types/system.d';
-import FilterType from 'library/constants/FilterType';
+import {uniqBy} from 'lodash';
+
 import {
 	DateTimePickPayload,
 	DateTimeRangePayload,
 	ListSelectorPayload,
 	RangePayload,
 } from 'library/types/filterPayload.d';
-import {uniqBy} from 'lodash';
 import getDefaultRange from 'library/helpers/getDefaultRange';
 import getDefaultDateRange from 'library/helpers/getDefaultDateRange';
 import { LayoutType } from 'library/paths';
 import EcoFarmlandStateDataType from 'library/constants/EcoFarmlandSlice';
-import { IEcoFarmlandState } from 'library/types/ecoFarmland';
+import { IEcoFarmlandState } from 'library/types/ecoFarmland.d';
+import ecoLocationStateMapper from 'library/mappers/ecoFarmland.mapper';
+import ecoFarmlandStateJSON from 'library/data/marineFarming/ecoFarmlandState.data.json';
+import { IFilterDataType } from 'library/types/system.d';
+import FilterType from 'library/constants/FilterType';
 
 const ecoFarmlandStateData: IEcoFarmlandState[] = ecoLocationStateMapper(ecoFarmlandStateJSON.data);
 
