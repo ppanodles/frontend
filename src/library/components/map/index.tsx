@@ -182,6 +182,7 @@ const DataMap = () => {
 			doubleClickZoom={false}
 			style={{ width: '100%', height: '100%' }}
 			onClick={(e) => {
+				console.log('=== lng:', e.lngLat.lng, ' lat:', e.lngLat.lat);
 				const clickedGreenhouseGase = getClickedHeap(e.lngLat.lng, e.lngLat.lat);
 
 				if (clickedGreenhouseGase) {
