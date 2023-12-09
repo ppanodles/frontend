@@ -23,16 +23,6 @@ interface IGreenhouseGases {
     device: string;
 }
 
-interface IEcoLocationState {
-    id: number;
-    time: string;
-    temp: number;
-    pressure: number;
-    humidity: number;
-    carbon: number;
-    location: string;
-}
-
 interface IFilmContamination { // пленочное загрязнение
     id: string; // urn:ogc:def:crs:OGC:1.3:CRS84
     time: string; // Date

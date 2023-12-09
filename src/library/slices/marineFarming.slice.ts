@@ -1,16 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import {
-	IEcoLocationState, IFilmContamination, IGreenhouseGases, IShip,
-} from 'library/types/marineFarming.d';
+import {IFilmContamination, IGreenhouseGases, IShip} from 'library/types/marineFarming.d';
 import greenhouseGasesMapper from 'library/mappers/greenhouseGases.mapper';
-import ecoLocationStateMapper from 'library/mappers/ecoLocation.mapper';
 import shipsMapper from 'library/mappers/ships.mapper';
 import filmContaminationMapper from 'library/mappers/filmContamination.mapper';
 import shipJSON from 'library/data/marineFarming/ships.data.json';
 import filmContaminationJSON from 'library/data/marineFarming/filmContamination.data.json';
 import greenhouseGasesJSON from 'library/data/marineFarming/greenhouseGases.data.json';
-import ecoFarmlandStateJSON from 'library/data/marineFarming/ecoFarmlandState.data.json';
-import ecoCityStateJSON from 'library/data/marineFarming/ecoCityState.data.json';
 import { IFilterDataType } from 'library/types/system.d';
 import FilterType from 'library/constants/FilterType';
 import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
@@ -32,10 +27,6 @@ const filmContaminationData: IFilmContamination[] = filmContaminationMapper(
 	filmContaminationJSON.data,
 );
 const greenhouseGasesData: IGreenhouseGases[] = greenhouseGasesMapper(greenhouseGasesJSON.data);
-
-const ecoFarmlandStateData: IEcoLocationState[] = ecoLocationStateMapper(ecoFarmlandStateJSON.data);
-
-const ecoCityStateData: IEcoLocationState[] = ecoLocationStateMapper(ecoCityStateJSON.data);
 
 export type Filters = {
   [MarineFarmingDataType.SHIPS]: IFilterDataType<IShip>;
@@ -60,8 +51,6 @@ export type MarineFarmingState = {
   ships: IShip[];
   filmContamination: IFilmContamination[];
   greenhouseGases: IGreenhouseGases[];
-  ecoFarmlandState: IEcoLocationState[];
-  ecoCityState: IEcoLocationState[];
   filters: Filters;
   /**
    * Флаги включения слоев
@@ -104,8 +93,6 @@ const initialState: MarineFarmingState = {
 	ships: shipsData,
 	filmContamination: filmContaminationData,
 	greenhouseGases: greenhouseGasesData,
-	ecoFarmlandState: ecoFarmlandStateData,
-	ecoCityState: ecoCityStateData,
 	filters: {
 		[MarineFarmingDataType.SHIPS]: {
 			[FilterType.LIST_SELECTOR]: {
