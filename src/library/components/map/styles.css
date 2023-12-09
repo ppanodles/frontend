@@ -28,7 +28,7 @@
   margin: 0 12px 0 0;
 }
 
-.mapboxgl-ctrl-group button + button {
+.mapboxgl-ctrl-group button+button {
   border-top: none;
 }
 
@@ -43,4 +43,8 @@
 .mapboxgl-ctrl button:disabled .mapboxgl-ctrl-icon {
   color: white;
   opacity: 1;
+}
+
+.mapboxgl-ctrl-compass {
+  cursor: default;
 }

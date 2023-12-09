@@ -86,6 +86,7 @@ const DataMap = () => {
 				latitude={shipInfo.latitude}
 				anchor="bottom"
 				rotation={shipInfo.rot}
+				style={{cursor: 'default'}}
 			>
 				<Icon iconName="ship-marker" />
 			</Marker>
@@ -107,6 +108,8 @@ const DataMap = () => {
 				latitude={filmContaminationInfo.lat}
 				anchor="top-left"
 				key={filmContaminationInfo.id}
+				// draggable={false}
+				style={{cursor: 'default'}}
 			>
 				<Icon iconName="film-contamination" style={{ color: '#FF9315' }} />
 			</Marker>
@@ -124,6 +127,7 @@ const DataMap = () => {
 				latitude={coordinates[1]}
 				anchor="top-left"
 				key={`${port}${coordinates[0]}${coordinates[1]}`}
+				style={{cursor: 'default'}}
 			>
 				<div
 					style={{
@@ -180,7 +184,8 @@ const DataMap = () => {
 			maxZoom={8}
 			minZoom={4}
 			doubleClickZoom={false}
-			style={{ width: '100%', height: '100%' }}
+			style={{ width: '100%', height: '100%', cursor: 'default' }}
+			cursor="default"
 			onClick={(e) => {
 				console.log('=== lng:', e.lngLat.lng, ' lat:', e.lngLat.lat);
 				const clickedGreenhouseGase = getClickedHeap(e.lngLat.lng, e.lngLat.lat);
