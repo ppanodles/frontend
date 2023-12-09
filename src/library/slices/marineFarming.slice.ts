@@ -158,7 +158,16 @@ const initialState: MarineFarmingState = {
 				},
 			},
 		},
-		[MarineFarmingDataType.FILM_CONTAMINATION]: {},
+		[MarineFarmingDataType.FILM_CONTAMINATION]: {
+			[FilterType.DATE_TIME_RANGE]: {
+				time: {
+					type: FilterType.DATE_TIME_RANGE,
+					field: 'time',
+					name: 'Время прибытия',
+					borders: getDefaultDateRange(filmContaminationData.map((v) => v.time)),
+				},
+			},
+		},
 	},
 	slicesStatus: {
 		[MarineFarmingDataType.SHIPS]: true,
