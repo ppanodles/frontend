@@ -1,13 +1,14 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 import {
-	Box, Drawer, Stack, Typography, useTheme,
+	Box, Drawer, Stack, useTheme,
 } from '@mui/material';
 import { DRAWER_WIDTH } from 'library/constants/styled';
 import paths from 'library/paths';
 import { useLocation } from 'react-router-dom';
 
 import MarineFarmingPanel from '../MarineFarmingPanel';
+import Icon from '../Icon';
 
 interface IProps {
     open: boolean;
@@ -57,10 +58,10 @@ const SidePanel: React.FunctionComponent<IProps> = ({ open, onClose }) => {
 			>
 				<Stack sx={{ overflow: 'hidden' }}>
 					<Box sx={{
-						minHeight: '56px', height: '56px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+						minHeight: '56px', width: '80px', height: '56px', display: 'flex', marginLeft: '15px', alignItems: 'center', justifyContent: 'center',
 					}}
 					>
-						<Typography variant="h5">LOGO WILL BE HERE</Typography>
+						<Icon iconName="logo" style={{width: '100%', height: '100%'}} />
 					</Box>
 					<Box sx={{
 						py: 2,
