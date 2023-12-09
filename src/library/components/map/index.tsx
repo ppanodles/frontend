@@ -13,6 +13,7 @@ import { RootState } from 'main/rootReducer';
 import * as turf from '@turf/turf';
 import selectFilteredShips from 'library/selectors/ships.selector';
 import { Box } from '@mui/material';
+import { latLngToCell } from 'h3-js';
 import ShipPopup from './components/popups/ShipPopup';
 import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
 import Icon from '../Icon/index';
@@ -22,6 +23,8 @@ import PortPopup from './components/popups/PortPopup';
 import GasesInfoTable from './components/GasesInfoTable';
 
 import './styles.css';
+
+(window as any).latLngToCell = latLngToCell;
 
 const layerStyle: FillLayer = {
 	id: 'point',
