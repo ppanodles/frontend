@@ -29,7 +29,8 @@ const Dashboard: React.FunctionComponent<IProps> = () => {
 				flexGrow: 1,
 				display: 'flex',
 				overflow: 'auto',
-				mt: { xs: NAVBAR_HEIGHT_MOBILE / 8, md: NAVBAR_HEIGHT_DESKTOP / 8 },
+				pt: { xs: NAVBAR_HEIGHT_MOBILE / 8, md: NAVBAR_HEIGHT_DESKTOP / 8 },
+				height: '100%',
 				minHeight: '100%',
 			})}
 			>

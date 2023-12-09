@@ -189,6 +189,386 @@
             "rot": null,
             "eta": "2027-08-03",
             "ts_pos_utc": "2023-06-27"
+        },
+        {
+            "type": "Feature",
+            "id": 1,
+            "mmsi": 273451700,
+            "imo": 8837942,
+            "vessel_name": "Керн",
+            "vessel_type": "Научно-исследовательское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Мурманск",
+                "coordinates": [
+                    33.083792,
+                    68.974705
+                ]
+            },
+            "longitude": 33.031631,
+            "latitude": 68.957283,
+            "rot": 0,
+            "eta": "2023-10-15",
+            "ts_pos_utc": "2023-06-09 17:25:16"
+        },
+        {
+            "type": "Feature",
+            "id": 13289,
+            "mmsi": 273297890,
+            "imo": 0,
+            "vessel_name": "Юрий Бабаев",
+            "vessel_type": "Грузовое",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Мурманск",
+                "coordinates": [
+                    33.083792,
+                    68.974705
+                ]
+            },
+            "longitude": 33.09000015258789,
+            "latitude": 69.05166625976562,
+            "rot": null,
+            "eta": "2024-09-10",
+            "ts_pos_utc": "2023-06-27 12:35:03"
+        },
+        {
+            "type": "Feature",
+            "id": 11,
+            "mmsi": 273457920,
+            "imo": 8909331,
+            "vessel_name": "Григорий Михеев",
+            "vessel_type": "Грузопассажирское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Калининград",
+                "coordinates": [
+                    20.261238,
+                    54.846789
+                ]
+            },
+            "longitude": 20.451831,
+            "latitude": 54.695446,
+            "rot": 0,
+            "eta": "2023-12-19",
+            "ts_pos_utc": "2023-06-09 19:21:31"
+        },
+        {
+            "type": "Feature",
+            "id": 15,
+            "mmsi": 273120100,
+            "imo": 8909343,
+            "vessel_name": "Петр Котцов",
+            "vessel_type": "Промысловое",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Калининград",
+                "coordinates": [
+                    20.261238,
+                    54.846789
+                ]
+            },
+            "longitude": 20.145467,
+            "latitude": 54.675888,
+            "rot": null,
+            "eta": "2024-09-10",
+            "ts_pos_utc": "2023-06-09 19:38:37"
+        },
+        {
+            "type": "Feature",
+            "id": 14835,
+            "mmsi": 273297890,
+            "imo": 9929065,
+            "vessel_name": "Всеволод Пересыпкин",
+            "vessel_type": "Специального назначения",
+            "flag_country": "Беларусь",
+            "destination": {
+                "port": "Мурманск",
+                "coordinates": [
+                    33.083792,
+                    68.974705
+                ]
+            },
+            "longitude": 33.09,
+            "latitude": 69.051666,
+            "rot": null,
+            "ts_eta": "2023-11-07 08:00:00",
+            "eta": "2025-02-23",
+            "ts_pos_utc": "2023-06-30 10:01:16"
+        },
+        {
+            "type": "Feature",
+            "id": 254,
+            "mmsi": 273295890,
+            "imo": 9929053,
+            "vessel_name": "Александр Парфенов",
+            "vessel_type": "Специального назначения",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Архангельск",
+                "coordinates": [
+                    40.522246,
+                    64.539871
+                ]
+            },
+            "longitude": 40.49985885620117,
+            "latitude": 64.58344268798828,
+            "rot": null,
+            "eta": "2024-02-27",
+            "ts_pos_utc": "2023-06-10"
+        },
+        {
+            "type": "Feature",
+            "id": 15089,
+            "mmsi": 273433010,
+            "imo": 8606575,
+            "vessel_name": "Иван Петров",
+            "vessel_type": "Научно-исследовательское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Архангельск",
+                "coordinates": [
+                    40.522246,
+                    64.539871
+                ]
+            },
+            "longitude": 40.538333,
+            "latitude": 64.526664,
+            "rot": null,
+            "eta": "2024-02-27",
+            "ts_pos_utc": "2023-07-01"
+        },
+        {
+            "type": "Feature",
+            "id": 13398,
+            "mmsi": 273456920,
+            "imo": 8909329,
+            "vessel_name": "АЛЕКСЕЙ МАРЫШЕВ",
+            "vessel_type": "Пасскажирское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Владивосток",
+                "coordinates": [
+                    131.882907,
+                    43.117321
+                ]
+            },
+            "longitude": 40.5,
+            "latitude": 64.58333587646484,
+            "rot": null,
+            "eta": "2024-01-04",
+            "ts_pos_utc": "2023-06-27"
+        },
+        {
+            "type": "Feature",
+            "id": 13391,
+            "mmsi": 273456920,
+            "imo": 8909329,
+            "vessel_name": "АЛЕКСЕЙ МАРЫШЕВ",
+            "vessel_type": "Пасскажирское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Владивосток",
+                "coordinates": [
+                    40.522246,
+                    64.539871
+                ]
+            },
+            "longitude": 40.5,
+            "latitude": 64.58333587646484,
+            "rot": null,
+            "eta": "2027-08-03",
+            "ts_pos_utc": "2023-06-27"
+        },
+        {
+            "type": "Feature",
+            "id": 1,
+            "mmsi": 273451700,
+            "imo": 8837942,
+            "vessel_name": "Керн",
+            "vessel_type": "Научно-исследовательское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Мурманск",
+                "coordinates": [
+                    33.083792,
+                    68.974705
+                ]
+            },
+            "longitude": 33.031631,
+            "latitude": 68.957283,
+            "rot": 0,
+            "eta": "2023-10-15",
+            "ts_pos_utc": "2023-06-09 17:25:16"
+        },
+        {
+            "type": "Feature",
+            "id": 13289,
+            "mmsi": 273297890,
+            "imo": 0,
+            "vessel_name": "Юрий Бабаев",
+            "vessel_type": "Грузовое",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Мурманск",
+                "coordinates": [
+                    33.083792,
+                    68.974705
+                ]
+            },
+            "longitude": 33.09000015258789,
+            "latitude": 69.05166625976562,
+            "rot": null,
+            "eta": "2024-09-10",
+            "ts_pos_utc": "2023-06-27 12:35:03"
+        },
+        {
+            "type": "Feature",
+            "id": 11,
+            "mmsi": 273457920,
+            "imo": 8909331,
+            "vessel_name": "Григорий Михеев",
+            "vessel_type": "Грузопассажирское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Калининград",
+                "coordinates": [
+                    20.261238,
+                    54.846789
+                ]
+            },
+            "longitude": 20.451831,
+            "latitude": 54.695446,
+            "rot": 0,
+            "eta": "2023-12-19",
+            "ts_pos_utc": "2023-06-09 19:21:31"
+        },
+        {
+            "type": "Feature",
+            "id": 15,
+            "mmsi": 273120100,
+            "imo": 8909343,
+            "vessel_name": "Петр Котцов",
+            "vessel_type": "Промысловое",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Калининград",
+                "coordinates": [
+                    20.261238,
+                    54.846789
+                ]
+            },
+            "longitude": 20.145467,
+            "latitude": 54.675888,
+            "rot": null,
+            "eta": "2024-09-10",
+            "ts_pos_utc": "2023-06-09 19:38:37"
+        },
+        {
+            "type": "Feature",
+            "id": 14835,
+            "mmsi": 273297890,
+            "imo": 9929065,
+            "vessel_name": "Всеволод Пересыпкин",
+            "vessel_type": "Специального назначения",
+            "flag_country": "Беларусь",
+            "destination": {
+                "port": "Мурманск",
+                "coordinates": [
+                    33.083792,
+                    68.974705
+                ]
+            },
+            "longitude": 33.09,
+            "latitude": 69.051666,
+            "rot": null,
+            "ts_eta": "2023-11-07 08:00:00",
+            "eta": "2025-02-23",
+            "ts_pos_utc": "2023-06-30 10:01:16"
+        },
+        {
+            "type": "Feature",
+            "id": 254,
+            "mmsi": 273295890,
+            "imo": 9929053,
+            "vessel_name": "Александр Парфенов",
+            "vessel_type": "Специального назначения",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Архангельск",
+                "coordinates": [
+                    40.522246,
+                    64.539871
+                ]
+            },
+            "longitude": 40.49985885620117,
+            "latitude": 64.58344268798828,
+            "rot": null,
+            "eta": "2024-02-27",
+            "ts_pos_utc": "2023-06-10"
+        },
+        {
+            "type": "Feature",
+            "id": 15089,
+            "mmsi": 273433010,
+            "imo": 8606575,
+            "vessel_name": "Иван Петров",
+            "vessel_type": "Научно-исследовательское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Архангельск",
+                "coordinates": [
+                    40.522246,
+                    64.539871
+                ]
+            },
+            "longitude": 40.538333,
+            "latitude": 64.526664,
+            "rot": null,
+            "eta": "2024-02-27",
+            "ts_pos_utc": "2023-07-01"
+        },
+        {
+            "type": "Feature",
+            "id": 13398,
+            "mmsi": 273456920,
+            "imo": 8909329,
+            "vessel_name": "АЛЕКСЕЙ МАРЫШЕВ",
+            "vessel_type": "Пасскажирское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Владивосток",
+                "coordinates": [
+                    131.882907,
+                    43.117321
+                ]
+            },
+            "longitude": 40.5,
+            "latitude": 64.58333587646484,
+            "rot": null,
+            "eta": "2024-01-04",
+            "ts_pos_utc": "2023-06-27"
+        },
+        {
+            "type": "Feature",
+            "id": 13391,
+            "mmsi": 273456920,
+            "imo": 8909329,
+            "vessel_name": "АЛЕКСЕЙ МАРЫШЕВ",
+            "vessel_type": "Пасскажирское",
+            "flag_country": "Россия",
+            "destination": {
+                "port": "Владивосток",
+                "coordinates": [
+                    40.522246,
+                    64.539871
+                ]
+            },
+            "longitude": 40.5,
+            "latitude": 64.58333587646484,
+            "rot": null,
+            "eta": "2027-08-03",
+            "ts_pos_utc": "2023-06-27"
         }
     ]
 }

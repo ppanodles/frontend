@@ -35,14 +35,14 @@ const pickerSx: SxProps<Theme> = ({ palette }) => ({
 		color: palette.text.secondary,
 	},
 	'.MuiDateCalendar-root': {
-		backgroundColor: palette.background.default,
+		backgroundColor: palette.background.paper,
 	},
 });
 
 const calendarSx: SxProps<Theme> = ({ palette }) => ({
 	'.MuiDateCalendar-root': {
 		color: '#ACAAAF',
-		backgroundColor: palette.background.default,
+		backgroundColor: palette.background.paper,
 	},
 	'.MuiDayCalendar-root': {
 		color: '#ACAAAF',

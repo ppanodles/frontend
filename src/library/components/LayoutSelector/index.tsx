@@ -45,6 +45,7 @@ const LayoutSelector: React.FunctionComponent<IProps> = ({ value, disableMaps, s
 			onChange={handleChange}
 			aria-label="Layout selector"
 			sx={(theme) => ({
+				height: '40px',
 				borderRadius: '20px',
 				backgroundColor: theme.palette.primary.main,
 			})}

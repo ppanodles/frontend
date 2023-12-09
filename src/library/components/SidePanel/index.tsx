@@ -75,7 +75,7 @@ const SidePanel: React.FunctionComponent<IProps> = ({ open, onClose }) => {
 
 						'&::-webkit-scrollbar-thumb': {
 							borderRadius: '8px',
-							backgroundColor: theme.palette.background.default,
+							backgroundColor: theme.palette.background.paper,
 						},
 					}}
 					>

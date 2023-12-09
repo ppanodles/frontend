@@ -125,7 +125,7 @@ const palette = {
 	// text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
 	text: { ...TEXT },
 	background: {
-		paper: '#fff', default: '#313140', neutral: GREY[200], main: '#FDFAF9',
+		paper: '#313140', default: '#151720', neutral: GREY[200], main: '#FDFAF9',
 	},
 	action: {
 		active: GREY[600],
