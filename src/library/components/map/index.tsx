@@ -14,6 +14,7 @@ import * as turf from '@turf/turf';
 import selectFilteredShips from 'library/selectors/ships.selector';
 import { Box } from '@mui/material';
 import { latLngToCell } from 'h3-js';
+import selectFilteredGases from 'library/selectors/gases.selector';
 import ShipPopup from './components/popups/ShipPopup';
 import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
 import Icon from '../Icon/index';
@@ -46,12 +47,13 @@ const DataMap = () => {
 	}, []);
 
 	const {
-		greenhouseGases, filmContamination, slicesStatus: slicesAccessibility,
+		filmContamination, slicesStatus: slicesAccessibility,
 	} = useSelector(
 		(state: RootState) => state.marineFarming,
 	);
 
 	const ships = useSelector(selectFilteredShips);
+	const greenhouseGases = useSelector(selectFilteredGases);
 
 	const ports = useMemo(
 		() => ships
