@@ -23,18 +23,18 @@ export default createHashRouter([
 				path: paths.agroIndustry.base,
 				element: <Dashboard />,
 				children: [
-					{ path: paths.agroIndustry.charts, element: <AgroIndustry /> },
-					{ path: paths.agroIndustry.table, element: <AgroIndustry /> },
-					{ path: paths.agroIndustry.base, element: <Navigate to={paths.agroIndustry.table} replace />},
+					{ path: paths.agroIndustry[LayoutType.CHARTS], element: <AgroIndustry /> },
+					{ path: paths.agroIndustry[LayoutType.TABLE], element: <AgroIndustry /> },
+					{ path: paths.agroIndustry.base, element: <Navigate to={paths.agroIndustry[LayoutType.TABLE]} replace />},
 				],
 			},
 			{
 				path: paths.municipality.base,
 				element: <Dashboard />,
 				children: [
-					{ path: paths.municipality.charts, element: <Municipality /> },
-					{ path: paths.municipality.table, element: <Municipality /> },
-					{ path: paths.municipality.base, element: <Navigate to={paths.municipality.table} replace />},
+					{ path: paths.municipality[LayoutType.CHARTS], element: <Municipality /> },
+					{ path: paths.municipality[LayoutType.TABLE], element: <Municipality /> },
+					{ path: paths.municipality.base, element: <Navigate to={paths.municipality[LayoutType.TABLE]} replace />},
 				],
 			},
 			{

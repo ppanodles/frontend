@@ -18,13 +18,13 @@ const paths = {
 	},
 	agroIndustry: {
 		base: AGRO_INDUSTRY_BASE,
-		charts: `${AGRO_INDUSTRY_BASE}charts`,
-		table: `${AGRO_INDUSTRY_BASE}table`,
+		[LayoutType.CHARTS]: `${AGRO_INDUSTRY_BASE}charts`,
+		[LayoutType.TABLE]: `${AGRO_INDUSTRY_BASE}table`,
 	},
 	municipality: {
 		base: MUNICIPALITY,
-		charts: `${MUNICIPALITY}charts`,
-		table: `${MUNICIPALITY}table`,
+		[LayoutType.CHARTS]: `${MUNICIPALITY}charts`,
+		[LayoutType.TABLE]: `${MUNICIPALITY}table`,
 	},
 };
 
