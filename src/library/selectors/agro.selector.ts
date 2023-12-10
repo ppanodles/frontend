@@ -3,7 +3,7 @@ import { createSelector } from 'reselect';
 import { values, isEmpty, keys } from 'lodash';
 import dayjs from 'dayjs';
 import FilterType from 'library/constants/FilterType';
-import { IAgroState } from 'library/types/agro';
+import { IAgroState } from 'library/types/agro.d';
 import AgroStateDataType from 'library/constants/AgroSlice';
 
 const selectFilteredAgroStates: (state: RootState) => IAgroState[] = createSelector(

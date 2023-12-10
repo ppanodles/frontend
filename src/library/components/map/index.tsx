@@ -187,6 +187,7 @@ const DataMap = () => {
 			style={{ width: '100%', height: '100%', cursor: 'default' }}
 			cursor="default"
 			onClick={(e) => {
+				// eslint-disable-next-line no-console
 				console.log('=== lng:', e.lngLat.lng, ' lat:', e.lngLat.lat);
 				const clickedGreenhouseGase = getClickedHeap(e.lngLat.lng, e.lngLat.lat);
 

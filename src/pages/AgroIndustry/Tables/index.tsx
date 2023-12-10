@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 import Table, { TableConfig } from 'library/components/Table';
 import { dateSorting } from 'library/helpers/sorting';
 import selectFilteredAgroStates from 'library/selectors/agro.selector';
-import { IAgroState } from 'library/types/agro';
+import { IAgroState } from 'library/types/agro.d';
 
 interface IProps {}
 

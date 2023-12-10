@@ -7,7 +7,7 @@ import { CommonFilterDataType } from 'library/types/system.d';
 import { useDispatch, useSelector } from 'react-redux';
 import MunicipalityStateDataType from 'library/constants/MunicipalitySlice';
 import { applyFilter } from 'library/slices/municipality.slice';
-import { IMunicipalityState } from 'library/types/municipality';
+import { IMunicipalityState } from 'library/types/municipality.d';
 
 interface IProps {}
 

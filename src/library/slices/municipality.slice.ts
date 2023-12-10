@@ -14,7 +14,7 @@ import getDefaultRange from 'library/helpers/getDefaultRange';
 import getDefaultDateRange from 'library/helpers/getDefaultDateRange';
 import { LayoutType } from 'library/paths';
 import MunicipalityStateDataType from 'library/constants/MunicipalitySlice';
-import { IMunicipalityState } from 'library/types/municipality';
+import { IMunicipalityState } from 'library/types/municipality.d';
 
 const municipalityStateData: IMunicipalityState[] = ecoLocationStateMapper(municipalityStateJSON.data);
 

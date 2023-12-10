@@ -183,7 +183,7 @@ const initialState: MarineFarmingState = {
 		[LayoutType.CHARTS]: {
 			[MarineFarmingDataType.SHIPS]: false,
 			[MarineFarmingDataType.GREENHOUSE_GASES]: true,
-			[MarineFarmingDataType.FILM_CONTAMINATION]: true,
+			[MarineFarmingDataType.FILM_CONTAMINATION]: false,
 		},
 		[LayoutType.TABLE]: {
 			[MarineFarmingDataType.SHIPS]: true,

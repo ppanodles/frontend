@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 
 import FilterType from 'library/constants/FilterType';
 import MunicipalityStateDataType from 'library/constants/MunicipalitySlice';
-import { IMunicipalityState } from 'library/types/municipality';
+import { IMunicipalityState } from 'library/types/municipality.d';
 
 const selectFilteredMunicipalityStates: (state: RootState) => IMunicipalityState[] = createSelector(
 	[

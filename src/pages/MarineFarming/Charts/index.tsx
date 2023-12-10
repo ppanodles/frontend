@@ -29,18 +29,18 @@ const Charts: React.FunctionComponent<IProps> = () => {
 	}
 
 	return (
-		<Grid container direction="row" ml={{xs: 1.5, md: 4}} mt={8} mr={1.5} mb={2} overflow="auto" columnSpacing={3}>
-			<Grid item xs={8}>
+		<Grid container direction="row" ml={{xs: 1.5, md: 4}} mt={8} mr={2} mb={2} overflow="auto" columnSpacing={3}>
+			<Grid item xs={12} lg={7}>
 
 				<Grid container direction="column" rowSpacing={3}>
 					<Grid item xs={12}><EmissionValueChart greenhouseGasesData={greenhouseGasesData} /></Grid>
 
 					<Grid item xs={12}>
 						<Grid container direction="row" columnSpacing={3}>
-							<Grid item xs={6}>
+							<Grid item xs={12} md={4}>
 								<CommonDirty />
 							</Grid>
-							<Grid item xs={6}>
+							<Grid item xs={12} md={8}>
 								<Variance greenhouseGasesData={greenhouseGasesData} />
 							</Grid>
 						</Grid>
@@ -49,7 +49,7 @@ const Charts: React.FunctionComponent<IProps> = () => {
 				</Grid>
 
 			</Grid>
-			<Grid item xs={4}>
+			<Grid item xs={12} md={5}>
 				<LevelsChart greenhouseGasesData={greenhouseGasesData} />
 			</Grid>
 		</Grid>

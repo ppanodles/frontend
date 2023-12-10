@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 
 import Table, { TableConfig } from 'library/components/Table';
 import { dateSorting } from 'library/helpers/sorting';
-import { IMunicipalityState } from 'library/types/municipality';
+import { IMunicipalityState } from 'library/types/municipality.d';
 import selectFilteredMunicipalityStates from 'library/selectors/municipality.selector';
 
 interface IProps {}

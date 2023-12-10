@@ -84,7 +84,7 @@ const EmissionValueChart: React.FunctionComponent<IProps> = ({ greenhouseGasesDa
 				},
 			},
 			yaxis: {
-				tickAmount: 10,
+				tickAmount: 8,
 				labels: {
 					formatter: (val) => Math.round(val).toString(),
 					style: {
@@ -110,7 +110,7 @@ const EmissionValueChart: React.FunctionComponent<IProps> = ({ greenhouseGasesDa
 				<Typography sx={{ color: '#FFFBFF' }} variant="h5">Значения эмиссии</Typography>
 				<Typography sx={{ color: '#E9E9ED' }} variant="caption">Среднее значение эмиссии</Typography>
 			</Stack>
-			<ReactApexChart options={chartData.options} series={chartData.series} type="line" height="210%" />
+			<ReactApexChart options={chartData.options} series={chartData.series} type="line" height="300rem" />
 		</Paper>
 	);
 };

@@ -7,7 +7,7 @@ import { CommonFilterDataType } from 'library/types/system.d';
 import { useDispatch, useSelector } from 'react-redux';
 import AgroStateDataType from 'library/constants/AgroSlice';
 import { applyFilter } from 'library/slices/agro.slice';
-import { IAgroState } from 'library/types/agro';
+import { IAgroState } from 'library/types/agro.d';
 
 interface IProps {}
 
