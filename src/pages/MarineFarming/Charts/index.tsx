@@ -29,7 +29,7 @@ const Charts: React.FunctionComponent<IProps> = () => {
 	}
 
 	return (
-		<Grid container direction="row" ml={{xs: 1.5, md: 4}} mt={8} mr={2} mb={2} overflow="auto" columnSpacing={3}>
+		<Grid container direction="row" ml={{xs: 0, md: 4}} mt={8} mr={2} mb={2} overflow="auto" columnSpacing={3}>
 			<Grid item xs={12} lg={7}>
 
 				<Grid container direction="column" rowSpacing={3}>

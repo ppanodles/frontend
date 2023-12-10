@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { IconNames } from 'resources/icons';
 import paths from 'library/paths';
 import {Link as RouterLink, useLocation} from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 import Icon from '../Icon';
 
 interface IProps {
@@ -61,13 +62,14 @@ const Navbar: React.FunctionComponent<IProps> = ({ handleDrawerToggle }) => {
 							key={button.name}
 							color="info"
 							sx={{
+								mr: isMobile ? 4 : 0,
 								textTransform: 'none',
 								fontSize: '1rem',
 								...(location.pathname.includes(button.target) && {color: (theme) => theme.palette.common.white}),
 							}}
 							startIcon={<Icon iconName={button.iconName} />}
 						>
-							{button.name}
+							{!isMobile ? button.name : undefined}
 						</Button>
 					))
 				}

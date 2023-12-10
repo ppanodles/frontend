@@ -90,7 +90,10 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 	return (
 		<Box sx={{
 			position: 'absolute',
-			inset: '60px 12px 32px 43px',
+			inset: {
+				xs: '60px 8px 32px 8px',
+				md: '60px 12px 32px 43px',
+			},
 			display: 'flex',
 			alignItems: 'flex-start',
 		}}

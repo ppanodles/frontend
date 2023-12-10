@@ -1,7 +1,9 @@
+import React from 'react';
 import {
 	SxProps, Theme, ToggleButton, ToggleButtonGroup,
 } from '@mui/material';
-import React from 'react';
+import { isMobile } from 'react-device-detect';
+
 import { LayoutType } from 'library/paths';
 import Icon from '../Icon';
 
@@ -53,17 +55,16 @@ const LayoutSelector: React.FunctionComponent<IProps> = ({ value, disableMaps, s
 			{!disableMaps && (
 				<ToggleButton value={LayoutType.MAP} sx={buttonStyles}>
 					<Icon iconName="map" sx={{mr: 1}} />
-					Карта
+					{!isMobile ? 'Карта' : undefined}
 				</ToggleButton>
 			)}
 			<ToggleButton value={LayoutType.TABLE} sx={buttonStyles}>
 				<Icon iconName="tables" sx={{mr: 1}} />
-				Таблицы
-
+				{!isMobile ? 'Таблицы' : undefined}
 			</ToggleButton>
 			<ToggleButton value={LayoutType.CHARTS} sx={buttonStyles}>
 				<Icon iconName="diagram" sx={{mr: 1}} />
-				Графики
+				{!isMobile ? 'Графики' : undefined}
 			</ToggleButton>
 		</ToggleButtonGroup>
 	);
