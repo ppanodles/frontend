@@ -126,7 +126,7 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 								<TableCell sx={{ color: 'white' }}>№</TableCell>
 								{tableConfig.map((column) => (
 									<TableCell
-										key={`column_${column.value}`}
+										key={`column_${column.value}_${column.name}`}
 										sortDirection={orderBy.field === column.value ? order : false}
 									>
 										<TableSortLabel
@@ -182,7 +182,7 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 										{
 											tableConfig.map((cell) => (
 												<TableCell
-													key={`${row.id}_${cell.value}`}
+													key={`${row.id}_${cell.value}_${cell.name}`}
 													align="left"
 													sx={cell.sx}
 												>

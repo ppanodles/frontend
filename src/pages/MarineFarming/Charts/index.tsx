@@ -2,9 +2,11 @@ import { Grid, Paper } from '@mui/material';
 import React from 'react';
 import getLayoutTypeFomPath from 'library/helpers/getLayoutTypeFomPath';
 import { selectFirstEnableSlice } from 'library/slices/marineFarming.slice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useMount } from 'react-use';
+import selectFilteredGases from 'library/selectors/gases.selector';
+import { isEmpty } from 'lodash';
 import EmissionValueChart from './EmissionValueChart';
 import CommonDirty from './CommonDirty';
 import Variance from './Variance';
@@ -19,13 +21,18 @@ const Charts: React.FunctionComponent<IProps> = () => {
 		dispatch(selectFirstEnableSlice(getLayoutTypeFomPath(pathname)));
 	});
 
-	return (
+	const greenhouseGasesData = useSelector(selectFilteredGases);
 
+	if (isEmpty(greenhouseGasesData)) {
+		return null;
+	}
+
+	return (
 		<Grid container direction="row" ml={{xs: 1.5, md: 4}} mt={8} mr={1.5} mb={2} overflow="auto" columnSpacing={3}>
 			<Grid item xs={8}>
 
 				<Grid container direction="column" rowSpacing={3}>
-					<Grid item xs={12}><EmissionValueChart /></Grid>
+					<Grid item xs={12}><EmissionValueChart greenhouseGasesData={greenhouseGasesData} /></Grid>
 
 					<Grid item xs={12}>
 						<Grid container direction="row" columnSpacing={3}>
@@ -33,7 +40,7 @@ const Charts: React.FunctionComponent<IProps> = () => {
 								<CommonDirty />
 							</Grid>
 							<Grid item xs={6}>
-								<Variance />
+								<Variance greenhouseGasesData={greenhouseGasesData} />
 							</Grid>
 						</Grid>
 					</Grid>

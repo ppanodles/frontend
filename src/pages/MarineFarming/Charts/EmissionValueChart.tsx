@@ -3,18 +3,16 @@ import {
 } from '@mui/material';
 import React, { useMemo } from 'react';
 import ReactApexChart from 'react-apexcharts';
-import { useSelector } from 'react-redux';
 import { ApexOptions } from 'apexcharts';
-import selectFilteredGases from 'library/selectors/gases.selector';
 import dayjs from 'dayjs';
 import { IGreenhouseGases } from 'library/types/marineFarming.d';
 
-interface IProps {}
+interface IProps {
+	greenhouseGasesData: IGreenhouseGases[];
+}
 
-const EmissionValueChart: React.FunctionComponent<IProps> = () => {
+const EmissionValueChart: React.FunctionComponent<IProps> = ({ greenhouseGasesData }) => {
 	const { palette } = useTheme();
-
-	const greenhouseGasesData = useSelector(selectFilteredGases);
 
 	const chartData = useMemo(() => {
 		const data: {[year: string]: IGreenhouseGases[]} = greenhouseGasesData.reduce((accumulator: any, currentValue: IGreenhouseGases) => {
@@ -36,7 +34,6 @@ const EmissionValueChart: React.FunctionComponent<IProps> = () => {
 
 		const options: ApexOptions = {
 			chart: {
-				// height: 350,
 				type: 'line',
 				zoom: {
 					enabled: false,
@@ -113,7 +110,7 @@ const EmissionValueChart: React.FunctionComponent<IProps> = () => {
 				<Typography sx={{ color: '#FFFBFF' }} variant="h5">Значения эмиссии</Typography>
 				<Typography sx={{ color: '#E9E9ED' }} variant="caption">Среднее значение эмиссии</Typography>
 			</Stack>
-			<ReactApexChart options={chartData.options} series={chartData.series} type="line" />
+			<ReactApexChart options={chartData.options} series={chartData.series} type="line" height="210%" />
 		</Paper>
 	);
 };

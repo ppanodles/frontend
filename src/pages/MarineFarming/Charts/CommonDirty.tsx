@@ -47,7 +47,7 @@ const CommonDirty: React.FunctionComponent<IProps> = () => {
 			>
 				47%
 			</Typography>
-			<ReactApexChart options={options} series={series} type="donut" />
+			<ReactApexChart options={options} series={series} type="donut" height="150%" />
 
 		</Paper>
 	);
