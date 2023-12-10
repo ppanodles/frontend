@@ -61,12 +61,13 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 	};
 
 	const visibleRows = React.useMemo(
-		() => (rowsPerPage > 0
-			? stableSort(tableData, getComparator(order, orderBy)).slice(
-				page * rowsPerPage,
-				page * rowsPerPage + rowsPerPage,
-			)
-			: []),
+		() => {
+			const sortedArray = stableSort(tableData, getComparator(order, orderBy));
+
+			return rowsPerPage > 0
+				? sortedArray.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+				: sortedArray;
+		},
 		[order, orderBy, page, rowsPerPage, tableData],
 	);
 
