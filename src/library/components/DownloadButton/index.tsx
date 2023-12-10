@@ -1,10 +1,11 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-shadow */
 /* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable no-nested-ternary */
 import {
 	Button,
 	SxProps, Theme,
 } from '@mui/material';
-import React, { useMemo } from 'react';
+import React, { useEffect, useState} from 'react';
 import { RootState } from 'main/rootReducer';
 import { useSelector } from 'react-redux';
 import selectFilteredFilmContaminations from 'library/selectors/filmContamination.selector';
@@ -19,6 +20,21 @@ import { IEcoCityState } from 'library/types/ecoCity';
 import { IEcoFarmlandState } from 'library/types/ecoFarmland';
 import selectFilteredEcoFarmlandStates from 'library/selectors/ecoFarmland.selector';
 import Icon from '../Icon';
+
+type DataType = IShip[] | IGreenhouseGases[] | IFilmContamination[] | IEcoCityState[] | IEcoFarmlandState[] | undefined
+
+enum DownloadFileNameType {
+    FILM ='плёночные_загрязнения',
+    GASES ='парниковые_газы',
+    AGRO = 'агропромышленность',
+    CITY = 'муниципалитет',
+    SHIPS = 'корабли',
+}
+
+interface IDownloadingdata {
+	data: DataType;
+	fileName: DownloadFileNameType;
+}
 
 const buttonStyles: SxProps<Theme> = (theme) => ({
 	textTransform: 'none',
@@ -35,7 +51,7 @@ const buttonStyles: SxProps<Theme> = (theme) => ({
 	},
 });
 
-const getUrl = (downloadingData: IShip[] | IGreenhouseGases[] | IFilmContamination[] | IEcoCityState[] | IEcoFarmlandState[] | undefined): string => {
+const getUrl = (downloadingData: DataType): string => {
 	if (!downloadingData) {
 		return '';
 	}
@@ -45,8 +61,8 @@ const getUrl = (downloadingData: IShip[] | IGreenhouseGases[] | IFilmContaminati
 };
 
 const DownloadButton: React.FunctionComponent = () => {
-	const slicesAccessibility = useSelector((state: RootState) => state.marineFarming.slicesStatus);
 	const { pathname } = useLocation();
+	const slicesAccessibility = useSelector((state: RootState) => state.marineFarming.slicesStatus);
 
 	const ships = useSelector(selectFilteredShips);
 	const greenhouseGases = useSelector(selectFilteredGases);
@@ -54,28 +70,35 @@ const DownloadButton: React.FunctionComponent = () => {
 	const ecoCity = useSelector(selectFilteredEcoCityStates);
 	const ecoFarmland = useSelector(selectFilteredEcoFarmlandStates);
 
-	const marineFarmingData = useMemo(
-		() => {
+	const [downloadingData, setDownloadingData] = useState<IDownloadingdata>({data: ships, fileName: DownloadFileNameType.SHIPS});
+
+	useEffect(() => {
+		if (pathname.includes(paths.marineFarming.base)) {
 			if (slicesAccessibility.SHIPS) {
-				return ships;
+				setDownloadingData({data: ships, fileName: DownloadFileNameType.SHIPS});
 			}
 			if (slicesAccessibility.FILM_CONTAMINATION) {
-				return filmContamination;
+				setDownloadingData({data: filmContamination, fileName: DownloadFileNameType.FILM});
 			}
 			if (slicesAccessibility.GREENHOUSE_GASES) {
-				return greenhouseGases;
+				setDownloadingData({data: greenhouseGases, fileName: DownloadFileNameType.GASES});
 			}
-			return undefined;
-		},
-		[filmContamination, greenhouseGases, ships, slicesAccessibility],
-	);
+		}
 
-	const downloadingData = pathname.includes(paths.marineFarming.base) ? marineFarmingData : pathname.includes(paths.agroIndustry.base) ? ecoFarmland : pathname.includes(paths.municipality.base) ? ecoCity : undefined;
+		if (pathname.includes(paths.agroIndustry.base)) {
+			setDownloadingData({data: ecoFarmland, fileName: DownloadFileNameType.AGRO});
+		}
+
+		if (pathname.includes(paths.municipality.base)) {
+			setDownloadingData({data: ecoCity, fileName: DownloadFileNameType.CITY});
+		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [pathname, slicesAccessibility]);
 
 	return (
 		<a
-			href={getUrl(downloadingData)}
-			download="data.csv"
+			href={getUrl(downloadingData.data)}
+			download={`${downloadingData.fileName}.csv`}
 			target="_blank"
 			rel="noreferrer"
 		>
