@@ -48,7 +48,7 @@ const Municipality: React.FunctionComponent<IProps> = () => {
 			</Box>
 
 			{LayoutType.CHARTS === layout && <Charts />}
-			<MunicipalityTable />
+			{LayoutType.TABLE === layout && <MunicipalityTable />}
 		</Container>
 	);
 };
