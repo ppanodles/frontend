@@ -1,8 +1,8 @@
 import { v1 as uuid } from 'uuid';
 
-import { IEcoCityState } from 'library/types/ecoCity.d';
+import { IMunicipalityState } from 'library/types/municipality';
 
-export default (data: any): IEcoCityState[] => data?.map((datum: any) => ({
+export default (data: any): IMunicipalityState[] => data?.map((datum: any) => ({
 	id: datum?.id ?? uuid(),
 	time: datum?.time ?? '',
 	temp: datum?.temp ?? 0,

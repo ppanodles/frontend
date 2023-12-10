@@ -5,12 +5,12 @@ import dayjs from 'dayjs';
 
 import Table, { TableConfig } from 'library/components/Table';
 import { dateSorting } from 'library/helpers/sorting';
-import { IEcoCityState } from 'library/types/ecoCity';
-import selectFilteredEcoCityStates from 'library/selectors/ecoCity.selector';
+import { IMunicipalityState } from 'library/types/municipality';
+import selectFilteredMunicipalityStates from 'library/selectors/municipality.selector';
 
 interface IProps {}
 
-const tableColumns: TableConfig<IEcoCityState>[] = [
+const tableColumns: TableConfig<IMunicipalityState>[] = [
 	{
 		name: 'Время  UTC',
 		value: 'time',
@@ -35,10 +35,10 @@ const tableColumns: TableConfig<IEcoCityState>[] = [
 ];
 
 const MunicipalityTable: React.FunctionComponent<IProps> = () => {
-	const EcoCityStatesData = useSelector(selectFilteredEcoCityStates);
+	const MunicipalityStatesData = useSelector(selectFilteredMunicipalityStates);
 
 	return (
-		<Table<IEcoCityState> tableData={EcoCityStatesData} tableConfig={tableColumns} defaultSortColumn="location" />
+		<Table<IMunicipalityState> tableData={MunicipalityStatesData} tableConfig={tableColumns} defaultSortColumn="location" />
 	);
 };
 

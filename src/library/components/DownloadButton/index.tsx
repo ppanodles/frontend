@@ -14,20 +14,20 @@ import selectFilteredShips from 'library/selectors/ships.selector';
 import Papa from 'papaparse';
 import { IFilmContamination, IGreenhouseGases, IShip } from 'library/types/marineFarming';
 import { useLocation } from 'react-router-dom';
-import selectFilteredEcoCityStates from 'library/selectors/ecoCity.selector';
+import selectFilteredMunicipalityStates from 'library/selectors/municipality.selector';
 import paths from 'library/paths';
-import { IEcoCityState } from 'library/types/ecoCity';
-import { IEcoFarmlandState } from 'library/types/ecoFarmland';
-import selectFilteredEcoFarmlandStates from 'library/selectors/ecoFarmland.selector';
+import { IMunicipalityState } from 'library/types/municipality';
+import { IAgroState } from 'library/types/agro';
+import selectFilteredAgroStates from 'library/selectors/agro.selector';
 import Icon from '../Icon';
 
-type DataType = IShip[] | IGreenhouseGases[] | IFilmContamination[] | IEcoCityState[] | IEcoFarmlandState[] | undefined
+type DataType = IShip[] | IGreenhouseGases[] | IFilmContamination[] | IMunicipalityState[] | IAgroState[] | undefined
 
 enum DownloadFileNameType {
     FILM ='плёночные_загрязнения',
     GASES ='парниковые_газы',
     AGRO = 'агропромышленность',
-    CITY = 'муниципалитет',
+    MUNICIPALITY = 'муниципалитет',
     SHIPS = 'корабли',
 }
 
@@ -55,7 +55,7 @@ const getUrl = (downloadingData: DataType): string => {
 	if (!downloadingData) {
 		return '';
 	}
-	const csvData = Papa.unparse<IShip | IGreenhouseGases | IFilmContamination | IEcoCityState | IEcoFarmlandState>(downloadingData);
+	const csvData = Papa.unparse<IShip | IGreenhouseGases | IFilmContamination | IMunicipalityState | IAgroState>(downloadingData);
 	const blob = new Blob([csvData ?? ''], { type: 'text/csv;charset=utf-8;' });
 	return URL.createObjectURL(blob);
 };
@@ -67,8 +67,8 @@ const DownloadButton: React.FunctionComponent = () => {
 	const ships = useSelector(selectFilteredShips);
 	const greenhouseGases = useSelector(selectFilteredGases);
 	const filmContamination = useSelector(selectFilteredFilmContaminations);
-	const ecoCity = useSelector(selectFilteredEcoCityStates);
-	const ecoFarmland = useSelector(selectFilteredEcoFarmlandStates);
+	const agro = useSelector(selectFilteredMunicipalityStates);
+	const municipality = useSelector(selectFilteredAgroStates);
 
 	const [downloadingData, setDownloadingData] = useState<IDownloadingdata>({data: ships, fileName: DownloadFileNameType.SHIPS});
 
@@ -89,12 +89,12 @@ const DownloadButton: React.FunctionComponent = () => {
 		}
 
 		if (pathname.includes(paths.agroIndustry.base)) {
-			setDownloadingData({data: ecoFarmland, fileName: DownloadFileNameType.AGRO});
+			setDownloadingData({data: agro, fileName: DownloadFileNameType.AGRO});
 			return;
 		}
 
 		if (pathname.includes(paths.municipality.base)) {
-			setDownloadingData({data: ecoCity, fileName: DownloadFileNameType.CITY});
+			setDownloadingData({data: municipality, fileName: DownloadFileNameType.MUNICIPALITY});
 		}
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [pathname, slicesAccessibility]);

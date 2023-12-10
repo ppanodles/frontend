@@ -1,4 +1,4 @@
-export interface IEcoFarmlandState {
+export interface IMunicipalityState {
     id: string;
     time: string;
     temp: number;

@@ -5,12 +5,12 @@ import dayjs from 'dayjs';
 
 import Table, { TableConfig } from 'library/components/Table';
 import { dateSorting } from 'library/helpers/sorting';
-import selectFilteredEcoFarmlandStates from 'library/selectors/ecoFarmland.selector';
-import { IEcoFarmlandState } from 'library/types/ecoFarmland';
+import selectFilteredAgroStates from 'library/selectors/agro.selector';
+import { IAgroState } from 'library/types/agro';
 
 interface IProps {}
 
-const tableColumns: TableConfig<IEcoFarmlandState>[] = [
+const tableColumns: TableConfig<IAgroState>[] = [
 	{
 		name: 'Время  UTC',
 		value: 'time',
@@ -35,10 +35,10 @@ const tableColumns: TableConfig<IEcoFarmlandState>[] = [
 ];
 
 const AgroTable: React.FunctionComponent<IProps> = () => {
-	const EcoFarmlandStatesData = useSelector(selectFilteredEcoFarmlandStates);
+	const AgroStatesData = useSelector(selectFilteredAgroStates);
 
 	return (
-		<Table<IEcoFarmlandState> tableData={EcoFarmlandStatesData} tableConfig={tableColumns} defaultSortColumn="location" />
+		<Table<IAgroState> tableData={AgroStatesData} tableConfig={tableColumns} defaultSortColumn="location" />
 	);
 };
 

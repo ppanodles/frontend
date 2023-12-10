@@ -2,19 +2,19 @@ import React from 'react';
 import { Stack } from '@mui/material';
 import Filter from 'library/components/Filter';
 import FilterType from 'library/constants/FilterType';
-import {selectEcoCityFilters} from 'library/selectors/filters.selector';
+import {selectMunicipalityFilters} from 'library/selectors/filters.selector';
 import { CommonFilterDataType } from 'library/types/system.d';
 import { useDispatch, useSelector } from 'react-redux';
-import EcoCityStateDataType from 'library/constants/EcoCitySlice';
-import { applyFilter } from 'library/slices/ecoCity.slice';
-import { IEcoCityState } from 'library/types/ecoCity';
+import MunicipalityStateDataType from 'library/constants/MunicipalitySlice';
+import { applyFilter } from 'library/slices/municipality.slice';
+import { IMunicipalityState } from 'library/types/municipality';
 
 interface IProps {}
 
-const CityFilter: React.FunctionComponent<IProps> = () => {
+const MunicipalityFilter: React.FunctionComponent<IProps> = () => {
 	const dispatch = useDispatch();
 
-	const filters: CommonFilterDataType<IEcoCityState>[] = useSelector(selectEcoCityFilters<IEcoCityState>(EcoCityStateDataType.CITY_STATE));
+	const filters: CommonFilterDataType<IMunicipalityState>[] = useSelector(selectMunicipalityFilters<IMunicipalityState>(MunicipalityStateDataType.MUNICIPALITY_STATE));
 
 	return (
 		<Stack sx={{ width: '100%' }}>
@@ -28,7 +28,7 @@ const CityFilter: React.FunctionComponent<IProps> = () => {
 							value={filter.selected}
 							borders={filter.borders}
 							onChange={(value) => dispatch(applyFilter({
-								dataType: EcoCityStateDataType.CITY_STATE,
+								dataType: MunicipalityStateDataType.MUNICIPALITY_STATE,
 								field: filter.field,
 								filter: filter.type,
 								value,
@@ -45,7 +45,7 @@ const CityFilter: React.FunctionComponent<IProps> = () => {
 							values={filter.items}
 							checked={filter.selected}
 							onChange={(value) => dispatch(applyFilter({
-								dataType: EcoCityStateDataType.CITY_STATE,
+								dataType: MunicipalityStateDataType.MUNICIPALITY_STATE,
 								field: filter.field,
 								filter: filter.type,
 								value,
@@ -62,7 +62,7 @@ const CityFilter: React.FunctionComponent<IProps> = () => {
 							value={filter.selected}
 							borders={filter.borders}
 							onChange={(value) => dispatch(applyFilter({
-								dataType: EcoCityStateDataType.CITY_STATE,
+								dataType: MunicipalityStateDataType.MUNICIPALITY_STATE,
 								field: filter.field,
 								filter: filter.type,
 								value,
@@ -76,4 +76,4 @@ const CityFilter: React.FunctionComponent<IProps> = () => {
 	);
 };
 
-export default CityFilter;
+export default MunicipalityFilter;

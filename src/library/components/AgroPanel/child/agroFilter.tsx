@@ -2,19 +2,19 @@ import React from 'react';
 import { Stack } from '@mui/material';
 import Filter from 'library/components/Filter';
 import FilterType from 'library/constants/FilterType';
-import {selectEcoFarmlandFilters} from 'library/selectors/filters.selector';
+import {selectAgroFilters} from 'library/selectors/filters.selector';
 import { CommonFilterDataType } from 'library/types/system.d';
 import { useDispatch, useSelector } from 'react-redux';
-import EcoFarmlandStateDataType from 'library/constants/EcoFarmlandSlice';
-import { applyFilter } from 'library/slices/ecoFarmland.slice';
-import { IEcoFarmlandState } from 'library/types/ecoFarmland';
+import AgroStateDataType from 'library/constants/AgroSlice';
+import { applyFilter } from 'library/slices/agro.slice';
+import { IAgroState } from 'library/types/agro';
 
 interface IProps {}
 
 const AgroFilter: React.FunctionComponent<IProps> = () => {
 	const dispatch = useDispatch();
 
-	const filters: CommonFilterDataType<IEcoFarmlandState>[] = useSelector(selectEcoFarmlandFilters<IEcoFarmlandState>(EcoFarmlandStateDataType.FARMLAND_STATE));
+	const filters: CommonFilterDataType<IAgroState>[] = useSelector(selectAgroFilters<IAgroState>(AgroStateDataType.AGRO_STATE));
 
 	return (
 		<Stack sx={{ width: '100%' }}>
@@ -28,7 +28,7 @@ const AgroFilter: React.FunctionComponent<IProps> = () => {
 							value={filter.selected}
 							borders={filter.borders}
 							onChange={(value) => dispatch(applyFilter({
-								dataType: EcoFarmlandStateDataType.FARMLAND_STATE,
+								dataType: AgroStateDataType.AGRO_STATE,
 								field: filter.field,
 								filter: filter.type,
 								value,
@@ -45,7 +45,7 @@ const AgroFilter: React.FunctionComponent<IProps> = () => {
 							values={filter.items}
 							checked={filter.selected}
 							onChange={(value) => dispatch(applyFilter({
-								dataType: EcoFarmlandStateDataType.FARMLAND_STATE,
+								dataType: AgroStateDataType.AGRO_STATE,
 								field: filter.field,
 								filter: filter.type,
 								value,
@@ -62,7 +62,7 @@ const AgroFilter: React.FunctionComponent<IProps> = () => {
 							value={filter.selected}
 							borders={filter.borders}
 							onChange={(value) => dispatch(applyFilter({
-								dataType: EcoFarmlandStateDataType.FARMLAND_STATE,
+								dataType: AgroStateDataType.AGRO_STATE,
 								field: filter.field,
 								filter: filter.type,
 								value,

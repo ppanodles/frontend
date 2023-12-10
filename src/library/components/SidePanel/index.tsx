@@ -10,7 +10,7 @@ import { useLocation } from 'react-router-dom';
 import MarineFarmingPanel from '../MarineFarmingPanel';
 import Icon from '../Icon';
 import AgroPanel from '../AgroPanel';
-import CityPanel from '../CityPanel';
+import MunicipalityPanel from '../MunicipalityPanel';
 
 interface IProps {
     open: boolean;
@@ -27,7 +27,7 @@ const getPanel = (path: string) => {
 	}
 
 	if (path.includes(paths.municipality.base)) {
-		return <CityPanel />;
+		return <MunicipalityPanel />;
 	}
 
 	return null;

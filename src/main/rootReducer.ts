@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import marineFarmingReducer from 'library/slices/marineFarming.slice';
-import ecoFarmlandSliceReducer from 'library/slices/ecoFarmland.slice';
-import ecoCitySliceReducer from 'library/slices/ecoCity.slice';
+import agroSliceReducer from 'library/slices/agro.slice';
+import municipalitySliceReducer from 'library/slices/municipality.slice';
 
 const store = configureStore({
 	reducer: {
 		marineFarming: marineFarmingReducer,
-		ecoFarmland: ecoFarmlandSliceReducer,
-		ecoCity: ecoCitySliceReducer,
+		agro: agroSliceReducer,
+		municipality: municipalitySliceReducer,
 	},
 	devTools: process.env.NODE_ENV !== 'production',
 });

@@ -6,8 +6,8 @@ import {
 	values, isEmpty, keys, pickBy,
 } from 'lodash';
 import getLayoutTypeFomPath from 'library/helpers/getLayoutTypeFomPath';
-import EcoFarmlandStateDataType from 'library/constants/EcoFarmlandSlice';
-import EcoCityStateDataType from 'library/constants/EcoCitySlice';
+import AgroStateDataType from 'library/constants/AgroSlice';
+import MunicipalityStateDataType from 'library/constants/MunicipalitySlice';
 
 export const selectFilters = <T>(dataType: MarineFarmingDataType) => createSelector(
 	(state: RootState) => state.marineFarming.filters[dataType],
@@ -24,8 +24,8 @@ export const selectFilters = <T>(dataType: MarineFarmingDataType) => createSelec
 	},
 );
 
-export const selectEcoFarmlandFilters = <T>(dataType: EcoFarmlandStateDataType) => createSelector(
-	(state: RootState) => state.ecoFarmland.filters[dataType],
+export const selectAgroFilters = <T>(dataType: AgroStateDataType) => createSelector(
+	(state: RootState) => state.agro.filters[dataType],
 	(filters) => {
 		if (!isEmpty(filters)) {
 			// @ts-ignore
@@ -39,8 +39,8 @@ export const selectEcoFarmlandFilters = <T>(dataType: EcoFarmlandStateDataType) 
 	},
 );
 
-export const selectEcoCityFilters = <T>(dataType: EcoCityStateDataType) => createSelector(
-	(state: RootState) => state.ecoCity.filters[dataType],
+export const selectMunicipalityFilters = <T>(dataType: MunicipalityStateDataType) => createSelector(
+	(state: RootState) => state.municipality.filters[dataType],
 	(filters) => {
 		if (!isEmpty(filters)) {
 			// @ts-ignore

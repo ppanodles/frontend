@@ -2,25 +2,24 @@ import { RootState } from 'main/rootReducer';
 import { createSelector } from 'reselect';
 import { values, isEmpty, keys } from 'lodash';
 import dayjs from 'dayjs';
-
 import FilterType from 'library/constants/FilterType';
-import EcoCityStateDataType from 'library/constants/EcoCitySlice';
-import { IEcoCityState } from 'library/types/ecoCity.d';
+import { IAgroState } from 'library/types/agro';
+import AgroStateDataType from 'library/constants/AgroSlice';
 
-const selectFilteredEcoCityStates: (state: RootState) => IEcoCityState[] = createSelector(
+const selectFilteredAgroStates: (state: RootState) => IAgroState[] = createSelector(
 	[
-		(state: RootState) => state.ecoCity.filters[EcoCityStateDataType.CITY_STATE],
-		(state: RootState) => state.ecoCity.ecoCityState,
+		(state: RootState) => state.agro.filters[AgroStateDataType.AGRO_STATE],
+		(state: RootState) => state.agro.agroState,
 	],
-	(filters, EcoCityStates) => {
+	(filters, AgroStates) => {
 		const filterTypes = keys(filters) as FilterType[];
 
-		return filterTypes.reduce((accumulator, currentValue: FilterType) => values(filters[currentValue]).reduce((accumulatedEcoCityStates, currentFilter) => {
+		return filterTypes.reduce((accumulator, currentValue: FilterType) => values(filters[currentValue]).reduce((accumulatedAgroStates, currentFilter) => {
 			if (!isEmpty(currentFilter.selected)) {
 				if (currentFilter.type === FilterType.LIST_SELECTOR) {
 					if (!isEmpty(currentFilter.selected)) {
-						return accumulatedEcoCityStates
-							.filter((ecoCityState) => typeof ecoCityState[currentFilter.field] === 'string' && values(currentFilter.selected).includes(ecoCityState[currentFilter.field] as string));
+						return accumulatedAgroStates
+							.filter((agroState) => typeof agroState[currentFilter.field] === 'string' && values(currentFilter.selected).includes(agroState[currentFilter.field] as string));
 					}
 				}
 
@@ -29,8 +28,8 @@ const selectFilteredEcoCityStates: (state: RootState) => IEcoCityState[] = creat
 					const dateTo = dayjs(currentFilter.selected.to);
 
 					if (dateFrom.isValid() && dateTo.isValid()) {
-						return accumulatedEcoCityStates.filter((ecoCityState) => {
-							const interestingDate = dayjs(ecoCityState[currentFilter.field] as string);
+						return accumulatedAgroStates.filter((agroState) => {
+							const interestingDate = dayjs(agroState[currentFilter.field] as string);
 
 							if (!interestingDate.isValid()) {
 								return true;
@@ -44,13 +43,13 @@ const selectFilteredEcoCityStates: (state: RootState) => IEcoCityState[] = creat
 				if (currentFilter.type === FilterType.RANGE && currentFilter.selected.from !== undefined && currentFilter.selected.to !== undefined) {
 					const { from, to } = currentFilter.selected;
 
-					return accumulatedEcoCityStates.filter((ecoCityState) => from <= (ecoCityState[currentFilter.field] as number) && (ecoCityState[currentFilter.field] as number) <= to);
+					return accumulatedAgroStates.filter((agroState) => from <= (agroState[currentFilter.field] as number) && (agroState[currentFilter.field] as number) <= to);
 				}
 			}
 
-			return accumulatedEcoCityStates;
-		}, accumulator), EcoCityStates);
+			return accumulatedAgroStates;
+		}, accumulator), AgroStates);
 	},
 );
 
-export default selectFilteredEcoCityStates;
+export default selectFilteredAgroStates;

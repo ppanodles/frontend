@@ -1,8 +1,8 @@
 import { v1 as uuid } from 'uuid';
 
-import { IEcoFarmlandState } from 'library/types/ecoFarmland.d';
+import { IAgroState } from 'library/types/agro';
 
-export default (data: any): IEcoFarmlandState[] => data?.map((datum: any) => ({
+export default (data: any): IAgroState[] => data?.map((datum: any) => ({
 	id: datum?.id ?? uuid(),
 	time: datum?.time ?? '',
 	temp: datum?.temp ?? 0,

@@ -2,11 +2,11 @@ import React from 'react';
 import { Stack, Typography } from '@mui/material';
 import { DRAWER_WIDTH } from 'library/constants/styled';
 import Icon from '../Icon';
-import CityFilter from './child/cityFilter';
+import MunicipalityFilter from './child/municipalityFilter';
 
 interface IProps {}
 
-const CityPanel: React.FunctionComponent<IProps> = () => (
+const MunicipalityPanel: React.FunctionComponent<IProps> = () => (
 	<Stack direction="column" alignItems="center" sx={{ width: DRAWER_WIDTH, px: 1.5 }}>
 		<Stack
 			direction="row"
@@ -24,10 +24,10 @@ const CityPanel: React.FunctionComponent<IProps> = () => (
 		</Stack>
 
 		<Stack spacing={3} width="100%">
-			<CityFilter />
+			<MunicipalityFilter />
 		</Stack>
 
 	</Stack>
 );
 
-export default CityPanel;
+export default MunicipalityPanel;
