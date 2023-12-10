@@ -6,8 +6,8 @@ import paths, { LayoutType } from 'library/paths';
 import React, { useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import DownloadButton from 'library/components/DownloadButton';
-import Charts from './Charts';
 import Tables from './Tables';
+import Charts from './Charts';
 
 interface IProps {}
 

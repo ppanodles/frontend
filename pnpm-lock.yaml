@@ -45,7 +45,7 @@ dependencies:
     specifier: 16.18.65
     version: 16.18.65
   '@types/papaparse':
-    specifier: ^5.3.14
+    specifier: 5.3.14
     version: 5.3.14
   '@types/react':
     specifier: 18.2.39
@@ -53,6 +53,12 @@ dependencies:
   '@types/react-dom':
     specifier: 18.2.17
     version: 18.2.17
+  apexcharts:
+    specifier: 3.44.2
+    version: 3.44.2
+  chart.js:
+    specifier: ^4.4.1
+    version: 4.4.1
   dayjs:
     specifier: 1.11.10
     version: 1.11.10
@@ -72,14 +78,17 @@ dependencies:
     specifier: 3.0.0
     version: 3.0.0
   papaparse:
-    specifier: ^5.4.1
+    specifier: 5.4.1
     version: 5.4.1
   react:
     specifier: 18.2.0
     version: 18.2.0
   react-apexcharts:
     specifier: 1.4.1
-    version: 1.4.1(apexcharts@3.44.0)(react@18.2.0)
+    version: 1.4.1(apexcharts@3.44.2)(react@18.2.0)
+  react-chartjs-2:
+    specifier: ^5.2.0
+    version: 5.2.0(chart.js@4.4.1)(react@18.2.0)
   react-device-detect:
     specifier: 2.2.3
     version: 2.2.3(react-dom@18.2.0)(react@18.2.0)
@@ -99,7 +108,7 @@ dependencies:
     specifier: 5.0.1
     version: 5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(eslint@8.54.0)(react@18.2.0)(typescript@4.9.5)
   react-use:
-    specifier: ^17.4.2
+    specifier: 17.4.2
     version: 17.4.2(react-dom@18.2.0)(react@18.2.0)
   reselect:
     specifier: 5.0.1
@@ -108,7 +117,7 @@ dependencies:
     specifier: 4.9.5
     version: 4.9.5
   uuid:
-    specifier: ^9.0.1
+    specifier: 9.0.1
     version: 9.0.1
   web-vitals:
     specifier: 2.1.4
@@ -119,7 +128,7 @@ devDependencies:
     specifier: 4.14.202
     version: 4.14.202
   '@types/uuid':
-    specifier: ^9.0.7
+    specifier: 9.0.7
     version: 9.0.7
   '@typescript-eslint/eslint-plugin':
     specifier: 6.13.1
@@ -2322,6 +2331,10 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /@kurkle/color@0.3.2:
+    resolution: {integrity: sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==}
+    dev: false
 
   /@leichtgewicht/ip-codec@2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
@@ -4960,8 +4973,8 @@ packages:
       picomatch: 2.3.1
     dev: false
 
-  /apexcharts@3.44.0:
-    resolution: {integrity: sha512-u7Xzrbcxc2yWznN78Jh5NMCYVAsWDfBjRl5ea++rVzFAqjU2hLz4RgKIFwYOBDRQtW1e/Qz8azJTqIJ1+Vu9Qg==}
+  /apexcharts@3.44.2:
+    resolution: {integrity: sha512-QWOFS/SC1TDsuI8VudVuIwLhs1qE6kwixRvmABMUgTVeVzizRWgQh8pdEIgwl+Zvr0TlM3vHPz6Dc5NP1hJ7BA==}
     dependencies:
       '@yr/monotone-cubic-spline': 1.0.3
       svg.draggable.js: 2.2.2
@@ -5738,6 +5751,13 @@ packages:
   /character-reference-invalid@1.1.4:
     resolution: {integrity: sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==}
     dev: true
+
+  /chart.js@4.4.1:
+    resolution: {integrity: sha512-C74QN1bxwV1v2PEujhmKjOZ7iUM4w6BWs23Md/6aOZZSlwMzeCIDGuZay++rBgChYru7/+QFeoQW0fQoP534Dg==}
+    engines: {pnpm: '>=7'}
+    dependencies:
+      '@kurkle/color': 0.3.2
+    dev: false
 
   /cheap-ruler@3.0.2:
     resolution: {integrity: sha512-02T332h1/HTN6cDSufLP8x4JzDs2+VC+8qZ/N0kWIVPyc2xUkWwWh3B2fJxR7raXkL4Mq7k554mfuM9ofv/vGg==}
@@ -9815,7 +9835,7 @@ packages:
     dev: false
 
   /json-stable-stringify-without-jsonify@1.0.1:
-    resolution: {integrity: sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=}
+    resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
 
   /json-stringify-pretty-compact@3.0.0:
     resolution: {integrity: sha512-Rc2suX5meI0S3bfdZuA7JMFBGkJ875ApfVyq2WHELjBiiG22My/l7/8zPpH/CfFVQHuVLd8NLR0nv6vi0BYYKA==}
@@ -12133,13 +12153,13 @@ packages:
       quickselect: 2.0.0
     dev: false
 
-  /react-apexcharts@1.4.1(apexcharts@3.44.0)(react@18.2.0):
+  /react-apexcharts@1.4.1(apexcharts@3.44.2)(react@18.2.0):
     resolution: {integrity: sha512-G14nVaD64Bnbgy8tYxkjuXEUp/7h30Q0U33xc3AwtGFijJB9nHqOt1a6eG0WBn055RgRg+NwqbKGtqPxy15d0Q==}
     peerDependencies:
       apexcharts: ^3.41.0
       react: '>=0.13'
     dependencies:
-      apexcharts: 3.44.0
+      apexcharts: 3.44.2
       prop-types: 15.8.1
       react: 18.2.0
     dev: false
@@ -12154,6 +12174,16 @@ packages:
       raf: 3.4.1
       regenerator-runtime: 0.13.11
       whatwg-fetch: 3.6.19
+    dev: false
+
+  /react-chartjs-2@5.2.0(chart.js@4.4.1)(react@18.2.0):
+    resolution: {integrity: sha512-98iN5aguJyVSxp5U3CblRLH67J8gkfyGNbiK3c+l1QI/G4irHMPQw44aEPmjVag+YKTyQ260NcF82GTQ3bdscA==}
+    peerDependencies:
+      chart.js: ^4.1.1
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      chart.js: 4.4.1
+      react: 18.2.0
     dev: false
 
   /react-dev-utils@12.0.1(eslint@8.54.0)(typescript@4.9.5)(webpack@5.89.0):
@@ -14005,14 +14035,14 @@ packages:
     dev: false
 
   /svg.easing.js@2.0.0:
-    resolution: {integrity: sha1-iqmUawqOJ4V6XEChDrpAkeVpHxI=}
+    resolution: {integrity: sha512-//ctPdJMGy22YoYGV+3HEfHbm6/69LJUTAqI2/5qBvaNHZ9uUFVC82B0Pl299HzgH13rKrBgi4+XyXXyVWWthA==}
     engines: {node: '>= 0.8.0'}
     dependencies:
       svg.js: 2.7.1
     dev: false
 
   /svg.filter.js@2.0.2:
-    resolution: {integrity: sha1-kQCOFROJ3ZIwd5/L5uLJo2LRwgM=}
+    resolution: {integrity: sha512-xkGBwU+dKBzqg5PtilaTb0EYPqPfJ9Q6saVldX+5vCRy31P6TlRCP3U9NxH3HEufkKkpNgdTLBJnmhDHeTqAkw==}
     engines: {node: '>= 0.8.0'}
     dependencies:
       svg.js: 2.7.1
