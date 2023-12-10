@@ -4,7 +4,7 @@ import {
 import React, { useMemo } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
-import { IMunicipalityState } from 'library/types/municipality';
+import { IMunicipalityState } from 'library/types/municipality.d';
 
 interface IProps {
 	municipalityState: IMunicipalityState[];

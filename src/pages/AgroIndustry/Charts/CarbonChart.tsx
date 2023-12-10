@@ -4,7 +4,7 @@ import {
 import React, { useMemo } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
-import { IAgroState } from 'library/types/agro';
+import { IAgroState } from 'library/types/agro.d';
 
 interface IProps {
 	agroState: IAgroState[];
