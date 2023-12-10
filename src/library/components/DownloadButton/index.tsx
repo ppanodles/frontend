@@ -76,17 +76,21 @@ const DownloadButton: React.FunctionComponent = () => {
 		if (pathname.includes(paths.marineFarming.base)) {
 			if (slicesAccessibility.SHIPS) {
 				setDownloadingData({data: ships, fileName: DownloadFileNameType.SHIPS});
+				return;
 			}
 			if (slicesAccessibility.FILM_CONTAMINATION) {
 				setDownloadingData({data: filmContamination, fileName: DownloadFileNameType.FILM});
+				return;
 			}
 			if (slicesAccessibility.GREENHOUSE_GASES) {
 				setDownloadingData({data: greenhouseGases, fileName: DownloadFileNameType.GASES});
+				return;
 			}
 		}
 
 		if (pathname.includes(paths.agroIndustry.base)) {
 			setDownloadingData({data: ecoFarmland, fileName: DownloadFileNameType.AGRO});
+			return;
 		}
 
 		if (pathname.includes(paths.municipality.base)) {
