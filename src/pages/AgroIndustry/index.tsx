@@ -7,7 +7,7 @@ import paths, { LayoutType } from 'library/paths';
 import { useLocation, useNavigate } from 'react-router-dom';
 import DownloadButton from 'library/components/DownloadButton';
 import Charts from 'pages/MarineFarming/Charts';
-import Tables from 'pages/MarineFarming/Tables';
+import AgroTable from './Tables';
 
 interface IProps {}
 
@@ -48,7 +48,7 @@ const AgroIndustry: React.FunctionComponent<IProps> = () => {
 			</Box>
 
 			{LayoutType.CHARTS === layout && <Charts />}
-			{LayoutType.TABLE === layout && <Tables />}
+			<AgroTable />
 		</Container>
 	);
 };
