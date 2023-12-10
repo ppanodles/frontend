@@ -1,4 +1,4 @@
-import { Grid, Paper } from '@mui/material';
+import { Grid } from '@mui/material';
 import React from 'react';
 import getLayoutTypeFomPath from 'library/helpers/getLayoutTypeFomPath';
 import { selectFirstEnableSlice } from 'library/slices/marineFarming.slice';
@@ -10,6 +10,7 @@ import { isEmpty } from 'lodash';
 import EmissionValueChart from './EmissionValueChart';
 import CommonDirty from './CommonDirty';
 import Variance from './Variance';
+import LevelsChart from './LevelsChart';
 
 interface IProps {}
 
@@ -48,7 +49,9 @@ const Charts: React.FunctionComponent<IProps> = () => {
 				</Grid>
 
 			</Grid>
-			<Grid item xs={4}><Paper sx={{ width: '100%', height: '100%' }} /></Grid>
+			<Grid item xs={4}>
+				<LevelsChart greenhouseGasesData={greenhouseGasesData} />
+			</Grid>
 		</Grid>
 	);
 };
