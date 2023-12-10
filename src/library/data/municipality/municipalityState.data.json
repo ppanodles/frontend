@@ -6,7 +6,7 @@
             "temp": 17,
             "pressure": 434333,
             "humidity": 82,
-            "carbon": 3543,
+            "carbon": 4,
             "location": "Сахильский муниципалитет"
         },
         {
@@ -15,7 +15,7 @@
             "temp": 21,
             "pressure": 546456,
             "humidity": 91,
-            "carbon": 4333,
+            "carbon": 6,
             "location": "Акбулакский муниципалитет"
         },
         {
@@ -24,7 +24,7 @@
             "temp": 5,
             "pressure": 655322,
             "humidity": 93,
-            "carbon": 2347,
+            "carbon": 2,
             "location": "Николаевский муниципалитет"
         }
     ]

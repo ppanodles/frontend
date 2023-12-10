@@ -6,8 +6,8 @@ import extractLayout from 'library/helpers/extractLayout';
 import paths, { LayoutType } from 'library/paths';
 import { useLocation, useNavigate } from 'react-router-dom';
 import DownloadButton from 'library/components/DownloadButton';
-import Charts from 'pages/MarineFarming/Charts';
 import MunicipalityTable from './Tables';
+import Charts from './Charts';
 
 interface IProps {}
 

@@ -2,29 +2,29 @@
     "data": [
         {
             "id": "urn:ogc",
-            "time": "2023-10-15 08:00",
+            "time": "2021-10-15 08:00",
             "temp": 17,
-            "pressure": 434333,
+            "pressure": 80,
             "humidity": 82,
-            "carbon": 3543,
+            "carbon": 35,
             "location": "Карадагская СМ"
         },
         {
             "id": "urn:ogc1",
-            "time": "2023-12-22 08:00",
+            "time": "2022-12-22 08:00",
             "temp": 21,
-            "pressure": 546456,
+            "pressure": 83,
             "humidity": 91,
-            "carbon": 4333,
+            "carbon": 43,
             "location": "Звенигородская СМ"
         },
         {
             "id": "urn:ogc2",
             "time": "2023-11-27 08:00",
             "temp": 5,
-            "pressure": 655322,
+            "pressure": 77,
             "humidity": 93,
-            "carbon": 2347,
+            "carbon": 38,
             "location": "Карадагская СМ"
         }
     ]
