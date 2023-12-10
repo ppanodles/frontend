@@ -9,6 +9,8 @@ import { useLocation } from 'react-router-dom';
 
 import MarineFarmingPanel from '../MarineFarmingPanel';
 import Icon from '../Icon';
+import AgroPanel from '../AgroPanel';
+import CityPanel from '../CityPanel';
 
 interface IProps {
     open: boolean;
@@ -21,11 +23,11 @@ const getPanel = (path: string) => {
 	}
 
 	if (path.includes(paths.agroIndustry.base)) {
-		return 'agroIndustry';
+		return <AgroPanel />;
 	}
 
 	if (path.includes(paths.municipality.base)) {
-		return 'municipality';
+		return <CityPanel />;
 	}
 
 	return null;
