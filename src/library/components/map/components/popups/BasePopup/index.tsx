@@ -16,7 +16,7 @@ interface IProps {
 const BasePopup = ({
 	content, onClose, cords, date, styles,
 }: IProps) => {
-	const [fullDate, time] = dayjs(date, ['DD-MM-YYYY HH:mm', 'DD-MM-YYYY HH:mm:ss', 'YYYY-MM-DD HH:mm:ss', 'YYYY-MM-DD HH:mm', 'DD-MM-YYYY', 'YYYY-MM-DD']).format('DD-MM-YYYY HH:mm').split(' ');
+	const time = dayjs(date);
 
 	return (
 		<Popup
@@ -40,7 +40,7 @@ const BasePopup = ({
 							</div>
 							<div className="popupValue">
 								<span>
-									{fullDate}
+									{time.format('DD.MM.YYYY')}
 								</span>
 							</div>
 						</div>
@@ -49,7 +49,7 @@ const BasePopup = ({
 								<Icon iconName="clock" />
 							</div>
 							<div className="popupValue">
-								{time ?? '00:00'}
+								{time.format('HH:mm') ?? '00:00'}
 							</div>
 						</div>
 					</div>

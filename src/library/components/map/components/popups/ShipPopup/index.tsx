@@ -17,7 +17,7 @@ interface IProps {
 const ShipPopup = ({
 	name, coordinates, onClose, destination, imo, mmsi, dateUTC,
 }: IProps) => {
-	const [fullDate, time] = dayjs(dateUTC, ['DD-MM-YYYY HH:mm', 'DD-MM-YYYY HH:mm:ss', 'YYYY-MM-DD HH:mm:ss', 'YYYY-MM-DD HH:mm', 'DD-MM-YYYY', 'YYYY-MM-DD']).format('DD-MM-YYYY HH:mm').split(' ');
+	const time = dayjs(dateUTC);
 
 	return (
 		<Popup
@@ -47,13 +47,13 @@ const ShipPopup = ({
 							<div className="popupIcon">
 								<Icon iconName="calendar" />
 							</div>
-							<div className="shipPopupDateValue">{fullDate}</div>
+							<div className="shipPopupDateValue">{time.format('DD.MM.YYYY')}</div>
 						</div>
 						<div className="popupBlock">
 							<div className="popupIcon">
 								<Icon iconName="clock" />
 							</div>
-							<div className="shipPopupDateValue">{time ?? '00:00'}</div>
+							<div className="shipPopupDateValue">{time.format('HH:mm') ?? '00:00'}</div>
 						</div>
 					</div>
 					<div className="shipPopupValue">
