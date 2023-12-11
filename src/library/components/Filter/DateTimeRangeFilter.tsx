@@ -88,7 +88,7 @@ const DateTimeRangeFilter: React.FunctionComponent<IDateTimeRangeFilter> = ({
 	};
 
 	return (
-		<Box>
+		<Box my={1.5}>
 			<Typography sx={filterLabelSx} mb={1}>
 				{name}
 			</Typography>

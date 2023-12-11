@@ -61,6 +61,7 @@ const AgroFilter: React.FunctionComponent<IProps> = () => {
 							name={filter.name}
 							value={filter.selected}
 							borders={filter.borders}
+							pepticColor={filter.pepticColor}
 							onChange={(value) => dispatch(applyFilter({
 								dataType: AgroStateDataType.AGRO_STATE,
 								field: filter.field,

@@ -14,6 +14,7 @@ type IListSelectionFilter<T> = {
 
 type IRangeFilter<T> = {
     type: FilterType.RANGE,
+    pepticColor?: string;
     borders: { from: number; to: number; };
     selected?: { from: number, to: number }
 } & Base<T>;

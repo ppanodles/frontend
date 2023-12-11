@@ -24,7 +24,7 @@ const ListSelectorFilter: React.FunctionComponent<IListSelectorFilter> = ({
 	};
 
 	return (
-		<Stack>
+		<Stack my={1.5}>
 			<Typography sx={filterLabelSx}>
 				{name}
 			</Typography>

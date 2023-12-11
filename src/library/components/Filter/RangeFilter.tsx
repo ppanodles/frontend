@@ -14,6 +14,7 @@ export type IRangeFilter = {
     value?: { from: number; to: number };
 	borders: { from: number; to: number };
 	onChange(value: { from: number; to: number }): void;
+	pepticColor?: string;
 }
 
 const InputSx: SxProps<Theme> = {
@@ -33,7 +34,7 @@ const InputSx: SxProps<Theme> = {
 const borderLabels = ['от', 'до'];
 
 const RangeFilter: React.FunctionComponent<IRangeFilter> = ({
-	name, borders, value: filterValue, onChange,
+	name, borders, value: filterValue, onChange, pepticColor,
 }) => {
 	const [value, setValue] = useState([filterValue?.from ?? borders.from, filterValue?.to ?? borders.to]);
 
@@ -59,7 +60,7 @@ const RangeFilter: React.FunctionComponent<IRangeFilter> = ({
 	};
 
 	return (
-		<Stack spacing={2} sx={{ width: '100%' }}>
+		<Stack my={1.5} spacing={2} sx={{ width: '100%' }}>
 			<Typography sx={filterLabelSx}>
 				{name}
 			</Typography>
@@ -123,14 +124,14 @@ const RangeFilter: React.FunctionComponent<IRangeFilter> = ({
 					valueLabelDisplay="off"
 					color="secondary"
 					sx={{
-						mt: 2,
+						mt: 1.5,
 						width: 'calc(100% - 22px)',
 
 						'.MuiSlider-thumb': {
-							color: '#FFC400',
+							color: pepticColor ?? '#FFC400',
 						},
 						'.MuiSlider-track': {
-							color: '#FFC400',
+							color: pepticColor ?? '#FFC400',
 						},
 					}}
 				/>
