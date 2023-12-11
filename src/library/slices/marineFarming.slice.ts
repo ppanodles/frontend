@@ -148,6 +148,15 @@ const initialState: MarineFarmingState = {
 			},
 		},
 		[MarineFarmingDataType.GREENHOUSE_GASES]: {
+			[FilterType.DATE_TIME_RANGE]: {
+				time: {
+					type: FilterType.DATE_TIME_RANGE,
+					field: 'time',
+					name: 'Временной диапазон',
+					shouldShowAlways: true,
+					borders: getDefaultDateRange(greenhouseGasesData.map((v) => v.time)),
+				},
+			},
 			[FilterType.RANGE]: {
 				emissionLevel: {
 					type: FilterType.RANGE,
