@@ -21,12 +21,14 @@ import { isEmpty } from 'lodash';
 import { Order, stableSort, getComparator } from 'library/helpers/sorting';
 import pagesDictionary from 'library/helpers/pagesDictionary';
 
+type FilterResult = 1 | -1 | 0;
+
 export type TableConfig<T extends object> = {
 	name: string;
 	value: keyof T & string;
 	sx?: SxProps<Theme>;
 	valueGetter?: (value: string) => React.ReactElement | string;
-	onSorting?: (a: T, b: T, orderByField: any) => 1 | -1 | 0;
+	onSorting?: (a: T, b: T, orderByField: any) => FilterResult;
 }
 
 type IProps<T extends object> = {
@@ -35,9 +37,24 @@ type IProps<T extends object> = {
     defaultSortColumn: keyof T;
 }
 
+interface IOrderBy<K> {
+	field: keyof K;
+	customFunction?:(a: K, b: K, orderByField: keyof K) => FilterResult;
+}
+
+function getCustomSorting<T extends object>(defaultSortColumn: keyof T, tableConfig: TableConfig<T>[]): IOrderBy<T> {
+	const defaultValue = tableConfig.find((config) => config.value === defaultSortColumn);
+
+	if (defaultValue) {
+		return { field: defaultValue.value, customFunction: defaultValue.onSorting };
+	}
+
+	return { field: defaultSortColumn };
+}
+
 const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: IProps<T>) => {
 	const [order, setOrder] = useState<Order>('asc');
-	const [orderBy, setOrderBy] = useState<{field: keyof T, customFunction?:(a: T, b: T, orderByField: keyof T) => 1 | -1 | 0}>({ field: defaultSortColumn });
+	const [orderBy, setOrderBy] = useState<IOrderBy<T>>(getCustomSorting(defaultSortColumn, tableConfig));
 	const [page, setPage] = useState(0);
 	const [rowsPerPage, setRowsPerPage] = useState(50);
 
@@ -213,7 +230,7 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 					component={Box}
 					page={page}
 					count={tableData.length}
-					rowsPerPageOptions={[10, 50, { value: -1, label: 'Все' }]}
+					rowsPerPageOptions={[10, 25, 50, 100, { value: -1, label: 'Все' }]}
 					rowsPerPage={rowsPerPage}
 					onPageChange={handleChangePage}
 					onRowsPerPageChange={handleChangeRowsPerPage}
