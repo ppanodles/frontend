@@ -39,7 +39,7 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 	const [order, setOrder] = useState<Order>('asc');
 	const [orderBy, setOrderBy] = useState<{field: keyof T, customFunction?:(a: T, b: T, orderByField: keyof T) => 1 | -1 | 0}>({ field: defaultSortColumn });
 	const [page, setPage] = useState(0);
-	const [rowsPerPage, setRowsPerPage] = useState(10);
+	const [rowsPerPage, setRowsPerPage] = useState(50);
 
 	const handleChangePage = (_: React.MouseEvent<HTMLButtonElement, MouseEvent> | null, newPage: number) => {
 		setPage(newPage);
