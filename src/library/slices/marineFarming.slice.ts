@@ -163,7 +163,7 @@ const initialState: MarineFarmingState = {
 				time: {
 					type: FilterType.DATE_TIME_RANGE,
 					field: 'time',
-					name: 'Время прибытия',
+					name: 'Время возникновения',
 					borders: getDefaultDateRange(filmContaminationData.map((v) => v.time)),
 				},
 			},
