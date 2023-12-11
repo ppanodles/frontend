@@ -40,12 +40,14 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 			>
 				<LayoutSelector value={layout} setValue={changeLayoutHandle} />
 			</Box>
-			<Box sx={{
-				position: 'absolute', top: 8, right: 12, zIndex: '1', width: 40, height: 40,
-			}}
-			>
-				<DownloadButton />
-			</Box>
+			{ LayoutType.MAP !== layout && (
+				<Box sx={{
+					position: 'absolute', top: 8, right: 12, zIndex: '1', width: 40, height: 40,
+				}}
+				>
+					<DownloadButton />
+				</Box>
+			)}
 
 			{LayoutType.MAP === layout && process.env.REACT_APP_ACCESS_TOKEN && (
 				<DataMap />
