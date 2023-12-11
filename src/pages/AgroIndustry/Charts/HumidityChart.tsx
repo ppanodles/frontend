@@ -5,6 +5,7 @@ import React, { useMemo } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 import { IAgroState } from 'library/types/agro.d';
+import dayjs from 'dayjs';
 
 interface IProps {
 	agroState: IAgroState[];
@@ -87,6 +88,7 @@ const HumidityChart: React.FunctionComponent<IProps> = ({ agroState }) => {
 				// даты
 				categories: data.date,
 				labels: {
+					formatter: (value) => dayjs(value).format('DD/MM'),
 					style: {
 						colors: '#B8C0CC',
 					},
@@ -119,7 +121,7 @@ const HumidityChart: React.FunctionComponent<IProps> = ({ agroState }) => {
 	}, [agroState, palette.common.white]);
 
 	return (
-		<Paper sx={{ p: 4, flex: 1}}>
+		<Paper sx={{ p: 3, flex: 1}}>
 			<Stack spacing={1} mb={2} pl={1.8}>
 				<Typography sx={{ color: '#FFFBFF' }} variant="h5">Влажность</Typography>
 			</Stack>

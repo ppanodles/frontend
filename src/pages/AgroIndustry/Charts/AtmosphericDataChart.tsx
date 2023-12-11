@@ -5,6 +5,7 @@ import React, { useMemo } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 import { IAgroState } from 'library/types/agro.d';
+import dayjs from 'dayjs';
 
 interface IProps {
 	agroState: IAgroState[];
@@ -89,6 +90,8 @@ const AtmosphericDataChart: React.FunctionComponent<IProps> = ({ agroState }) =>
 				// даты
 				categories: data.date,
 				labels: {
+					formatter: (value) => dayjs(value).format('DD/MM/YYYY'),
+
 					style: {
 						colors: '#B8C0CC',
 					},

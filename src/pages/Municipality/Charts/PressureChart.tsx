@@ -5,6 +5,7 @@ import React, { useMemo } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 import { IMunicipalityState } from 'library/types/municipality.d';
+import dayjs from 'dayjs';
 
 interface IProps {
 	municipalityState: IMunicipalityState[];
@@ -87,6 +88,7 @@ const HumidityChart: React.FunctionComponent<IProps> = ({ municipalityState }) =
 				// даты
 				categories: data.date,
 				labels: {
+					formatter: (value) => dayjs(value).format('DD/MM'),
 					style: {
 						colors: '#B8C0CC',
 					},

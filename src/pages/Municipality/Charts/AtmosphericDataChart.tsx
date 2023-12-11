@@ -5,6 +5,7 @@ import React, { useMemo } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 import { IMunicipalityState } from 'library/types/municipality.d';
+import dayjs from 'dayjs';
 
 interface IProps {
 	municipalityState: IMunicipalityState[];
@@ -89,6 +90,7 @@ const AtmosphericDataChart: React.FunctionComponent<IProps> = ({ municipalitySta
 				// даты
 				categories: data.date,
 				labels: {
+					formatter: (value) => dayjs(value).format('DD/MM/YYYY'),
 					style: {
 						colors: '#B8C0CC',
 					},
