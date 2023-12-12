@@ -8,12 +8,12 @@ import {
 	ReactElement, useCallback, useMemo, useState,
 } from 'react';
 import { useSelector } from 'react-redux';
-import { IFilmContamination, IMonitoringStation, IShip } from 'library/types/marineFarming';
-import { RootState } from 'main/rootReducer';
 import * as turf from '@turf/turf';
-import selectFilteredShips from 'library/selectors/ships.selector';
-import { Box } from '@mui/material';
 import { latLngToCell } from 'h3-js';
+
+import { RootState } from 'main/rootReducer';
+import { IFilmContamination, IMonitoringStation, IShip } from 'library/types/marineFarming';
+import selectFilteredShips from 'library/selectors/ships.selector';
 import selectFilteredGases from 'library/selectors/gases.selector';
 import selectFilteredFilmContaminations from 'library/selectors/filmContamination.selector';
 import paths, { LayoutType } from 'library/paths';
@@ -262,22 +262,7 @@ const DataMap = () => {
 				</Source>
 			)}
 			{slicesAccessibility.GREENHOUSE_GASES && (
-				<Box sx={{
-					position: 'absolute',
-					bottom: 100,
-					right: 38,
-					zIndex: '1',
-					width: 180,
-					height: 200,
-					backgroundColor: '#0B071B',
-					display: 'flex',
-					justifyContent: 'center',
-					alignItems: 'center',
-					borderRadius: 4,
-				}}
-				>
-					<GasesInfoTable />
-				</Box>
+				<GasesInfoTable />
 			)}
 
 			<NavigationControl
