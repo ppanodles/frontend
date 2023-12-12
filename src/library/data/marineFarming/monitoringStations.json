@@ -1,0 +1,6754 @@
+{
+  "data": [
+    {
+      "station": "1",
+      "coordinates": [
+        69.91481,
+        60.7295
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "6.38"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "5.48",
+            "jump": "6.3",
+            "bottom": "5.52"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "89",
+            "jump": "92",
+            "bottom": "148"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "15.3",
+            "jump": "18.7",
+            "bottom": "12.7"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.59",
+            "jump": "4.53",
+            "bottom": "5.30"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "1.95"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.026",
+            "jump": "0.074",
+            "bottom": "0.031"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.45",
+            "jump": "0.38",
+            "bottom": "0.49"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.36",
+            "jump": "0",
+            "bottom": "1.94"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "27.0",
+            "jump": "20.5",
+            "bottom": "25.3"
+          }
+        }
+      ]
+    },
+    {
+      "station": "2",
+      "coordinates": [
+        70.54911,
+        58.82301
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "10.6",
+            "jump": "6.68",
+            "bottom": "7.66"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "6.6",
+            "jump": "5.30",
+            "bottom": "6.3"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "64.4",
+            "jump": "77",
+            "bottom": "168"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "24.1",
+            "jump": "10.6",
+            "bottom": "10.9"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.96",
+            "jump": "3.89",
+            "bottom": "5.00"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "4.6",
+            "jump": "1.95",
+            "bottom": "3.6"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.022",
+            "jump": "0.017",
+            "bottom": "0.029"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.49",
+            "jump": "0.49",
+            "bottom": "0.43"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.85",
+            "jump": "1.33",
+            "bottom": "1.88"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "28.5",
+            "jump": "21.5",
+            "bottom": "22.6"
+          }
+        }
+      ]
+    },
+    {
+      "station": "3",
+      "coordinates": [
+        71.44731,
+        60.35712
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "8.23",
+            "jump": "15.7",
+            "bottom": "13.0"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "5.11",
+            "jump": "5.22",
+            "bottom": "6.1"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "148",
+            "jump": "161",
+            "bottom": "199"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "81",
+            "jump": "10.1",
+            "bottom": "30.5"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.00",
+            "jump": "6.49",
+            "bottom": "5.40"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "2.47",
+            "jump": "1.08",
+            "bottom": "2.15"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.057",
+            "jump": "0.059",
+            "bottom": "0.012"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.55",
+            "jump": "0.46",
+            "bottom": "0.74"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.26",
+            "jump": "1.99",
+            "bottom": "2.59"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "30.0",
+            "jump": "23.3",
+            "bottom": "37.7"
+          }
+        }
+      ]
+    },
+    {
+      "station": "4",
+      "coordinates": [
+        72.28143,
+        62.4342
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "6.65",
+            "jump": "9.48",
+            "bottom": "8.70"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "5.10",
+            "jump": "5.30",
+            "bottom": "7.8"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "128",
+            "jump": "171",
+            "bottom": "165"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "25.4",
+            "jump": "19.9",
+            "bottom": "9.8"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.06",
+            "jump": "4.68",
+            "bottom": "4.94"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.88",
+            "jump": "2.36",
+            "bottom": "1.71"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.013",
+            "jump": "0.031",
+            "bottom": "0.054"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.56",
+            "jump": "0.56",
+            "bottom": "0.45"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.09",
+            "jump": "2.19",
+            "bottom": "2.52"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "30.8",
+            "jump": "31.9",
+            "bottom": "23.2"
+          }
+        }
+      ]
+    },
+    {
+      "station": "5",
+      "coordinates": [
+        72.76742,
+        64.04904
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "10.7",
+            "jump": "8.50",
+            "bottom": "11.8"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "6.0",
+            "jump": "6.0",
+            "bottom": "7.4"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "190",
+            "jump": "150",
+            "bottom": "186"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "19.1",
+            "jump": "12.6",
+            "bottom": "17.0"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.85",
+            "jump": "4.81",
+            "bottom": "5.66"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "4.7",
+            "jump": "2.10",
+            "bottom": "2.58"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.012",
+            "jump": "0.040",
+            "bottom": "0.023"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.52",
+            "jump": "0.63",
+            "bottom": "1.08"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.96",
+            "jump": "2.54",
+            "bottom": "2.17"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "18.5",
+            "jump": "19.6",
+            "bottom": "27.4"
+          }
+        }
+      ]
+    },
+    {
+      "station": "6",
+      "coordinates": [
+        73.31562,
+        66.31555
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "6.98",
+            "jump": "8.36",
+            "bottom": "7.32"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "6.2",
+            "jump": "6.0",
+            "bottom": "7.2"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "125",
+            "jump": "129",
+            "bottom": "175"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "70.8",
+            "jump": "73.2",
+            "bottom": "16.1"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.25",
+            "jump": "4.71",
+            "bottom": "5.36"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.55",
+            "jump": "2.40",
+            "bottom": "2.55"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.043",
+            "jump": "0.069",
+            "bottom": "0.059"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.64",
+            "jump": "0.52",
+            "bottom": "0.68"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.82",
+            "jump": "1.71",
+            "bottom": "2.48"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "33.4",
+            "jump": "26.5",
+            "bottom": "27.4"
+          }
+        }
+      ]
+    },
+    {
+      "station": "7",
+      "coordinates": [
+        73.76322,
+        69.02789
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "8.30",
+            "jump": "11.6",
+            "bottom": "9.12"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "8.1",
+            "jump": "7.4",
+            "bottom": "7.9"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "168",
+            "jump": "149",
+            "bottom": "250"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0.101"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "74",
+            "jump": "68.4",
+            "bottom": "73.0"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.74",
+            "jump": "4.87",
+            "bottom": "5.34"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.39",
+            "jump": "0",
+            "bottom": "2.8"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.055",
+            "jump": "0.049",
+            "bottom": "0.087"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.68",
+            "jump": "0.61",
+            "bottom": "0.84"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.45",
+            "jump": "2.13",
+            "bottom": "2.66"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "29.7",
+            "jump": "29.7",
+            "bottom": "42.6"
+          }
+        }
+      ]
+    },
+    {
+      "station": "8",
+      "coordinates": [
+        73.17631667,
+        72.81401667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "13.4",
+            "jump": "7.96",
+            "bottom": "7.78"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "8.8",
+            "jump": "9.0",
+            "bottom": "8.5"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "106",
+            "jump": "135",
+            "bottom": "164"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "9.3",
+            "jump": "11.6",
+            "bottom": "66.0"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.91",
+            "jump": "5.10",
+            "bottom": "6.21"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.44",
+            "jump": "4.7",
+            "bottom": "3.6"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "3.80",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.059",
+            "jump": "0.011",
+            "bottom": "0.046"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "2.4",
+            "jump": "1.47",
+            "bottom": "1.42"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.92",
+            "jump": "1.98",
+            "bottom": "2.07"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "80",
+            "jump": "39.2",
+            "bottom": "41.0"
+          }
+        }
+      ]
+    },
+    {
+      "station": "9",
+      "coordinates": [
+        71.95846667,
+        73.02793333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "12.1",
+            "jump": "13.5",
+            "bottom": "18.0"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "11.0",
+            "jump": "11.1",
+            "bottom": "14.3"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "56.3",
+            "jump": "91",
+            "bottom": "90"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "36.3",
+            "jump": "21.0",
+            "bottom": "27.2"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "13.4",
+            "jump": "4.27",
+            "bottom": "4.16"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.40",
+            "jump": "0",
+            "bottom": "1.67"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "10.2",
+            "jump": "3.48",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.042",
+            "jump": "0.041",
+            "bottom": "0.013"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "2.6",
+            "jump": "1.68",
+            "bottom": "1.40"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "1.08"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "88",
+            "jump": "108",
+            "bottom": "102"
+          }
+        }
+      ]
+    },
+    {
+      "station": "10",
+      "coordinates": [
+        71.36871667,
+        72.33291667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "18.9",
+            "jump": "30.3",
+            "bottom": "24.6"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "6.7",
+            "jump": "6.2",
+            "bottom": "7.5"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "77",
+            "jump": "45.5",
+            "bottom": "102"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0.118"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "11.1",
+            "jump": "17.4",
+            "bottom": "45.3"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.60",
+            "jump": "3.84",
+            "bottom": "7.00"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "3.13",
+            "jump": "3.00",
+            "bottom": "8.8"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.022",
+            "jump": "0.010",
+            "bottom": "0.066"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "2.5",
+            "jump": "1.87",
+            "bottom": "3.5"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "5.5"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "82",
+            "jump": "77",
+            "bottom": "105"
+          }
+        }
+      ]
+    },
+    {
+      "station": "11",
+      "coordinates": [
+        70.58798333,
+        73.56763333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "24.9",
+            "jump": "46.0",
+            "bottom": "40.9"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "36.3",
+            "jump": "28.7",
+            "bottom": "29.2"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "197",
+            "jump": "407",
+            "bottom": "373"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.155",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "3.85",
+            "jump": "4.82",
+            "bottom": "4.61"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.98",
+            "jump": "5.82",
+            "bottom": "5.91"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "6.3",
+            "jump": "6.5",
+            "bottom": "6.2"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.066",
+            "jump": "0.093",
+            "bottom": "0.091"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "3.4",
+            "jump": "4.0",
+            "bottom": "4.3"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.03",
+            "jump": "1.86",
+            "bottom": "1.34"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "102",
+            "jump": "66.2",
+            "bottom": "99"
+          }
+        }
+      ]
+    },
+    {
+      "station": "12",
+      "coordinates": [
+        69.76061667,
+        73.09506667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "31.6",
+            "jump": "30.0",
+            "bottom": "26.2"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "35.6",
+            "jump": "30.5",
+            "bottom": "28.9"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "259",
+            "jump": "277",
+            "bottom": "230"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.155",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "3.65",
+            "jump": "3.70",
+            "bottom": "3.37"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.88",
+            "jump": "6.50",
+            "bottom": "5.28"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "5.9",
+            "jump": "6.4",
+            "bottom": "5.1"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.105",
+            "jump": "0.043",
+            "bottom": "0.061"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "3.5",
+            "jump": "4.3",
+            "bottom": "3.4"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.33",
+            "jump": "1.34",
+            "bottom": "1.15"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "66.9",
+            "jump": "80",
+            "bottom": "62.0"
+          }
+        }
+      ]
+    },
+    {
+      "station": "13",
+      "coordinates": [
+        69.13876667,
+        73.7841
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "28.5",
+            "jump": "34.6",
+            "bottom": "36.9"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "36.7",
+            "jump": "28.0",
+            "bottom": "29.5"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "225",
+            "jump": "293",
+            "bottom": "261"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.124",
+            "jump": "0.136",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "3.52",
+            "jump": "4.03",
+            "bottom": "3.74"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.24",
+            "jump": "5.35",
+            "bottom": "5.31"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "6.0",
+            "jump": "5.0",
+            "bottom": "5.0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.055",
+            "jump": "0.047",
+            "bottom": "0.053"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "3.1",
+            "jump": "3.4",
+            "bottom": "3.3"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.09",
+            "jump": "1.40",
+            "bottom": "1.38"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "63.7",
+            "jump": "63.7",
+            "bottom": "66.7"
+          }
+        }
+      ]
+    },
+    {
+      "station": "14",
+      "coordinates": [
+        73.9269,
+        74.91152
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "15.3",
+            "jump": "8.50",
+            "bottom": "6.01"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "9.0",
+            "jump": "9.5",
+            "bottom": "9.5"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "107",
+            "jump": "106",
+            "bottom": "149"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "67.4",
+            "jump": "69.0",
+            "bottom": "53.8"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.27",
+            "jump": "3.73",
+            "bottom": "5.35"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.49",
+            "jump": "1.83",
+            "bottom": "4.0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.082",
+            "jump": "0.065",
+            "bottom": "0.053"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.47",
+            "jump": "1.02",
+            "bottom": "0.85"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "4.1",
+            "jump": "5.3",
+            "bottom": "5.3"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "25.1",
+            "jump": "40.3",
+            "bottom": "44.4"
+          }
+        }
+      ]
+    },
+    {
+      "station": "15",
+      "coordinates": [
+        72.8697,
+        79.9316
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "7.20",
+            "jump": "16.8",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "13.8",
+            "jump": "9.9",
+            "bottom": "10.8"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "128",
+            "jump": "139",
+            "bottom": "133"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "68.9",
+            "jump": "28.2",
+            "bottom": "33.0"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.37",
+            "jump": "4.58",
+            "bottom": "5.42"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.17",
+            "jump": "2.40",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.020",
+            "jump": "0.019",
+            "bottom": "0.040"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.60",
+            "jump": "0.54",
+            "bottom": "1.59"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "3.7",
+            "jump": "1.30",
+            "bottom": "1.51"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "31.1",
+            "jump": "31.6",
+            "bottom": "43.8"
+          }
+        }
+      ]
+    },
+    {
+      "station": "16",
+      "coordinates": [
+        72.3925,
+        80.7315
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "12.2",
+            "jump": "10.7",
+            "bottom": "11.2"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "14.9",
+            "jump": "12.9",
+            "bottom": "11.5"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "23.6",
+            "jump": "33.8",
+            "bottom": "119"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "21.5",
+            "jump": "37.2",
+            "bottom": "44.1"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.64",
+            "jump": "4.74",
+            "bottom": "8.1"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "5.7"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0",
+            "jump": "0.021",
+            "bottom": "0.030"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "1.07",
+            "jump": "1.11",
+            "bottom": "4.2"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "3.4"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "41.5",
+            "jump": "46.2",
+            "bottom": "96"
+          }
+        }
+      ]
+    },
+    {
+      "station": "17",
+      "coordinates": [
+        71.827,
+        82.4911
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "9.34",
+            "jump": "9.48",
+            "bottom": "10.4"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "14.4",
+            "jump": "30.6",
+            "bottom": "31.0"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "31.7",
+            "jump": "111",
+            "bottom": "128"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0.109"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "43.0",
+            "jump": "66.0",
+            "bottom": "71.6"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "2.59",
+            "jump": "5.72",
+            "bottom": "5.93"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "2.08",
+            "bottom": "2.60"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0.042"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.62",
+            "jump": "0.90",
+            "bottom": "1.69"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "0",
+            "jump": "1.38",
+            "bottom": "2.38"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "21.7",
+            "jump": "35.0",
+            "bottom": "52.6"
+          }
+        }
+      ]
+    },
+    {
+      "station": "18",
+      "coordinates": [
+        70.93341,
+        83.28312
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "10.9",
+            "jump": "13.5",
+            "bottom": "16.9"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "9.6",
+            "jump": "10.2",
+            "bottom": "10.2"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "15.0",
+            "jump": "13.7",
+            "bottom": "36.4"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "11.9",
+            "jump": "11.5",
+            "bottom": "20.3"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "1.66",
+            "jump": "1.81",
+            "bottom": "2.58"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "1.27"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.028",
+            "jump": "0.055",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.34",
+            "jump": "0.39",
+            "bottom": "0.99"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "1.23"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "16.8",
+            "jump": "20.9",
+            "bottom": "58.3"
+          }
+        }
+      ]
+    },
+    {
+      "station": "19",
+      "coordinates": [
+        69.54863,
+        85.8377
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "24.7",
+            "jump": "12.7",
+            "bottom": "22.8"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "10.4",
+            "jump": "10.8",
+            "bottom": "10.7"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "54.8",
+            "jump": "71.4",
+            "bottom": "115"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "63.6",
+            "jump": "27.4",
+            "bottom": "22.7"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "2.39",
+            "jump": "1.68",
+            "bottom": "2.26"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "5.2",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.039",
+            "jump": "0.061",
+            "bottom": "0.052"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.70",
+            "jump": "0.47",
+            "bottom": "0.47"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "5.3",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "50.3",
+            "jump": "28.3",
+            "bottom": "26.3"
+          }
+        }
+      ]
+    },
+    {
+      "station": "20",
+      "coordinates": [
+        73.76511,
+        73.80002
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "9.09",
+            "jump": "6.50",
+            "bottom": "6.32"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "9.4",
+            "jump": "10.0",
+            "bottom": "9.3"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "83",
+            "jump": "122",
+            "bottom": "144"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "93",
+            "jump": "85",
+            "bottom": "86"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "3.70",
+            "jump": "3.80",
+            "bottom": "4.70"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.091",
+            "jump": "0.085",
+            "bottom": "0.068"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.49",
+            "jump": "0.52",
+            "bottom": "0.83"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "26.8",
+            "jump": "28.7",
+            "bottom": "34.8"
+          }
+        }
+      ]
+    },
+    {
+      "station": "21",
+      "coordinates": [
+        73.7413,
+        76.76891
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "13.4",
+            "jump": "0",
+            "bottom": "8.37"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "12.9",
+            "jump": "12.6",
+            "bottom": "9.3"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "128",
+            "jump": "82",
+            "bottom": "98"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "38.3",
+            "jump": "31.4",
+            "bottom": "40.9"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.10",
+            "jump": "3.72",
+            "bottom": "5.55"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.22",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.022",
+            "jump": "0.026",
+            "bottom": "0.048"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.64",
+            "jump": "0.51",
+            "bottom": "0.85"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "24.6",
+            "jump": "26.4",
+            "bottom": "37.1"
+          }
+        }
+      ]
+    },
+    {
+      "station": "22",
+      "coordinates": [
+        73.7335,
+        78.2232
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "8.49",
+            "jump": "9.22",
+            "bottom": "11.8"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "13.8",
+            "jump": "12.1",
+            "bottom": "9.7"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "104",
+            "jump": "116",
+            "bottom": "164"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0.107"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "34.2",
+            "jump": "34.8",
+            "bottom": "50.6"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "3.90",
+            "jump": "3.69",
+            "bottom": "5.79"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.26",
+            "jump": "0",
+            "bottom": "1.13"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.021",
+            "jump": "0.025",
+            "bottom": "0.038"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.69",
+            "jump": "0.80",
+            "bottom": "0.95"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "23.8",
+            "jump": "29.2",
+            "bottom": "40.6"
+          }
+        }
+      ]
+    },
+    {
+      "station": "23",
+      "coordinates": [
+        74.29833333,
+        80.695
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "6.92",
+            "jump": "6.78",
+            "bottom": "6.73"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "9.0",
+            "jump": "9.3",
+            "bottom": "7.8"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "126",
+            "jump": "216",
+            "bottom": "176"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.138",
+            "jump": "0.133",
+            "bottom": "0.25"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "6.78",
+            "jump": "4.74",
+            "bottom": "3.82"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "3.66",
+            "jump": "5.78",
+            "bottom": "4.28"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "2.19",
+            "jump": "3.2",
+            "bottom": "1.28"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.021",
+            "jump": "0",
+            "bottom": "0.068"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.26",
+            "jump": "1.61",
+            "bottom": "0.48"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.79",
+            "jump": "1.67",
+            "bottom": "1.89"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "1.52",
+            "jump": "10.5",
+            "bottom": "8.5"
+          }
+        }
+      ]
+    },
+    {
+      "station": "24",
+      "coordinates": [
+        75,
+        83.48166667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "13.7",
+            "jump": "14.7",
+            "bottom": "8.94"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "8.5",
+            "jump": "8.9",
+            "bottom": "7.8"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "142",
+            "jump": "186",
+            "bottom": "207"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.118",
+            "jump": "0.180",
+            "bottom": "0.25"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "4.26",
+            "jump": "3.05",
+            "bottom": "4.16"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "3.71",
+            "jump": "5.14",
+            "bottom": "5.03"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "2.04",
+            "jump": "3.1",
+            "bottom": "1.72"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.079",
+            "jump": "0.019",
+            "bottom": "0.031"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.35",
+            "jump": "1.31",
+            "bottom": "0.72"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.21",
+            "jump": "1.60",
+            "bottom": "1.80"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "3.27",
+            "jump": "10.0",
+            "bottom": "7.9"
+          }
+        }
+      ]
+    },
+    {
+      "station": "25",
+      "coordinates": [
+        75.52666667,
+        85.42833333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "8.34",
+            "jump": "9.00",
+            "bottom": "9.14"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "8.4",
+            "jump": "8.6",
+            "bottom": "7.6"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "183",
+            "jump": "202",
+            "bottom": "199"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.151",
+            "jump": "0.148",
+            "bottom": "0.25"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "5.29",
+            "jump": "5.90",
+            "bottom": "5.31"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.39",
+            "jump": "3.98",
+            "bottom": "4.99"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.96",
+            "jump": "2.19",
+            "bottom": "4.1"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.069",
+            "jump": "0.012",
+            "bottom": "0.014"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.37",
+            "jump": "0.38",
+            "bottom": "0.56"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.60",
+            "jump": "2.82",
+            "bottom": "1.73"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "4.23",
+            "jump": "6.55",
+            "bottom": "26.9"
+          }
+        }
+      ]
+    },
+    {
+      "station": "26",
+      "coordinates": [
+        76.21666667,
+        88.435
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "14.2",
+            "jump": "6.55",
+            "bottom": "28.1"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "8.8",
+            "jump": "7.5",
+            "bottom": "7.6"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "199",
+            "jump": "186",
+            "bottom": "218"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.157",
+            "jump": "0.164",
+            "bottom": "0.30"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "6.96",
+            "jump": "9.7",
+            "bottom": "9.9"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.36",
+            "jump": "3.80",
+            "bottom": "6.63"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "3.7",
+            "jump": "1.81",
+            "bottom": "3.0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.049",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.45",
+            "jump": "0.48",
+            "bottom": "0.93"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.66",
+            "jump": "1.31",
+            "bottom": "1.93"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "7.7",
+            "jump": "6.81",
+            "bottom": "12.3"
+          }
+        }
+      ]
+    },
+    {
+      "station": "27",
+      "coordinates": [
+        76.19166667,
+        89.95666667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "0",
+            "jump": "8.49",
+            "bottom": "8.32"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "8.4",
+            "jump": "8.5",
+            "bottom": "7.6"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "142",
+            "jump": "138",
+            "bottom": "140"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0.198"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "4.63",
+            "jump": "5.24",
+            "bottom": "6.58"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.14",
+            "jump": "4.40",
+            "bottom": "5.00"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "3.1",
+            "jump": "3.1",
+            "bottom": "2.9"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0",
+            "jump": "0.013",
+            "bottom": "0.045"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.40",
+            "jump": "0.66",
+            "bottom": "1.05"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.13",
+            "jump": "1.40",
+            "bottom": "1.49"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "5.60",
+            "jump": "5.56",
+            "bottom": "8.9"
+          }
+        }
+      ]
+    },
+    {
+      "station": "28",
+      "coordinates": [
+        77.315,
+        112.075
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "6.50",
+            "jump": "7.44",
+            "bottom": "10.6"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "8.1",
+            "jump": "7.6",
+            "bottom": "8.0"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "172",
+            "jump": "192",
+            "bottom": "184"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.147",
+            "jump": "0.185",
+            "bottom": "0.208"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "9.2",
+            "jump": "8.5",
+            "bottom": "5.91"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "3.95",
+            "jump": "3.91",
+            "bottom": "4.27"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "3.3",
+            "jump": "4.2",
+            "bottom": "2.9"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.062",
+            "jump": "0",
+            "bottom": "0.014"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.30",
+            "jump": "0.30",
+            "bottom": "0.36"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.53",
+            "jump": "1.57",
+            "bottom": "1.42"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "5.50",
+            "jump": "4.14",
+            "bottom": "5.93"
+          }
+        }
+      ]
+    },
+    {
+      "station": "29",
+      "coordinates": [
+        77.00166667,
+        114.6666667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "6.44",
+            "jump": "8.12",
+            "bottom": "14.1"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "7.2",
+            "jump": "7.6",
+            "bottom": "8.1"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "176",
+            "jump": "201",
+            "bottom": "243"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.196",
+            "jump": "0.134",
+            "bottom": "0.24"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "0",
+            "jump": "3.13",
+            "bottom": "6.29"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "3.98",
+            "jump": "4.56",
+            "bottom": "5.06"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "3.7",
+            "jump": "4.2",
+            "bottom": "4.0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0",
+            "jump": "0.016",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.24",
+            "jump": "0.29",
+            "bottom": "0.47"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.44",
+            "jump": "1.64",
+            "bottom": "2.20"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "3.86",
+            "jump": "5.01",
+            "bottom": "10.2"
+          }
+        }
+      ]
+    },
+    {
+      "station": "30",
+      "coordinates": [
+        76.96,
+        118.98
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "22.0",
+            "jump": "12.9",
+            "bottom": "11.9"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "7.5",
+            "jump": "8.0",
+            "bottom": "7.6"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "280",
+            "jump": "291",
+            "bottom": "248"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.22",
+            "jump": "0.29",
+            "bottom": "0.184"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "4.48",
+            "jump": "3.89",
+            "bottom": "3.78"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.25",
+            "jump": "4.66",
+            "bottom": "6.17"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "4.1",
+            "jump": "5.2",
+            "bottom": "5.2"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.027",
+            "jump": "0.014",
+            "bottom": "0.014"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.58",
+            "jump": "0.51",
+            "bottom": "0.55"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.56",
+            "jump": "1.88",
+            "bottom": "1.96"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "11.7",
+            "jump": "6.68",
+            "bottom": "10.1"
+          }
+        }
+      ]
+    },
+    {
+      "station": "31",
+      "coordinates": [
+        76.895,
+        121.99
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "9.8",
+            "jump": "13.2",
+            "bottom": "11.8"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "7.2",
+            "jump": "7.9",
+            "bottom": "7.5"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "271",
+            "jump": "252",
+            "bottom": "291"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.135",
+            "jump": "0.210",
+            "bottom": "0.26"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "4.51",
+            "jump": "3.51",
+            "bottom": "7.19"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.68",
+            "jump": "4.75",
+            "bottom": "5.48"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "4.1",
+            "jump": "4.0",
+            "bottom": "5.2"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.015",
+            "jump": "0.048",
+            "bottom": "0.010"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.39",
+            "jump": "0.36",
+            "bottom": "0.55"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.78",
+            "jump": "1.70",
+            "bottom": "1.86"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "7.8",
+            "jump": "7.7",
+            "bottom": "13.7"
+          }
+        }
+      ]
+    },
+    {
+      "station": "32",
+      "coordinates": [
+        76.89166667,
+        127.8066667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "12.1",
+            "jump": "9.34",
+            "bottom": "12.2"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "7.7",
+            "jump": "7.7",
+            "bottom": "8.2"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "267",
+            "jump": "124",
+            "bottom": "143"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.25",
+            "jump": "0.168",
+            "bottom": "0.194"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "9.3",
+            "jump": "7.23",
+            "bottom": "5.01"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.10",
+            "jump": "4.41",
+            "bottom": "6.92"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "5.2",
+            "jump": "3.7",
+            "bottom": "3.1"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.093",
+            "jump": "0.085",
+            "bottom": "0.062"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.55",
+            "jump": "0.66",
+            "bottom": "0.74"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "5.5",
+            "jump": "1.21",
+            "bottom": "1.32"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "8.7",
+            "jump": "6.55",
+            "bottom": "23.6"
+          }
+        }
+      ]
+    },
+    {
+      "station": "33",
+      "coordinates": [
+        76.75666667,
+        133.3816667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "10.0",
+            "jump": "16.2",
+            "bottom": "13.4"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "7.9",
+            "jump": "9.0",
+            "bottom": "9.6"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "132",
+            "jump": "179",
+            "bottom": "234"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.174",
+            "jump": "0.184",
+            "bottom": "0.202"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "3.38",
+            "jump": "4.64",
+            "bottom": "5.36"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "3.67",
+            "jump": "4.87",
+            "bottom": "4.68"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "2.9",
+            "jump": "4.0",
+            "bottom": "4.8"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0.019"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.29",
+            "jump": "1.12",
+            "bottom": "0.61"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "0",
+            "jump": "1.50",
+            "bottom": "1.40"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "3.94",
+            "jump": "10.0",
+            "bottom": "7.9"
+          }
+        }
+      ]
+    },
+    {
+      "station": "34",
+      "coordinates": [
+        76.70833333,
+        136.34
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "15.5",
+            "jump": "14.6",
+            "bottom": "33.3"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "12.1",
+            "jump": "10.4",
+            "bottom": "10.8"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "260",
+            "jump": "221",
+            "bottom": "275"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.180",
+            "jump": "0.152",
+            "bottom": "0.154"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "15.3",
+            "jump": "4.86",
+            "bottom": "5.45"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.91",
+            "jump": "4.70",
+            "bottom": "4.59"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "4.1",
+            "jump": "4.9",
+            "bottom": "4.8"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.46",
+            "jump": "0.33",
+            "bottom": "0.47"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.59",
+            "jump": "1.48",
+            "bottom": "1.64"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "8.6",
+            "jump": "7.02",
+            "bottom": "7.5"
+          }
+        }
+      ]
+    },
+    {
+      "station": "35",
+      "coordinates": [
+        76.68333333,
+        138.9566667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "12.9",
+            "jump": "12.7",
+            "bottom": "11.2"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "12.1",
+            "jump": "13.2",
+            "bottom": "11.1"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "239",
+            "jump": "242",
+            "bottom": "277"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.150",
+            "jump": "0.27",
+            "bottom": "0.160"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "0",
+            "jump": "3.75",
+            "bottom": "7.9"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.01",
+            "jump": "5.98",
+            "bottom": "7.14"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "4.7",
+            "jump": "6.4",
+            "bottom": "3.3"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.37",
+            "jump": "0.48",
+            "bottom": "0.61"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.49",
+            "jump": "1.98",
+            "bottom": "1.87"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "7.8",
+            "jump": "12.3",
+            "bottom": "16.5"
+          }
+        }
+      ]
+    },
+    {
+      "station": "36",
+      "coordinates": [
+        76.33333333,
+        142.8866667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "19.0",
+            "jump": "16.3",
+            "bottom": "18.9"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "11.8",
+            "jump": "10.9",
+            "bottom": "11.6"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "218",
+            "jump": "230",
+            "bottom": "250"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.142",
+            "jump": "0.132",
+            "bottom": "0.198"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "4.77",
+            "jump": "4.14",
+            "bottom": "5.29"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.26",
+            "jump": "7.13",
+            "bottom": "7.05"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "5.6",
+            "jump": "4.6",
+            "bottom": "4.8"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0",
+            "jump": "0.012",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.39",
+            "jump": "0.41",
+            "bottom": "0.64"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.63",
+            "jump": "1.60",
+            "bottom": "2.13"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "6.98",
+            "jump": "7.30",
+            "bottom": "10.4"
+          }
+        }
+      ]
+    },
+    {
+      "station": "37",
+      "coordinates": [
+        75.92,
+        146.3583333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "19.1",
+            "jump": "21.6",
+            "bottom": "19.2"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "12.1",
+            "jump": "13.0",
+            "bottom": "10.9"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "288",
+            "jump": "250",
+            "bottom": "223"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.158",
+            "jump": "0.154",
+            "bottom": "0.160"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "9.1",
+            "jump": "9.9",
+            "bottom": "9.3"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.29",
+            "jump": "5.14",
+            "bottom": "4.78"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "4.1",
+            "jump": "5.2",
+            "bottom": "5.6"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.044",
+            "jump": "0.011",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.40",
+            "jump": "0.54",
+            "bottom": "0.55"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.31",
+            "jump": "1.67",
+            "bottom": "2.58"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "16.5",
+            "jump": "9.7",
+            "bottom": "10.8"
+          }
+        }
+      ]
+    },
+    {
+      "station": "38",
+      "coordinates": [
+        75.81,
+        149.2183333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "19.7",
+            "jump": "19.6",
+            "bottom": "11.6"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "13.4",
+            "jump": "12.8",
+            "bottom": "13.4"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "308",
+            "jump": "289",
+            "bottom": "288"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.23",
+            "jump": "0.146",
+            "bottom": "0.173"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "8.9",
+            "jump": "11.2",
+            "bottom": "9.8"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.34",
+            "jump": "5.62",
+            "bottom": "5.02"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "5.3",
+            "jump": "4.5",
+            "bottom": "4.5"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.011",
+            "jump": "0",
+            "bottom": "0.021"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.59",
+            "jump": "0.48",
+            "bottom": "0.46"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.92",
+            "jump": "1.73",
+            "bottom": "1.50"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "17.4",
+            "jump": "11.9",
+            "bottom": "8.3"
+          }
+        }
+      ]
+    },
+    {
+      "station": "39",
+      "coordinates": [
+        75.37166667,
+        152.6633333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "15.1",
+            "jump": "10.5",
+            "bottom": "12.5"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "12.8",
+            "jump": "13.2",
+            "bottom": "13.8"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "277",
+            "jump": "281",
+            "bottom": "258"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.157",
+            "jump": "0.168",
+            "bottom": "0.147"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "7.9",
+            "jump": "4.00",
+            "bottom": "5.03"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "7.4",
+            "jump": "6.35",
+            "bottom": "6.33"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "5.0",
+            "jump": "5.8",
+            "bottom": "6.2"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0.051"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.63",
+            "jump": "0.45",
+            "bottom": "0.53"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.59",
+            "jump": "1.70",
+            "bottom": "1.50"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "18.1",
+            "jump": "9.7",
+            "bottom": "8.0"
+          }
+        }
+      ]
+    },
+    {
+      "station": "40",
+      "coordinates": [
+        75.41666667,
+        155.4733333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "15.3",
+            "jump": "20.0",
+            "bottom": "10.6"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "11.3",
+            "jump": "11.0",
+            "bottom": "10.8"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "310",
+            "jump": "275",
+            "bottom": "227"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.136",
+            "jump": "0.120",
+            "bottom": "0.142"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "11.4",
+            "jump": "9.6",
+            "bottom": "8.0"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "5.53",
+            "jump": "5.30",
+            "bottom": "5.14"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "5.4",
+            "jump": "4.5",
+            "bottom": "4.8"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.013",
+            "jump": "0.031",
+            "bottom": "0.067"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.50",
+            "jump": "1.06",
+            "bottom": "0.38"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.05",
+            "jump": "1.50",
+            "bottom": "1.41"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "11.3",
+            "jump": "8.2",
+            "bottom": "9.4"
+          }
+        }
+      ]
+    },
+    {
+      "station": "41",
+      "coordinates": [
+        74.26666667,
+        171.1366667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "15.4",
+            "jump": "17.6",
+            "bottom": "18.3"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "8.3",
+            "jump": "8.9",
+            "bottom": "10.9"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "319",
+            "jump": "371",
+            "bottom": "364"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.118",
+            "jump": "0.127",
+            "bottom": "0.22"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "17.1",
+            "jump": "6.44",
+            "bottom": "11.2"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "9.9",
+            "jump": "11.1",
+            "bottom": "7.17"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "4.8",
+            "jump": "4.8",
+            "bottom": "7.6"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.063",
+            "jump": "0.061",
+            "bottom": "0.064"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.65",
+            "jump": "0.71",
+            "bottom": "0.67"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.99",
+            "jump": "2.02",
+            "bottom": "2.15"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "32.1",
+            "jump": "27.4",
+            "bottom": "12.6"
+          }
+        }
+      ]
+    },
+    {
+      "station": "42",
+      "coordinates": [
+        73.35166667,
+        164.195
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "11.8"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "6.6",
+            "jump": "5.34",
+            "bottom": "12.7"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "378",
+            "jump": "377",
+            "bottom": "347"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.195",
+            "jump": "0.159",
+            "bottom": "0.190"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "9.7",
+            "jump": "8.1",
+            "bottom": "12.0"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "16.2",
+            "jump": "13.0",
+            "bottom": "13.5"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "3.7",
+            "jump": "5.0",
+            "bottom": "4.5"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "3.21",
+            "jump": "3.72",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.064",
+            "jump": "0.063",
+            "bottom": "0.063"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "2.2",
+            "jump": "1.67",
+            "bottom": "0.97"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "3.03",
+            "jump": "4.2",
+            "bottom": "2.79"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "28.4",
+            "jump": "26.2",
+            "bottom": "28.3"
+          }
+        }
+      ]
+    },
+    {
+      "station": "43",
+      "coordinates": [
+        73.57833333,
+        175.4133333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "9.50",
+            "jump": "19.9",
+            "bottom": "17.7"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "8.2",
+            "jump": "7.8",
+            "bottom": "12.1"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "374",
+            "jump": "365",
+            "bottom": "387"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.186",
+            "jump": "0.142",
+            "bottom": "0.180"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "5.78",
+            "jump": "7.6",
+            "bottom": "10.0"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "12.6",
+            "jump": "12.7",
+            "bottom": "12.9"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "2.8",
+            "jump": "4.2",
+            "bottom": "5.6"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "3.65",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.063",
+            "jump": "0.073",
+            "bottom": "0.073"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.80",
+            "jump": "0.78",
+            "bottom": "0.79"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.13",
+            "jump": "2.79",
+            "bottom": "2.15"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "24.0",
+            "jump": "21.8",
+            "bottom": "20.5"
+          }
+        }
+      ]
+    },
+    {
+      "station": "44",
+      "coordinates": [
+        71.82333333,
+        177.28
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "6.65",
+            "jump": "29.0",
+            "bottom": "15.9"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "6.8",
+            "jump": "7.0",
+            "bottom": "13.6"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "160",
+            "jump": "189",
+            "bottom": "229"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.186",
+            "jump": "0.158",
+            "bottom": "0.26"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "7.9",
+            "jump": "13.2",
+            "bottom": "15.9"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "9.5",
+            "jump": "9.6",
+            "bottom": "12.0"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "1.52",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.062",
+            "jump": "0.062",
+            "bottom": "0.025"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.34",
+            "jump": "0.45",
+            "bottom": "0.58"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "1.13",
+            "jump": "1.09",
+            "bottom": "1.76"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "21.0",
+            "jump": "22.3",
+            "bottom": "28.2"
+          }
+        }
+      ]
+    },
+    {
+      "station": "45",
+      "coordinates": [
+        70.31166667,
+        178.7033333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "14.6",
+            "jump": "11.6",
+            "bottom": "22.4"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "3.87",
+            "jump": "8.1",
+            "bottom": "10.5"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "338",
+            "jump": "302",
+            "bottom": "327"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.22",
+            "jump": "0.170",
+            "bottom": "0.27"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "3.60",
+            "jump": "4.99",
+            "bottom": "7.03"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "9.3",
+            "jump": "8.0",
+            "bottom": "9.0"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "6.7",
+            "jump": "5.6",
+            "bottom": "6.8"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "4.3"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.030",
+            "jump": "0.030",
+            "bottom": "0.033"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "2.03",
+            "jump": "0.71",
+            "bottom": "1.04"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "2.87",
+            "jump": "2.37",
+            "bottom": "3.8"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "15.2",
+            "jump": "15.2",
+            "bottom": "18.7"
+          }
+        }
+      ]
+    },
+    {
+      "station": "46",
+      "coordinates": [
+        70.54,
+        -176.4733333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "8.44",
+            "jump": "25.4",
+            "bottom": "6.40"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "5.45",
+            "jump": "6.5",
+            "bottom": "10.5"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "284",
+            "jump": "378",
+            "bottom": "251"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.21",
+            "jump": "0.184",
+            "bottom": "0.188"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "3.19",
+            "jump": "10.2",
+            "bottom": "4.36"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "7.14",
+            "jump": "5.92",
+            "bottom": "5.34"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "7.2",
+            "jump": "5.9",
+            "bottom": "5.5"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.042",
+            "jump": "0.032",
+            "bottom": "0.037"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.75",
+            "jump": "1.65",
+            "bottom": "0.98"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "3.3",
+            "jump": "4.6",
+            "bottom": "4.4"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "11.3",
+            "jump": "17.9",
+            "bottom": "7.6"
+          }
+        }
+      ]
+    },
+    {
+      "station": "47",
+      "coordinates": [
+        70.03166667,
+        -171.8583333
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "7.66",
+            "jump": "11.2",
+            "bottom": "12.7"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "4.29",
+            "jump": "5.60",
+            "bottom": "10.8"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "297",
+            "jump": "279",
+            "bottom": "296"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.172",
+            "jump": "0.193",
+            "bottom": "0.27"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "4.75"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "4.74",
+            "jump": "6.03",
+            "bottom": "8.2"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "6.1",
+            "jump": "4.8",
+            "bottom": "4.0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "4.5"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.037",
+            "jump": "0.033",
+            "bottom": "0.039"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "1.98",
+            "jump": "0.61",
+            "bottom": "1.05"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "4.7",
+            "jump": "5.6",
+            "bottom": "6.4"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "8.9",
+            "jump": "10.1",
+            "bottom": "13.9"
+          }
+        }
+      ]
+    },
+    {
+      "station": "48",
+      "coordinates": [
+        68.33166667,
+        -170.3816667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "39.8",
+            "jump": "21.8",
+            "bottom": "14.7"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "9.2",
+            "jump": "8.4",
+            "bottom": "9.3"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "251",
+            "jump": "293",
+            "bottom": "261"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.206",
+            "jump": "0.176",
+            "bottom": "0.204"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "11.3",
+            "jump": "9.2",
+            "bottom": "6.30"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "5.6",
+            "jump": "4.7",
+            "bottom": "6.5"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "4.4",
+            "jump": "3.24",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.036",
+            "jump": "0.035",
+            "bottom": "0.039"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "1.43",
+            "jump": "0.90",
+            "bottom": "0.59"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "6.4",
+            "jump": "6.5",
+            "bottom": "5.2"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "18.2",
+            "jump": "10.7",
+            "bottom": "8.6"
+          }
+        }
+      ]
+    },
+    {
+      "station": "49",
+      "coordinates": [
+        67.055,
+        -169.6066667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "40.8",
+            "jump": "24.1",
+            "bottom": "39.9"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "5.04",
+            "jump": "5.68",
+            "bottom": "11.3"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "248",
+            "jump": "248",
+            "bottom": "306"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.146",
+            "jump": "0.110",
+            "bottom": "0.154"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "11.7"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "6.58",
+            "jump": "6.42",
+            "bottom": "8.3"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "4.2",
+            "jump": "5.7",
+            "bottom": "7.0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "0",
+            "jump": "0",
+            "bottom": "4.18"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.030",
+            "jump": "0.031",
+            "bottom": "0.035"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "1.11",
+            "jump": "0.65",
+            "bottom": "1.32"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "7.5",
+            "jump": "5.0",
+            "bottom": "6.3"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "9.1",
+            "jump": "8.7",
+            "bottom": "14.1"
+          }
+        }
+      ]
+    },
+    {
+      "station": "50",
+      "coordinates": [
+        66.265,
+        -169.2716667
+      ],
+      "indications": [
+        {
+          "name": "Алюминий",
+          "abbreviation": "Al",
+          "data": {
+            "surface": "38.5",
+            "jump": "16.1",
+            "bottom": "41.8"
+          }
+        },
+        {
+          "name": "Барий",
+          "abbreviation": "Ba",
+          "data": {
+            "surface": "4.53",
+            "jump": "11.9",
+            "bottom": "13.1"
+          }
+        },
+        {
+          "name": "Ванадий",
+          "abbreviation": "V",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Железо",
+          "abbreviation": "Fe",
+          "data": {
+            "surface": "311",
+            "jump": "321",
+            "bottom": "389"
+          }
+        },
+        {
+          "name": "Кадмий",
+          "abbreviation": "Cd",
+          "data": {
+            "surface": "0.122",
+            "jump": "0.24",
+            "bottom": "0.23"
+          }
+        },
+        {
+          "name": "Кобальт",
+          "abbreviation": "Co",
+          "data": {
+            "surface": "-9999",
+            "jump": "-9999",
+            "bottom": "-9999"
+          }
+        },
+        {
+          "name": "Марганец",
+          "abbreviation": "Mn",
+          "data": {
+            "surface": "4.68",
+            "jump": "0",
+            "bottom": "9.5"
+          }
+        },
+        {
+          "name": "Медь",
+          "abbreviation": "Cu",
+          "data": {
+            "surface": "6.78",
+            "jump": "8.3",
+            "bottom": "8.1"
+          }
+        },
+        {
+          "name": "Мышьяк",
+          "abbreviation": "As",
+          "data": {
+            "surface": "6.0",
+            "jump": "7.3",
+            "bottom": "6.0"
+          }
+        },
+        {
+          "name": "Никель",
+          "abbreviation": "Ni",
+          "data": {
+            "surface": "4.08",
+            "jump": "0",
+            "bottom": "0"
+          }
+        },
+        {
+          "name": "Ртуть",
+          "abbreviation": "Hg",
+          "data": {
+            "surface": "0.026",
+            "jump": "0.036",
+            "bottom": "0.042"
+          }
+        },
+        {
+          "name": "Свинец",
+          "abbreviation": "Pb",
+          "data": {
+            "surface": "0.68",
+            "jump": "0.73",
+            "bottom": "1.47"
+          }
+        },
+        {
+          "name": "Хром",
+          "abbreviation": "Cr",
+          "data": {
+            "surface": "6.6",
+            "jump": "6.7",
+            "bottom": "6.2"
+          }
+        },
+        {
+          "name": "Цинк",
+          "abbreviation": "Zn",
+          "data": {
+            "surface": "10.6",
+            "jump": "10.4",
+            "bottom": "16.0"
+          }
+        }
+      ]
+    }
+  ]
+}
