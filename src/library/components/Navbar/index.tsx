@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-	AppBar, Button, IconButton, Toolbar,
+	AppBar, Button, IconButton, SxProps, Theme, Toolbar,
 } from '@mui/material';
 import {
 	DRAWER_WIDTH, NAVBAR_HEIGHT_MOBILE, NAVBAR_HEIGHT_DESKTOP,
@@ -13,22 +13,27 @@ import { isMobile } from 'react-device-detect';
 import Icon from '../Icon';
 
 interface IProps {
-    handleDrawerToggle(): void;
+	fullWidthMode?: boolean,
+    handleDrawerToggle?(): void;
 }
 
 interface IButtons{
 	name: string;
 	iconName: IconNames;
 	target: string;
+	sx?: SxProps<Theme>;
 }
 
 const buttons: IButtons[] = [
 	{ name: 'Морехозяйство', iconName: 'marine-farming', target: paths.marineFarming.base },
 	{ name: 'Агропромышленность', iconName: 'agro-industry', target: paths.agroIndustry.base },
 	{ name: 'Муниципалитет', iconName: 'municipality', target: paths.municipality.base },
+	{
+		name: 'О нас', iconName: 'about', target: paths.about, sx: { ml: 'auto' },
+	},
 ];
 
-const Navbar: React.FunctionComponent<IProps> = ({ handleDrawerToggle }) => {
+const Navbar: React.FunctionComponent<IProps> = ({ fullWidthMode, handleDrawerToggle }) => {
 	const location = useLocation();
 
 	return (
@@ -36,20 +41,24 @@ const Navbar: React.FunctionComponent<IProps> = ({ handleDrawerToggle }) => {
 			position="fixed"
 			color="primary"
 			sx={{
-				width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
-				ml: { sm: `${DRAWER_WIDTH}px` },
+				...(!fullWidthMode && {
+					width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
+					ml: { sm: `${DRAWER_WIDTH}px` },
+				}),
 			}}
 		>
 			<Toolbar sx={{
-				height: { xs: NAVBAR_HEIGHT_MOBILE, md: NAVBAR_HEIGHT_DESKTOP },
-				minHeight: { xs: NAVBAR_HEIGHT_MOBILE, md: NAVBAR_HEIGHT_DESKTOP },
+				...(!fullWidthMode && {
+					height: { xs: NAVBAR_HEIGHT_MOBILE, md: NAVBAR_HEIGHT_DESKTOP },
+					minHeight: { xs: NAVBAR_HEIGHT_MOBILE, md: NAVBAR_HEIGHT_DESKTOP },
+				}),
 			}}
 			>
 				<IconButton
 					color="inherit"
 					aria-label="open drawer"
 					edge="start"
-					onClick={handleDrawerToggle}
+					onClick={() => handleDrawerToggle?.()}
 					sx={{ mr: 2, display: { sm: 'none' } }}
 				>
 					<MenuIcon />
@@ -65,6 +74,7 @@ const Navbar: React.FunctionComponent<IProps> = ({ handleDrawerToggle }) => {
 								mr: isMobile ? 4 : 0,
 								textTransform: 'none',
 								fontSize: '1rem',
+								...button.sx,
 								...(location.pathname.includes(button.target) && {color: (theme) => theme.palette.common.white}),
 							}}
 							startIcon={<Icon iconName={button.iconName} />}

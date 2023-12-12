@@ -1,6 +1,7 @@
-const MARINE_FARMING_BASE = '/app/marine-farming/';
-const AGRO_INDUSTRY_BASE = '/app/agro-industry/';
-const MUNICIPALITY = '/app/municipality/';
+const BASE = '/app';
+const MARINE_FARMING_BASE = `${BASE}/app/marine-farming/`;
+const AGRO_INDUSTRY_BASE = `${BASE}/app/agro-industry/`;
+const MUNICIPALITY = `${BASE}/app/municipality/`;
 
 // eslint-disable-next-line no-shadow
 export enum LayoutType {
@@ -26,6 +27,7 @@ const paths = {
 		[LayoutType.CHARTS]: `${MUNICIPALITY}charts`,
 		[LayoutType.TABLE]: `${MUNICIPALITY}table`,
 	},
+	about: `${BASE}/about`,
 };
 
 export default paths;

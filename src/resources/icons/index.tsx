@@ -24,6 +24,7 @@ export type IconNames = 'marine-farming'
 	| 'logo'
 	| 'download'
 	| 'microscope'
+	| 'about'
 
 export const icons: Record<IconNames, React.ReactNode> = {
 	'marine-farming': (
@@ -185,6 +186,14 @@ export const icons: Record<IconNames, React.ReactNode> = {
 	microscope: (
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M7 19.5c-1.1 0-2 .9-2 2h14c0-1.1-.9-2-2-2h-4v-2h3c1.1 0 2-.9 2-2h-8c-1.66 0-3-1.34-3-3a3 3 0 0 1 1.47-2.57c.41.59 1.06 1 1.83 1.06.7.06 1.36-.19 1.85-.62l.59 1.61.94-.34.34.94 1.88-.68-.34-.94.94-.34-2.74-7.52-.94.34-.34-.94-1.88.68.34.94-.94.35.56 1.55c-1.17-.04-2.19.75-2.48 1.86A5.01 5.01 0 0 0 5 12.5c0 2.76 2.24 5 5 5v2H7Zm5.86-14.48 1.71 4.7-.94.34-1.71-4.7.94-.34ZM10.5 7.5c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1Z" fill="currentColor" />
+		</svg>
+	),
+	about: (
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+			<path
+				d="M13 9H11V7H13V9ZM13 17H11L11 11H13L13 17ZM12.01 22C17.53 22 22 17.52 22 12C22 6.48 17.53 2 12.01 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12.01 22ZM12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4Z"
+				fill="currentColor"
+			/>
 		</svg>
 	),
 };

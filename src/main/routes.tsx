@@ -1,5 +1,6 @@
 import Dashboard from 'library/components/Dashboard';
 import paths, { LayoutType } from 'library/paths';
+import AboutUs from 'pages/AboutUs';
 import AgroIndustry from 'pages/AgroIndustry';
 import MarineFarming from 'pages/MarineFarming';
 import Municipality from 'pages/Municipality';
@@ -37,11 +38,9 @@ export default createHashRouter([
 					{ path: paths.municipality.base, element: <Navigate to={paths.municipality[LayoutType.TABLE]} replace />},
 				],
 			},
-			{
-				element: <Navigate to={paths.marineFarming.base} replace />,
-			},
 		],
 	},
+	{ path: paths.about, element: <AboutUs /> },
 	{ path: '/', element: <Navigate to={paths.marineFarming.base} replace /> },
 	{ path: '*', element: <Navigate to={paths.marineFarming.base} replace /> },
 ]);
