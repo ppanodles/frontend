@@ -1,0 +1,151 @@
+{
+    "data": [
+        {
+            "name": "Станция 1",
+            "long": 38.00673082821922,
+            "lat": 70.52810409444223,
+            "metals": [
+                {
+                    "name": "Алюминий",
+                    "label": "Al",
+                    "underworld": 44,
+                    "surface": 6,
+                    "leap": 93
+                },
+                {
+                    "name": "Барий",
+                    "label": "Ba",
+                    "underworld": 55,
+                    "surface": 76,
+                    "leap": 29
+                },
+                {
+                    "name": "Ванадий",
+                    "label": "V",
+                    "underworld": 45,
+                    "surface": 26,
+                    "leap": 21
+                },
+                {
+                    "name": "Барий",
+                    "label": "Fe",
+                    "underworld": 95,
+                    "surface": 79,
+                    "leap": 8
+                },
+                {
+                    "name": "Кадмий",
+                    "label": "Cd",
+                    "underworld": 51,
+                    "surface": 12,
+                    "leap": 2
+                },
+                {
+                    "name": "Кобальт",
+                    "label": "Co",
+                    "underworld": 85,
+                    "surface": 46,
+                    "leap": 49
+                }
+            ]
+        },
+        {
+            "name": "Станция 2",
+            "long": 68.971368522559,
+            "lat": 73.4225501015789,
+            "metals": [
+                {
+                    "name": "Алюминий",
+                    "label": "Al",
+                    "underworld": 91,
+                    "surface": 56,
+                    "leap": 29
+                },
+                {
+                    "name": "Барий",
+                    "label": "Ba",
+                    "underworld": 77,
+                    "surface": 55,
+                    "leap": 22
+                },
+                {
+                    "name": "Ванадий",
+                    "label": "V",
+                    "underworld": 85,
+                    "surface": 73,
+                    "leap": 39
+                },
+                {
+                    "name": "Барий",
+                    "label": "Fe",
+                    "underworld": 94,
+                    "surface": 98,
+                    "leap": 67
+                },
+                {
+                    "name": "Кадмий",
+                    "label": "Cd",
+                    "underworld": 45,
+                    "surface": 36,
+                    "leap": 7
+                },
+                {
+                    "name": "Кобальт",
+                    "label": "Co",
+                    "underworld": 75,
+                    "surface": 36,
+                    "leap": 83
+                }
+             ]
+        },
+        {
+            "name": "Станция 3",
+            "long": 65.08535889515014,
+            "lat": 69.75131307434222,
+            "metals": [
+                {
+                    "name": "Алюминий",
+                    "label": "Al",
+                    "underworld": 65,
+                    "surface": 86,
+                    "leap": 9
+                },
+                {
+                    "name": "Барий",
+                    "label": "Ba",
+                    "underworld": 91,
+                    "surface": 26,
+                    "leap": 49
+                },
+                {
+                    "name": "Ванадий",
+                    "label": "V",
+                    "underworld": 45,
+                    "surface": 36,
+                    "leap": 17
+                },
+                {
+                    "name": "Барий",
+                    "label": "Fe",
+                    "underworld": 33,
+                    "surface": 44,
+                    "leap": 72
+                },
+                {
+                    "name": "Кадмий",
+                    "label": "Cd",
+                    "underworld": 15,
+                    "surface": 32,
+                    "leap": 84
+                },
+                {
+                    "name": "Кобальт",
+                    "label": "Co",
+                    "underworld": 93,
+                    "surface": 63,
+                    "leap": 44
+                }
+             ]
+        }
+    ]
+}

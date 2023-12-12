@@ -1,0 +1,115 @@
+/* stylelint-disable selector-class-pattern */
+
+.stationChartContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 1577px;
+    height: 100%;
+    margin-top: 64px;
+    margin-left: 56px;
+    padding: 24px;
+    color: #FFFBFF;
+    border-radius: 4px;
+}
+
+.stationChartHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 59px;
+}
+
+.headerLeftBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 268px;
+    height: 59px;
+}
+
+.headerTitle {
+    width: 100%;
+    height: 27px;
+    font-size: 22px;
+}
+
+.headerSubtitle {
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+}
+
+.headerRightBlock {
+    display: flex;
+    gap: 16px;
+    width: 230px;
+    height: 16px
+}
+
+.metalLabel {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 100%;
+    font-size: 12px;
+}
+
+.metalContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 179px;
+    height: 164px;
+    padding-top: 12px;
+    padding-left: 30px
+}
+
+.metalContainer:not(last-child) {
+    border-right: 2px solid #41414F;
+}
+
+.metalNameBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    height: 46px;
+}
+
+.metalParamsBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+}
+
+.metalParam {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 12px
+}
+
+.listOfMetalsBlock {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.metalLine {
+    display: flex;
+    justify-content: flex-start;
+    width: 100px;
+    height: 15px;
+}

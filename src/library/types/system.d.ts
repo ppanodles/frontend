@@ -12,6 +12,12 @@ type IListSelectionFilter<T> = {
     selected: { [key: string]: string },
 } & Base<T>;
 
+type ISelectOneFilter<T> = {
+    type: FilterType.SELECT_ONE,
+    variants: Array<{ id: string, name: string }>
+    selected: { id: string, name: string },
+} & Base<T>;
+
 type IRangeFilter<T> = {
     type: FilterType.RANGE,
     pepticColor?: string;
@@ -30,7 +36,7 @@ type IDatePickFilter<T> = {
     selected?: Date
 } & Base<T>;
 
-export type CommonFilterDataType<T> = IListSelectionFilter<T> | IRangeFilter<T> | IDateTimeRangeFilter<T> | IDatePickFilter<T>
+export type CommonFilterDataType<T> = IListSelectionFilter<T> | IRangeFilter<T> | IDateTimeRangeFilter<T> | IDatePickFilter<T> | ISelectOneFilter<T>
 
 export type IFilterDataType<T> = {
     [Key in FilterType]?: {

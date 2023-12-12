@@ -7,6 +7,13 @@ export type ListSelectorPayload<T, P> = {
 	value: {[key: string]: string};
 }
 
+export type SelectOnePayload<T, P> = {
+    dataType: T;
+	field: P;
+	filter: FilterType.SELECT_ONE;
+	value: {id: string, name: string};
+}
+
 export type DateTimeRangePayload<T, P> = {
     dataType: T;
 	field: P;

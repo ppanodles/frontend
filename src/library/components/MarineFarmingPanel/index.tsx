@@ -11,6 +11,7 @@ import Icon from '../Icon';
 import ShipsFIlter from './children/ShipsFIlter';
 import GreenhouseGasesFilter from './children/GreenhouseGasesFilter';
 import FilmContaminationFilter from './children/FilmContaminationFilter';
+import MonitoringStationsFilter from './children/MonitoringStationsFilter';
 
 interface IProps {}
 
@@ -43,6 +44,7 @@ const MarineFarmingPanel: React.FunctionComponent<IProps> = () => {
 				{checkFilterAvailable(MarineFarmingDataType.SHIPS) && <ShipsFIlter />}
 				{checkFilterAvailable(MarineFarmingDataType.GREENHOUSE_GASES) && <GreenhouseGasesFilter />}
 				{checkFilterAvailable(MarineFarmingDataType.FILM_CONTAMINATION) && <FilmContaminationFilter />}
+				{checkFilterAvailable(MarineFarmingDataType.MONITORING_STATIONS) && <MonitoringStationsFilter />}
 			</Stack>
 
 		</Stack>

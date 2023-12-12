@@ -1,11 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import {IFilmContamination, IGreenhouseGases, IShip} from 'library/types/marineFarming.d';
+import {
+	IFilmContamination, IGreenhouseGases, IMonitoringStation, IShip,
+} from 'library/types/marineFarming.d';
 import greenhouseGasesMapper from 'library/mappers/greenhouseGases.mapper';
 import shipsMapper from 'library/mappers/ships.mapper';
 import filmContaminationMapper from 'library/mappers/filmContamination.mapper';
 import shipJSON from 'library/data/marineFarming/ships.data.json';
 import filmContaminationJSON from 'library/data/marineFarming/filmContamination.data.json';
 import greenhouseGasesJSON from 'library/data/marineFarming/greenhouseGases.data.json';
+import monitoringStationsJSON from 'library/data/marineFarming/monitoringStations.data.json';
 import { IFilterDataType } from 'library/types/system.d';
 import FilterType from 'library/constants/FilterType';
 import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
@@ -14,6 +17,7 @@ import {
 	DateTimeRangePayload,
 	ListSelectorPayload,
 	RangePayload,
+	SelectOnePayload,
 } from 'library/types/filterPayload.d';
 import {
 	keys, pickBy, uniqBy, values,
@@ -21,6 +25,7 @@ import {
 import getDefaultRange from 'library/helpers/getDefaultRange';
 import getDefaultDateRange from 'library/helpers/getDefaultDateRange';
 import { LayoutType } from 'library/paths';
+import monitoringStationsMapper from 'library/mappers/monitoringStations.mapper';
 
 const shipsData: IShip[] = shipsMapper((shipJSON as any).data);
 const filmContaminationData: IFilmContamination[] = filmContaminationMapper(
@@ -28,10 +33,13 @@ const filmContaminationData: IFilmContamination[] = filmContaminationMapper(
 );
 const greenhouseGasesData: IGreenhouseGases[] = greenhouseGasesMapper(greenhouseGasesJSON.data);
 
+const monitoringStationsData: IMonitoringStation[] = monitoringStationsMapper(monitoringStationsJSON.data);
+
 export type Filters = {
   [MarineFarmingDataType.SHIPS]: IFilterDataType<IShip>;
   [MarineFarmingDataType.GREENHOUSE_GASES]: IFilterDataType<IGreenhouseGases>;
   [MarineFarmingDataType.FILM_CONTAMINATION]: IFilterDataType<IFilmContamination>;
+  [MarineFarmingDataType.MONITORING_STATIONS]: IFilterDataType<IMonitoringStation>;
 };
 
 export type ISlicesStatus = {
@@ -51,6 +59,7 @@ export type MarineFarmingState = {
   ships: IShip[];
   filmContamination: IFilmContamination[];
   greenhouseGases: IGreenhouseGases[];
+  monitoringStations: IMonitoringStation[];
   filters: Filters;
   /**
    * Флаги включения слоев
@@ -70,29 +79,40 @@ type ShipsFilterPayload =
   | ListSelectorPayload<MarineFarmingDataType.SHIPS, keyof IShip>
   | DateTimeRangePayload<MarineFarmingDataType.SHIPS, keyof IShip>
   | DateTimePickPayload<MarineFarmingDataType.SHIPS, keyof IShip>
-  | RangePayload<MarineFarmingDataType.SHIPS, keyof IShip>;
+  | RangePayload<MarineFarmingDataType.SHIPS, keyof IShip>
+  | SelectOnePayload<MarineFarmingDataType.SHIPS, keyof IShip>;
 
 type GreenhouseGasesFilterPayload =
   | ListSelectorPayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
   | DateTimeRangePayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
   | DateTimePickPayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
-  | RangePayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>;
+  | RangePayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>
+  | SelectOnePayload<MarineFarmingDataType.GREENHOUSE_GASES, keyof IGreenhouseGases>;
 
 type FilmContaminationFilterPayload =
   | ListSelectorPayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
   | DateTimeRangePayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
   | DateTimePickPayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
-  | RangePayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>;
+  | RangePayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>
+  | SelectOnePayload<MarineFarmingDataType.FILM_CONTAMINATION, keyof IFilmContamination>;
+
+type MonitoringStationsFilterPayload =
+  | ListSelectorPayload<MarineFarmingDataType.MONITORING_STATIONS, keyof IMonitoringStation>
+  | DateTimeRangePayload<MarineFarmingDataType.MONITORING_STATIONS, keyof IMonitoringStation>
+  | DateTimePickPayload<MarineFarmingDataType.MONITORING_STATIONS, keyof IMonitoringStation>
+  | SelectOnePayload<MarineFarmingDataType.MONITORING_STATIONS, keyof IMonitoringStation>;
 
 type ApplyFilterPayload =
   | ShipsFilterPayload
   | GreenhouseGasesFilterPayload
-  | FilmContaminationFilterPayload;
+  | FilmContaminationFilterPayload
+  | MonitoringStationsFilterPayload
 
 const initialState: MarineFarmingState = {
 	ships: shipsData,
 	filmContamination: filmContaminationData,
 	greenhouseGases: greenhouseGasesData,
+	monitoringStations: monitoringStationsData,
 	filters: {
 		[MarineFarmingDataType.SHIPS]: {
 			[FilterType.LIST_SELECTOR]: {
@@ -177,27 +197,60 @@ const initialState: MarineFarmingState = {
 				},
 			},
 		},
+		[MarineFarmingDataType.MONITORING_STATIONS]: {
+			[FilterType.SELECT_ONE]: {
+				id: {
+					type: FilterType.SELECT_ONE,
+					field: 'id',
+					name: 'Станция мониторинга',
+					variants: uniqBy(
+						monitoringStationsData.filter((v) => v.id !== undefined),
+						'id',
+					).map((v) => ({id: v.id, name: v.name })),
+					selected: {id: monitoringStationsData[0].id, name: monitoringStationsData[0].name},
+				},
+			},
+			[FilterType.LIST_SELECTOR]: {
+				name: {
+					type: FilterType.LIST_SELECTOR,
+					field: 'name',
+					name: 'Станция мониторинга',
+					shouldShowAlways: true,
+					items: uniqBy(
+						monitoringStationsData.filter((v) => v.name !== undefined),
+						'name',
+					).map((v) => ({ id: v.id, name: v.name })),
+					selected: {},
+				},
+			},
+		},
 	},
+
 	slicesStatus: {
 		[MarineFarmingDataType.SHIPS]: true,
 		[MarineFarmingDataType.GREENHOUSE_GASES]: true,
 		[MarineFarmingDataType.FILM_CONTAMINATION]: true,
+		[MarineFarmingDataType.MONITORING_STATIONS]: true,
 	},
 	enableSlices: {
 		[LayoutType.MAP]: {
 			[MarineFarmingDataType.SHIPS]: true,
 			[MarineFarmingDataType.GREENHOUSE_GASES]: true,
 			[MarineFarmingDataType.FILM_CONTAMINATION]: true,
+			[MarineFarmingDataType.MONITORING_STATIONS]: true,
 		},
 		[LayoutType.CHARTS]: {
 			[MarineFarmingDataType.SHIPS]: false,
 			[MarineFarmingDataType.GREENHOUSE_GASES]: true,
 			[MarineFarmingDataType.FILM_CONTAMINATION]: false,
+			[MarineFarmingDataType.MONITORING_STATIONS]: true,
 		},
 		[LayoutType.TABLE]: {
 			[MarineFarmingDataType.SHIPS]: true,
 			[MarineFarmingDataType.GREENHOUSE_GASES]: true,
 			[MarineFarmingDataType.FILM_CONTAMINATION]: false,
+			[MarineFarmingDataType.MONITORING_STATIONS]: false,
+
 		},
 	},
 	enableMultiSelect: {

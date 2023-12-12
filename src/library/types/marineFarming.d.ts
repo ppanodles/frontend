@@ -31,3 +31,19 @@ interface IFilmContamination { // пленочное загрязнение
     long: number;
     lat: number;
 }
+
+interface IMetal {
+    name: string;
+    label: string;
+    underworld:number;
+    surface: number;
+    leap: number;
+}
+
+interface IMonitoringStation {
+    id: string
+    name: string;
+    long: number;
+    lat: number;
+    metals: IMetal[]
+}

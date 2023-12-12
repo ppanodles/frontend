@@ -61,6 +61,17 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 			return [...accumulator, slice];
 		}
 
+		if (currentValue === MarineFarmingDataType.MONITORING_STATIONS) {
+			const slice: SliceSelectorType = {
+				id: MarineFarmingDataType.MONITORING_STATIONS,
+				name: 'Станции мониторинга',
+				icon: 'near-me',
+				status: sliceFlags[MarineFarmingDataType.MONITORING_STATIONS],
+			};
+
+			return [...accumulator, slice];
+		}
+
 		return accumulator;
 	}, [] as SliceSelectorType[]), [sliceFlags, accessibleSlices]);
 

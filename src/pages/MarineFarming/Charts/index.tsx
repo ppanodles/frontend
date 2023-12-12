@@ -1,59 +1,47 @@
-import { Grid } from '@mui/material';
 import React from 'react';
 import getLayoutTypeFomPath from 'library/helpers/getLayoutTypeFomPath';
-import { selectFirstEnableSlice } from 'library/slices/marineFarming.slice';
+import { applyFilter, selectFirstEnableSlice, toggleSliceAccessibility } from 'library/slices/marineFarming.slice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useMount } from 'react-use';
-import selectFilteredGases from 'library/selectors/gases.selector';
-import { isEmpty } from 'lodash';
-import EmissionValueChart from './EmissionValueChart';
-import CommonDirty from './CommonDirty';
-import Variance from './Variance';
-import LevelsChart from './LevelsChart';
+import { selectActiveSlice } from 'library/selectors/filters.selector';
+import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
+import FilterType from 'library/constants/FilterType';
+import GasesCharts from './gases';
+import StationsCharts from './stations';
 
 interface IProps {}
 
 const Charts: React.FunctionComponent<IProps> = () => {
 	const dispatch = useDispatch();
-	const { pathname } = useLocation();
+
+	const { pathname, state } = useLocation();
 
 	useMount(() => {
 		dispatch(selectFirstEnableSlice(getLayoutTypeFomPath(pathname)));
+
+		if (state && state?.dataType && state.station) {
+			dispatch(toggleSliceAccessibility({dataType: state.dataType, currentLayout: getLayoutTypeFomPath(pathname)}));
+			dispatch(applyFilter({
+				dataType: MarineFarmingDataType.MONITORING_STATIONS,
+				field: 'id',
+				filter: FilterType.SELECT_ONE,
+				value: {id: state.station.id, name: state.station.name},
+			}));
+		}
 	});
 
-	const greenhouseGasesData = useSelector(selectFilteredGases);
+	const selectedSlice = useSelector(selectActiveSlice);
 
-	if (isEmpty(greenhouseGasesData)) {
-		return null;
+	if (selectedSlice === MarineFarmingDataType.GREENHOUSE_GASES) {
+		return <GasesCharts />;
 	}
 
-	return (
-		<Grid container direction="row" ml={{xs: 0, md: 4}} mt={8} mr={2} mb={2} overflow="auto" columnSpacing={3}>
-			<Grid item xs={12} lg={7}>
+	if (selectedSlice === MarineFarmingDataType.MONITORING_STATIONS) {
+		return <StationsCharts />;
+	}
 
-				<Grid container direction="column" rowSpacing={3}>
-					<Grid item xs={12}><EmissionValueChart greenhouseGasesData={greenhouseGasesData} /></Grid>
-
-					<Grid item xs={12}>
-						<Grid container direction="row" columnSpacing={3}>
-							<Grid item xs={12} md={4}>
-								<CommonDirty />
-							</Grid>
-							<Grid item xs={12} md={8}>
-								<Variance greenhouseGasesData={greenhouseGasesData} />
-							</Grid>
-						</Grid>
-					</Grid>
-
-				</Grid>
-
-			</Grid>
-			<Grid item xs={12} md={5}>
-				<LevelsChart greenhouseGasesData={greenhouseGasesData} />
-			</Grid>
-		</Grid>
-	);
+	return null;
 };
 
 export default Charts;

@@ -8,7 +8,7 @@ import {
 	ReactElement, useCallback, useMemo, useState,
 } from 'react';
 import { useSelector } from 'react-redux';
-import { IFilmContamination, IShip } from 'library/types/marineFarming';
+import { IFilmContamination, IMonitoringStation, IShip } from 'library/types/marineFarming';
 import { RootState } from 'main/rootReducer';
 import * as turf from '@turf/turf';
 import selectFilteredShips from 'library/selectors/ships.selector';
@@ -16,6 +16,11 @@ import { Box } from '@mui/material';
 import { latLngToCell } from 'h3-js';
 import selectFilteredGases from 'library/selectors/gases.selector';
 import selectFilteredFilmContaminations from 'library/selectors/filmContamination.selector';
+import paths, { LayoutType } from 'library/paths';
+import { useNavigate } from 'react-router-dom';
+import MarineFarmingDataType from 'library/constants/MarineFarmingSlice';
+import FilterType from 'library/constants/FilterType';
+import selectFilteredMonitoringStations from 'library/selectors/stations.selector';
 import ShipPopup from './components/popups/ShipPopup';
 import FilmContaminationPopup from './components/popups/FilmContaminationPopup';
 import Icon from '../Icon/index';
@@ -47,11 +52,14 @@ const DataMap = () => {
 		}
 	}, []);
 
+	const navigate = useNavigate();
+
 	const slicesAccessibility = useSelector((state: RootState) => state.marineFarming.slicesStatus);
 
 	const ships = useSelector(selectFilteredShips);
 	const greenhouseGases = useSelector(selectFilteredGases);
 	const filmContamination = useSelector(selectFilteredFilmContaminations);
+	const monitoringStations = useSelector((state: RootState) => selectFilteredMonitoringStations(state, FilterType.SELECT_ONE));
 
 	const ports = useMemo(
 		() => ships
@@ -147,6 +155,33 @@ const DataMap = () => {
 		[],
 	);
 
+	const mapMonitoringStationsToMarkers = useCallback(({
+		lat, long, name, id,
+	}: IMonitoringStation) => (
+		<Marker
+			onClick={() => navigate(paths.marineFarming[LayoutType.CHARTS], {state: {dataType: MarineFarmingDataType.MONITORING_STATIONS, station: {id, name} }})}
+			longitude={long}
+			latitude={lat}
+			anchor="top-left"
+			key={`${name}${long}${lat}`}
+			style={{cursor: 'default'}}
+		>
+			<div
+				style={{
+					width: 30,
+					height: 30,
+					borderRadius: '50%',
+					backgroundColor: '#304FFE',
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+				}}
+			>
+				<Icon style={{ color: '#0B071B' }} iconName="microscope" />
+			</div>
+		</Marker>
+	), [navigate]);
+
 	const greenhouseGasesFeatures = useMemo(
 		() => greenhouseGases.map(mapGreenhouseGasesDataToFeatures),
 		[greenhouseGases],
@@ -162,6 +197,11 @@ const DataMap = () => {
 	const filmContaminationMarkers = useMemo(
 		() => filmContamination.map(mapFilmContaminationToMarkers),
 		[filmContamination, mapFilmContaminationToMarkers],
+	);
+
+	const monitoringStationsMarkers = useMemo(
+		() => monitoringStations.map(mapMonitoringStationsToMarkers),
+		[monitoringStations, mapMonitoringStationsToMarkers],
 	);
 
 	const getClickedHeap = useCallback(
@@ -208,6 +248,7 @@ const DataMap = () => {
 			{portMarkers}
 			{slicesAccessibility.FILM_CONTAMINATION && filmContaminationMarkers}
 			{slicesAccessibility.SHIPS && shipMarkers}
+			{slicesAccessibility.MONITORING_STATIONS && monitoringStationsMarkers}
 			{slicesAccessibility.GREENHOUSE_GASES && (
 				<Source
 					id="my-data"
