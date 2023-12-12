@@ -29,6 +29,7 @@ export type IEnableMultiSelect = {
 export type MunicipalityState = {
   municipalityState: IMunicipalityState[];
   filters: Filters;
+  isAnyFilterSelected: boolean,
 };
 
 type MunicipalityFilterPayload =
@@ -39,6 +40,7 @@ type MunicipalityFilterPayload =
 
 const initialState: MunicipalityState = {
 	municipalityState: municipalityStateData,
+	isAnyFilterSelected: false,
 	filters: {
 		[MunicipalityStateDataType.MUNICIPALITY_STATE]: {
 			[FilterType.DATE_TIME_RANGE]: {
@@ -68,24 +70,28 @@ const initialState: MunicipalityState = {
 					field: 'temp',
 					name: 'Температура',
 					borders: getDefaultRange(municipalityStateData.map((v) => v.temp)),
+					pepticColor: '#FFCC80',
 				},
 				pressure: {
 					type: FilterType.RANGE,
 					field: 'pressure',
 					name: 'Давление',
 					borders: getDefaultRange(municipalityStateData.map((v) => v.pressure)),
+					pepticColor: '#8C9EFF',
 				},
 				humidity: {
 					type: FilterType.RANGE,
 					field: 'humidity',
-					name: 'Давление',
+					name: 'Влажность',
 					borders: getDefaultRange(municipalityStateData.map((v) => v.humidity)),
+					pepticColor: '#A5D6A7',
 				},
 				carbon: {
 					type: FilterType.RANGE,
 					field: 'carbon',
 					name: 'Углерод',
 					borders: getDefaultRange(municipalityStateData.map((v) => v.carbon)),
+					pepticColor: '#84FFFF',
 				},
 			},
 		},
@@ -102,6 +108,7 @@ const municipalitySlice = createSlice({
 			},
 		}: PayloadAction<MunicipalityFilterPayload>) {
 			(state.filters[dataType] as any)[filter][field].selected = value;
+			state.isAnyFilterSelected = true;
 		},
 		dropFilterByField(state, { payload: { dataType, filter, field } }: PayloadAction<{dataType: MunicipalityStateDataType, filter: FilterType, field: keyof IMunicipalityState}>) {
 			(state.filters[dataType] as any)[filter][field] = (initialState.filters[dataType] as any)[filter][field];
@@ -114,10 +121,11 @@ const municipalitySlice = createSlice({
 		},
 		dropFilters(state) {
 			state.filters = initialState.filters;
+			state.isAnyFilterSelected = false;
 		},
 	},
 });
 
-export const { applyFilter } = municipalitySlice.actions;
+export const { applyFilter, dropFilters } = municipalitySlice.actions;
 
 export default municipalitySlice.reducer;

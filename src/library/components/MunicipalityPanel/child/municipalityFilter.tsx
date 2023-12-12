@@ -61,6 +61,7 @@ const MunicipalityFilter: React.FunctionComponent<IProps> = () => {
 							name={filter.name}
 							value={filter.selected}
 							borders={filter.borders}
+							pepticColor={filter.pepticColor}
 							onChange={(value) => dispatch(applyFilter({
 								dataType: MunicipalityStateDataType.MUNICIPALITY_STATE,
 								field: filter.field,

@@ -30,6 +30,7 @@ export type IEnableMultiSelect = {
 export type AgroState = {
   agroState: IAgroState[];
   filters: Filters;
+  isAnyFilterSelected: boolean,
 };
 
 type AgroFilterPayload =
@@ -40,6 +41,7 @@ type AgroFilterPayload =
 
 const initialState: AgroState = {
 	agroState: agroStateData,
+	isAnyFilterSelected: false,
 	filters: {
 		[AgroStateDataType.AGRO_STATE]: {
 			[FilterType.DATE_TIME_RANGE]: {
@@ -107,6 +109,7 @@ const agroSlice = createSlice({
 			},
 		}: PayloadAction<AgroFilterPayload>) {
 			(state.filters[dataType] as any)[filter][field].selected = value;
+			state.isAnyFilterSelected = true;
 		},
 		dropFilterByField(state, { payload: { dataType, filter, field } }: PayloadAction<{dataType: AgroStateDataType, filter: FilterType, field: keyof IAgroState}>) {
 			(state.filters[dataType] as any)[filter][field] = (initialState.filters[dataType] as any)[filter][field];
@@ -119,10 +122,11 @@ const agroSlice = createSlice({
 		},
 		dropFilters(state) {
 			state.filters = initialState.filters;
+			state.isAnyFilterSelected = false;
 		},
 	},
 });
 
-export const { applyFilter } = agroSlice.actions;
+export const { applyFilter, dropFilters } = agroSlice.actions;
 
 export default agroSlice.reducer;

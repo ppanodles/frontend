@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
 	Box,
 	Divider,
@@ -37,6 +37,12 @@ const RangeFilter: React.FunctionComponent<IRangeFilter> = ({
 	name, borders, value: filterValue, onChange, pepticColor,
 }) => {
 	const [value, setValue] = useState([filterValue?.from ?? borders.from, filterValue?.to ?? borders.to]);
+
+	useEffect(() => {
+		if (filterValue === undefined) {
+			setValue([borders.from, borders.to]);
+		}
+	}, [borders, filterValue]);
 
 	const handleChange = (_: any, newValue: number | number[]) => {
 		setValue(newValue as number[]);

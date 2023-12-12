@@ -60,6 +60,7 @@ export type MarineFarmingState = {
   filmContamination: IFilmContamination[];
   greenhouseGases: IGreenhouseGases[];
   monitoringStations: IMonitoringStation[];
+  isAnyFilterSelected: boolean;
   filters: Filters;
   /**
    * Флаги включения слоев
@@ -113,6 +114,7 @@ const initialState: MarineFarmingState = {
 	filmContamination: filmContaminationData,
 	greenhouseGases: greenhouseGasesData,
 	monitoringStations: monitoringStationsData,
+	isAnyFilterSelected: false,
 	filters: {
 		[MarineFarmingDataType.SHIPS]: {
 			[FilterType.LIST_SELECTOR]: {
@@ -296,6 +298,7 @@ const marineFarmingSlice = createSlice({
 			},
 		}: PayloadAction<ApplyFilterPayload>) {
 			(state.filters[dataType] as any)[filter][field].selected = value;
+			state.isAnyFilterSelected = true;
 		},
 		dropFilterByField(state, { payload: { dataType, filter, field } }: PayloadAction<{dataType: MarineFarmingDataType, filter: FilterType, field: keyof IShip}>) {
 			(state.filters[dataType] as any)[filter][field] = (initialState.filters[dataType] as any)[filter][field];
@@ -308,10 +311,13 @@ const marineFarmingSlice = createSlice({
 		},
 		dropFilters(state) {
 			state.filters = initialState.filters;
+			state.isAnyFilterSelected = false;
 		},
 	},
 });
 
-export const { toggleSliceAccessibility, applyFilter, selectFirstEnableSlice } = marineFarmingSlice.actions;
+export const {
+	toggleSliceAccessibility, applyFilter, selectFirstEnableSlice, dropFilters,
+} = marineFarmingSlice.actions;
 
 export default marineFarmingSlice.reducer;
