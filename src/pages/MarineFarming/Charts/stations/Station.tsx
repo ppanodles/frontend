@@ -22,6 +22,14 @@ const Station: React.FunctionComponent<IProps> = ({ metal }) => {
 		<Stack sx={{
 			position: 'relative',
 
+			'&::before': {
+				content: '""',
+				position: 'absolute',
+				right: 0,
+				left: 0,
+				bottom: -14,
+				borderBottom: '1px solid #41414F',
+			},
 			'&::after': {
 				content: '""',
 				position: 'absolute',
