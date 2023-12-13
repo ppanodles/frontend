@@ -84,12 +84,12 @@ const LevelsChart: React.FunctionComponent<IProps> = ({ greenhouseGasesData }) =
 
 	return (
 		<Paper sx={{
-			p: 4, position: 'relative',
+			p: 4, position: 'relative', height: '100%',
 		}}
 		>
 			<Stack sx={{ height: '100%' }}>
 				<Stack width="100%" alignItems="start" justifyContent="center" mb={4}>
-					<Typography sx={{ color: '#FFFBFF', mb: 1 }} variant="h5">Уровни эмиссии%</Typography>
+					<Typography sx={{ color: '#FFFBFF', mb: 1 }} variant="h5">Уровни эмиссии %</Typography>
 					<Typography sx={{ color: '#FFFBFF' }} variant="body1">Процентное соотношение </Typography>
 					<Typography sx={{ color: '#FFFBFF' }} variant="body1">за отчетный период</Typography>
 				</Stack>
@@ -104,12 +104,8 @@ const LevelsChart: React.FunctionComponent<IProps> = ({ greenhouseGasesData }) =
 						{levelsList.map((level) => (
 							<Stack key={level.color} direction="row" alignItems="center" justifyContent="start" spacing={2}>
 								<Icon iconName={level.icon} sx={{ color: level.color}} />
-								<Typography variant="body1" sx={{ color: '#E9E9ED' }}>
-									{Math.round(level.from)}
-									{' '}
-									-
-									{' '}
-									{Math.round(level.to)}
+								<Typography sx={{ color: '#E9E9ED', fontSize: '0.9rem' }}>
+									{`${Math.round(level.from)} - ${Math.round(level.to)}`}
 								</Typography>
 							</Stack>
 						))}
