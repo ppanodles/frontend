@@ -105,11 +105,11 @@ const LevelsChart: React.FunctionComponent<IProps> = ({ greenhouseGasesData }) =
 							<Stack key={level.color} direction="row" alignItems="center" justifyContent="start" spacing={2}>
 								<Icon iconName={level.icon} sx={{ color: level.color}} />
 								<Typography variant="body1" sx={{ color: '#E9E9ED' }}>
-									{level.from}
+									{Math.round(level.from)}
 									{' '}
 									-
 									{' '}
-									{level.to}
+									{Math.round(level.to)}
 								</Typography>
 							</Stack>
 						))}
