@@ -1,6 +1,6 @@
 import { v1 as uuid } from 'uuid';
 
-import { IMunicipalityState } from 'library/types/municipality';
+import { IMunicipalityState } from 'library/types/municipality.d';
 
 export default (data: any): IMunicipalityState[] => data?.map((datum: any) => ({
 	id: datum?.id ?? uuid(),
@@ -9,5 +9,5 @@ export default (data: any): IMunicipalityState[] => data?.map((datum: any) => ({
 	pressure: datum?.pressure ?? 0,
 	humidity: datum?.humidity ?? 0,
 	carbon: datum?.carbon ?? 0,
-	location: datum?.location ?? 'Наименование неизвестно',
+	location: datum?.name ?? 'Наименование неизвестно',
 })) ?? [];

@@ -100,8 +100,8 @@ const HumidityChart: React.FunctionComponent<IProps> = ({ agroState }) => {
 			},
 			yaxis: {
 				tickAmount: 4,
-				min: 0,
-				max: 100,
+				// min: 0,
+				// max: 100,
 				labels: {
 					formatter: (val) => Math.round(val).toString(),
 					style: {
