@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
 	Box,
 	Stack,
@@ -11,8 +11,12 @@ interface IProps {
     metal: IMetal;
 }
 
+const getLineWidth = (value: number, max: number) => (value / (max * 1.1)) * 100;
+
 const Station: React.FunctionComponent<IProps> = ({ metal }) => {
 	const theme = useTheme();
+
+	const maxValue = useMemo(() => Math.max(metal.underworld, metal.surface, metal.leap), [metal.leap, metal.surface, metal.underworld]);
 
 	return (
 		<Stack sx={{
@@ -38,21 +42,21 @@ const Station: React.FunctionComponent<IProps> = ({ metal }) => {
 				<Stack direction="row" alignItems="center">
 					<Typography variant="caption" sx={{ width: '20px', mr: 1, color: theme.palette.common.white }}>{metal.underworld}</Typography>
 					<Box sx={{ width: '100px', height: '16px' }}>
-						<div style={{width: `${metal.underworld}%`, height: '100%', backgroundColor: '#FF9315'}} />
+						<div style={{width: `${getLineWidth(metal.underworld, maxValue)}%`, height: '100%', backgroundColor: '#FF9315'}} />
 					</Box>
 				</Stack>
 
 				<Stack direction="row" alignItems="center">
 					<Typography variant="caption" sx={{ width: '20px', mr: 1, color: theme.palette.common.white }}>{metal.surface}</Typography>
 					<Box sx={{ width: '100px', height: '16px' }}>
-						<div style={{width: `${metal.surface}%`, height: '100%', backgroundColor: '#304FFE'}} />
+						<div style={{width: `${getLineWidth(metal.surface, maxValue)}%`, height: '100%', backgroundColor: '#304FFE'}} />
 					</Box>
 				</Stack>
 
 				<Stack direction="row" alignItems="center">
 					<Typography variant="caption" sx={{ width: '20px', mr: 1, color: theme.palette.common.white }}>{metal.leap}</Typography>
 					<Box sx={{ width: '100px', height: '16px' }}>
-						<div style={{width: `${metal.leap}%`, height: '100%', backgroundColor: '#22C38E'}} />
+						<div style={{width: `${getLineWidth(metal.leap, maxValue)}%`, height: '100%', backgroundColor: '#22C38E'}} />
 					</Box>
 				</Stack>
 			</Stack>
