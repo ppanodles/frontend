@@ -106,12 +106,12 @@ const EmissionValueChart: React.FunctionComponent<IProps> = ({ greenhouseGasesDa
 	}, [greenhouseGasesData, palette.common.white]);
 
 	return (
-		<Paper sx={{ p: 4, height: '100%' }}>
+		<Paper sx={{ p: 4, flex: 1 }}>
 			<Stack spacing={1} mb={2} pl={1.8}>
 				<Typography sx={{ color: '#FFFBFF' }} variant="h5">Значения эмиссии</Typography>
 				<Typography sx={{ color: '#E9E9ED' }} variant="caption">Среднее значение эмиссии</Typography>
 			</Stack>
-			<ReactApexChart options={chartData.options} series={chartData.series} type="line" height={350} />
+			<ReactApexChart options={chartData.options} series={chartData.series} type="line" height={300} />
 		</Paper>
 	);
 };

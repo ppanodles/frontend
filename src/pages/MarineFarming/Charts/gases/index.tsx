@@ -1,10 +1,9 @@
-import { Grid } from '@mui/material';
+import { Container, Grid, Stack } from '@mui/material';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import selectFilteredGases from 'library/selectors/gases.selector';
 import { isEmpty } from 'lodash';
 import EmissionValueChart from './EmissionValueChart';
-import CommonDirty from './CommonDirty';
 import Variance from './Variance';
 import LevelsChart from './LevelsChart';
 
@@ -18,29 +17,28 @@ const GasesCharts: React.FunctionComponent<IProps> = () => {
 	}
 
 	return (
-		<Grid container direction="row" ml={{xs: 0, md: 4}} mt={8} mr={2} mb={2} overflow="hidden" columnSpacing={3}>
-			<Grid item xs={12} lg={7}>
-				<Grid container direction="row" height="100%" rowSpacing={3}>
-					<Grid item xs={12}>
+		<Container sx={{ mt: 8 }} maxWidth={false}>
+			<Grid container direction="row" overflow="auto" columnSpacing={3} rowSpacing={3}>
+				<Grid item xs={12} lg={7}>
+					<Stack spacing={2} sx={{ height: '100%' }}>
 						<EmissionValueChart greenhouseGasesData={greenhouseGasesData} />
-					</Grid>
-					<Grid item xs={12}>
-						<Grid container direction="row" height="100%" columnSpacing={3}>
-							<Grid item xs={12} md={4}>
-								<CommonDirty />
-							</Grid>
-							<Grid item xs={12} md={8}>
-								<Variance greenhouseGasesData={greenhouseGasesData} />
-							</Grid>
+						<Variance greenhouseGasesData={greenhouseGasesData} />
+					</Stack>
+					{/* <Grid container direction="row" height="100%" rowSpacing={3}>
+						<Grid item xs={12}>
+							<EmissionValueChart greenhouseGasesData={greenhouseGasesData} />
 						</Grid>
-					</Grid>
+						<Grid item xs={12}>
+							<Variance greenhouseGasesData={greenhouseGasesData} />
+						</Grid>
+					</Grid> */}
+				</Grid>
+
+				<Grid item xs={12} md={5}>
+					<LevelsChart greenhouseGasesData={greenhouseGasesData} />
 				</Grid>
 			</Grid>
-
-			<Grid item xs={12} mb={3} md={5}>
-				<LevelsChart greenhouseGasesData={greenhouseGasesData} />
-			</Grid>
-		</Grid>
+		</Container>
 	);
 };
 

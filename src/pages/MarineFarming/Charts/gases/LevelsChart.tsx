@@ -9,6 +9,7 @@ import { IGreenhouseGases } from 'library/types/marineFarming.d';
 import Icon from 'library/components/Icon';
 import { IconNames } from 'resources/icons';
 import { max, min } from 'lodash';
+import { isMobile } from 'react-device-detect';
 
 interface IProps {
     greenhouseGasesData: IGreenhouseGases[];
@@ -98,7 +99,7 @@ const LevelsChart: React.FunctionComponent<IProps> = ({ greenhouseGasesData }) =
 						options={options}
 						series={levelsList.map((level) => level.count)}
 						type="donut"
-						height="300rem"
+						height={isMobile ? '200rem' : '300rem'}
 					/>
 					<Stack spacing={1}>
 						{levelsList.map((level) => (

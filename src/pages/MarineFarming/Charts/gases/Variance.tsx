@@ -77,7 +77,7 @@ const Variance: React.FunctionComponent<IProps> = ({ greenhouseGasesData }) => {
 	};
 
 	return (
-		<Paper sx={{ p: 4, pt: 2, height: '100%' }}>
+		<Paper sx={{ p: 4, pt: 2, flex: 1 }}>
 			<Stack spacing={1} mb={2} pl={1.8}>
 				<Typography sx={{ color: '#FFFBFF' }} variant="h5">Отклонение  от среднего значения</Typography>
 			</Stack>
@@ -115,7 +115,7 @@ const Variance: React.FunctionComponent<IProps> = ({ greenhouseGasesData }) => {
 					},
 				}}
 				data={data}
-				height={121}
+				height={100}
 			/>
 		</Paper>
 	);
