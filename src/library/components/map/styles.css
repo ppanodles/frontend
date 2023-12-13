@@ -1,3 +1,11 @@
+a.mapboxgl-ctrl-logo {
+  background-image: none;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  visibility: hidden;
+}
+
 .mapboxgl-ctrl-group {
   display: flex;
   flex-direction: column;
