@@ -42,27 +42,27 @@ const Station: React.FunctionComponent<IProps> = ({ metal }) => {
 		}}
 		>
 			<Box>
-				<Typography variant="h6" sx={{ color: theme.palette.common.white }}>{metal.name}</Typography>
-				<Typography variant="caption" sx={{ color: theme.palette.common.white }}>{metal.label}</Typography>
+				<Typography variant="h6" sx={{ color: theme.palette.common.white }}>{metal.label}</Typography>
+				<Typography variant="caption" sx={{ color: theme.palette.common.white }}>{metal.name}</Typography>
 			</Box>
 
 			<Stack spacing={2} mt={4}>
 				<Stack direction="row" alignItems="center">
-					<Typography variant="caption" sx={{ width: '20px', mr: 1, color: theme.palette.common.white }}>{metal.underworld}</Typography>
+					<Typography variant="caption" sx={{ width: '40px', mr: 1, color: theme.palette.common.white }}>{metal.underworld}</Typography>
 					<Box sx={{ width: '100px', height: '16px' }}>
 						<div style={{width: `${getLineWidth(metal.underworld, maxValue)}%`, height: '100%', backgroundColor: '#FF9315'}} />
 					</Box>
 				</Stack>
 
 				<Stack direction="row" alignItems="center">
-					<Typography variant="caption" sx={{ width: '20px', mr: 1, color: theme.palette.common.white }}>{metal.surface}</Typography>
+					<Typography variant="caption" sx={{ width: '40px', mr: 1, color: theme.palette.common.white }}>{metal.surface}</Typography>
 					<Box sx={{ width: '100px', height: '16px' }}>
 						<div style={{width: `${getLineWidth(metal.surface, maxValue)}%`, height: '100%', backgroundColor: '#304FFE'}} />
 					</Box>
 				</Stack>
 
 				<Stack direction="row" alignItems="center">
-					<Typography variant="caption" sx={{ width: '20px', mr: 1, color: theme.palette.common.white }}>{metal.leap}</Typography>
+					<Typography variant="caption" sx={{ width: '40px', mr: 1, color: theme.palette.common.white }}>{metal.leap}</Typography>
 					<Box sx={{ width: '100px', height: '16px' }}>
 						<div style={{width: `${getLineWidth(metal.leap, maxValue)}%`, height: '100%', backgroundColor: '#22C38E'}} />
 					</Box>
