@@ -198,7 +198,7 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 										}}
 									>
 										<TableCell align="left" sx={{ color: '#C7C5D0' }}>
-											{index.toString()}
+											{(index + 1).toString()}
 										</TableCell>
 										{
 											tableConfig.map((cell) => (
