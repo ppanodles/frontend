@@ -15,7 +15,7 @@ const tableColumns: TableConfig<IGreenhouseGases>[] = [
 		name: 'Время  UTC',
 		value: 'time',
 		sx: { color: '#C7C5D0' },
-		valueGetter: (data: string) => dayjs(data).format('DD/MM/YYYY'),
+		valueGetter: (data: string) => dayjs(data).format('DD-MM-YYYY HH:mm'),
 		onSorting: dateSorting,
 	},
 	{

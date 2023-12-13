@@ -14,7 +14,8 @@ const tableColumns: TableConfig<IAgroState>[] = [
 	{
 		name: 'Время  UTC',
 		value: 'time',
-		valueGetter: (data: string) => dayjs(data).format('DD/MM/YYYY'),
+		valueGetter: (data: string) => dayjs(data).format('DD-MM-YYYY HH:mm'),
+
 		onSorting: dateSorting,
 	},
 	{

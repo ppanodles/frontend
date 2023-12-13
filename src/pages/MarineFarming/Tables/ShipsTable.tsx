@@ -22,7 +22,7 @@ const tableColumns: TableConfig<IShip>[] = [
 	{
 		name: 'Прибытие  UTC',
 		value: 'eta',
-		valueGetter: (data: string) => dayjs(data).format('DD/MM/YYYY'),
+		valueGetter: (data: string) => dayjs(data).format('DD-MM-YYYY HH:mm'),
 		onSorting: dateSorting,
 	},
 ];
