@@ -3,7 +3,8 @@ import {
 	Container, Stack, Typography, useTheme,
 } from '@mui/material';
 import Navbar from 'library/components/Navbar';
-import React from 'react';
+import SidePanel from 'library/components/SidePanel';
+import React, { useState } from 'react';
 
 interface IProps {}
 
@@ -26,6 +27,10 @@ const ListBlock: React.FunctionComponent<{title: string, data: string[], color?:
 
 const AboutUs: React.FunctionComponent<IProps> = () => {
 	const { palette } = useTheme();
+	const [mobileOpen, setMobileOpen] = useState(false);
+	const handleDrawerToggle = () => {
+		setMobileOpen((prevState) => !prevState);
+	};
 
 	return (
 		<Box sx={{
@@ -48,7 +53,9 @@ const AboutUs: React.FunctionComponent<IProps> = () => {
 		}}
 		>
 			<Container>
-				<Navbar fullWidthMode />
+				<Navbar />
+				<SidePanel open={mobileOpen} onClose={handleDrawerToggle} />
+
 				<Stack mt={10} spacing={2}>
 					<Typography variant="h1" sx={{ color: palette.common.white }}>О нас</Typography>
 					<Typography variant="body1" sx={{ color: palette.common.white }}>
