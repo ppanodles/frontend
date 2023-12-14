@@ -30,6 +30,7 @@ interface IFilmContamination { // пленочное загрязнение
     time: string; // Date
     long: number;
     lat: number;
+    coordinates: string;
 }
 
 interface IMetal {

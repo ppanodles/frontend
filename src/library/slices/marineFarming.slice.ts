@@ -250,7 +250,7 @@ const initialState: MarineFarmingState = {
 		[LayoutType.TABLE]: {
 			[MarineFarmingDataType.SHIPS]: true,
 			[MarineFarmingDataType.GREENHOUSE_GASES]: true,
-			[MarineFarmingDataType.FILM_CONTAMINATION]: false,
+			[MarineFarmingDataType.FILM_CONTAMINATION]: true,
 			[MarineFarmingDataType.MONITORING_STATIONS]: false,
 
 		},

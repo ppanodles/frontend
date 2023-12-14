@@ -10,6 +10,7 @@ import { selectFirstEnableSlice } from 'library/slices/marineFarming.slice';
 
 import GreenhouseGasesTable from './GreenhouseGasesTable';
 import ShipsTable from './ShipsTable';
+import FilmContaminationTable from './FilmContaminationTable';
 
 interface IProps {}
 
@@ -30,6 +31,10 @@ const Tables: React.FunctionComponent<IProps> = () => {
 
 	if (selectedSlice === MarineFarmingDataType.GREENHOUSE_GASES) {
 		return <GreenhouseGasesTable />;
+	}
+
+	if (selectedSlice === MarineFarmingDataType.FILM_CONTAMINATION) {
+		return <FilmContaminationTable />;
 	}
 
 	return null;

@@ -39,7 +39,7 @@ const Panel: React.FunctionComponent<IProps> = ({ name }) => (
 						width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#FF9315',
 					}}
 				/>
-				<Typography variant="caption" sx={{ color: (theme) => theme.palette.common.white }}>Скачек</Typography>
+				<Typography variant="caption" sx={{ color: (theme) => theme.palette.common.white }}>Скачок</Typography>
 			</Stack>
 		</Stack>
 	</Stack>
