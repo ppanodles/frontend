@@ -39,29 +39,27 @@ const Charts: React.FunctionComponent<IProps> = () => {
 			maxWidth={false}
 		>
 			<Stack>
-				<Box sx={{ height: '50vh', display: 'flex' }}>
+				<Box sx={{ height: {xs: '80vh', md: '55vh'}, display: 'flex' }}>
 					<AtmosphericDataChart agroState={agroState} />
 				</Box>
 				<Stack
-					direction="row"
-					spacing={2}
-					sx={{
-						mt: 3, height: '300px', overflowX: 'auto', overflowY: 'hidden',
-					}}
+					direction={{ xs: 'column', md: 'row' }}
+					spacing={{ xs: 13, md: 2 }}
+					sx={{ mt: 3 }}
 				>
-					<Box sx={{ width: '25%', height: 160 }}>
+					<Box sx={{ width: {xs: '99%', md: '25%'}, height: 160 }}>
 						<TempChart agroState={agroState} />
 					</Box>
 
-					<Box sx={{ width: '25%', height: 160 }}>
+					<Box sx={{width: {xs: '99%', md: '25%'}, height: 160 }}>
 						<PressureChart agroState={agroState} />
 					</Box>
 
-					<Box sx={{ width: '25%', height: 160 }}>
+					<Box sx={{ width: {xs: '99%', md: '25%'}, height: 160 }}>
 						<HumidityChart agroState={agroState} />
 					</Box>
 
-					<Box sx={{ width: '25%', height: 160 }}>
+					<Box sx={{ width: {xs: '99%', md: '25%'}, height: 160 }}>
 						<CarbonChart agroState={agroState} />
 					</Box>
 				</Stack>
