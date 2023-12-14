@@ -27,7 +27,7 @@
                     "leap": 21
                 },
                 {
-                    "name": "Барий",
+                    "name": "Ферум",
                     "label": "Fe",
                     "underworld": 95,
                     "surface": 79,
@@ -46,7 +46,49 @@
                     "underworld": 85,
                     "surface": 46,
                     "leap": 49
-                }
+                },
+                {
+                    "name": "Мышьяк",
+                    "label": "As",
+                    "surface": 23,
+                    "leap": 43,
+                    "underworld": 15
+                 },
+                   {
+                     "name": "Никель",
+                     "label": "Ni",
+                     "surface": 23,
+                     "leap": 37,
+                     "underworld": 15
+                   },
+                   {
+                     "name": "Ртуть",
+                     "label": "Hg",
+                     "surface": 23,
+                     "leap": 77,
+                     "underworld": 48
+                   },
+                   {
+                     "name": "Свинец",
+                     "label": "Pb",
+                     "surface": 48,
+                     "leap": 36,
+                     "underworld": 29
+                   },
+                   {
+                     "name": "Хром",
+                     "label": "Cr",
+                     "surface": 23,
+                     "leap": 91,
+                     "underworld": 37
+                   },
+                   {
+                     "name": "Цинк",
+                     "label": "Zn",
+                     "surface": 34,
+                     "leap": 27,
+                     "underworld": 43
+                   }
             ]
         },
         {
@@ -57,16 +99,16 @@
                 {
                     "name": "Алюминий",
                     "label": "Al",
-                    "underworld": 91,
-                    "surface": 56,
-                    "leap": 29
+                    "underworld": 51,
+                    "surface": 16,
+                    "leap": 39
                 },
                 {
                     "name": "Барий",
                     "label": "Ba",
-                    "underworld": 77,
-                    "surface": 55,
-                    "leap": 22
+                    "underworld": 57,
+                    "surface": 25,
+                    "leap": 12
                 },
                 {
                     "name": "Ванадий",
@@ -76,7 +118,7 @@
                     "leap": 39
                 },
                 {
-                    "name": "Барий",
+                    "name": "Ферум",
                     "label": "Fe",
                     "underworld": 94,
                     "surface": 98,
@@ -95,7 +137,49 @@
                     "underworld": 75,
                     "surface": 36,
                     "leap": 83
-                }
+                },
+                {
+                    "name": "Мышьяк",
+                    "label": "As",
+                    "surface": 23,
+                    "leap": 43,
+                    "underworld": 15
+                 },
+                   {
+                     "name": "Никель",
+                     "label": "Ni",
+                     "surface": 23,
+                     "leap": 17,
+                     "underworld": 18
+                   },
+                   {
+                     "name": "Ртуть",
+                     "label": "Hg",
+                     "surface": 3,
+                     "leap": 7,
+                     "underworld": 4
+                   },
+                   {
+                     "name": "Свинец",
+                     "label": "Pb",
+                     "surface": 88,
+                     "leap": 56,
+                     "underworld": 19
+                   },
+                   {
+                     "name": "Хром",
+                     "label": "Cr",
+                     "surface": 53,
+                     "leap": 81,
+                     "underworld": 77
+                   },
+                   {
+                     "name": "Цинк",
+                     "label": "Zn",
+                     "surface": 24,
+                     "leap": 37,
+                     "underworld": 43
+                   }
              ]
         },
         {
@@ -125,7 +209,7 @@
                     "leap": 17
                 },
                 {
-                    "name": "Барий",
+                    "name": "Ферум",
                     "label": "Fe",
                     "underworld": 33,
                     "surface": 44,
@@ -144,7 +228,49 @@
                     "underworld": 93,
                     "surface": 63,
                     "leap": 44
-                }
+                },
+                {
+                    "name": "Мышьяк",
+                    "label": "As",
+                    "surface": 3,
+                    "leap": 4,
+                    "underworld": 5
+                 },
+                   {
+                     "name": "Никель",
+                     "label": "Ni",
+                     "surface": 45,
+                     "leap": 37,
+                     "underworld": 55
+                   },
+                   {
+                     "name": "Ртуть",
+                     "label": "Hg",
+                     "surface": 33,
+                     "leap": 57,
+                     "underworld": 78
+                   },
+                   {
+                     "name": "Свинец",
+                     "label": "Pb",
+                     "surface": 98,
+                     "leap": 86,
+                     "underworld": 69
+                   },
+                   {
+                     "name": "Хром",
+                     "label": "Cr",
+                     "surface": 23,
+                     "leap": 31,
+                     "underworld": 47
+                   },
+                   {
+                     "name": "Цинк",
+                     "label": "Zn",
+                     "surface": 34,
+                     "leap": 47,
+                     "underworld": 63
+                   }
              ]
         },
         {
@@ -174,7 +300,7 @@
                     "leap": 17
                 },
                 {
-                    "name": "Барий",
+                    "name": "Ферум",
                     "label": "Fe",
                     "underworld": 43,
                     "surface": 34,
@@ -193,7 +319,49 @@
                     "underworld": 3,
                     "surface": 53,
                     "leap": 24
-                }
+                },
+                {
+                   "name": "Мышьяк",
+                   "label": "As",
+                   "surface": 23,
+                   "leap": 43,
+                   "underworld": 15
+                },
+                  {
+                    "name": "Никель",
+                    "label": "Ni",
+                    "surface": 33,
+                    "leap": 37,
+                    "underworld": 15
+                  },
+                  {
+                    "name": "Ртуть",
+                    "label": "Hg",
+                    "surface": 23,
+                    "leap": 37,
+                    "underworld": 48
+                  },
+                  {
+                    "name": "Свинец",
+                    "label": "Pb",
+                    "surface": 48,
+                    "leap": 36,
+                    "underworld": 29
+                  },
+                  {
+                    "name": "Хром",
+                    "label": "Cr",
+                    "surface": 13,
+                    "leap": 11,
+                    "underworld": 47
+                  },
+                  {
+                    "name": "Цинк",
+                    "label": "Zn",
+                    "surface": 4,
+                    "leap": 7,
+                    "underworld": 3
+                  }
              ]
         },
         {
@@ -223,7 +391,7 @@
                     "leap": 17
                 },
                 {
-                    "name": "Барий",
+                    "name": "Ферум",
                     "label": "Fe",
                     "underworld": 33,
                     "surface": 14,
@@ -242,7 +410,49 @@
                     "underworld": 13,
                     "surface": 23,
                     "leap": 44
-                }
+                },
+                {
+                   "name": "Мышьяк",
+                   "label": "As",
+                   "surface": 33,
+                   "leap": 63,
+                   "underworld": 17
+                },
+                  {
+                    "name": "Никель",
+                    "label": "Ni",
+                    "surface": 33,
+                    "leap": 67,
+                    "underworld": 55
+                  },
+                  {
+                    "name": "Ртуть",
+                    "label": "Hg",
+                    "surface": 43,
+                    "leap": 17,
+                    "underworld": 78
+                  },
+                  {
+                    "name": "Свинец",
+                    "label": "Pb",
+                    "surface": 98,
+                    "leap": 76,
+                    "underworld": 79
+                  },
+                  {
+                    "name": "Хром",
+                    "label": "Cr",
+                    "surface": 53,
+                    "leap": 23,
+                    "underworld": 37
+                  },
+                  {
+                    "name": "Цинк",
+                    "label": "Zn",
+                    "surface": 11,
+                    "leap": 17,
+                    "underworld": 6
+                  }
              ]
         }
     ]
