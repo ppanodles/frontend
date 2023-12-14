@@ -30,14 +30,10 @@ const levelsList = [
 const BaseGasesInfoTable: React.FunctionComponent = () => (
 	<Stack spacing={1} alignItems="flex-start">
 		{levelsList.map((level) => (
-			<Stack direction="row" spacing={1.5} justifyContent="flex-start" alignItems="center">
+			<Stack key={level.color} direction="row" spacing={1.5} justifyContent="flex-start" alignItems="center">
 				<Icon iconName="heap" sx={{ height: '24px', width: '24px', color: level.color }} />
 				<Typography variant="caption" sx={{ color: '#E9E9ED' }}>
-					{level.from}
-					{' '}
-					-
-					{' '}
-					{level.to}
+					{`${level.from} - ${level.to}`}
 				</Typography>
 			</Stack>
 		))}
