@@ -1,5 +1,6 @@
 import {
-	Paper, Stack, Typography, useTheme,
+	Box,
+	Paper, Typography, useTheme,
 } from '@mui/material';
 import React, { useMemo } from 'react';
 import ReactApexChart from 'react-apexcharts';
@@ -82,6 +83,7 @@ const HumidityChart: React.FunctionComponent<IProps> = ({ agroState }) => {
 				},
 			},
 			xaxis: {
+				tickAmount: 4,
 				axisBorder: {
 					show: false,
 				},
@@ -121,11 +123,11 @@ const HumidityChart: React.FunctionComponent<IProps> = ({ agroState }) => {
 	}, [agroState, palette.common.white]);
 
 	return (
-		<Paper sx={{ p: 3, flex: 1}}>
-			<Stack spacing={1} mb={2} pl={1.8}>
-				<Typography sx={{ color: '#FFFBFF' }} variant="h5">Давление</Typography>
-			</Stack>
-			<ReactApexChart options={chartData.options} series={chartData.series} type="line" height="210%" />
+		<Paper sx={{ p: 2 }}>
+			<Typography mb={2} pl={1.8} sx={{ color: '#FFFBFF' }} variant="h5">Давление</Typography>
+			<Box sx={{ height: 160}}>
+				<ReactApexChart options={chartData.options} series={chartData.series} type="line" height="100%" />
+			</Box>
 		</Paper>
 	);
 };

@@ -1,4 +1,7 @@
-import { Grid } from '@mui/material';
+import {
+	Box,
+	Container, Stack, useTheme,
+} from '@mui/material';
 import React from 'react';
 import selectFilteredAgroStates from 'library/selectors/agro.selector';
 import { useSelector } from 'react-redux';
@@ -11,29 +14,59 @@ import CarbonChart from './CarbonChart';
 interface IProps {}
 
 const Charts: React.FunctionComponent<IProps> = () => {
+	const theme = useTheme();
+
 	const agroState = useSelector(selectFilteredAgroStates);
 
 	return (
-		<Grid container direction="row" ml={{xs: 1.5, md: 4}} mt={8} mr={1.5} mb={2} overflow="auto" columnSpacing={2} rowSpacing={2}>
-			<Grid item xs={12}><AtmosphericDataChart agroState={agroState} /></Grid>
+		<Container
+			sx={{
+				mt: 8,
+				overflow: 'auto',
+				'&::-webkit-scrollbar': {
+					width: '0.3rem',
+					height: '0.3rem',
+				},
 
-			<Grid item xs={12}>
-				<Grid container direction="row" columnSpacing={2} rowSpacing={2}>
-					<Grid item xs={12} md={4}>
+				'&::-webkit-scrollbar-thumb': {
+					borderRadius: '8px',
+					backgroundColor: '#46464F',
+				},
+				'&::-webkit-scrollbar-corner': {
+					backgroundColor: theme.palette.background.paper,
+				},
+			}}
+			maxWidth={false}
+		>
+			<Stack>
+				<Box sx={{ height: '50vh', display: 'flex' }}>
+					<AtmosphericDataChart agroState={agroState} />
+				</Box>
+				<Stack
+					direction="row"
+					spacing={2}
+					sx={{
+						mt: 3, height: '300px', overflowX: 'auto', overflowY: 'hidden',
+					}}
+				>
+					<Box sx={{ width: '25%', height: 160 }}>
 						<TempChart agroState={agroState} />
-					</Grid>
-					<Grid item xs={12} md={4}>
+					</Box>
+
+					<Box sx={{ width: '25%', height: 160 }}>
 						<PressureChart agroState={agroState} />
-					</Grid>
-					<Grid item xs={12} md={4}>
+					</Box>
+
+					<Box sx={{ width: '25%', height: 160 }}>
 						<HumidityChart agroState={agroState} />
-					</Grid>
-					<Grid item xs={12} md={4}>
+					</Box>
+
+					<Box sx={{ width: '25%', height: 160 }}>
 						<CarbonChart agroState={agroState} />
-					</Grid>
-				</Grid>
-			</Grid>
-		</Grid>
+					</Box>
+				</Stack>
+			</Stack>
+		</Container>
 	);
 };
 

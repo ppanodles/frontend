@@ -84,6 +84,7 @@ const AtmosphericDataChart: React.FunctionComponent<IProps> = ({ agroState }) =>
 				},
 			},
 			xaxis: {
+				tickAmount: 4,
 				axisBorder: {
 					show: false,
 				},
@@ -129,7 +130,7 @@ const AtmosphericDataChart: React.FunctionComponent<IProps> = ({ agroState }) =>
 					Показания датчиков измерения температуры, давления, влажности и углерода для выбранной области
 				</Typography>
 			</Stack>
-			<ReactApexChart options={chartData.options} series={chartData.series} type="line" height="210%" />
+			<ReactApexChart options={chartData.options} series={chartData.series} type="line" height="80%" />
 		</Paper>
 	);
 };
