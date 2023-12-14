@@ -83,6 +83,7 @@ const HumidityChart: React.FunctionComponent<IProps> = ({ agroState }) => {
 				},
 			},
 			xaxis: {
+				tickAmount: 4,
 				axisBorder: {
 					show: false,
 				},
