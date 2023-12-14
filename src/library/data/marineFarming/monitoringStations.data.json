@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "name": "Станция 1",
+            "name": "Станция Мурманск-3",
             "long": 38.00673082821922,
             "lat": 70.52810409444223,
             "metals": [
@@ -50,7 +50,7 @@
             ]
         },
         {
-            "name": "Станция 2",
+            "name": "Станция Баренцево",
             "long": 68.971368522559,
             "lat": 73.4225501015789,
             "metals": [
@@ -99,7 +99,7 @@
              ]
         },
         {
-            "name": "Станция 3",
+            "name": "Станция Карская",
             "long": 65.08535889515014,
             "lat": 69.75131307434222,
             "metals": [
@@ -143,6 +143,104 @@
                     "label": "Co",
                     "underworld": 93,
                     "surface": 63,
+                    "leap": 44
+                }
+             ]
+        },
+        {
+            "name": "Станция Мурманская",
+            "long": 29.847377119810716,
+            "lat": 69.97558457137123,
+            "metals": [
+                {
+                    "name": "Алюминий",
+                    "label": "Al",
+                    "underworld": 35,
+                    "surface": 26,
+                    "leap": 19
+                },
+                {
+                    "name": "Барий",
+                    "label": "Ba",
+                    "underworld": 97,
+                    "surface": 89,
+                    "leap": 59
+                },
+                {
+                    "name": "Ванадий",
+                    "label": "V",
+                    "underworld": 75,
+                    "surface": 56,
+                    "leap": 17
+                },
+                {
+                    "name": "Барий",
+                    "label": "Fe",
+                    "underworld": 43,
+                    "surface": 34,
+                    "leap": 62
+                },
+                {
+                    "name": "Кадмий",
+                    "label": "Cd",
+                    "underworld": 15,
+                    "surface": 12,
+                    "leap": 4
+                },
+                {
+                    "name": "Кобальт",
+                    "label": "Co",
+                    "underworld": 3,
+                    "surface": 53,
+                    "leap": 24
+                }
+             ]
+        },
+        {
+            "name": "Станция Архангельская",
+            "long": 43.79990164117092,
+            "lat": 66.75105694559852,
+            "metals": [
+                {
+                    "name": "Алюминий",
+                    "label": "Al",
+                    "underworld": 55,
+                    "surface": 96,
+                    "leap": 29
+                },
+                {
+                    "name": "Барий",
+                    "label": "Ba",
+                    "underworld": 77,
+                    "surface": 19,
+                    "leap": 29
+                },
+                {
+                    "name": "Ванадий",
+                    "label": "V",
+                    "underworld": 75,
+                    "surface": 56,
+                    "leap": 17
+                },
+                {
+                    "name": "Барий",
+                    "label": "Fe",
+                    "underworld": 33,
+                    "surface": 14,
+                    "leap": 42
+                },
+                {
+                    "name": "Кадмий",
+                    "label": "Cd",
+                    "underworld": 25,
+                    "surface": 12,
+                    "leap": 14
+                },
+                {
+                    "name": "Кобальт",
+                    "label": "Co",
+                    "underworld": 13,
+                    "surface": 23,
                     "leap": 44
                 }
              ]

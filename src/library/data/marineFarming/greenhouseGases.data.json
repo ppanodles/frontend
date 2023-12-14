@@ -1,214 +1,284 @@
 {
   "data": [
     {
-      "h3": "870080002ffffff",
+      "h3": "8500b553fffffff",
       "emission_per_cell": 280.5998462512822,
       "date": "Thu, 18 Jun 2020 21:00:00"
     },
     {
-      "h3": "870080003ffffff",
-      "emission_per_cell": 140.4833610012414,
+      "h3": "8500b423fffffff",
+      "emission_per_cell": 20.5998462512822,
+      "date": "Thu, 11 Jun 2020 21:00:00"
+    },
+    {
+      "h3": "8500b55bfffffff",
+      "emission_per_cell": 80.4833610012414,
       "date": "Wed, 08 Nov 2023 21:00:00"
     },
     {
-      "h3": "870080006ffffff",
-      "emission_per_cell": 280.5998462512822,
+      "h3": "8501a373fffffff",
+      "emission_per_cell": 5880.5998462512822,
       "date": "Fri, 24 Mar 2023 21:00:00"
     },
     {
-      "h3": "870080010ffffff",
-      "emission_per_cell": 141.253306379331,
+      "h3": "8501a3affffffff",
+      "emission_per_cell": 5641.253306379331,
       "date": "Mon, 29 Jun 2020 21:00:00"
     },
     {
-      "h3": "870080012ffffff",
-      "emission_per_cell": 140.83439372165512,
+      "h3": "8501a33bfffffff",
+      "emission_per_cell": 5440.83439372165512,
       "date": "Fri, 09 Jun 2023 21:00:00"
     },
     {
-      "h3": "870080013ffffff",
-      "emission_per_cell": 141.253306379331,
+      "h3": "8501a31bfffffff",
+      "emission_per_cell": 6141.253306379331,
       "date": "Tue, 23 Jun 2020 21:00:00"
     },
     {
-      "h3": "870080014ffffff",
-      "emission_per_cell": 141.253306379331,
+      "h3": "8501a317fffffff",
+      "emission_per_cell": 5541.253306379331,
       "date": "Tue, 22 Dec 2020 21:00:00"
     },
     {
-      "h3": "870080016ffffff",
-      "emission_per_cell": 140.83439372165512,
+      "h3": "8501a3c7fffffff",
+      "emission_per_cell": 3740.83439372165512,
       "date": "Wed, 08 Dec 2021 21:00:00"
     },
     {
-      "h3": "870080019ffffff",
-      "emission_per_cell": 280.5998462512822,
+      "h3": "8501a383fffffff",
+      "emission_per_cell": 2280.5998462512822,
       "date": "Wed, 29 May 2019 21:00:00"
     },
     {
-      "h3": "87008001affffff",
-      "emission_per_cell": 141.253306379331,
+      "h3": "8501a3c3fffffff",
+      "emission_per_cell": 1441.253306379331,
       "date": "Tue, 24 May 2022 21:00:00"
     },
     {
-      "h3": "87008001cffffff",
-      "emission_per_cell": 140.1164852500408,
+      "h3": "8501a38bfffffff",
+      "emission_per_cell": 1340.1164852500408,
       "date": "Fri, 18 Aug 2023 21:00:00"
     },
     {
-      "h3": "87008001dffffff",
-      "emission_per_cell": 280.5998462512822,
+      "h3": "8501a3d7fffffff",
+      "emission_per_cell": 680.5998462512822,
       "date": "Thu, 30 Nov 2023 21:00:00"
     },
     {
-      "h3": "870080030ffffff",
-      "emission_per_cell": 140.1164852500408,
+      "h3": "8501a3d3fffffff",
+      "emission_per_cell": 378.1164852500408,
       "date": "Sat, 05 Dec 2020 21:00:00"
     },
     {
-      "h3": "870080031ffffff",
-      "emission_per_cell": 140.4833610012414,
+      "h3": "8501a39bfffffff",
+      "emission_per_cell": 320.4833610012414,
       "date": "Wed, 18 Oct 2023 21:00:00"
     },
     {
-      "h3": "870080033ffffff",
-      "emission_per_cell": 140.1164852500408,
+      "h3": "8501a067fffffff",
+      "emission_per_cell": 178.1164852500408,
       "date": "Sat, 25 Sep 2021 21:00:00"
     },
     {
-      "h3": "870080034ffffff",
+      "h3": "8501a06ffffffff",
       "emission_per_cell": 280.5998462512822,
       "date": "Sun, 07 Mar 2021 21:00:00"
     },
     {
-      "h3": "870080035ffffff",
+      "h3": "8501a06bfffffff",
       "emission_per_cell": 140.4833610012414,
       "date": "Sun, 08 Jan 2023 21:00:00"
     },
     {
-      "h3": "870080042ffffff",
-      "emission_per_cell": 295.9043570416213,
+      "h3": "85089387fffffff",
+      "emission_per_cell": 1295.9043570416213,
       "date": "Sun, 23 Jul 2023 21:00:00"
     },
     {
-      "h3": "870080044ffffff",
-      "emission_per_cell": 295.9043570416213,
+      "h3": "850893c7fffffff",
+      "emission_per_cell": 6295.9043570416213,
       "date": "Sun, 01 May 2022 21:00:00"
     },
     {
-      "h3": "870080046ffffff",
-      "emission_per_cell": 295.9043570416213,
+      "h3": "8508938bfffffff",
+      "emission_per_cell": 3395.9043570416213,
       "date": "Sat, 05 Jun 2021 21:00:00"
     },
     {
-      "h3": "870080048ffffff",
-      "emission_per_cell": 147.81857026939159,
+      "h3": "8508938ffffffff",
+      "emission_per_cell": 6147.81857026939159,
       "date": "Thu, 14 May 2020 21:00:00"
     },
     {
-      "h3": "87008004affffff",
-      "emission_per_cell": 147.81857026939159,
+      "h3": "8508906ffffffff",
+      "emission_per_cell": 3347.81857026939159,
       "date": "Tue, 22 Jun 2021 21:00:00"
     },
     {
-      "h3": "8501b577fffffff",
-      "emission_per_cell": 652,
+      "h3": "85089383fffffff",
+      "emission_per_cell": 2652,
       "date": "Sun, 18 Jun 2023 21:00:00"
     },
     {
-      "h3": "8501b567fffffff",
+      "h3": "85089313fffffff",
       "emission_per_cell": 1543,
       "date": "Thu, 16 Feb 2023 21:00:00"
     },
     {
-      "h3": "8501b563fffffff",
+      "h3": "850893b3fffffff",
       "emission_per_cell": 1245,
       "date": "Fri, 24 Jul 2020 21:00:00"
     },
     {
-      "h3": "8501b573fffffff",
-      "emission_per_cell": 1668,
+      "h3": "8511692bfffffff",
+      "emission_per_cell": 6668,
       "date": "Thu, 30 Sep 2021 21:00:00"
     },
     {
-      "h3": "8501b53bfffffff",
-      "emission_per_cell": 5478,
+      "h3": "85019427fffffff",
+      "emission_per_cell": 6478,
       "date": "Thu, 24 Feb 2022 21:00:00"
     },
     {
-      "h3": "8501b52bfffffff",
-      "emission_per_cell": 163,
+      "h3": "850195cffffffff",
+      "emission_per_cell": 5563,
       "date": "Mon, 09 Sep 2019 21:00:00"
     },
     {
-      "h3": "8501b50ffffffff",
-      "emission_per_cell": 3358,
+      "h3": "85019543fffffff",
+      "emission_per_cell": 2358,
       "date": "Wed, 17 Jul 2019 21:00:00"
     },
     {
-      "h3": "8501b523fffffff",
-      "emission_per_cell": 3854,
+      "h3": "8501951bfffffff",
+      "emission_per_cell": 2154,
       "date": "Wed, 18 Dec 2019 21:00:00"
     },
     {
-      "h3": "8501b533fffffff",
-      "emission_per_cell": 3910,
+      "h3": "85019573fffffff",
+      "emission_per_cell": 1910,
       "date": "Tue, 27 Jul 2021 21:00:00"
     },
     {
-      "h3": "8501b507fffffff",
-      "emission_per_cell": 3773,
+      "h3": "8501952bfffffff",
+      "emission_per_cell": 973,
       "date": "Thu, 26 Nov 2020 21:00:00"
     },
     {
-      "h3": "8501b517fffffff",
-      "emission_per_cell": 3131,
+      "h3": "8501953bfffffff",
+      "emission_per_cell": 731,
       "date": "Fri, 20 May 2022 21:00:00"
     },
     {
-      "h3": "8501b5abfffffff",
-      "emission_per_cell": 4138,
+      "h3": "85019567fffffff",
+      "emission_per_cell": 238,
       "date": "Fri, 07 Jul 2023 21:00:00"
     },
     {
-      "h3": "8501b5bbfffffff",
-      "emission_per_cell": 4437,
+      "h3": "8501919bfffffff",
+      "emission_per_cell": 137,
       "date": "Sat, 06 Jun 2020 21:00:00"
     },
     {
-      "h3": "8501b587fffffff",
-      "emission_per_cell": 4672,
+      "h3": "85116937fffffff",
+      "emission_per_cell": 5672,
       "date": "Thu, 31 Oct 2019 21:00:00"
     },
     {
-      "h3": "8501b5affffffff",
-      "emission_per_cell": 93,
+      "h3": "8501a5d7fffffff",
+      "emission_per_cell": 2133,
       "date": "Fri, 13 Nov 2020 21:00:00"
     },
     {
-      "h3": "8501b537fffffff",
-      "emission_per_cell": 235,
+      "h3": "8501a513fffffff",
+      "emission_per_cell": 735,
       "date": "Thu, 17 Jun 2021 21:00:00"
     },
     {
-      "h3": "8501b527fffffff",
-      "emission_per_cell": 6453,
+      "h3": "8501a58bfffffff",
+      "emission_per_cell": 653,
       "date": "Thu, 15 Apr 2021 21:00:00"
     },
     {
-      "h3": "8501b52ffffffff",
-      "emission_per_cell": 5945,
+      "h3": "8501a5c7fffffff",
+      "emission_per_cell": 595,
       "date": "Wed, 06 Oct 2021 21:00:00"
     },
     {
-      "h3": "8501b197fffffff",
-      "emission_per_cell": 6125,
-      "date": "Mon, 04 Nov 2019 21:00:00"
+      "h3": "8501a51bfffffff",
+      "emission_per_cell": 16,
+      "date": "Mon, 04 Nov 2019 24:00:00"
     },
     {
-      "h3": "8501a24bfffffff",
-      "emission_per_cell": 5233,
+      "h3": "8501a503fffffff",
+      "emission_per_cell": 13,
+      "date": "Fri, 02 Sep 2023 11:00:00"
+    },
+    {
+      "h3": "8500b427fffffff",
+      "emission_per_cell": 313,
       "date": "Fri, 22 Sep 2023 21:00:00"
+    },
+    {
+      "h3": "8500b42ffffffff",
+      "emission_per_cell": 613,
+      "date": "Fri, 21 Sep 2023 21:00:00"
+    },
+    {
+      "h3": "8500b437fffffff",
+      "emission_per_cell": 813,
+      "date": "Fri, 10 Sep 2023 20:00:00"
+    },
+    {
+      "h3": "8500b5cbfffffff",
+      "emission_per_cell": 913,
+      "date": "Fri, 12 Sep 2023 23:00:00"
+    },
+    {
+      "h3": "8500b437fffffff",
+      "emission_per_cell": 813,
+      "date": "Fri, 25 Sep 2023 21:00:00"
+    },
+    {
+      "h3": "8500b5dbfffffff",
+      "emission_per_cell": 1813,
+      "date": "Fri, 04 Sep 2023 13:00:00"
+    },
+    {
+      "h3": "8500b4affffffff",
+      "emission_per_cell": 3813,
+      "date": "Fri, 04 Sep 2023 10:00:00"
+    },
+    {
+      "h3": "8500b433fffffff",
+      "emission_per_cell": 3813,
+      "date": "Fri, 02 Sep 2023 11:00:00"
+    },
+    {
+      "h3": "8500b43bfffffff",
+      "emission_per_cell": 5813,
+      "date": "Fri, 12 Sep 2023 11:00:00"
+    },
+    {
+      "h3": "8500b403fffffff",
+      "emission_per_cell": 6813,
+      "date": "Fri, 12 Sep 2023 11:00:00"
+    },
+    {
+      "h3": "8500b4b3fffffff",
+      "emission_per_cell": 5613,
+      "date": "Fri, 02 Sep 2023 11:00:00"
+    },
+    {
+      "h3": "8500b48ffffffff",
+      "emission_per_cell": 5413,
+      "date": "Fri, 02 Sep 2023 11:00:00"
+    },
+    {
+      "h3": "8500b493fffffff",
+      "emission_per_cell": 5713,
+      "date": "Fri, 02 Sep 2023 11:00:00"
     }
   ]
 }
