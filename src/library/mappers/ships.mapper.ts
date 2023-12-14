@@ -52,11 +52,11 @@ export default (data: any): IShip[] => data?.map((datum: any) => ({
 	vesselName: datum?.vessel_name ?? '',
 	vesselType: datum?.vessel_type ?? '',
 	flagCountry: datum?.flag_country ?? '',
-	destinationPort: datum?.destination.port || '',
+	destinationPort: datum?.destination?.port || '',
 	destinationCoordinates: datum?.destination ? datum?.destination.coordinates : [0, 0],
 	longitude: datum?.longitude ?? 0,
 	latitude: datum?.latitude ?? 0,
 	rot: datum?.rot,
-	tsPosUtc: datum?.ts_pos_utc ?? '',
+	tsPosUtc: datum?.ts_pos_utc ?? new Date(),
 	eta: (datum?.eta ? new Date(datum.eta) : new Date()).toString(),
 })) ?? [];
