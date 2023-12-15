@@ -52,8 +52,6 @@
     "predeploy": "pnpm build",
     "deploy": "gh-pages -d build",
     "lint": "eslint --ext .ts,.tsx src/",
-    "stylelint": "stylelint '**/*{.css,.scss}'",
-    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix",
     "precommit": "lint-staged",
     "prepare": "husky install"
   },
@@ -90,19 +88,9 @@
     "eslint-webpack-plugin": "4.0.1",
     "gh-pages": "6.1.0",
     "lint-staged": "15.1.0",
-    "prettier": "3.1.0",
-    "stylelint": "15.11.0",
-    "stylelint-config-idiomatic-order": "9.0.0",
-    "stylelint-config-prettier": "9.0.5",
-    "stylelint-config-rational-order": "0.1.2",
-    "stylelint-config-standard": "34.0.0",
-    "stylelint-order": "6.0.3",
-    "stylelint-prettier": "4.1.0"
+    "prettier": "3.1.0"
   },
   "lint-staged": {
-    "*.(css|scss)": [
-      "stylelint --fix"
-    ],
     "*.{js,ts,tsx}": [
       "eslint --quiet --cache --fix"
     ]
