@@ -221,7 +221,7 @@ const DataMap = () => {
 				latitude: 70.939,
 				zoom: 4,
 			}}
-			maxZoom={8}
+			maxZoom={6}
 			minZoom={4}
 			doubleClickZoom={false}
 			style={{ width: '100%', height: '100%', cursor: 'default' }}

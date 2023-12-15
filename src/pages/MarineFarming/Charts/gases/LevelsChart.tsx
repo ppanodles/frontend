@@ -25,22 +25,22 @@ type ILevelsList = {
 
 const getLevelsList = (minVal: number, maxVal: number): ILevelsList[] => [
 	{
-		icon: 'heap', color: '#880E4F', from: minVal - 1, to: 294.7, perc: 20,
+		icon: 'heap', color: '#FFEB3B', from: minVal - 1, to: 294.7, perc: 20,
 	},
 	{
-		icon: 'heap', color: '#C2185B', from: 294.7, to: 612.2, perc: 45,
+		icon: 'heap', color: '#FFC400', from: 294.7, to: 612.2, perc: 45,
 	},
 	{
-		icon: 'heap', color: '#DD2C00', from: 612.2, to: 1107.14, perc: 30,
+		icon: 'heap', color: '#FF9100', from: 612.2, to: 1107.14, perc: 30,
 	},
 	{
-		icon: 'heap', color: '#FF9100', from: 1107.14, to: 2082.9, perc: 25,
+		icon: 'heap', color: '#DD2C00', from: 1107.14, to: 2082.9, perc: 25,
 	},
 	{
-		icon: 'heap', color: '#FFC400', from: 2082.9, to: 5347.57, perc: 20,
+		icon: 'heap', color: '#C2185B', from: 2082.9, to: 5347.57, perc: 20,
 	},
 	{
-		icon: 'heap', color: '#FFEB3B', from: 5347.57, to: maxVal + 1, perc: 15,
+		icon: 'heap', color: '#880E4F', from: 5347.57, to: maxVal + 1, perc: 15,
 	},
 ];
 
