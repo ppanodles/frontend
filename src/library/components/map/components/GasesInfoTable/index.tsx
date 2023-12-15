@@ -8,22 +8,22 @@ import {
 
 const levelsList = [
 	{
-		icon: 'heap', color: '#880E4F', from: 4.712, to: 294.7,
+		icon: 'heap', color: '#FFEB3B', from: 4.712, to: 294.7,
 	},
 	{
-		icon: 'heap', color: '#C2185B', from: 294.7, to: 612.2,
+		icon: 'heap', color: '#FFC400', from: 294.7, to: 612.2,
 	},
 	{
-		icon: 'heap', color: '#DD2C00', from: 612.2, to: 1107.14,
+		icon: 'heap', color: '#FF9100', from: 612.2, to: 1107.14,
 	},
 	{
-		icon: 'heap', color: '#FF9100', from: 1107.14, to: 2082.9,
+		icon: 'heap', color: '#DD2C00', from: 1107.14, to: 2082.9,
 	},
 	{
-		icon: 'heap', color: '#FFC400', from: 2082.9, to: 5347.57,
+		icon: 'heap', color: '#C2185B', from: 2082.9, to: 5347.57,
 	},
 	{
-		icon: 'heap', color: '#FFEB3B', from: 5347.57, to: '682.5k',
+		icon: 'heap', color: '#880E4F', from: 5347.57, to: '682.5k',
 	},
 ];
 
