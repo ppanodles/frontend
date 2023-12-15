@@ -4,7 +4,7 @@
             "id": "urn:ogc",
             "time": "2021-10-15 08:00",
             "temp": 17,
-            "pressure": 80,
+            "pressure": 780,
             "humidity": 82,
             "carbon": 35,
             "location": "Карадагская СМ"
@@ -13,7 +13,7 @@
             "id": "urn:ogc1",
             "time": "2022-12-22 08:00",
             "temp": 21,
-            "pressure": 83,
+            "pressure": 793,
             "humidity": 91,
             "carbon": 43,
             "location": "Звенигородская СМ"
@@ -22,7 +22,7 @@
             "id": "urn:ogc2",
             "time": "2023-11-27 08:00",
             "temp": 5,
-            "pressure": 77,
+            "pressure": 767,
             "humidity": 93,
             "carbon": 38,
             "location": "Карадагская СМ"
