@@ -36,16 +36,16 @@ const MarineFarmingPanel: React.FunctionComponent<IProps> = () => {
 				sx={{
 					width: '100%',
 					mt: 8,
-					mb: 3,
+					mb: 2,
 					display: 'flex',
 					color: ({ palette }) => palette.common.white,
 				}}
 			>
 				<Icon iconName="filters" />
-				<Typography>Фильтр данных</Typography>
+				<Typography>Фильтры данных</Typography>
 			</Stack>
 
-			<Stack spacing={3} width="100%">
+			<Stack width="100%">
 				{checkFilterAvailable(MarineFarmingDataType.SHIPS) && <ShipsFIlter />}
 				{checkFilterAvailable(MarineFarmingDataType.GREENHOUSE_GASES) && <GreenhouseGasesFilter />}
 				{checkFilterAvailable(MarineFarmingDataType.FILM_CONTAMINATION) && <FilmContaminationFilter />}

@@ -24,7 +24,7 @@ const ListSelectorFilter: React.FunctionComponent<IListSelectorFilter> = ({
 	};
 
 	return (
-		<Stack my={1.5}>
+		<Stack my={1}>
 			<Typography sx={filterLabelSx}>
 				{name}
 			</Typography>
@@ -36,6 +36,7 @@ const ListSelectorFilter: React.FunctionComponent<IListSelectorFilter> = ({
 					return (
 						<ListItem key={id} disablePadding>
 							<ListItemButton
+								sx={{height: '2.5rem'}}
 								role={undefined}
 								onClick={() => selectHandler(id, value)}
 								dense

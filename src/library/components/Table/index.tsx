@@ -93,8 +93,7 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 			<Stack
 				spacing={2}
 				sx={{
-					position: 'absolute',
-					inset: '60px 12px 64px 88px',
+					inset: '60px 24px 24px 24px',
 					display: 'flex',
 					alignItems: 'flex-start',
 				}}
@@ -109,8 +108,8 @@ const Table = <T extends object>({ tableData, tableConfig, defaultSortColumn }: 
 		<Box sx={{
 			position: 'absolute',
 			inset: {
-				xs: '60px 8px 32px 8px',
-				md: '60px 12px 32px 43px',
+				xs: '60px 8px 24px 8px',
+				md: '60px 24px 24px 24px',
 			},
 			display: 'flex',
 			alignItems: 'flex-start',

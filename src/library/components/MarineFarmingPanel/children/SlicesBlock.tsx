@@ -31,7 +31,7 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 		if (currentValue === MarineFarmingDataType.SHIPS) {
 			const slice: SliceSelectorType = {
 				id: MarineFarmingDataType.SHIPS,
-				name: 'Судно/Корабль',
+				name: 'Судоходство',
 				icon: 'near-me',
 				status: sliceFlags[MarineFarmingDataType.SHIPS],
 			};
@@ -42,7 +42,7 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 		if (currentValue === MarineFarmingDataType.GREENHOUSE_GASES) {
 			const slice: SliceSelectorType = {
 				id: MarineFarmingDataType.GREENHOUSE_GASES,
-				name: 'Парниковые газы от судоходства',
+				name: 'Парниковые газы',
 				icon: 'heat',
 				status: sliceFlags[MarineFarmingDataType.GREENHOUSE_GASES],
 			};
@@ -78,8 +78,8 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 	const listItemButtonHandler = (id: MarineFarmingDataType) => dispatch(toggleSliceAccessibility({dataType: id, currentLayout: getLayoutTypeFomPath(pathname)}));
 
 	return (
-		<Box>
-			<Stack direction="row" spacing={0.7} sx={{ mb: 3, display: 'flex', color: ({ palette }) => palette.common.white }}>
+		<Box sx={{width: '100%'}}>
+			<Stack direction="row" spacing={0.7} sx={{ mb: 1, display: 'flex', color: ({ palette }) => palette.common.white }}>
 				<Icon iconName="items" />
 				<Typography>Слои</Typography>
 			</Stack>
@@ -101,12 +101,14 @@ const SlicesBlock: React.FunctionComponent<IProps> = () => {
 								dense
 								sx={{ backgroundColor: ({ palette }) => palette.primary.light}}
 							>
-								<ListItemAvatar sx={{ display: 'flex', alignItems: 'center'}}>
+								<ListItemAvatar sx={{ display: 'flex', alignItems: 'center', minWidth: 'max-content'}}>
 									<Box sx={{ height: '40px', width: '2px', backgroundColor: ({ palette }) => (data.status ? palette.success.light : palette.info.main) }} />
-									<Icon sx={{ ml: 2, color: ({ palette }) => palette.info.main }} iconName={data.icon} />
+									<Icon sx={{ ml: 1.5, color: ({ palette }) => palette.info.main }} iconName={data.icon} />
 								</ListItemAvatar>
 								<ListItemText
 									sx={{
+										ml: 1.5,
+										flex: 1,
 										color: ({ palette }) => palette.info.main,
 									}}
 									primary={data.name}

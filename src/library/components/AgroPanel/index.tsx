@@ -22,14 +22,13 @@ const AgroPanel: React.FunctionComponent<IProps> = () => {
 				spacing={0.7}
 				sx={{
 					width: '100%',
-					mt: 8,
 					mb: 3,
 					display: 'flex',
 					color: ({ palette }) => palette.common.white,
 				}}
 			>
 				<Icon iconName="filters" />
-				<Typography>Фильтр данных</Typography>
+				<Typography>Фильтры данных</Typography>
 			</Stack>
 
 			<Stack spacing={3} width="100%">

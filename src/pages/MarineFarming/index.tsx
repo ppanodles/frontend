@@ -35,23 +35,24 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 			}}
 		>
 			<Box sx={{
-				position: 'absolute', top: 8, right: 64, zIndex: '1',
+				display: 'flex', position: 'absolute', top: 8, right: 8, zIndex: '1', gap: 1,
 			}}
 			>
 				<LayoutSelector value={layout} setValue={changeLayoutHandle} />
+				{ LayoutType.MAP !== layout && (
+					<Box sx={{
+						zIndex: '1', width: 40, height: 40,
+					}}
+					>
+						<DownloadButton />
+					</Box>
+				)}
 			</Box>
-			{ LayoutType.MAP !== layout && (
-				<Box sx={{
-					position: 'absolute', top: 8, right: 12, zIndex: '1', width: 40, height: 40,
-				}}
-				>
-					<DownloadButton />
-				</Box>
-			)}
 
 			{LayoutType.MAP === layout && process.env.REACT_APP_ACCESS_TOKEN && (
 				<DataMap />
 			)}
+
 			{LayoutType.CHARTS === layout && <Charts />}
 			{LayoutType.TABLE === layout && <Tables />}
 		</Container>

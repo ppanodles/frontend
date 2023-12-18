@@ -152,7 +152,7 @@ const initialState: MarineFarmingState = {
 				destinationPort: {
 					type: FilterType.LIST_SELECTOR,
 					field: 'destinationPort',
-					name: 'Порт назначения',
+					name: 'Порт назначения судна',
 					items: uniqBy(
 						shipsData.filter((v) => v.destinationPort !== undefined),
 						'destinationPort',
@@ -164,7 +164,7 @@ const initialState: MarineFarmingState = {
 				eta: {
 					type: FilterType.DATE_TIME_RANGE,
 					field: 'eta',
-					name: 'Время прибытия',
+					name: 'Время прибытия судна',
 					borders: getDefaultDateRange(shipsData.map((v) => v.eta)),
 				},
 			},
@@ -174,7 +174,7 @@ const initialState: MarineFarmingState = {
 				time: {
 					type: FilterType.DATE_TIME_RANGE,
 					field: 'time',
-					name: 'Временной диапазон',
+					name: 'Временной диапазон эмиссии',
 					shouldShowAlways: true,
 					borders: getDefaultDateRange(greenhouseGasesData.map((v) => v.time)),
 				},
@@ -194,7 +194,7 @@ const initialState: MarineFarmingState = {
 				time: {
 					type: FilterType.DATE_TIME_RANGE,
 					field: 'time',
-					name: 'Время возникновения',
+					name: 'Время возникновения пятна',
 					borders: getDefaultDateRange(filmContaminationData.map((v) => v.time)),
 				},
 			},
@@ -250,7 +250,7 @@ const initialState: MarineFarmingState = {
 		[LayoutType.TABLE]: {
 			[MarineFarmingDataType.SHIPS]: true,
 			[MarineFarmingDataType.GREENHOUSE_GASES]: true,
-			[MarineFarmingDataType.FILM_CONTAMINATION]: true,
+			[MarineFarmingDataType.FILM_CONTAMINATION]: false,
 			[MarineFarmingDataType.MONITORING_STATIONS]: false,
 
 		},
