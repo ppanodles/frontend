@@ -83,8 +83,8 @@ const GasesInfoTable: React.FunctionComponent = () => (isMobile ? <MobileGasesIn
 	<Box sx={{
 		p: 2,
 		position: 'absolute',
-		bottom: 100,
-		right: 38,
+		bottom: 12,
+		right: 12,
 		zIndex: '1',
 		backgroundColor: '#0B071B',
 		display: 'flex',

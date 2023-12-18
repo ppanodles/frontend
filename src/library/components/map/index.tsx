@@ -267,7 +267,7 @@ const DataMap = () => {
 
 			<NavigationControl
 				style={{
-					marginTop: 400,
+					marginTop: '60px',
 				}}
 				position="top-right"
 				showCompass={false}

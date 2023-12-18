@@ -35,7 +35,7 @@ const MarineFarming: React.FunctionComponent<IProps> = () => {
 			}}
 		>
 			<Box sx={{
-				display: 'flex', position: 'absolute', top: 8, right: 8, zIndex: '1', gap: 1,
+				display: 'flex', position: 'absolute', top: 8, right: '12px', zIndex: '1', gap: 1,
 			}}
 			>
 				<LayoutSelector value={layout} setValue={changeLayoutHandle} />
