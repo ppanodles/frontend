@@ -55,11 +55,11 @@ const initialState: MunicipalityState = {
 				location: {
 					type: FilterType.LIST_SELECTOR,
 					field: 'location',
-					name: 'Муниципалитет',
+					name: 'Название станции',
 					shouldShowAlways: true,
 					items: uniqBy(
 						municipalityStateData.filter((v) => v.location !== undefined),
-						'temp',
+						'location',
 					).map((v) => ({ id: v.id, name: v.location })),
 					selected: {},
 				},
