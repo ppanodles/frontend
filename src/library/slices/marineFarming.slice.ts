@@ -194,7 +194,7 @@ const initialState: MarineFarmingState = {
 				time: {
 					type: FilterType.DATE_TIME_RANGE,
 					field: 'time',
-					name: 'Время возникновения пятна',
+					name: 'Дрейф пленочных загрязнений',
 					borders: getDefaultDateRange(filmContaminationData.map((v) => v.time)),
 				},
 			},

@@ -1,11 +1,14 @@
-import { v1 as uuid } from 'uuid';
-
 import { IFilmContamination } from 'library/types/marineFarming.d';
 
-export default (data: any): IFilmContamination[] => data?.map((datum: any) => ({
-	id: datum.id ?? uuid(),
-	time: datum.time ?? '',
-	long: datum.long ?? 0,
-	lat: datum.lat ?? 0,
-	coordinates: `${datum.long}, ${datum.lat}`,
-}));
+let result: IFilmContamination[] = [];
+
+export default (data: any): IFilmContamination[] => {
+	data?.forEach((datum: any) => {
+		datum.coordinates.forEach((coordinate: any, i: number) => {
+			result = [...result, {
+				id: `${datum.id}-${i}`, long: coordinate.long, lat: coordinate.lat, time: coordinate.time, coordinates: `${coordinate.long}, ${coordinate.lat}`,
+			} as IFilmContamination];
+		});
+	});
+	return result;
+};
