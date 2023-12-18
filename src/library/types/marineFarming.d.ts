@@ -1,3 +1,5 @@
+import { IconNames } from 'resources/icons';
+
 export interface IShip {
     type: string;
     id: string;
@@ -31,6 +33,7 @@ interface IFilmContamination { // пленочное загрязнение
     long: number;
     lat: number;
     coordinates: string;
+    icon: IconNames;
 }
 
 interface IMetal {

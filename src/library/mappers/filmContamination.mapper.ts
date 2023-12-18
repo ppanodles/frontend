@@ -8,4 +8,5 @@ export default (data: any): IFilmContamination[] => data?.map((datum: any) => ({
 	long: datum.long ?? 0,
 	lat: datum.lat ?? 0,
 	coordinates: `${datum.long}, ${datum.lat}`,
+	icon: datum.icon ?? 'film-contamination',
 }));
