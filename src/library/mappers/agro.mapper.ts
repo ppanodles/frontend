@@ -8,6 +8,6 @@ export default (data: any): IAgroState[] => data?.map((datum: any) => ({
 	temp: datum?.temp ?? 0,
 	pressure: datum?.pressure ? Number(datum?.pressure) / 1000 : 0,
 	humidity: datum?.humidity ?? 0,
-	carbon: datum?.carbon ?? 0,
+	carbon: datum?.carbon ? Number(datum?.carbon) / 100 : 0,
 	location: datum?.name ?? 'Наименование неизвестно',
 })) ?? [];

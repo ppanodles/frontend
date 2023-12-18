@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 import {Paper, Stack, Typography} from '@mui/material';
 import dayjs from 'dayjs';
+import weekOfYear from 'dayjs/plugin/weekOfYear';
+import 'dayjs/locale/ru';
 import { max, min } from 'lodash';
 
 import {
@@ -14,6 +16,9 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { IGreenhouseGases } from 'library/types/marineFarming.d';
+
+dayjs.extend(weekOfYear);
+dayjs.locale('ru');
 
 ChartJS.register(
 	CategoryScale,
@@ -48,6 +53,8 @@ const Variance: React.FunctionComponent<IProps> = ({ greenhouseGasesData }) => {
 				categories: accumulator.categories ? [...accumulator.categories, dayjs(greenhouseGases.time).format('DD/MM')] : [dayjs(greenhouseGases.time).format('DD/MM')],
 			}), {} as any);
 
+		console.log(valuesAndDates);
+
 		const average = Math.round(calculateAverage(valuesAndDates.data));
 
 		const emissionsVariance = calculateDeviation(valuesAndDates.data, average);
@@ -62,9 +69,9 @@ const Variance: React.FunctionComponent<IProps> = ({ greenhouseGasesData }) => {
 			average,
 		};
 	}, [greenhouseGasesData]);
-
+	const labels = tableData.categories.filter((item, i, ar) => ar.indexOf(item) === i);
 	const data = {
-		labels: tableData.categories,
+		labels,
 		borderWidth: 1,
 		base: tableData.average,
 		datasets: [{

@@ -50,21 +50,21 @@ const Station: React.FunctionComponent<IProps> = ({ metal }) => {
 				<Stack direction="row" alignItems="center">
 					<Typography variant="caption" sx={{ width: '40px', mr: 1, color: theme.palette.common.white }}>{metal.underworld}</Typography>
 					<Box sx={{ width: '100px', height: '16px' }}>
-						<div style={{width: `${getLineWidth(metal.underworld, maxValue)}%`, height: '100%', backgroundColor: '#FF9315'}} />
+						<div style={{width: metal.underworld ? `${getLineWidth(metal.underworld, maxValue)}%` : 0, height: '100%', backgroundColor: '#FF9315'}} />
 					</Box>
 				</Stack>
 
 				<Stack direction="row" alignItems="center">
 					<Typography variant="caption" sx={{ width: '40px', mr: 1, color: theme.palette.common.white }}>{metal.surface}</Typography>
 					<Box sx={{ width: '100px', height: '16px' }}>
-						<div style={{width: `${getLineWidth(metal.surface, maxValue)}%`, height: '100%', backgroundColor: '#304FFE'}} />
+						<div style={{width: metal.underworld ? `${getLineWidth(metal.surface, maxValue)}%` : 0, height: '100%', backgroundColor: '#304FFE'}} />
 					</Box>
 				</Stack>
 
 				<Stack direction="row" alignItems="center">
 					<Typography variant="caption" sx={{ width: '40px', mr: 1, color: theme.palette.common.white }}>{metal.leap}</Typography>
 					<Box sx={{ width: '100px', height: '16px' }}>
-						<div style={{width: `${getLineWidth(metal.leap, maxValue)}%`, height: '100%', backgroundColor: '#22C38E'}} />
+						<div style={{width: metal.underworld ? `${getLineWidth(metal.leap, maxValue)}%` : 0, height: '100%', backgroundColor: '#22C38E'}} />
 					</Box>
 				</Stack>
 			</Stack>

@@ -60,7 +60,7 @@ const initialState: AgroState = {
 					shouldShowAlways: true,
 					items: uniqBy(
 						agroStateData.filter((v) => v.location !== undefined),
-						'temp',
+						'location',
 					).map((v) => ({ id: v.id, name: v.location })),
 					selected: {},
 				},
