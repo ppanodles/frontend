@@ -6,7 +6,12 @@ export default (data: any): IFilmContamination[] => {
 	data?.forEach((datum: any) => {
 		datum.coordinates.forEach((coordinate: any, i: number) => {
 			result = [...result, {
-				id: `${datum.id}-${i}`, long: coordinate.long, lat: coordinate.lat, time: coordinate.time, coordinates: `${coordinate.long}, ${coordinate.lat}`,
+				id: `${datum.id}-${i}`,
+				long: coordinate.long,
+				lat: coordinate.lat,
+				time: coordinate.time,
+				coordinates: `${coordinate.long}, ${coordinate.lat}`,
+				icon: datum.icon ?? 'film-contamination',
 			} as IFilmContamination];
 		});
 	});

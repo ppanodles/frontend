@@ -116,10 +116,9 @@ const DataMap = () => {
 				latitude={filmContaminationInfo.lat}
 				anchor="top-left"
 				key={filmContaminationInfo.id}
-				// draggable={false}
 				style={{cursor: 'default'}}
 			>
-				<Icon iconName="film-contamination" style={{ color: '#FF9315' }} />
+				<Icon iconName={filmContaminationInfo.icon} style={{ color: '#FF9315' }} />
 			</Marker>
 		),
 		[],
