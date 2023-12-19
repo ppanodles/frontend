@@ -103,7 +103,7 @@ const DataMap = () => {
 	);
 
 	const mapFilmContaminationToMarkers = useCallback(
-		(filmContaminationInfo: IFilmContamination) => (
+		(filmContaminationInfo: IFilmContamination, index: number) => (
 			<Marker
 				onClick={() => setPopup(
 					<FilmContaminationPopup
@@ -115,7 +115,7 @@ const DataMap = () => {
 				longitude={filmContaminationInfo.long}
 				latitude={filmContaminationInfo.lat}
 				anchor="top-left"
-				key={filmContaminationInfo.id}
+				key={`${filmContaminationInfo.id}_${index}`}
 				style={{cursor: 'default'}}
 			>
 				<Icon iconName={filmContaminationInfo.icon} style={{ color: '#FF9315' }} />
@@ -194,7 +194,7 @@ const DataMap = () => {
 	const portMarkers = useMemo(() => ports.map(portsToMarkers), [ports, portsToMarkers]);
 
 	const filmContaminationMarkers = useMemo(
-		() => filmContamination.map(mapFilmContaminationToMarkers),
+		() => filmContamination.map((marker, index) => mapFilmContaminationToMarkers(marker, index)),
 		[filmContamination, mapFilmContaminationToMarkers],
 	);
 
